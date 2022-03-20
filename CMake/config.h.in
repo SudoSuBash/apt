@@ -79,3 +79,6 @@
 
 /* Group of the root user */
 #cmakedefine ROOT_GROUP "${ROOT_GROUP}"
+
+/* Drop backward-compat includes from our public headers */
+#define APT_25_CLEANER_HEADERS

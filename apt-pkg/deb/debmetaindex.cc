@@ -17,6 +17,7 @@
 #include <apt-pkg/tagfile.h>
 
 #include <algorithm>
+#include <iterator>
 #include <map>
 #include <optional>
 #include <sstream>

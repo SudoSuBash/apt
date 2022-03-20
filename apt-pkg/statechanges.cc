@@ -8,6 +8,7 @@
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
+#include <iterator>
 #include <memory>
 
 namespace APT

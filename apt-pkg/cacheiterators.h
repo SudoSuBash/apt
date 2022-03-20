@@ -33,13 +33,15 @@
 #warning apt-pkg/cacheiterators.h should not be included directly, include apt-pkg/pkgcache.h instead
 #endif
 #include <apt-pkg/macros.h>
-
-#include <iosfwd>
-#include <iterator>
-#include <string>
 #include <apt-pkg/string_view.h>
 
-#include <string.h>
+#include <cstring>
+#include <iosfwd>
+#include <string>
+
+#ifndef APT_25_CLEANER_HEADERS
+#include <iterator>
+#endif
 
 // abstract Iterator template						/*{{{*/
 /* This template provides the very basic iterator methods we

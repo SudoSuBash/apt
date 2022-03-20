@@ -32,6 +32,7 @@
 
 #include <algorithm>
 #include <array>
+#include <iterator>
 #include <limits>
 #include <sstream>
 #include <string>
