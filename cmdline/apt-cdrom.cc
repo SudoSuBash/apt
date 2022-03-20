@@ -18,19 +18,17 @@
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
-#include <apt-pkg/init.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgsystem.h>
 #include <apt-pkg/progress.h>
-#include <apt-pkg/strutl.h>
 
 #include <iostream>
 #include <string>
-#include <vector>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <vector>
 
 #include <apt-private/private-cmndline.h>
-#include <apt-private/private-main.h>
 #include <apt-private/private-output.h>
 
 #include <apti18n.h>

@@ -5,6 +5,7 @@
 #include <apt-pkg/acquire.h>
 #include <apt-pkg/algorithms.h>
 #include <apt-pkg/cachefile.h>
+#include <apt-pkg/cachefilter.h>
 #include <apt-pkg/cacheset.h>
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
@@ -18,18 +19,11 @@
 #include <apt-pkg/pkgrecords.h>
 #include <apt-pkg/pkgsystem.h>
 #include <apt-pkg/prettyprinters.h>
+#include <apt-pkg/progress.h>
+#include <apt-pkg/sourcelist.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/upgrade.h>
 
-#include <algorithm>
-#include <iostream>
-#include <map>
-#include <set>
-#include <vector>
-#include <stdlib.h>
-#include <string.h>
-
-#include <apt-private/acqprogress.h>
 #include <apt-private/private-cachefile.h>
 #include <apt-private/private-cacheset.h>
 #include <apt-private/private-download.h>
@@ -37,9 +31,23 @@
 #include <apt-private/private-json-hooks.h>
 #include <apt-private/private-output.h>
 
+#include <algorithm>
+#include <cstdlib>
+#include <cstring>
+#include <functional>
+#include <iostream>
+#include <iterator>
+#include <list>
+#include <map>
+#include <memory>
+#include <set>
+#include <string>
+#include <strings.h>
+#include <utility>
+#include <vector>
+
 #include <apti18n.h>
 									/*}}}*/
-class pkgSourceList;
 
 bool CheckNothingBroken(CacheFile &Cache)				/*{{{*/
 {

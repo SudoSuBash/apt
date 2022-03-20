@@ -10,10 +10,10 @@
 #define CONTENTS_H
 
 #include <apt-pkg/dirstream.h>
+#include <apt-pkg/macros.h>
 
 #include <string>
-#include <stddef.h>
-#include <stdio.h>
+#include <cstddef>
 
 class debDebFile;
 class FileFd;

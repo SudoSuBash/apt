@@ -2,9 +2,11 @@
 #include <config.h>
 
 #include <apt-pkg/cachefile.h>
+#include <apt-pkg/cacheset.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/depcache.h>
 #include <apt-pkg/error.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgrecords.h>
 #include <apt-pkg/policy.h>
@@ -13,18 +15,22 @@
 #include <apt-private/private-cachefile.h>
 #include <apt-private/private-output.h>
 
-#include <iomanip>
+#include <csignal>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <fstream>
+#include <functional>
 #include <iostream>
 #include <langinfo.h>
+#include <map>
 #include <regex.h>
-#include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <sstream>
+#include <string>
 #include <sys/ioctl.h>
 #include <unistd.h>
-
-#include <sstream>
+#include <utility>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

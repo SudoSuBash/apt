@@ -17,14 +17,14 @@
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/versionmatch.h>
 
-#include <string>
-#include <ctype.h>
+#include <cctype>
+#include <cstddef>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <fnmatch.h>
 #include <regex.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <string>
 									/*}}}*/
 
 using std::string;

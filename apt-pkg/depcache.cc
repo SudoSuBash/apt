@@ -29,18 +29,19 @@
 #include <apt-pkg/versionmatch.h>
 
 #include <algorithm>
+#include <cstdio>
+#include <cstring>
 #include <iostream>
-#include <memory>
-#include <sstream>
 #include <iterator>
 #include <list>
+#include <memory>
 #include <set>
+#include <sstream>
 #include <string>
+#include <string_view>
 #include <unordered_map>
 #include <utility>
 #include <vector>
-#include <stdio.h>
-#include <string.h>
 
 #include <sys/stat.h>
 

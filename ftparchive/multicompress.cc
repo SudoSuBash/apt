@@ -21,13 +21,14 @@
 #include <apt-pkg/hashes.h>
 #include <apt-pkg/strutl.h>
 
-#include <ctype.h>
+#include <algorithm>
+#include <cctype>
+#include <cstdio>
+#include <ctime>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <sys/types.h>
 #include <unistd.h>
-
-#include <algorithm>
 #include <vector>
 
 #include "multicompress.h"

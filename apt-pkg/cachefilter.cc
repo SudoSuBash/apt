@@ -8,6 +8,7 @@
 
 #include <apt-pkg/cachefile.h>
 #include <apt-pkg/cachefilter.h>
+#include <apt-pkg/depcache.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
@@ -18,7 +19,9 @@
 #include <unordered_map>
 #include <fnmatch.h>
 #include <regex.h>
-#include <string.h>
+#include <cstring>
+#include <utility>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

@@ -18,17 +18,18 @@
 #include <apt-pkg/hashes.h>
 #include <apt-pkg/strutl.h>
 
-#include <iostream>
-#include <string>
-#include <vector>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <dirent.h>
 #include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <string>
 #include <sys/stat.h>
 #include <sys/statvfs.h>
 #include <unistd.h>
+#include <utility>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

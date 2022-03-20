@@ -13,17 +13,19 @@
 
 #include "aptmethod.h"
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
+#include <ctime>
 #include <iostream>
 #include <memory>
 #include <string>
-#include <time.h>
 
 using std::cout;
 using std::endl;
 
 class Hashes;
+class HashStringList;
 class BaseHttpMethod;
 struct ServerState;
 

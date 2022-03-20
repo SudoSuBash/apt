@@ -23,7 +23,9 @@
 #include <apt-pkg/tagfile.h>
 
 #include <array>
-
+#include <cstdint>
+#include <string>
+#include <vector>
 									/*}}}*/
 
 // ListParser::edspListParser - Constructor				/*{{{*/

@@ -3,15 +3,17 @@
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
+#include <apt-private/private-cmndline.h>
 #include <apt-private/private-main.h>
 
+#include <csignal>
+#include <cstring>
 #include <iostream>
 #include <locale>
-
-#include <signal.h>
-#include <string.h>
+#include <string>
 #include <unistd.h>
 
 #include <apti18n.h>

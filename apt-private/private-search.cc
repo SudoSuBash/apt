@@ -7,6 +7,7 @@
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/depcache.h>
+#include <apt-pkg/error.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgrecords.h>
@@ -26,7 +27,10 @@
 #include <string>
 #include <utility>
 #include <vector>
-#include <string.h>
+#include <cstring>
+#include <regex.h>
+#include <cstdio>
+#include <cstdlib>
 
 #include <apti18n.h>
 									/*}}}*/

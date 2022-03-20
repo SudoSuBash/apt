@@ -12,8 +12,12 @@
 #include <apt-pkg/acquire.h>
 #include <apt-pkg/macros.h>
 
+#include <cstddef>
 #include <iostream>
 #include <string>
+#include <vector>
+
+class metaIndex;
 
 class APT_PUBLIC AcqTextStatus : public pkgAcquireStatus
 {

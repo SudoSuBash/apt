@@ -11,20 +11,30 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
-#include "aptmethod.h"
-#include <apt-pkg/configuration.h>
+#include <apt-pkg/acquire-method.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/metaindex.h>
 #include <apt-pkg/sourcelist.h>
 #include <apt-pkg/strutl.h>
 
+#include <algorithm>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
 #include <functional>
+#include <iostream>
+#include <iterator>
+#include <limits>
 #include <random>
 #include <string>
 #include <unordered_map>
+#include <utility>
+#include <vector>
 
-#include <sys/utsname.h>
+#include "aptmethod.h"
 
 #include <apti18n.h>
 									/*}}}*/

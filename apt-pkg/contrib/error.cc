@@ -17,17 +17,18 @@
 
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
+#include <apt-pkg/macros.h>
 
 #include <algorithm>
+#include <cerrno>
+#include <cstdarg>
+#include <cstddef>
+#include <cstdio>
+#include <cstdlib>
 #include <cstring>
 #include <iostream>
 #include <list>
 #include <string>
-#include <errno.h>
-#include <stdarg.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
 
 									/*}}}*/

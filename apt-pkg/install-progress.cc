@@ -3,18 +3,22 @@
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/install-progress.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
+#include <cerrno>
 #include <cmath>
-#include <iostream>
-#include <sstream>
-#include <vector>
+#include <csignal>
+#include <cstdio>
 #include <fcntl.h>
-#include <signal.h>
-#include <stdio.h>
+#include <iostream>
+#include <iterator>
+#include <sstream>
+#include <string>
 #include <sys/ioctl.h>
 #include <unistd.h>
+#include <vector>
 
 #include <apti18n.h>
 

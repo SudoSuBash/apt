@@ -9,33 +9,36 @@
 
 #include <apt-pkg/algorithms.h>
 #include <apt-pkg/aptconfiguration.h>
-#include <apt-pkg/cacheset.h>
+#include <apt-pkg/configuration.h>
 #include <apt-pkg/depcache.h>
 #include <apt-pkg/edsp.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/packagemanager.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgsystem.h>
-#include <apt-pkg/prettyprinters.h>
 #include <apt-pkg/progress.h>
 #include <apt-pkg/string_view.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/tagfile.h>
 
-#include <ctype.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
-#include <sys/stat.h>
-#include <unistd.h>
-
 #include <algorithm>
 #include <array>
+#include <cctype>
+#include <cstddef>
+#include <cstring>
+#include <ctime>
+#include <iostream>
 #include <iterator>
-#include <limits>
+#include <list>
+#include <set>
 #include <sstream>
 #include <string>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <utility>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

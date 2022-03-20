@@ -19,16 +19,17 @@
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
-#include <string>
-#include <vector>
-#include <ctype.h>
+#include <cctype>
+#include <clocale>
+#include <cstddef>
+#include <cstdlib>
 #include <dirent.h>
 #include <fcntl.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <iostream>
+#include <iterator>
+#include <string>
 #include <unistd.h>
+#include <vector>
 
 									/*}}}*/
 namespace APT {

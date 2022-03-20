@@ -3,12 +3,16 @@
 
 #include <apt-pkg/acquire-item.h>
 #include <apt-pkg/acquire.h>
+#include <apt-pkg/cachefile.h>
 #include <apt-pkg/cacheset.h>
 #include <apt-pkg/clean.h>
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
+#include <apt-pkg/depcache.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
+#include <apt-pkg/pkgrecords.h>
 #include <apt-pkg/strutl.h>
 
 #include <apt-private/acqprogress.h>
@@ -20,6 +24,8 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include <cstdint>
+#include <iostream>
 
 #include <fcntl.h>
 #include <pwd.h>
@@ -33,11 +39,13 @@
 #endif
 #include <sys/mount.h>
 #endif
-#include <errno.h>
+#include <cerrno>
 #include <sys/stat.h>
 #include <sys/statvfs.h>
 
 #include <apti18n.h>
+
+class pkgSourceList;
 									/*}}}*/
 
 // CheckAuth - check if each download comes form a trusted source	/*{{{*/
@@ -104,7 +112,7 @@ bool AcquireRun(pkgAcquire &Fetcher, int const PulseInterval, bool * const Failu
 	    (*I)->Complete == true)
 	 continue;
 
-      if (TransientNetworkFailure != NULL && (*I)->Status == pkgAcquire::Item::StatIdle)
+      if (TransientNetworkFailure != nullptr && (*I)->Status == pkgAcquire::Item::StatIdle)
       {
 	 *TransientNetworkFailure = true;
 	 continue;
@@ -117,7 +125,7 @@ bool AcquireRun(pkgAcquire &Fetcher, int const PulseInterval, bool * const Failu
       _error->Error(_("Failed to fetch %s  %s"), descUri.c_str(),
 	    (*I)->ErrorText.c_str());
 
-      if (Failure != NULL)
+      if (Failure != nullptr)
 	 *Failure = true;
    }
 
@@ -217,7 +225,7 @@ bool DoDownload(CommandLine &CmdL)
       return false;
 
    bool Failed = false;
-   if (AcquireRun(Fetcher, 0, &Failed, NULL) == false)
+   if (AcquireRun(Fetcher, 0, &Failed, nullptr) == false)
       return false;
 
    // copy files in local sources to the current directory
@@ -275,7 +283,7 @@ bool DoChangelog(CommandLine &CmdL)
    if (printOnly == false)
    {
       bool Failed = false;
-      if (AcquireRun(Fetcher, 0, &Failed, NULL) == false || Failed == true)
+      if (AcquireRun(Fetcher, 0, &Failed, nullptr) == false || Failed == true)
 	 return false;
    }
 

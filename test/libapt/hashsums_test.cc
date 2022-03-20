@@ -1,13 +1,13 @@
 #include <config.h>
 
+#include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
 #include <apt-pkg/strutl.h>
 
-#include <iostream>
 #include <string>
-#include <stdlib.h>
+#include <cstdlib>
 
 #include <gtest/gtest.h>
 

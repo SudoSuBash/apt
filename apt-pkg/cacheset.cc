@@ -11,27 +11,25 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
-#include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/cachefile.h>
 #include <apt-pkg/cachefilter.h>
 #include <apt-pkg/cacheset.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/depcache.h>
 #include <apt-pkg/error.h>
-#include <apt-pkg/fileutl.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgrecords.h>
 #include <apt-pkg/policy.h>
 #include <apt-pkg/versionmatch.h>
 
+#include <cstddef>
+#include <cstdio>
+#include <cstring>
 #include <list>
-#include <string>
-#include <vector>
+#include <memory>
 #include <regex.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <string.h>
+#include <string>
 
 #include <apti18n.h>
 									/*}}}*/

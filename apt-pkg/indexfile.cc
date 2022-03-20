@@ -10,27 +10,25 @@
 #include <config.h>
 
 #include <apt-pkg/acquire.h>
-#include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/deblistparser.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/indexfile.h>
-#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgcachegen.h>
 #include <apt-pkg/progress.h>
 #include <apt-pkg/srcrecords.h>
 #include <apt-pkg/strutl.h>
 
-#include <apt-pkg/debindexfile.h>
-
-#include <sys/stat.h>
-
 #include <clocale>
 #include <cstring>
+#include <iostream>
+#include <map>
 #include <memory>
 #include <string>
+#include <sys/stat.h>
+#include <utility>
 #include <vector>
 									/*}}}*/
 

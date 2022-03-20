@@ -18,11 +18,11 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
+#include <apt-pkg/acquire-method.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
-#include <apt-pkg/proxy.h>
 #include <apt-pkg/string_view.h>
 #include <apt-pkg/strutl.h>
 
@@ -31,17 +31,19 @@
 #include <iostream>
 #include <sstream>
 #include <arpa/inet.h>
-#include <errno.h>
-#include <signal.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <cerrno>
+#include <csignal>
+#include <cstddef>
+#include <cstdlib>
 #include <sys/select.h>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <unistd.h>
+#include <algorithm>
+#include <iterator>
+#include <utility>
+#include <vector>
 
-#include "config.h"
 #include "connect.h"
 #include "http.h"
 

@@ -5,10 +5,10 @@
 #include <apt-pkg/fileutl.h>
 
 #include <algorithm>
-#include <iostream>
+#include <cstddef>
 #include <string>
 #include <vector>
-#include <stddef.h>
+#include <unistd.h>
 
 #include <gtest/gtest.h>
 

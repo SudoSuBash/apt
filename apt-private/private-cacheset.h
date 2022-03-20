@@ -2,16 +2,18 @@
 #define APT_PRIVATE_CACHESET_H
 
 #include <apt-pkg/cacheset.h>
+#include <apt-pkg/error.h>
 #include <apt-pkg/macros.h>
+#include <apt-pkg/pkgcache.h>
 
-#include <apt-private/private-output.h>
-
+#include <iostream>
 #include <list>
 #include <set>
 #include <string>
-#include <vector>
+#include <utility>
 
 class OpProgress;
+class pkgCacheFile;
 
 class VerIteratorWithCaching
 {

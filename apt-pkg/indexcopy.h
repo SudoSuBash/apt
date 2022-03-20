@@ -9,10 +9,10 @@
 #ifndef INDEXCOPY_H
 #define INDEXCOPY_H
 
-#include <vector>
-#ifndef APT_11_CLEAN_HEADERS
 #include <string>
-#include <stdio.h>
+#include <vector>
+#ifndef APT_42_CLEAN_HEADERS
+#include <cstdio>
 #endif
 
 #include <apt-pkg/macros.h>

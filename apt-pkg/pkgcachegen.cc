@@ -11,6 +11,7 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
+#include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
@@ -23,17 +24,24 @@
 #include <apt-pkg/pkgsystem.h>
 #include <apt-pkg/progress.h>
 #include <apt-pkg/sourcelist.h>
+#include <apt-pkg/string_view.h>
 #include <apt-pkg/version.h>
 
 #include <algorithm>
+#include <cstddef>
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
+#include <iterator>
+#include <limits>
 #include <memory>
 #include <string>
-#include <vector>
-#include <stddef.h>
-#include <string.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

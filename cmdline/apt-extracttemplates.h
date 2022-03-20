@@ -11,6 +11,7 @@
 
 #include <apt-pkg/dirstream.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 
 #include <string>
 

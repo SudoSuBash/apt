@@ -21,7 +21,6 @@
 #include <apt-pkg/dirstream.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
-#include <apt-pkg/init.h>
 #include <apt-pkg/mmap.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgcachegen.h>
@@ -33,13 +32,12 @@
 #include <apt-pkg/version.h>
 
 #include <apt-private/private-cmndline.h>
-#include <apt-private/private-main.h>
 
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
+#include <vector>
 
 #include "apt-extracttemplates.h"
 

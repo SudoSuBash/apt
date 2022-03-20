@@ -25,12 +25,13 @@
 #include <apt-pkg/macros.h>
 #include <apt-pkg/packagemanager.h>
 #include <apt-pkg/pkgcache.h>
-#include <apt-pkg/string_view.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/version.h>
-
 #include <apt-pkg/prettyprinters.h>
 
+#include <algorithm>
+#include <iterator>
+#include <memory>
 #include <cstdlib>
 #include <iostream>
 #include <map>
@@ -39,10 +40,13 @@
 #include <string>
 #include <utility>
 #include <vector>
-#include <string.h>
+#include <cstring>
 #include <sys/utsname.h>
 
 #include <apti18n.h>
+
+class OpProgress;
+namespace APT::Progress { class PackageManager; }
 									/*}}}*/
 using namespace std;
 

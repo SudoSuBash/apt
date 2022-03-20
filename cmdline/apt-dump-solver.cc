@@ -12,21 +12,23 @@
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/edsp.h>
+#include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
 #include <apt-private/private-cmndline.h>
 
-#include <cstdio>
+#include <cerrno>
+#include <csignal>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
 #include <memory>
 #include <sstream>
-
-#include <sys/types.h>
 #include <sys/wait.h>
-
-#include <string.h>
 #include <unistd.h>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

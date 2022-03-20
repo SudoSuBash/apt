@@ -20,8 +20,6 @@
 #include <apt-pkg/depcache.h>
 #include <apt-pkg/edsp.h>
 #include <apt-pkg/error.h>
-#include <apt-pkg/install-progress.h>
-#include <apt-pkg/macros.h>
 #include <apt-pkg/orderlist.h>
 #include <apt-pkg/packagemanager.h>
 #include <apt-pkg/pkgcache.h>
@@ -29,14 +27,19 @@
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/version.h>
 
+#include <cstddef>
 #include <iostream>
 #include <list>
+#include <memory>
 #include <string>
-#include <stddef.h>
 
 #include <apti18n.h>
 									/*}}}*/
 using namespace std;
+class pkgAcquire;
+class pkgRecords;
+class pkgSourceList;
+namespace APT::Progress { class PackageManager; }
 
 bool pkgPackageManager::SigINTStop = false;
 

@@ -1,20 +1,26 @@
 #ifndef APT_PRIVATE_INSTALL_H
 #define APT_PRIVATE_INSTALL_H
 
-#include <apt-pkg/depcache.h>
-#include <apt-pkg/cachefile.h>
 #include <apt-pkg/cacheset.h>
+#include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
+#include <apt-pkg/depcache.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 
+#include <iosfwd>
 #include <list>
+#include <map>
+#include <set>
 #include <string>
+#include <sys/types.h>
 #include <utility>
+#include <vector>
 
 class CacheFile;
-class CommandLine;
+class pkgCacheFile;
 class pkgProblemResolver;
+class pkgSourceList;
 
 APT_PUBLIC bool DoInstall(CommandLine &Cmd);
 

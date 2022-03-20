@@ -14,17 +14,20 @@
 #include <apt-pkg/debrecords.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/hashes.h>
 #include <apt-pkg/pkgcache.h>
+#include <apt-pkg/pkgrecords.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/tagfile-keys.h>
 #include <apt-pkg/tagfile.h>
 
+
 #include <algorithm>
+#include <cstring>
+#include <langinfo.h>
 #include <sstream>
 #include <string>
 #include <vector>
-#include <langinfo.h>
-#include <string.h>
 
 #include <apti18n.h>
 									/*}}}*/

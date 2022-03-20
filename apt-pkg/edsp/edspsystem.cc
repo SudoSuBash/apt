@@ -16,15 +16,21 @@
 #include <apt-pkg/edspindexfile.h>
 #include <apt-pkg/edspsystem.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/indexfile.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
+#include <apt-pkg/pkgsystem.h>
 
-#include <stddef.h>
-#include <stdlib.h>
-#include <unistd.h>
-
+#include <cstdio>
+#include <cstdlib>
+#include <memory>
 #include <string>
+#include <unistd.h>
 #include <vector>
 
+class OpProgress;
+class pkgDepCache;
+class pkgPackageManager;
 									/*}}}*/
 
 // System::System - Constructor						/*{{{*/

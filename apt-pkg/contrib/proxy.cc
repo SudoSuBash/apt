@@ -13,9 +13,12 @@
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
-#include <iostream>
+#include <cstring>
 #include <fcntl.h>
+#include <iostream>
+#include <string>
 #include <unistd.h>
+#include <vector>
 
 #include "proxy.h"
 									/*}}}*/

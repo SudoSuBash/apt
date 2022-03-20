@@ -2,10 +2,10 @@
 
 #include <apt-pkg/error.h>
 
+#include <cerrno>
+#include <cstring>
 #include <string>
-#include <errno.h>
-#include <stddef.h>
-#include <string.h>
+#include <sstream>
 
 #include <gtest/gtest.h>
 

@@ -10,6 +10,7 @@
 
 #include <apt-pkg/macros.h>
 #include <iostream>
+#include <locale>
 
 template <typename CharT, typename Traits = std::char_traits<CharT>
 > class basic_teebuf: public std::basic_streambuf<CharT, Traits>

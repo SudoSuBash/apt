@@ -21,19 +21,22 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
+#include <cstdarg>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
 #include <iterator>
 #include <sstream>
 #include <string>
-#include <vector>
-#include <stdarg.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
+#include <unordered_map>
+#include <utility>
+#include <vector>
 									/*}}}*/
 
 using namespace std;

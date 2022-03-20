@@ -6,7 +6,7 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
-#include <apt-pkg/sourcelist.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
 #include <apt-private/private-output.h>
@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <string>
-#include <stddef.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -37,7 +36,7 @@ public:
 bool EditSources(CommandLine &CmdL)
 {
    std::string sourceslist;
-   if (CmdL.FileList[1] != NULL)
+   if (CmdL.FileList[1] != nullptr)
    {
       sourceslist = _config->FindDir("Dir::Etc::sourceparts") + CmdL.FileList[1];
       if (!APT::String::Endswith(sourceslist, ".list"))

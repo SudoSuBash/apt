@@ -10,9 +10,8 @@
 #define SRVREC_H
 
 #include <string>
-#include <vector>
-#include <arpa/nameser.h>
 #include <sys/types.h>
+#include <vector>
 
 #include <apt-pkg/macros.h>
 

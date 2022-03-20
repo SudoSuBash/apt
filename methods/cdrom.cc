@@ -9,21 +9,23 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
+#include <apt-pkg/acquire-method.h>
 #include <apt-pkg/cdrom.h>
 #include <apt-pkg/cdromutl.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
-
 #include "aptmethod.h"
 
-#include <string>
-#include <vector>
-#include <sys/stat.h>
-
 #include <iostream>
+#include <string>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <vector>
+
 #include <apti18n.h>
 									/*}}}*/
 

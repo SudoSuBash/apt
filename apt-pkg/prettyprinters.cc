@@ -9,6 +9,8 @@
 #include <config.h>
 
 #include <apt-pkg/depcache.h>
+#include <apt-pkg/macros.h>
+#include <apt-pkg/pkgcache.h>
 #include <apt-pkg/prettyprinters.h>
 
 #include <ostream>

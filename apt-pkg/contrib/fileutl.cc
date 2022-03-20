@@ -27,33 +27,32 @@
 #include <apt-pkg/pkgsystem.h>
 #include <apt-pkg/strutl.h>
 
+#include <algorithm>
+#include <cctype>
+#include <cerrno>
+#include <csignal>
+#include <cstdarg>
+#include <cstdint>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
-#include <iostream>
-#include <string>
-#include <vector>
-#include <ctype.h>
+#include <ctime>
 #include <dirent.h>
-#include <errno.h>
+#include <endian.h>
 #include <fcntl.h>
 #include <glob.h>
 #include <grp.h>
+#include <iostream>
+#include <memory>
 #include <pwd.h>
-#include <signal.h>
-#include <stdarg.h>
-#include <stddef.h>
-#include <stdio.h>
+#include <set>
+#include <string>
 #include <sys/select.h>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <sys/wait.h>
-#include <time.h>
 #include <unistd.h>
-
-#include <algorithm>
-#include <memory>
-#include <set>
+#include <vector>
 
 #ifdef HAVE_ZLIB
 #include <zlib.h>
@@ -73,8 +72,6 @@
 #ifdef HAVE_SYSTEMD
 #include <systemd/sd-bus.h>
 #endif
-#include <endian.h>
-#include <stdint.h>
 
 #if __gnu_linux__
 #include <sys/prctl.h>

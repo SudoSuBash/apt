@@ -19,6 +19,7 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/indexfile.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/mmap.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgcachegen.h>
@@ -27,14 +28,12 @@
 #include <apt-pkg/progress.h>
 #include <apt-pkg/sourcelist.h>
 
+#include <cstring>
 #include <limits>
 #include <memory>
 #include <string>
-#include <vector>
-#include <string.h>
-#include <sys/types.h>
 #include <sys/stat.h>
-#include <unistd.h>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

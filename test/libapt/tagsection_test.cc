@@ -3,8 +3,8 @@
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/tagfile.h>
 
-#include <sstream>
 #include <string>
+#include <vector>
 
 #include <gtest/gtest.h>
 
@@ -61,7 +61,7 @@ TEST(TagSectionTest,WriteUnmodifiedOrder)
    pkgTagSection section;
    std::string content;
    setupTestcaseStart(fd, section, content);
-   char const * const order[] = { "Package", "TypoA", "Override", NULL };
+   char const * const order[] = { "Package", "TypoA", "Override", nullptr };
    EXPECT_TRUE(section.Write(fd, order));
    EXPECT_TRUE(fd.Seek(0));
    pkgTagFile tfile(&fd);
@@ -74,7 +74,7 @@ TEST(TagSectionTest,WriteUnmodifiedOrderReversed)
    pkgTagSection section;
    std::string content;
    setupTestcaseStart(fd, section, content);
-   char const * const order[] = { "Override", "TypoA", "Package", NULL };
+   char const * const order[] = { "Override", "TypoA", "Package", nullptr };
    EXPECT_TRUE(section.Write(fd, order));
    EXPECT_TRUE(fd.Seek(0));
    pkgTagFile tfile(&fd);
@@ -87,7 +87,7 @@ TEST(TagSectionTest,WriteUnmodifiedOrderNotAll)
    pkgTagSection section;
    std::string content;
    setupTestcaseStart(fd, section, content);
-   char const * const order[] = { "Override", NULL };
+   char const * const order[] = { "Override", nullptr };
    EXPECT_TRUE(section.Write(fd, order));
    EXPECT_TRUE(fd.Seek(0));
    pkgTagFile tfile(&fd);
@@ -102,7 +102,7 @@ TEST(TagSectionTest,WriteNoOrderRename)
    setupTestcaseStart(fd, section, content);
    std::vector<pkgTagSection::Tag> rewrite;
    rewrite.push_back(pkgTagSection::Tag::Rename("TypoA", "TypoB"));
-   EXPECT_TRUE(section.Write(fd, NULL, rewrite));
+   EXPECT_TRUE(section.Write(fd, nullptr, rewrite));
    EXPECT_TRUE(fd.Seek(0));
    pkgTagFile tfile(&fd);
    ASSERT_TRUE(tfile.Step(section));
@@ -126,7 +126,7 @@ TEST(TagSectionTest,WriteNoOrderRemove)
    std::vector<pkgTagSection::Tag> rewrite;
    rewrite.push_back(pkgTagSection::Tag::Remove("TypoA"));
    rewrite.push_back(pkgTagSection::Tag::Rewrite("Override", ""));
-   EXPECT_TRUE(section.Write(fd, NULL, rewrite));
+   EXPECT_TRUE(section.Write(fd, nullptr, rewrite));
    EXPECT_TRUE(fd.Seek(0));
    pkgTagFile tfile(&fd);
    ASSERT_TRUE(tfile.Step(section));
@@ -146,7 +146,7 @@ TEST(TagSectionTest,WriteNoOrderRewrite)
    setupTestcaseStart(fd, section, content);
    std::vector<pkgTagSection::Tag> rewrite;
    rewrite.push_back(pkgTagSection::Tag::Rewrite("Override", "42"));
-   EXPECT_TRUE(section.Write(fd, NULL, rewrite));
+   EXPECT_TRUE(section.Write(fd, nullptr, rewrite));
    EXPECT_TRUE(fd.Seek(0));
    pkgTagFile tfile(&fd);
    ASSERT_TRUE(tfile.Step(section));
@@ -168,7 +168,7 @@ TEST(TagSectionTest,WriteOrderRename)
    setupTestcaseStart(fd, section, content);
    std::vector<pkgTagSection::Tag> rewrite;
    rewrite.push_back(pkgTagSection::Tag::Rename("TypoA", "TypoB"));
-   char const * const order[] = { "Package", "TypoA", "Override", NULL };
+   char const * const order[] = { "Package", "TypoA", "Override", nullptr };
    EXPECT_TRUE(section.Write(fd, order, rewrite));
    EXPECT_TRUE(fd.Seek(0));
    pkgTagFile tfile(&fd);
@@ -193,7 +193,7 @@ TEST(TagSectionTest,WriteOrderRemove)
    std::vector<pkgTagSection::Tag> rewrite;
    rewrite.push_back(pkgTagSection::Tag::Remove("TypoA"));
    rewrite.push_back(pkgTagSection::Tag::Rewrite("Override", ""));
-   char const * const order[] = { "Package", "TypoA", "Override", NULL };
+   char const * const order[] = { "Package", "TypoA", "Override", nullptr };
    EXPECT_TRUE(section.Write(fd, order, rewrite));
    EXPECT_TRUE(fd.Seek(0));
    pkgTagFile tfile(&fd);
@@ -215,7 +215,7 @@ TEST(TagSectionTest,WriteOrderRewrite)
    setupTestcaseStart(fd, section, content);
    std::vector<pkgTagSection::Tag> rewrite;
    rewrite.push_back(pkgTagSection::Tag::Rewrite("Override", "42"));
-   char const * const order[] = { "Package", "TypoA", "Override", NULL };
+   char const * const order[] = { "Package", "TypoA", "Override", nullptr };
    EXPECT_TRUE(section.Write(fd, order, rewrite));
    EXPECT_TRUE(fd.Seek(0));
    pkgTagFile tfile(&fd);

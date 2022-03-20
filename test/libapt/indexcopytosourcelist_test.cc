@@ -3,12 +3,14 @@
 #include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/indexcopy.h>
+#include <apt-pkg/macros.h>
 
+#include <cstdio>
 #include <string>
-#include <stdio.h>
 
 #include <gtest/gtest.h>
 
+class FileFd;
 class NoCopy : private IndexCopy {
    public:
       std::string ConvertToSourceList(std::string const &CD,std::string &&Path) {

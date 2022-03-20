@@ -14,9 +14,12 @@
 #include <apt-pkg/deblistparser.h>
 #include <apt-pkg/debsrcrecords.h>
 #include <apt-pkg/error.h>
+#include <apt-pkg/fileutl.h>
 #include <apt-pkg/gpgv.h>
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/pkgcache.h>
 #include <apt-pkg/srcrecords.h>
+#include <apt-pkg/string_view.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/tagfile-keys.h>
 #include <apt-pkg/tagfile.h>
@@ -25,9 +28,11 @@
 #include <string>
 #include <sstream>
 #include <vector>
-#include <ctype.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cstdlib>
+#include <cstring>
+#include <utility>
+
+class pkgIndexFile;
 									/*}}}*/
 
 using std::max;

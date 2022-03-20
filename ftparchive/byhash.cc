@@ -11,15 +11,17 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
-#include <algorithm>
-#include <string>
-
-#include <sys/stat.h>
-#include <unistd.h>
-
-#include "byhash.h"
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
+
+#include <algorithm>
+#include <string>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <vector>
+
+#include "byhash.h"
+									/*}}}*/
 
 // Delete all files in a directory except the most recent N ones
 void DeleteAllButMostRecent(std::string dir, int KeepFiles)

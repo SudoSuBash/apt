@@ -11,11 +11,10 @@
 #include <apt-pkg/update.h>
 
 #include <string>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/
-
-using namespace std;
 
 // ListUpdate - construct Fetcher and update the cache files		/*{{{*/
 // ---------------------------------------------------------------------

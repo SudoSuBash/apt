@@ -5,6 +5,8 @@
 #include <apt-pkg/init.h>
 #include <apt-pkg/pkgsystem.h>
 
+#include <iostream>
+
 int main(int argc, char **argv) {
    ::testing::InitGoogleTest(&argc, argv);
    if (pkgInitSystem(*_config, _system) == false)

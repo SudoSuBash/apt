@@ -8,8 +8,23 @@
 
 #include <config.h>
 
-#include <apt-pkg/cachefilter-patterns.h>
+#include <apt-pkg/cachefile.h>
+#include <apt-pkg/cachefilter.h>
+#include <apt-pkg/error.h>
+#include <apt-pkg/macros.h>
+#include <apt-pkg/pkgcache.h>
+#include <apt-pkg/string_view.h>
+#include <apt-pkg/strutl.h>
 
+#include <cassert>
+#include <regex.h>
+#include <memory>
+#include <sstream>
+#include <string>
+#include <utility>
+#include <vector>
+
+#include <apt-pkg/cachefilter-patterns.h>
 #include <apti18n.h>
 
 namespace APT
@@ -559,7 +574,7 @@ BaseRegexMatcher::BaseRegexMatcher(std::string const &Pattern)
       return;
 
    delete pattern;
-   pattern = NULL;
+   pattern = nullptr;
    char Error[300];
    regerror(Res, pattern, Error, sizeof(Error));
    _error->Error(_("Regex compilation error - %s"), Error);
@@ -573,7 +588,7 @@ bool BaseRegexMatcher::operator()(const char *string)
 }
 BaseRegexMatcher::~BaseRegexMatcher()
 {
-   if (pattern == NULL)
+   if (pattern == nullptr)
       return;
    regfree(pattern);
    delete pattern;

@@ -26,36 +26,24 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
-#include <apt-pkg/acquire-item.h>
-#include <apt-pkg/acquire.h>
 #include <apt-pkg/algorithms.h>
-#include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/cachefile.h>
 #include <apt-pkg/cacheset.h>
-#include <apt-pkg/clean.h>
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
-#include <apt-pkg/debmetaindex.h>
 #include <apt-pkg/depcache.h>
 #include <apt-pkg/error.h>
-#include <apt-pkg/fileutl.h>
 #include <apt-pkg/indexfile.h>
-#include <apt-pkg/init.h>
-#include <apt-pkg/macros.h>
 #include <apt-pkg/metaindex.h>
 #include <apt-pkg/pkgcache.h>
-#include <apt-pkg/pkgrecords.h>
 #include <apt-pkg/pkgsystem.h>
 #include <apt-pkg/progress.h>
 #include <apt-pkg/sourcelist.h>
-#include <apt-pkg/srcrecords.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/upgrade.h>
 #include <apt-pkg/version.h>
 
-#include <apt-private/acqprogress.h>
 #include <apt-private/private-cachefile.h>
-#include <apt-private/private-cacheset.h>
 #include <apt-private/private-cmndline.h>
 #include <apt-private/private-download.h>
 #include <apt-private/private-install.h>
@@ -65,26 +53,16 @@
 #include <apt-private/private-source.h>
 #include <apt-private/private-update.h>
 #include <apt-private/private-upgrade.h>
-#include <apt-private/private-utils.h>
-
-#include <errno.h>
-#include <grp.h>
-#include <pwd.h>
-#include <signal.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/ioctl.h>
-#include <sys/stat.h>
-#include <unistd.h>
 
 #include <algorithm>
-#include <fstream>
+#include <cctype>
+#include <cstddef>
 #include <iostream>
-#include <set>
+#include <map>
 #include <sstream>
 #include <string>
+#include <strings.h>
+#include <utility>
 #include <vector>
 
 #include <apti18n.h>

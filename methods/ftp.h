@@ -10,13 +10,18 @@
 #define APT_FTP_H
 
 #include "aptmethod.h"
-#include "connect.h"
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
+#include <ctime>
+#include <memory>
 #include <string>
 #include <sys/socket.h>
-#include <sys/types.h>
-#include <time.h>
+
+class FileFd;
+class Hashes;
+class pkgAcqMethod;
+struct MethodFd;
 
 class FTPConn
 {

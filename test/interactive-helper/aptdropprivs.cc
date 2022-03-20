@@ -5,6 +5,8 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 
+#include <iostream>
+
 #include <unistd.h>
 
 int main(int const argc, const char * argv[])

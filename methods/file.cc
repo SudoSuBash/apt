@@ -15,14 +15,18 @@
 #include <config.h>
 
 #include "aptmethod.h"
+#include <apt-pkg/acquire-method.h>
 #include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
+#include <cerrno>
 #include <string>
 #include <sys/stat.h>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

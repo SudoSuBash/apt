@@ -23,10 +23,13 @@
 #include <apt-pkg/macros.h>
 #include <apt-pkg/mmap.h>
 
+#include <cerrno>
+#include <cstdint>
+#include <cstdlib>
 #include <cstring>
+#include <limits>
 #include <string>
-#include <errno.h>
-#include <stdlib.h>
+#include <sys/mman.h>
 #include <unistd.h>
 
 #include <apti18n.h>

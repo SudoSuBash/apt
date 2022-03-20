@@ -27,18 +27,20 @@
 #include <apt-pkg/macros.h>
 #include <apt-pkg/mmap.h>
 #include <apt-pkg/pkgcache.h>
-#include <apt-pkg/policy.h>
+#include <apt-pkg/string_view.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/version.h>
 
 #include <algorithm>
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
+#include <iostream>
 #include <iterator>
+#include <limits>
 #include <sstream>
 #include <string>
 #include <vector>
-#include <stddef.h>
-#include <string.h>
-#include <sys/stat.h>
 #include <xxhash.h>
 
 #include <apti18n.h>

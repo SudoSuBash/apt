@@ -3,7 +3,6 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 
-#include <iostream>
 #include <string>
 #include <vector>
 

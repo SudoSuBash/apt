@@ -1,5 +1,7 @@
 #include <apt-pkg/fileutl.h>
 
+#include <cstdlib>
+#include <cstring>
 #include <string>
 
 #include <fcntl.h>

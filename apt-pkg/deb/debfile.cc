@@ -28,11 +28,11 @@
 #include <apt-pkg/tagfile.h>
 
 #include <algorithm>
-#include <string>
+#include <cstring>
 #include <sstream>
-#include <vector>
-#include <string.h>
+#include <string>
 #include <sys/stat.h>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

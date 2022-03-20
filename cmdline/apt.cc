@@ -13,10 +13,7 @@
 
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
-#include <apt-pkg/error.h>
-#include <apt-pkg/init.h>
 #include <apt-pkg/pkgsystem.h>
-#include <apt-pkg/strutl.h>
 
 #include <apt-private/private-cmndline.h>
 #include <apt-private/private-depends.h>
@@ -35,7 +32,6 @@
 
 #include <iostream>
 #include <vector>
-#include <unistd.h>
 
 #include <apti18n.h>
 									/*}}}*/
