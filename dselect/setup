@@ -118,7 +118,7 @@ sub get_source {
   }
 
   $type         = 'deb';
-  $urn          = "http://http.us.debian.org/debian" unless $urn;
+  $urn          = "http://deb.debian.org/debian" unless $urn;
   $distribution = "stable" unless $distribution;
   $components   = "main contrib non-free" unless $components;
 
@@ -232,7 +232,7 @@ sub get_sources {
   print " For example:\n";
   print "              file:/mnt/debian,\n";
   print "              ftp://ftp.example.org/debian,\n";
-  print "              http://ftp.de.debian.org/debian,\n";
+  print "              http://deb.debian.org/debian,\n";
 #  print " and the special mirror scheme,\n";
 #  print "              mirror:http://www.debian.org/archivemirrors \n";
   print "\n";
