@@ -33,6 +33,7 @@
 #define PKGLIB_POLICY_H
 
 #include <apt-pkg/depcache.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/versionmatch.h>
 

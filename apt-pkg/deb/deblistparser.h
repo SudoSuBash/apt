@@ -13,11 +13,12 @@
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgcachegen.h>
+#include <apt-pkg/string_view.h>
 #include <apt-pkg/tagfile.h>
 
+#include <cstdint>
 #include <string>
 #include <vector>
-#include <apt-pkg/string_view.h>
 
 
 class FileFd;

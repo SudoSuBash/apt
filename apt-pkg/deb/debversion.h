@@ -11,6 +11,7 @@
 #ifndef PKGLIB_DEBVERSION_H
 #define PKGLIB_DEBVERSION_H
 
+#include <apt-pkg/macros.h>
 #include <apt-pkg/version.h>
 
 #include <string>

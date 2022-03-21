@@ -15,17 +15,17 @@
 #ifndef STRUTL_H
 #define STRUTL_H
 
+#include <apt-pkg/macros.h>
+#include <apt-pkg/string_view.h>
+
+#include <cstddef>
+#include <cstdio>
 #include <cstring>
+#include <ctime>
 #include <iostream>
 #include <limits>
 #include <string>
 #include <vector>
-#include <apt-pkg/string_view.h>
-#include <stddef.h>
-#include <time.h>
-
-#include "macros.h"
-
 
 namespace APT {
    namespace String {

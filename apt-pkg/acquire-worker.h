@@ -19,11 +19,12 @@
 #define PKGLIB_ACQUIRE_WORKER_H
 
 #include <apt-pkg/acquire.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/weakptr.h>
 
 #include <string>
-#include <vector>
 #include <sys/types.h>
+#include <vector>
 
 /** \brief A fetch subprocess.
  *

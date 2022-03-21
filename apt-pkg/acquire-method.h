@@ -22,9 +22,8 @@
 #include <apt-pkg/hashes.h>
 #include <apt-pkg/macros.h>
 
-#include <stdarg.h>
-#include <time.h>
-
+#include <ctime>
+#include <cstdarg>
 #include <string>
 #include <unordered_map>
 #include <vector>

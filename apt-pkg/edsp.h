@@ -9,17 +9,21 @@
 #ifndef PKGLIB_EDSP_H
 #define PKGLIB_EDSP_H
 
-#include <apt-pkg/cacheset.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 
-#include <stdio.h>
-
+#include <cstdio>
 #include <list>
 #include <string>
 #include <vector>
+#include <sys/types.h>
+#include <utility>
 
+#ifndef APT_25_CLEANER_HEADERS
+#include <apt-pkg/cacheset.h>
+#endif
 
+class FileFd;
 class pkgDepCache;
 class OpProgress;
 

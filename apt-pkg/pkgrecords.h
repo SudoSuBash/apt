@@ -104,7 +104,7 @@ class APT_PUBLIC pkgRecords::Parser						/*{{{*/
    {
       HashStringList const hashes = Hashes();
       HashString const * const hs = hashes.find(type);
-      return hs != NULL ? hs->HashValue() : "";
+      return hs != nullptr ? hs->HashValue() : "";
    };
 };
 									/*}}}*/

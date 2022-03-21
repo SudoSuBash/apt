@@ -3,7 +3,9 @@
 
 #include <apt-pkg/macros.h>
 #include <apt-pkg/metaindex.h>
+#include <apt-pkg/pkgcache.h>
 
+#include <ctime>
 #include <map>
 #include <string>
 #include <vector>

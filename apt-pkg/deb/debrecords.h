@@ -14,6 +14,8 @@
 #define PKGLIB_DEBRECORDS_H
 
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgrecords.h>
 #include <apt-pkg/tagfile.h>

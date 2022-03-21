@@ -10,6 +10,8 @@
 #ifndef PKGLIB_UPDATE_H
 #define PKGLIB_UPDATE_H
 
+#include <apt-pkg/macros.h>
+
 class pkgAcquireStatus;
 class pkgSourceList;
 class pkgAcquire;

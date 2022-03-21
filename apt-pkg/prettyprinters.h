@@ -3,6 +3,8 @@
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 
+#include <iosfwd>
+
 class pkgDepCache;
 
 namespace APT {

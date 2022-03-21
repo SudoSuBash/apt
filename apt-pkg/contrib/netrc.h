@@ -15,7 +15,7 @@
 
 #include <apt-pkg/macros.h>
 
-#ifndef APT_24_CLEANER_HEADERS
+#ifndef APT_25_CLEANER_HEADERS
 #include <string>
 #endif
 

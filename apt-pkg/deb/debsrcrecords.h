@@ -11,13 +11,13 @@
 #define PKGLIB_DEBSRCRECORDS_H
 
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/srcrecords.h>
 #include <apt-pkg/tagfile-keys.h>
 #include <apt-pkg/tagfile.h>
 
 #include <string>
 #include <vector>
-#include <stddef.h>
 
 class pkgIndexFile;
 

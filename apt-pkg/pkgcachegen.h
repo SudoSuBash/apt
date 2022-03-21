@@ -19,21 +19,29 @@
 #define PKGLIB_PKGCACHEGEN_H
 
 #include <apt-pkg/macros.h>
-#include <apt-pkg/mmap.h>
 #include <apt-pkg/pkgcache.h>
+#include <apt-pkg/string_view.h>
 
 #include <string>
 #include <vector>
-#if __cplusplus >= 201103L
-#include <unordered_set>
-#endif
-#include <apt-pkg/string_view.h>
+#include <cstddef>
+#include <cstdint>
 
 #ifdef APT_COMPILING_APT
 #include <xxhash.h>
+#include <unordered_set>
 #endif
 
+#ifndef APT_25_CLEANER_HEADERS
+#if __cplusplus >= 201103L
+#include <unordered_set>
+#endif
+#include <apt-pkg/mmap.h>
 class FileFd;
+#endif
+
+class DynamicMMap;
+class MMap;
 class pkgSourceList;
 class OpProgress;
 class pkgIndexFile;

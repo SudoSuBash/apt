@@ -11,9 +11,9 @@
 
 #if !defined(APT_STRINGVIEW_H)
 #define APT_STRINGVIEW_H
-#include <apt-pkg/macros.h>
+#include <algorithm>
+#include <cstring>
 #include <string>
-#include <string.h>
 
 namespace APT {
 
