@@ -475,6 +475,8 @@ bool pkgAcquire::Worker::RunMessages()
 	    }
 
 	    std::vector<Item*> const ItmOwners = Itm->Owners;
+	    for (auto const Owner : ItmOwners)
+	       Owner->ErrorText.clear();
 	    OwnerQ->ItemDone(Itm);
 	    Itm = NULL;
 
@@ -622,6 +624,8 @@ bool pkgAcquire::Worker::RunMessages()
 		  Log->Pulse((*O)->GetOwner());
 
 	    std::vector<Item*> const ItmOwners = Itm->Owners;
+	    for (auto const Owner : ItmOwners)
+	       Owner->ErrorText.clear();
 	    OwnerQ->ItemDone(Itm);
 	    Itm = nullptr;
 
