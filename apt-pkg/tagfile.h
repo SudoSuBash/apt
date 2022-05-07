@@ -20,15 +20,16 @@
 #define PKGLIB_TAGFILE_H
 
 #include <apt-pkg/macros.h>
-
-#include <stdint.h>
-#include <stdio.h>
-
-#include <list>
-#include <string>
-#include <vector>
 #include <apt-pkg/string_view.h>
 
+#include <cstdint>
+#include <cstdio>
+#include <string>
+#include <vector>
+
+#ifndef APT_25_CLEANER_HEADERS
+#include <list>
+#endif
 
 class FileFd;
 class pkgTagSectionPrivate;

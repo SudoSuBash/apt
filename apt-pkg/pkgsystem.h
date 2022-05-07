@@ -36,8 +36,10 @@
 #ifndef PKGLIB_PKGSYSTEM_H
 #define PKGLIB_PKGSYSTEM_H
 
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 
+#include <string>
 #include <vector>
 
 

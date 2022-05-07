@@ -6,6 +6,7 @@
 #include <apt-pkg/cacheset.h>
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
+#include <apt-pkg/error.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgrecords.h>
@@ -18,6 +19,7 @@
 
 #include <iostream>
 #include <map>
+#include <memory>
 #include <sstream>
 #include <string>
 #include <utility>
@@ -45,10 +47,10 @@ class PackageNameMatcher : public Matcher
    explicit PackageNameMatcher(pkgCacheFile &cacheFile, const char **patterns)
    : cacheFile(cacheFile)
    {
-      for(int i=0; patterns[i] != NULL; ++i)
+      for(int i=0; patterns[i] != nullptr; ++i)
       {
          std::string pattern = patterns[i];
-         APT::CacheFilter::Matcher *cachefilter = NULL;
+         APT::CacheFilter::Matcher *cachefilter = nullptr;
          if(_config->FindB("APT::Cmd::Use-Regexp", false) == true)
             cachefilter = new APT::CacheFilter::PackageNameMatchesRegEx(pattern);
          else if (pattern.find_first_not_of(isfnmatch_strict) == std::string::npos)
@@ -108,7 +110,7 @@ bool DoList(CommandLine &Cmd)
    pkgRecords records(CacheFile);
 
    const char **patterns;
-   const char *all_pattern[] = { "*", NULL};
+   const char *all_pattern[] = { "*", nullptr};
 
    if (strv_length(Cmd.FileList + 1) == 0)
    {

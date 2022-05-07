@@ -19,7 +19,9 @@
 #ifndef PKGLIB_VERSION_H
 #define PKGLIB_VERSION_H
 
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
+
 #include <string>
 
 

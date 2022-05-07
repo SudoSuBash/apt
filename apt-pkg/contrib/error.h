@@ -41,12 +41,11 @@
 
 #include <apt-pkg/macros.h>
 
+#include <cstdarg>
+#include <cstddef>
 #include <iostream>
 #include <list>
 #include <string>
-
-#include <stdarg.h>
-#include <stddef.h>
 
 class APT_PUBLIC GlobalError						/*{{{*/
 {

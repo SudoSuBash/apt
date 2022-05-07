@@ -9,11 +9,16 @@
 #ifndef PKGLIB_DEBSYSTEM_H
 #define PKGLIB_DEBSYSTEM_H
 
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgsystem.h>
 
+#include <string>
+#include <sys/types.h>
 #include <vector>
+
 class Configuration;
+class OpProgress;
 class pkgIndexFile;
 class pkgPackageManager;
 class debSystemPrivate;

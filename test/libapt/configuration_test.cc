@@ -1,7 +1,6 @@
 #include <config.h>
 
 #include <apt-pkg/configuration.h>
-#include <apt-pkg/fileutl.h>
 
 #include <string>
 #include <vector>
@@ -189,7 +188,7 @@ TEST(ConfigurationTest,Merge)
 	EXPECT_TRUE(Cnf.Exists("Binary::apt2::option::empty"));
 	Cnf.Set("option::empty", "not");
 
-	Cnf.MoveSubTree("Binary::apt2", NULL);
+	Cnf.MoveSubTree("Binary::apt2", nullptr);
 	EXPECT_FALSE(Cnf.Exists("Binary::apt2::option"));
 	EXPECT_TRUE(Cnf.Exists("option"));
 	EXPECT_EQ("bar", Cnf.Find("option::foo"));

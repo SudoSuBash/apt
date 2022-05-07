@@ -19,14 +19,17 @@
 #include <apt-private/acqprogress.h>
 #include <apt-private/private-output.h>
 
+#include <csignal>
 #include <iostream>
 #include <sstream>
-#include <signal.h>
-#include <stdio.h>
-#include <string.h>
+#include <string>
 #include <unistd.h>
+#include <utility>
+#include <vector>
 
 #include <apti18n.h>
+
+class metaIndex;
 									/*}}}*/
 
 // AcqTextStatus::AcqTextStatus - Constructor				/*{{{*/

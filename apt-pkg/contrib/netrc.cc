@@ -11,7 +11,6 @@
    ##################################################################### */
 									/*}}}*/
 #include <config.h>
-#include <apti18n.h>
 
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
@@ -19,8 +18,10 @@
 #include <apt-pkg/strutl.h>
 
 #include <iostream>
+#include <string>
 
 #include "netrc.h"
+#include <apti18n.h>
 
 /* Get user and password from .netrc when given a machine name */
 bool MaybeAddAuth(FileFd &NetRCFile, URI &Uri)

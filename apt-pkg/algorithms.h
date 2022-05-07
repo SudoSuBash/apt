@@ -29,8 +29,8 @@
 #ifndef PKGLIB_ALGORITHMS_H
 #define PKGLIB_ALGORITHMS_H
 
-#include <apt-pkg/cachefilter.h>
 #include <apt-pkg/depcache.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/packagemanager.h>
 #include <apt-pkg/pkgcache.h>
 
@@ -38,12 +38,15 @@
 #include <memory>
 #include <string>
 
-#include <apt-pkg/macros.h>
+#ifndef APT_25_CLEANER_HEADERS
+#include <apt-pkg/cachefilter.h>
+#endif
 
-
-
-
+namespace APT { namespace CacheFilter { class Matcher; } }
+namespace APT { namespace Progress { class PackageManager; } }
 class pkgSimulatePrivate;
+class OpProgress;
+
 class APT_PUBLIC pkgSimulate : public pkgPackageManager				/*{{{*/
 {
    pkgSimulatePrivate * const d;
@@ -132,11 +135,11 @@ class APT_PUBLIC pkgProblemResolver						/*{{{*/
    inline void Clear(pkgCache::PkgIterator Pkg) {Flags[Pkg->ID] &= ~(Protected | ToRemove);};
 
    // Try to intelligently resolve problems by installing and removing packages
-   bool Resolve(bool BrokenFix = false, OpProgress * const Progress = NULL);
+   bool Resolve(bool BrokenFix = false, OpProgress * const Progress = nullptr);
    APT_HIDDEN bool ResolveInternal(bool const BrokenFix = false);
 
    // Try to resolve problems only by using keep
-   bool ResolveByKeep(OpProgress * const Progress = NULL);
+   bool ResolveByKeep(OpProgress * const Progress = nullptr);
    APT_HIDDEN bool ResolveByKeepInternal();
 
    explicit pkgProblemResolver(pkgDepCache *Cache);

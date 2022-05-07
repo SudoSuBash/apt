@@ -9,19 +9,20 @@
 #ifndef PKGLIB_EDSPSYSTEM_H
 #define PKGLIB_EDSPSYSTEM_H
 
+#include <apt-pkg/error.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgsystem.h>
-#include <apt-pkg/error.h>
 
 #include <memory>
+#include <string>
 #include <vector>
-
-#include <apt-pkg/macros.h>
 
 class Configuration;
 class pkgDepCache;
 class pkgIndexFile;
 class pkgPackageManager;
+class OpProgress;
 
 class APT_HIDDEN edspLikeSystem : public pkgSystem
 {

@@ -6,14 +6,14 @@
 #ifndef APT_CACHEFILTER_H
 #define APT_CACHEFILTER_H
 // Include Files							/*{{{*/
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/string_view.h>
 
 #include <memory>
+#include <regex.h>
 #include <string>
 #include <vector>
-
-#include <regex.h>
 
 class pkgCacheFile;
 									/*}}}*/

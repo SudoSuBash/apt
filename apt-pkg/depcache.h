@@ -40,13 +40,17 @@
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
-
-#include <stddef.h>
+#include <apt-pkg/string_view.h>
 
 #include <list>
-#include <memory>
 #include <string>
 #include <utility>
+#include <vector>
+
+#ifndef APT_25_CLEANER_HEADERS
+#include <cstddef>
+#include <memory>
+#endif
 
 
 class OpProgress;
@@ -225,7 +229,7 @@ class APT_PUBLIC pkgDepCache : protected pkgCache::Namespace
       inline bool Keep() const {return Mode == ModeKeep;};
       inline bool Protect() const {return (iFlags & Protected) == Protected;};
       inline bool Upgrade() const {return Status > 0 && Mode == ModeInstall;};
-      inline bool Upgradable() const {return Status >= 1 && CandidateVer != NULL;};
+      inline bool Upgradable() const {return Status >= 1 && CandidateVer != nullptr;};
       inline bool Downgrade() const {return Status < 0 && Mode == ModeInstall;};
       inline bool Held() const {return Status != 0 && Keep();};
       inline bool NowBroken() const {return (DepState & DepNowMin) != DepNowMin;};
@@ -350,7 +354,7 @@ class APT_PUBLIC pkgDepCache : protected pkgCache::Namespace
 
    /** \return A function identifying packages in the root set other
     *  than manually installed packages and essential packages, or \b
-    *  NULL if an error occurs.
+    *  nullptr if an error occurs.
     *
     *  \todo Is this the best place for this function?  Perhaps the
     *  settings for mark-and-sweep should be stored in a single

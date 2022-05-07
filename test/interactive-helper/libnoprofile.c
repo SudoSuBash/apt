@@ -1,10 +1,8 @@
 #define _GNU_SOURCE
-#include <stdarg.h>
-#include <stdlib.h>
-#include <string.h>
 #include <dlfcn.h>
-#include <unistd.h>
+#include <stdarg.h>
 #include <stdio.h>
+#include <string.h>
 
 int vprintf(const char *format, va_list ap) {
     if (strncmp(format, "profiling:", strlen("profiling:")) == 0)

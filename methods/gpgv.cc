@@ -1,28 +1,30 @@
 #include <config.h>
 
 #include "aptmethod.h"
+#include <apt-pkg/acquire-method.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/gpgv.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
-#include <ctype.h>
-#include <errno.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/wait.h>
-#include <unistd.h>
-
 #include <algorithm>
-#include <array>
+#include <cctype>
+#include <cerrno>
+#include <cstddef>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
 #include <iterator>
 #include <map>
 #include <sstream>
 #include <string>
+#include <sys/wait.h>
+#include <unistd.h>
+#include <unordered_map>
+#include <utility>
 #include <vector>
 
 #include <apti18n.h>

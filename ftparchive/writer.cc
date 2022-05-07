@@ -17,33 +17,34 @@
 #include <apt-pkg/deblistparser.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
-#include <apt-pkg/gpgv.h>
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/tagfile-keys.h>
 #include <apt-pkg/tagfile.h>
 
 #include <algorithm>
+#include <cctype>
+#include <cstdio>
+#include <cstring>
 #include <ctime>
-#include <iomanip>
-#include <iostream>
-#include <memory>
-#include <sstream>
-#include <utility>
-#include <ctype.h>
 #include <fnmatch.h>
 #include <ftw.h>
-#include <locale.h>
-#include <string.h>
+#include <iostream>
+#include <iterator>
+#include <memory>
+#include <sstream>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <utility>
 
 #include "apt-ftparchive.h"
 #include "byhash.h"
 #include "cachedb.h"
 #include "multicompress.h"
+#include "sources.h"
 #include "writer.h"
 
 #include <apti18n.h>

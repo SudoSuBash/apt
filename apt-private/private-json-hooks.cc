@@ -5,23 +5,36 @@
  *
  * SPDX-License-Identifier: GPL-2.0+
  */
+#include <config.h>
 
-#include <apt-pkg/debsystem.h>
+#include <apt-pkg/cachefile.h>
+#include <apt-pkg/cacheset.h>
+#include <apt-pkg/configuration.h>
+#include <apt-pkg/depcache.h>
+#include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/macros.h>
+#include <apt-pkg/pkgcache.h>
 #include <apt-pkg/strutl.h>
+#include <apt-private/private-cachefile.h>
 #include <apt-private/private-json-hooks.h>
 #include <apt-private/private-output.h>
 
-#include <iomanip>
-#include <ostream>
+#include <algorithm>
+#include <cerrno>
+#include <iostream>
+#include <locale>
+#include <set>
+#include <csignal>
 #include <sstream>
 #include <stack>
-#include <unordered_map>
-
-#include <signal.h>
+#include <cstdio>
+#include <cstdlib>
+#include <string>
+#include <cstring>
 #include <sys/socket.h>
-#include <sys/types.h>
+#include <unistd.h>
+#include <unordered_map>
 
 /**
  * @brief Simple JSON writer

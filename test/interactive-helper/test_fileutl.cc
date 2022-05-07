@@ -2,15 +2,10 @@
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/strutl.h>
 
-#include <fcntl.h>
-#include <stdlib.h>
-#include <sys/stat.h>
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <unistd.h>
-
-#include <iostream>
+#include <cstdlib>
 #include <string>
+
+#include <unistd.h>
 
 static void callsystem(std::string const &call)
 {

@@ -1,9 +1,10 @@
-
 #include <config.h>
-#include <apt-pkg/string_view.h>
-#include <string>
 
-#include <type_traits>
+#include <apt-pkg/string_view.h>
+
+#include <cstdlib>
+#include <cstring>
+#include <string>
 
 #include <gtest/gtest.h>
 

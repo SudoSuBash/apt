@@ -1,7 +1,11 @@
 #include <config.h>
+
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/string_view.h>
 #include <apt-pkg/strutl.h>
+
+#include <cstring>
+#include <ctime>
 #include <limits>
 #include <string>
 #include <vector>

@@ -7,16 +7,16 @@
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 
 #include <apt-private/private-cacheset.h>
 #include <apt-private/private-depends.h>
 
 #include <iostream>
+#include <memory>
 #include <string>
 #include <vector>
-
-#include <stddef.h>
 
 #include <apti18n.h>
 									/*}}}*/

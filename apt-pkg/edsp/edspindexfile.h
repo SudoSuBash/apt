@@ -8,12 +8,14 @@
 #ifndef PKGLIB_EDSPINDEXFILE_H
 #define PKGLIB_EDSPINDEXFILE_H
 
-#include <apt-pkg/debindexfile.h>
+#include <apt-pkg/indexfile.h>
+#include <apt-pkg/macros.h>
+
+#include <cstdint>
 #include <string>
 
-
-class OpProgress;
-class pkgCacheGenerator;
+class FileFd;
+class pkgCacheListParser;
 
 class APT_HIDDEN edspLikeIndex : public pkgDebianIndexRealFile
 {

@@ -13,14 +13,15 @@
 
 #include <apt-pkg/deblistparser.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
+#include <apt-pkg/string_view.h>
 
+#include <cstdint>
 #include <string>
+#include <vector>
 
 
-namespace APT {
-   class StringView;
-}
 class APT_HIDDEN edspLikeListParser : public debListParser
 {
    public:

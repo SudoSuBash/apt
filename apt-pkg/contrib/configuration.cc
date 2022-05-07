@@ -23,22 +23,21 @@
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/string_view.h>
 
-#include <ctype.h>
-#include <regex.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include <algorithm>
 #include <array>
-#include <fstream>
+#include <cctype>
+#include <cstddef>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <iterator>
 #include <numeric>
+#include <regex.h>
 #include <sstream>
 #include <stack>
 #include <string>
 #include <unordered_map>
+#include <utility>
 #include <vector>
 
 #include <apti18n.h>

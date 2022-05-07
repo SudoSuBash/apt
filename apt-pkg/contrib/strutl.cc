@@ -18,31 +18,34 @@
 
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
+#include <apt-pkg/string_view.h>
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
 #include <array>
+#include <cctype>
+#include <cerrno>
+#include <cstdarg>
+#include <cstdint>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
+#include <cwchar>
+#include <iconv.h>
 #include <iomanip>
+#include <iterator>
 #include <limits>
 #include <locale>
-#include <sstream>
 #include <memory>
+#include <regex.h>
 #include <sstream>
 #include <string>
-#include <vector>
-
-#include <ctype.h>
-#include <errno.h>
-#include <iconv.h>
-#include <regex.h>
-#include <stdarg.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <time.h>
+#include <strings.h>
 #include <unistd.h>
-#include <wchar.h>
+#include <utility>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

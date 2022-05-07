@@ -23,13 +23,16 @@
 #define PKGLIB_PACKAGEMANAGER_H
 
 #include <apt-pkg/edsp.h>
-#include <apt-pkg/init.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 
 #include <set>
 #include <string>
 
+#ifndef APT_25_CLEANER_HEADERS
+#include <apt-pkg/init.h>
+class pkgPackageManager;
+#endif
 
 class pkgAcquire;
 class pkgDepCache;
@@ -37,7 +40,6 @@ class pkgSourceList;
 class pkgOrderList;
 class pkgRecords;
 class OpProgress;
-class pkgPackageManager;
 namespace APT {
    namespace Progress {
       class PackageManager;

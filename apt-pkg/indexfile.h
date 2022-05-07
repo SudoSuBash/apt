@@ -28,8 +28,9 @@
 
 #include <map>
 #include <string>
+#include <cstdint>
 
-
+class FileFd;
 class pkgCacheGenerator;
 class pkgCacheListParser;
 class OpProgress;

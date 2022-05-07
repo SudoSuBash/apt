@@ -16,14 +16,16 @@
 #define PKGLIB_DEBINDEXFILE_H
 
 #include <apt-pkg/indexfile.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/srcrecords.h>
 
+#include <cstdint>
+#include <iostream>
 #include <string>
 
-class OpProgress;
-class pkgAcquire;
-class pkgCacheGenerator;
+class FileFd;
+class pkgCacheListParser;
 
 class debStatusIndex : public pkgDebianIndexRealFile
 {

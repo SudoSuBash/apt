@@ -1,14 +1,23 @@
+#include <config.h>
+
 #include <apt-pkg/cacheset.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/debsystem.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/pkgcache.h>
-#include <apt-pkg/prettyprinters.h>
+#include <apt-pkg/pkgsystem.h>
 #include <apt-pkg/statechanges.h>
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
+#include <cstdio>
+#include <cstring>
+#include <iostream>
+#include <iterator>
 #include <memory>
+#include <string>
+#include <sys/types.h>
+#include <vector>
 
 namespace APT
 {

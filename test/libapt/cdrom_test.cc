@@ -3,11 +3,9 @@
 #include <apt-pkg/cdrom.h>
 #include <apt-pkg/cdromutl.h>
 #include <apt-pkg/configuration.h>
-#include <apt-pkg/fileutl.h>
 
 #include <string>
 #include <vector>
-#include <string.h>
 
 #include <gtest/gtest.h>
 

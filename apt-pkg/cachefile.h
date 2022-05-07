@@ -16,12 +16,11 @@
 #ifndef PKGLIB_CACHEFILE_H
 #define PKGLIB_CACHEFILE_H
 
-#include <stddef.h>
-
 #include <apt-pkg/depcache.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 
+#include <cstddef>
 
 class MMap;
 class pkgPolicy;

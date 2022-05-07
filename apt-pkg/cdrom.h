@@ -3,10 +3,9 @@
 
 #include <apt-pkg/macros.h>
 
+#include <cstddef>
 #include <string>
 #include <vector>
-
-#include <stddef.h>
 
 
 class Configuration;

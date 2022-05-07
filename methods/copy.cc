@@ -11,15 +11,13 @@
 #include <config.h>
 
 #include "aptmethod.h"
-#include <apt-pkg/configuration.h>
+#include <apt-pkg/acquire-method.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
-#include <apt-pkg/hashes.h>
-#include <apt-pkg/strutl.h>
+#include <apt-pkg/macros.h>
 
 #include <string>
 #include <sys/stat.h>
-#include <sys/time.h>
 
 #include <apti18n.h>
 									/*}}}*/

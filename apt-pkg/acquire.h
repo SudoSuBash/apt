@@ -71,13 +71,13 @@
 
 #include <chrono>
 #include <string>
+#include <sys/select.h>
 #include <vector>
 
-#include <stddef.h>
-#include <sys/select.h>
+#ifndef APT_25_CLEANER_HEADERS
+#include <cstddef>
 #include <sys/time.h>
-
-
+#endif
 
 class pkgAcquireStatus;
 class metaIndex;

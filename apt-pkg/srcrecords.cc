@@ -12,7 +12,6 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
-#include <apt-pkg/debsrcrecords.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/indexfile.h>
 #include <apt-pkg/macros.h>
@@ -20,9 +19,9 @@
 #include <apt-pkg/sourcelist.h>
 #include <apt-pkg/srcrecords.h>
 
+#include <cstring>
 #include <string>
 #include <vector>
-#include <string.h>
 
 #include <apti18n.h>
 									/*}}}*/

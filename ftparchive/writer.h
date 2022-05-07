@@ -13,16 +13,16 @@
 #define WRITER_H
 
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 
+#include <cstdlib>
 #include <iostream>
 #include <map>
 #include <set>
 #include <string>
+#include <sys/types.h>
 #include <utility>
 #include <vector>
-#include <stdio.h>
-#include <stdlib.h>
-#include <sys/types.h>
 
 #include "apt-ftparchive.h"
 #include "cachedb.h"
@@ -34,6 +34,7 @@ using std::cout;
 using std::endl;
 using std::vector;
 using std::map;
+class FileFd;
 
 class FTWScanner
 {

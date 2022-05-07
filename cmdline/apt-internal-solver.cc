@@ -19,23 +19,22 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/init.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgsystem.h>
-#include <apt-pkg/strutl.h>
 #include <apt-pkg/upgrade.h>
 
 #include <apt-private/private-cmndline.h>
-#include <apt-private/private-main.h>
 #include <apt-private/private-output.h>
 
-#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
 #include <list>
 #include <sstream>
 #include <string>
-#include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

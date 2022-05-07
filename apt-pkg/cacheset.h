@@ -9,27 +9,31 @@
 #ifndef APT_CACHESET_H
 #define APT_CACHESET_H
 // Include Files							/*{{{*/
-#include <fstream>
+#include <apt-pkg/error.h>
+#include <apt-pkg/macros.h>
+#include <apt-pkg/pkgcache.h>
+
+#include <algorithm>
+#include <cstddef>
+#include <deque>
+#include <iostream>
+#include <iterator>
+#include <list>
 #include <map>
 #include <set>
+#include <string>
+#include <type_traits>
+#include <utility>
+#include <vector>
 #if __cplusplus >= 201103L
 #include <forward_list>
 #include <initializer_list>
 #include <unordered_set>
 #endif
-#include <algorithm>
-#include <deque>
-#include <iterator>
-#include <list>
-#include <string>
-#include <vector>
 
-#include <stddef.h>
-
-#include <apt-pkg/error.h>
-#include <apt-pkg/macros.h>
-#include <apt-pkg/pkgcache.h>
-
+#ifndef APT_25_CLEANER_HEADERS
+#include <fstream>
+#endif
 									/*}}}*/
 
 class pkgCacheFile;

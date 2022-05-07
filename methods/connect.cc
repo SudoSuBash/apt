@@ -12,24 +12,28 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
-#include <apt-pkg/acquire-method.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/srvrec.h>
 #include <apt-pkg/strutl.h>
 
 #include <gnutls/gnutls.h>
-#include <gnutls/x509.h>
 
+#include <algorithm>
+#include <cerrno>
+#include <cstdint>
+#include <cstring>
+#include <iostream>
+#include <iterator>
 #include <list>
 #include <set>
 #include <sstream>
 #include <string>
-#include <errno.h>
-#include <stdio.h>
-#include <string.h>
 #include <unistd.h>
+#include <utility>
+#include <vector>
 
 // Internet stuff
 #include <netdb.h>

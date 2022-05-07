@@ -13,6 +13,7 @@
 #define APT_FTPARCHIVE_H
 
 #include <fstream>
+#include <iostream>
 
 using std::ostream;
 using std::ofstream;

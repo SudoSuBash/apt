@@ -18,26 +18,34 @@
 #include <apt-pkg/dpkgpm.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
+#include <apt-pkg/pkgsystem.h>
 #include <apt-pkg/progress.h>
+#include <apt-pkg/strutl.h>
 
 #include <algorithm>
-#include <sstream>
-
 #include <string>
 #include <vector>
-#include <ctype.h>
+#include <cctype>
 #include <dirent.h>
-#include <errno.h>
+#include <cerrno>
 #include <fcntl.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cstdlib>
+#include <cstring>
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <sys/wait.h>
 #include <unistd.h>
+#include <cstdio>
+#include <iostream>
+#include <utility>
 
 #include <apti18n.h>
+
+class pkgDepCache;
+class pkgIndexFile;
+class pkgPackageManager;
 									/*}}}*/
 
 using std::string;

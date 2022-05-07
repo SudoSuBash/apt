@@ -20,20 +20,23 @@
 #ifndef PKGLIB_FILEUTL_H
 #define PKGLIB_FILEUTL_H
 
-#include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/macros.h>
 
+#include <ctime>
 #include <set>
 #include <string>
+#include <sys/types.h>
 #include <vector>
-#include <time.h>
 
+#ifndef APT_25_CLEANER_HEADERS
+#include <apt-pkg/aptconfiguration.h>
 #include <zlib.h>
-
+#endif
 
 /* Define this for python-apt */
 #define APT_HAS_GZIP 1
 
+namespace APT { namespace Configuration { struct Compressor; } }
 class FileFdPrivate;
 class APT_PUBLIC FileFd
 {

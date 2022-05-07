@@ -3,12 +3,15 @@
 
 #include <apt-pkg/acquire-item.h>
 #include <apt-pkg/acquire.h>
+#include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/cachefile.h>
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
+#include <apt-pkg/depcache.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/metaindex.h>
+#include <apt-pkg/pkgcache.h>
 #include <apt-pkg/sourcelist.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/update.h>
@@ -19,8 +22,12 @@
 #include <apt-private/private-output.h>
 #include <apt-private/private-update.h>
 
-#include <ostream>
+#include <algorithm>
+#include <cstring>
+#include <iostream>
+#include <iterator>
 #include <string>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

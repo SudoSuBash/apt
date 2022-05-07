@@ -3,16 +3,20 @@
 #include <config.h>
 
 #include <apt-pkg/cachefile.h>
+#include <apt-pkg/cacheset.h>
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
+#include <apt-pkg/error.h>
+#include <apt-pkg/macros.h>
+#include <apt-pkg/pkgcache.h>
 #include <apt-pkg/strutl.h>
 
 #include <apt-private/private-cacheset.h>
 #include <apt-private/private-unmet.h>
 
-#include <stddef.h>
-
+#include <cstddef>
 #include <iostream>
+#include <string>
 
 #include <apti18n.h>
 									/*}}}*/

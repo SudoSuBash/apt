@@ -15,15 +15,15 @@
 #include <apt-pkg/debfile.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
-#include <apt-pkg/gpgv.h>
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
-#include <ctype.h>
+#include <cctype>
 #include <netinet/in.h> // htonl, etc
-#include <stddef.h>
 #include <strings.h>
 #include <sys/stat.h>
+#include <vector>
 
 #include "cachedb.h"
 

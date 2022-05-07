@@ -20,16 +20,20 @@
 #include <apt-pkg/hashes.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
+#include <apt-pkg/pkgcachegen.h>
+#include <apt-pkg/string_view.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/tagfile-keys.h>
 #include <apt-pkg/tagfile.h>
 
 #include <algorithm>
+#include <cstddef>
+#include <cstdint>
+#include <cstring>
 #include <string>
+#include <strings.h>
 #include <vector>
-#include <ctype.h>
-#include <stddef.h>
-#include <string.h>
+class FileFd;
 									/*}}}*/
 
 using std::string;

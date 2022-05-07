@@ -1,10 +1,19 @@
 #include <config.h>
 
 #include <apt-pkg/cachefile.h>
+#include <apt-pkg/cmndline.h>
+#include <apt-pkg/configuration.h>
+#include <apt-pkg/depcache.h>
+#include <apt-pkg/macros.h>
+#include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgsystem.h>
 #include <apt-private/private-cmndline.h>
 
+#include <algorithm>
+#include <cstddef>
 #include <iostream>
+#include <string>
+#include <vector>
 
 static bool ShowHelp(CommandLine &)					/*{{{*/
 {

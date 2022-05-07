@@ -6,6 +6,7 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/extracttar.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 
 #include <iostream>
 #include <string>

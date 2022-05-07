@@ -1,20 +1,26 @@
 #ifndef PKGLIB_METAINDEX_H
 #define PKGLIB_METAINDEX_H
 
-#include <apt-pkg/indexfile.h>
-#include <apt-pkg/init.h>
+#include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
+#include <apt-pkg/pkgcache.h>
 
-#include <stddef.h>
-
+#include <ctime>
+#include <map>
 #include <string>
 #include <vector>
 
+#ifndef APT_25_CLEANER_HEADERS
+#include <apt-pkg/indexfile.h>
+#include <apt-pkg/init.h>
+#include <cstddef>
+#endif
 
 class pkgAcquire;
 class IndexTarget;
 class pkgCacheGenerator;
+class pkgIndexFile;
 class OpProgress;
-
 class metaIndexPrivate;
 
 class APT_PUBLIC metaIndex

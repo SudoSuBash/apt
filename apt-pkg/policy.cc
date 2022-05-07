@@ -19,6 +19,7 @@
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/policy.h>
 #include <apt-pkg/string_view.h>
@@ -28,14 +29,17 @@
 #include <apt-pkg/version.h>
 #include <apt-pkg/versionmatch.h>
 
+#include <algorithm>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
+#include <limits>
+#include <memory>
 #include <random>
 #include <sstream>
 #include <string>
 #include <vector>
-#include <ctype.h>
-#include <stddef.h>
-#include <string.h>
 
 #include <apti18n.h>
 									/*}}}*/

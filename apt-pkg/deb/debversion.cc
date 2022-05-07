@@ -13,10 +13,12 @@
 
 #include <apt-pkg/debversion.h>
 #include <apt-pkg/pkgcache.h>
+#include <apt-pkg/strutl.h>
 
-#include <ctype.h>
-#include <stdlib.h>
-#include <string.h>
+#include <cctype>
+#include <cstdlib>
+#include <cstring>
+#include <string>
 									/*}}}*/
 
 debVersioningSystem debVS;

@@ -30,7 +30,7 @@ static bool pkgDistUpgrade(pkgDepCache &Cache, OpProgress * const Progress)
    if (solver != "internal")
       return ret;
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->OverallProgress(0, 100, 1, _("Calculating upgrade"));
 
    pkgDepCache::ActionGroup group(Cache);
@@ -42,7 +42,7 @@ static bool pkgDistUpgrade(pkgDepCache &Cache, OpProgress * const Progress)
       if (I->CurrentVer != 0)
 	 Cache.MarkInstall(I, false, 0, false);
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Progress(10);
 
    /* Auto upgrade all installed packages, this provides the basis 
@@ -51,7 +51,7 @@ static bool pkgDistUpgrade(pkgDepCache &Cache, OpProgress * const Progress)
       if (I->CurrentVer != 0)
 	 Cache.MarkInstall(I, true, 0, false);
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Progress(50);
 
    /* Now, install each essential package which is not installed
@@ -85,7 +85,7 @@ static bool pkgDistUpgrade(pkgDepCache &Cache, OpProgress * const Progress)
 	 if ((I->Flags & pkgCache::Flag::Essential) == pkgCache::Flag::Essential)
 	    Cache.MarkInstall(I, true, 0, false);
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Progress(55);
 
    /* We do it again over all previously installed packages to force 
@@ -94,12 +94,12 @@ static bool pkgDistUpgrade(pkgDepCache &Cache, OpProgress * const Progress)
       if (I->CurrentVer != 0)
 	 Cache.MarkInstall(I, false, 0, false);
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Progress(65);
 
    pkgProblemResolver Fix(&Cache);
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Progress(95);
 
    // Hold back held packages.
@@ -116,7 +116,7 @@ static bool pkgDistUpgrade(pkgDepCache &Cache, OpProgress * const Progress)
    }
 
    bool const success = Fix.ResolveInternal(false);
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Done();
    return success;
 }									/*}}}*/
@@ -129,7 +129,7 @@ static bool pkgAllUpgradeNoNewPackages(pkgDepCache &Cache, OpProgress * const Pr
    if (solver != "internal")
       return ret;
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->OverallProgress(0, 100, 1, _("Calculating upgrade"));
 
    pkgDepCache::ActionGroup group(Cache);
@@ -149,12 +149,12 @@ static bool pkgAllUpgradeNoNewPackages(pkgDepCache &Cache, OpProgress * const Pr
 	 Cache.MarkInstall(I, false, 0, false);
    }
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Progress(50);
 
    // resolve remaining issues via keep
    bool const success = Fix.ResolveByKeepInternal();
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Done();
    return success;
 }
@@ -173,7 +173,7 @@ static bool pkgAllUpgradeWithNewPackages(pkgDepCache &Cache, OpProgress * const 
    if (solver != "internal")
       return ret;
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->OverallProgress(0, 100, 1, _("Calculating upgrade"));
 
    pkgDepCache::ActionGroup group(Cache);
@@ -193,7 +193,7 @@ static bool pkgAllUpgradeWithNewPackages(pkgDepCache &Cache, OpProgress * const 
       }
    }
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Progress(10);
 
    // then let auto-install loose
@@ -201,7 +201,7 @@ static bool pkgAllUpgradeWithNewPackages(pkgDepCache &Cache, OpProgress * const 
       if (Cache[I].Install())
 	 Cache.MarkInstall(I, true, 0, false);
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Progress(50);
 
    // ... but it may remove stuff, we need to clean up afterwards again
@@ -209,12 +209,12 @@ static bool pkgAllUpgradeWithNewPackages(pkgDepCache &Cache, OpProgress * const 
       if (Cache[I].Delete() == true)
 	 Cache.MarkKeep(I, false, false);
 
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Progress(60);
 
    // resolve remaining issues via keep
    bool const success = Fix.ResolveByKeepInternal();
-   if (Progress != NULL)
+   if (Progress != nullptr)
       Progress->Done();
    return success;
 }

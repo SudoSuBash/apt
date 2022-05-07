@@ -13,8 +13,6 @@
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/depcache.h>
 #include <apt-pkg/error.h>
-#include <apt-pkg/fileutl.h>
-#include <apt-pkg/init.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgsystem.h>
@@ -22,22 +20,17 @@
 #include <apt-pkg/strutl.h>
 
 #include <apt-private/private-cmndline.h>
-#include <apt-private/private-main.h>
 #include <apt-private/private-output.h>
 
 #include <algorithm>
-#include <fstream>
+#include <cstring>
 #include <iostream>
+#include <iterator>
+#include <memory>
 #include <string>
+#include <strings.h>
+#include <utility>
 #include <vector>
-#include <errno.h>
-#include <fcntl.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/wait.h>
-#include <unistd.h>
 
 #include <apti18n.h>
 									/*}}}*/
@@ -83,7 +76,7 @@ static bool DoAuto(CommandLine &CmdL)
    bool MarkWritten = false;
    bool IsSimulation = _config->FindB("APT::Mark::Simulate", false);
    if (PackagesMarked.size() > 0 && !IsSimulation) {
-      MarkWritten = DepCache->writeStateFile(NULL);
+      MarkWritten = DepCache->writeStateFile(nullptr);
       if(!MarkWritten) {
          return MarkWritten;
       }
@@ -132,7 +125,7 @@ static bool DoMarkAuto(CommandLine &CmdL)
       ++AutoMarkChanged;
    }
    if (AutoMarkChanged > 0 && _config->FindB("APT::Mark::Simulate", false) == false)
-      return DepCache->writeStateFile(NULL);
+      return DepCache->writeStateFile(nullptr);
 
    _error->Notice(_("This command is deprecated. Please use 'apt-mark auto' and 'apt-mark manual' instead."));
 
@@ -253,7 +246,7 @@ static bool DoMinimize(CommandLine &CmdL)
       if (YnPrompt(_("Do you want to continue?"), false) == false)
 	 return true;
 
-      return DepCache->writeStateFile(NULL);
+      return DepCache->writeStateFile(nullptr);
    }
 
    return true;

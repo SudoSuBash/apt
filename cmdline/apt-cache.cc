@@ -14,7 +14,6 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
-#include <apt-pkg/algorithms.h>
 #include <apt-pkg/cachefile.h>
 #include <apt-pkg/cacheset.h>
 #include <apt-pkg/cmndline.h>
@@ -23,12 +22,10 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/indexfile.h>
-#include <apt-pkg/init.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/metaindex.h>
 #include <apt-pkg/mmap.h>
 #include <apt-pkg/pkgcache.h>
-#include <apt-pkg/pkgrecords.h>
 #include <apt-pkg/pkgsystem.h>
 #include <apt-pkg/policy.h>
 #include <apt-pkg/progress.h>
@@ -38,15 +35,15 @@
 #include <apt-pkg/tagfile.h>
 #include <apt-pkg/version.h>
 
-#include <apt-private/private-cacheset.h>
 #include <apt-private/private-cmndline.h>
 #include <apt-private/private-depends.h>
-#include <apt-private/private-main.h>
 #include <apt-private/private-search.h>
 #include <apt-private/private-show.h>
 #include <apt-private/private-unmet.h>
+#include <apt-private/private-output.h>
 
 #include <algorithm>
+#include <cstdio>
 #include <cstring>
 #include <iomanip>
 #include <iostream>
@@ -54,12 +51,8 @@
 #include <map>
 #include <set>
 #include <string>
-#include <vector>
-#include <regex.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <unistd.h>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/
@@ -188,7 +181,7 @@ static bool Stats(CommandLine &CmdL)
    pkgCacheFile CacheFile;
    pkgCache *Cache = CacheFile.GetPkgCache();
 
-   if (unlikely(Cache == NULL))
+   if (unlikely(Cache == nullptr))
       return false;
 
    cout << _("Total package names: ") << Cache->Head().GroupCount << " (" <<
@@ -345,7 +338,7 @@ static bool Dump(CommandLine &)
 {
    pkgCacheFile CacheFile;
    pkgCache *Cache = CacheFile.GetPkgCache();
-   if (unlikely(Cache == NULL))
+   if (unlikely(Cache == nullptr))
       return false;
 
    std::cout << "Using Versioning System: " << Cache->VS->Label << std::endl;
@@ -397,7 +390,7 @@ static bool DumpAvail(CommandLine &)
 {
    pkgCacheFile CacheFile;
    pkgCache *Cache = CacheFile.GetPkgCache();
-   if (unlikely(Cache == NULL || CacheFile.BuildPolicy() == false))
+   if (unlikely(Cache == nullptr || CacheFile.BuildPolicy() == false))
       return false;
 
    auto const Count = Cache->HeaderP->PackageCount+1;
@@ -504,7 +497,7 @@ static bool DumpAvail(CommandLine &)
 	 {
 	    pkgTagSection Tags;
 	    if (Tags.Scan(Buffer+Jitter,VF.Size+1) == false ||
-		Tags.Write(stdoutfd, NULL, RW) == false ||
+		Tags.Write(stdoutfd, nullptr, RW) == false ||
 		stdoutfd.Write("\n", 1) == false)
 	    {
 	       _error->Error("Internal Error, Unable to parse a package record");
@@ -537,7 +530,7 @@ static bool XVcg(CommandLine &CmdL)
 {
    pkgCacheFile CacheFile;
    pkgCache *Cache = CacheFile.GetPkgCache();
-   if (unlikely(Cache == NULL))
+   if (unlikely(Cache == nullptr))
       return false;
 
    bool GivenOnly = _config->FindB("APT::Cache::GivenOnly",false);
@@ -750,7 +743,7 @@ static bool Dotty(CommandLine &CmdL)
 {
    pkgCacheFile CacheFile;
    pkgCache *Cache = CacheFile.GetPkgCache();
-   if (unlikely(Cache == NULL))
+   if (unlikely(Cache == nullptr))
       return false;
 
    bool GivenOnly = _config->FindB("APT::Cache::GivenOnly",false);
@@ -952,7 +945,7 @@ static bool ShowAuto(CommandLine &)
    pkgCacheFile CacheFile;
    pkgCache *Cache = CacheFile.GetPkgCache();
    pkgDepCache *DepCache = CacheFile.GetDepCache();
-   if (unlikely(Cache == NULL || DepCache == NULL))
+   if (unlikely(Cache == nullptr || DepCache == nullptr))
       return false;
 
    std::vector<string> packages;
@@ -977,7 +970,7 @@ static bool ShowAuto(CommandLine &)
 static bool ShowPkgNames(CommandLine &CmdL)
 {
    pkgCacheFile CacheFile;
-   if (unlikely(CacheFile.BuildCaches(NULL, false) == false))
+   if (unlikely(CacheFile.BuildCaches(nullptr, false) == false))
       return false;
    pkgCache::GrpIterator I = CacheFile.GetPkgCache()->GrpBegin();
    bool const All = _config->FindB("APT::Cache::AllNames", false);

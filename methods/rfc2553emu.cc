@@ -17,10 +17,10 @@
 
 #include "rfc2553emu.h"
 #include <arpa/inet.h>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <netinet/in.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 #ifndef HAVE_GETADDRINFO
 // getaddrinfo - Resolve a hostname					/*{{{*/

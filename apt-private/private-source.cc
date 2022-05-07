@@ -9,39 +9,42 @@
 #include <apt-pkg/cacheset.h>
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
+#include <apt-pkg/debindexfile.h>
+#include <apt-pkg/deblistparser.h>
 #include <apt-pkg/depcache.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
 #include <apt-pkg/indexfile.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/metaindex.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/policy.h>
+#include <apt-pkg/progress.h>
 #include <apt-pkg/sourcelist.h>
 #include <apt-pkg/srcrecords.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/version.h>
+#include <apt-pkg/versionmatch.h>
 
 #include <apt-private/private-cachefile.h>
-#include <apt-private/private-cacheset.h>
 #include <apt-private/private-download.h>
 #include <apt-private/private-install.h>
+#include <apt-private/private-output.h>
 #include <apt-private/private-source.h>
 
-#include <apt-pkg/debindexfile.h>
-#include <apt-pkg/deblistparser.h>
-
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <sys/stat.h>
-#include <unistd.h>
-
+#include <algorithm>
+#include <cstddef>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
+#include <list>
 #include <set>
 #include <sstream>
 #include <string>
+#include <strings.h>
+#include <sys/stat.h>
+#include <utility>
 #include <vector>
 
 #include <apti18n.h>

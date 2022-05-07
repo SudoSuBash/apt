@@ -71,9 +71,11 @@
 #include <apt-pkg/pkgcache.h>
 
 #include <algorithm>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
-#include <stdlib.h>
-#include <string.h>
+#include <memory>
+#include <string>
 									/*}}}*/
 
 using namespace std;

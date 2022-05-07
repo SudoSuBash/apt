@@ -17,6 +17,7 @@
 #include <apt-pkg/policy.h>
 #include <apt-pkg/sourcelist.h>
 #include <apt-pkg/strutl.h>
+#include <apt-pkg/srcrecords.h>
 #include <apt-pkg/tagfile-keys.h>
 #include <apt-pkg/tagfile.h>
 
@@ -25,10 +26,16 @@
 #include <apt-private/private-install.h>
 #include <apt-private/private-show.h>
 
-#include <ostream>
+#include <algorithm>
+#include <cctype>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <iostream>
+#include <set>
 #include <string>
-#include <stdio.h>
 #include <unistd.h>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

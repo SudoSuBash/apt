@@ -4,8 +4,10 @@
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
-#include <iostream>
+#include <ctime>
+#include <iterator>
 #include <string>
+#include <vector>
 
 #include <gtest/gtest.h>
 

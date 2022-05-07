@@ -9,8 +9,11 @@
 #include <algorithm>
 #include <string>
 #include <vector>
-#include <stdlib.h>
-#include <string.h>
+#include <cstdlib>
+#include <cstring>
+
+#include <sys/stat.h>
+#include <unistd.h>
 
 #include <gtest/gtest.h>
 

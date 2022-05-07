@@ -1,10 +1,14 @@
 #include <config.h>
+
 #include <apt-pkg/acquire-item.h>
 #include <apt-pkg/acquire.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-private/acqprogress.h>
+
 #include <gtest/gtest.h>
+
 #include <sstream>
 #include <string>
 

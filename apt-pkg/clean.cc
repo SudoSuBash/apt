@@ -17,13 +17,12 @@
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/strutl.h>
 
-#include <string>
+#include <cstring>
 #include <dirent.h>
 #include <fcntl.h>
-#include <string.h>
+#include <string>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <unistd.h>
 
 #include <apti18n.h>
 									/*}}}*/

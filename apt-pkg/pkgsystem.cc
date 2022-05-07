@@ -11,14 +11,14 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
-#include <apt-pkg/debsystem.h>
-#include <apt-pkg/error.h>
 #include <apt-pkg/macros.h>
+#include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgsystem.h>
 
 #include <cassert>
 #include <cstring>
 #include <map>
+#include <utility>
 									/*}}}*/
 
 pkgSystem *_system = 0;
@@ -37,6 +37,7 @@ public:
 // System::pkgSystem - Constructor					/*{{{*/
 // ---------------------------------------------------------------------
 /* Add it to the global list.. */
+class pkgVersioningSystem;
 pkgSystem::pkgSystem(char const * const label, pkgVersioningSystem * const vs) :
    Label(label), VS(vs), d(new pkgSystemPrivate())
 {

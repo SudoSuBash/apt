@@ -13,17 +13,15 @@
 #include <apt-pkg/packagemanager.h>
 #include <apt-pkg/pkgcache.h>
 
+#include <cstdio>
 #include <map>
 #include <string>
 #include <vector>
-#include <stdio.h>
 
 
 class pkgDepCache;
-namespace APT { namespace Progress { class PackageManager; } }
-
-
 class pkgDPkgPMPrivate;
+namespace APT { namespace Progress { class PackageManager; } }
 
 
 class APT_PUBLIC pkgDPkgPM : public pkgPackageManager

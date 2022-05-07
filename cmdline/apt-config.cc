@@ -21,18 +21,17 @@
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
-#include <apt-pkg/init.h>
 #include <apt-pkg/pkgsystem.h>
 #include <apt-pkg/strutl.h>
 
+#include <apt-private/private-cmndline.h>
+
+#include <cstring>
 #include <iostream>
 #include <map>
 #include <string>
+#include <utility>
 #include <vector>
-#include <string.h>
-
-#include <apt-private/private-cmndline.h>
-#include <apt-private/private-main.h>
 
 #include <apti18n.h>
 									/*}}}*/

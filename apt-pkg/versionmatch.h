@@ -34,6 +34,7 @@
 #ifndef PKGLIB_VERSIONMATCH_H
 #define PKGLIB_VERSIONMATCH_H
 
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 
 #include <string>

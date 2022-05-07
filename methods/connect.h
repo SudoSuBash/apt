@@ -9,9 +9,9 @@
 #ifndef CONNECT_H
 #define CONNECT_H
 
+#include <cstddef>
 #include <memory>
 #include <string>
-#include <stddef.h>
 
 #include "aptmethod.h"
 
@@ -41,6 +41,7 @@ struct MethodFd
 ResultState Connect(std::string To, int Port, const char *Service, int DefPort,
 		    std::unique_ptr<MethodFd> &Fd, unsigned long TimeOut, aptMethod *Owner);
 
+class URI;
 ResultState UnwrapSocks(std::string To, int Port, URI Proxy, std::unique_ptr<MethodFd> &Fd, unsigned long Timeout, aptMethod *Owner);
 ResultState UnwrapTLS(std::string const &To, std::unique_ptr<MethodFd> &Fd, unsigned long Timeout, aptMethod *Owner,
 		      aptConfigWrapperForMethods const * OwnerConf);

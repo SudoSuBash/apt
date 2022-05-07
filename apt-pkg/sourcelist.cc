@@ -9,30 +9,37 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
+#include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/debindexfile.h>
 #include <apt-pkg/debsrcrecords.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/hashes.h>
 #include <apt-pkg/indexfile.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/metaindex.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/sourcelist.h>
+#include <apt-pkg/srcrecords.h>
 #include <apt-pkg/strutl.h>
 #include <apt-pkg/tagfile.h>
 
 #include <algorithm>
+#include <cctype>
 #include <cstring>
+#include <ctime>
 #include <fstream>
+#include <iterator>
 #include <map>
 #include <string>
+#include <utility>
 #include <vector>
-#include <ctype.h>
-#include <stddef.h>
-#include <time.h>
 
 #include <apti18n.h>
+
+class pkgAcquire;
 									/*}}}*/
 
 using namespace std;

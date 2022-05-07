@@ -12,9 +12,11 @@
 #include <apt-private/private-cachefile.h>
 #include <apt-private/private-output.h>
 
-#include <cstdlib>
-#include <ostream>
-#include <string.h>
+#include <algorithm>
+#include <cstring>
+#include <functional>
+#include <iostream>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

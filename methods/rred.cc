@@ -10,29 +10,32 @@
 #ifndef APT_EXCLUDE_RRED_METHOD_CODE
 #include "aptmethod.h"
 #include <apt-pkg/configuration.h>
-#include <apt-pkg/init.h>
 #endif
 
+#include <apt-pkg/acquire-method.h>
+#include <apt-pkg/aptconfiguration.h>
+#include <apt-pkg/cmndline.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
 #include <apt-private/private-cmndline.h>
 
+#include <cassert>
+#include <cerrno>
+#include <cstddef>
+#include <cstdlib>
+#include <cstring>
 #include <iostream>
+#include <limits>
 #include <list>
 #include <string>
-#include <vector>
-#include <stddef.h>
-
-#include <cassert>
-#include <errno.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <sys/stat.h>
 #include <sys/time.h>
+#include <unistd.h>
+#include <vector>
 
 #include <apti18n.h>
 

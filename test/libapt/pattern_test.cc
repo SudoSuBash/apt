@@ -8,7 +8,12 @@
 
 #include <config.h>
 #include <apt-pkg/cachefilter-patterns.h>
-#include <apt-pkg/cachefilter.h>
+#include <apt-pkg/string_view.h>
+
+#include <cstddef>
+#include <memory>
+#include <string>
+#include <vector>
 
 #include <gtest/gtest.h>
 

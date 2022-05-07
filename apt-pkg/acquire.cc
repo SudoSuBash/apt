@@ -20,34 +20,41 @@
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
+#include <cerrno>
 #include <chrono>
 #include <cmath>
-#include <iomanip>
-#include <iostream>
-#include <memory>
-#include <numeric>
-#include <sstream>
-#include <string>
-#include <tuple>
-#include <vector>
-
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
 #include <dirent.h>
-#include <errno.h>
 #include <fcntl.h>
 #include <grp.h>
+#include <iomanip>
+#include <iostream>
+#include <limits>
+#include <memory>
+#include <numeric>
 #include <pwd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include <sstream>
+#include <string>
+#include <strings.h>
 #include <sys/select.h>
 #include <sys/stat.h>
 #include <sys/time.h>
+#include <sys/types.h>
+#include <tuple>
 #include <unistd.h>
+#include <utility>
+#include <vector>
 
 #include <apti18n.h>
+
+class metaIndex;
 									/*}}}*/
 
 using namespace std;

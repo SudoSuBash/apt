@@ -24,6 +24,7 @@
 #include <apt-pkg/gpgv.h>
 #include <apt-pkg/hashes.h>
 #include <apt-pkg/indexfile.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/metaindex.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/pkgrecords.h>
@@ -32,23 +33,30 @@
 #include <apt-pkg/tagfile.h>
 
 #include <algorithm>
-#include <ctime>
+#include <cerrno>
 #include <chrono>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
 #include <iostream>
+#include <iterator>
+#include <limits>
+#include <list>
+#include <map>
 #include <memory>
 #include <numeric>
 #include <random>
 #include <sstream>
 #include <string>
-#include <unordered_set>
-#include <vector>
-#include <errno.h>
-#include <stddef.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <sys/stat.h>
+#include <sys/time.h>
+#include <type_traits>
 #include <unistd.h>
+#include <unordered_map>
+#include <unordered_set>
+#include <utility>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

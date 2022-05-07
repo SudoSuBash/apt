@@ -1,10 +1,12 @@
-#include <apt-pkg/error.h>
 #include <apt-pkg/dirstream.h>
+#include <apt-pkg/error.h>
 #include <apt-pkg/extracttar.h>
-#include <iostream>
-#include <stdlib.h>
+#include <apt-pkg/fileutl.h>
+#include <apt-pkg/macros.h>
 
-#include "assert.h"
+#include <cstdlib>
+#include <string>
+
 #include <gtest/gtest.h>
 
 class Stream : public pkgDirStream

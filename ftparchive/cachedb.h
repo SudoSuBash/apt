@@ -14,12 +14,12 @@
 #include <apt-pkg/debfile.h>
 #include <apt-pkg/hashes.h>
 
+#include <cerrno>
+#include <cstdint>
+#include <cstdio>
+#include <cstring>
 #include <db.h>
 #include <string>
-#include <errno.h>
-#include <stdint.h>
-#include <stdio.h>
-#include <string.h>
 
 #include "contents.h"
 #include "sources.h"

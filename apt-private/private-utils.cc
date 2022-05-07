@@ -7,7 +7,9 @@
 #include <apt-private/private-utils.h>
 
 #include <cstdlib>
+#include <ctime>
 #include <sstream>
+#include <string>
 #include <unistd.h>
 
 // DisplayFileInPager - Display File with pager				/*{{{*/

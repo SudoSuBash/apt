@@ -13,11 +13,11 @@
 #ifndef NETRC_H
 #define NETRC_H
 
-#include <string>
-
 #include <apt-pkg/macros.h>
 
-
+#ifndef APT_25_CLEANER_HEADERS
+#include <string>
+#endif
 
 class URI;
 class FileFd;

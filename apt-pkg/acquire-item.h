@@ -22,14 +22,17 @@
 #include <apt-pkg/acquire.h>
 #include <apt-pkg/hashes.h>
 #include <apt-pkg/indexfile.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/weakptr.h>
 
-#include <map>
 #include <string>
 #include <unordered_map>
 #include <vector>
 
+#ifndef APT_25_CLEANER_HEADERS
+#include <map>
+#endif
 
 /** \addtogroup acquire
  *  @{

@@ -10,26 +10,31 @@
 // Include Files							/*{{{*/
 #include <config.h>
 
+#include <apt-pkg/acquire-method.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/debversion.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
+#include <apt-pkg/hashes.h>
 #include <apt-pkg/strutl.h>
 
+#include <algorithm>
+#include <cctype>
+#include <csignal>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
 #include <iostream>
+#include <iterator>
 #include <limits>
-#include <map>
 #include <string>
 #include <string_view>
-#include <vector>
-#include <ctype.h>
-#include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
 #include <sys/stat.h>
 #include <sys/time.h>
-#include <time.h>
 #include <unistd.h>
+#include <utility>
+#include <vector>
 
 #include "basehttp.h"
 

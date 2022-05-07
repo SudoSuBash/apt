@@ -20,21 +20,23 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/hashes.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/proxy.h>
 #include <apt-pkg/strutl.h>
 
 #include <algorithm>
+#include <cerrno>
+#include <chrono>
+#include <csignal>
+#include <cstdio>
+#include <cstdlib>
+#include <initializer_list>
 #include <iostream>
-#include <string>
-#include <vector>
-
 #include <sstream>
-#include <errno.h>
-#include <signal.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <string>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <vector>
 
 #include <apti18n.h>
 									/*}}}*/

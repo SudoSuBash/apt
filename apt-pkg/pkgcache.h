@@ -76,13 +76,12 @@
 #define __PKGLIB_IN_PKGCACHE_H
 #include <apt-pkg/macros.h>
 #include <apt-pkg/mmap.h>
+#include <apt-pkg/string_view.h>
 
 #include <cstddef>       // required for nullptr_t
+#include <cstdint>
+#include <ctime>
 #include <string>
-#include <stdint.h>
-#include <time.h>
-
-#include <apt-pkg/string_view.h>
 
 
 // size of (potentially big) files like debs or the install size of them

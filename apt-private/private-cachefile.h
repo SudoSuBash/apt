@@ -7,7 +7,8 @@
 #include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
 #include <apt-pkg/progress.h>
-#include <apt-pkg/sourcelist.h>
+
+#include <vector>
 
 // class CacheFile - Cover class for some dependency cache functions	/*{{{*/
 class APT_PUBLIC CacheFile : public pkgCacheFile

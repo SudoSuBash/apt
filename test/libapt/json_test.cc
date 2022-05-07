@@ -1,8 +1,13 @@
 #include <config.h>
+
+#include <gtest/gtest.h>
+#include <apt-pkg/strutl.h>
+
+#include <sstream>
+#include <string>
+
 #include "../../apt-private/private-cachefile.cc"
 #include "../../apt-private/private-json-hooks.cc"
-#include <gtest/gtest.h>
-#include <string>
 
 TEST(JsonTest, JsonString)
 {

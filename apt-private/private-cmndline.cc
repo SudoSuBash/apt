@@ -6,21 +6,27 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/init.h>
-#include <apt-pkg/pkgsystem.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/strutl.h>
 
 #include <apt-private/private-cmndline.h>
 #include <apt-private/private-main.h>
 
-#include <stdarg.h>
-#include <stdlib.h>
-#include <string.h>
-
 #include <algorithm>
+#include <cstdlib>
+#include <cstring>
 #include <iomanip>
+#include <iostream>
+#include <iterator>
+#include <memory>
+#include <string>
+#include <unistd.h>
+#include <utility>
 #include <vector>
 
 #include <apti18n.h>
+
+class pkgSystem;
 									/*}}}*/
 
 APT_NONNULL(1, 2)

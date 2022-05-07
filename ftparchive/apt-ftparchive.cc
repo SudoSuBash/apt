@@ -15,26 +15,23 @@
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
-#include <apt-pkg/init.h>
 #include <apt-pkg/strutl.h>
 
 #include <apt-private/private-cmndline.h>
-#include <apt-private/private-main.h>
 #include <apt-private/private-output.h>
 
 #include <algorithm>
+#include <cctype>
 #include <chrono>
-#include <climits>
-#include <functional>
+#include <clocale>
+#include <cmath>
+#include <ctime>
 #include <iostream>
+#include <limits>
 #include <string>
-#include <vector>
-#include <locale.h>
-#include <stdio.h>
 #include <sys/stat.h>
 #include <sys/time.h>
-#include <time.h>
-#include <math.h>
+#include <vector>
 
 #include "apt-ftparchive.h"
 #include "cachedb.h"
@@ -116,19 +113,19 @@ struct PackageMap
    bool SrcDone;
    time_t ContentsMTime;
    
-   struct ContentsCompare : public binary_function<PackageMap,PackageMap,bool>
+   struct ContentsCompare
    {
       inline bool operator() (const PackageMap &x,const PackageMap &y)
       {return x.ContentsMTime < y.ContentsMTime;};
    };
     
-   struct DBCompare : public binary_function<PackageMap,PackageMap,bool>
+   struct DBCompare
    {
       inline bool operator() (const PackageMap &x,const PackageMap &y)
       {return x.BinCacheDB < y.BinCacheDB;};
    };  
 
-   struct SrcDBCompare : public binary_function<PackageMap,PackageMap,bool>
+   struct SrcDBCompare
    {
       inline bool operator() (const PackageMap &x,const PackageMap &y)
       {return x.SrcCacheDB < y.SrcCacheDB;};

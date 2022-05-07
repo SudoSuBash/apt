@@ -1,5 +1,6 @@
 #include <config.h>
 
+#include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/cmndline.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
@@ -8,17 +9,18 @@
 
 #include "teestream.h"
 
+#include <cctype>
+#include <cerrno>
+#include <csignal>
+#include <cstddef>
+#include <cstdlib>
+#include <cstring>
+#include <ctime>
 #include <dirent.h>
-#include <errno.h>
 #include <netinet/in.h>
 #include <regex.h>
-#include <signal.h>
-#include <stddef.h>
-#include <stdlib.h>
-#include <string.h>
 #include <sys/socket.h>
 #include <sys/stat.h>
-#include <time.h>
 #include <unistd.h>
 
 #include <array>
@@ -29,7 +31,6 @@
 #include <sstream>
 #include <string>
 #include <thread>
-#include <unordered_map>
 #include <vector>
 
 static std::string HTMLEncode(std::string encode)			/*{{{*/
@@ -383,7 +384,7 @@ static int grouped_alpha_case_sort(const struct dirent **a, const struct dirent 
       else if (S_ISDIR(bmode))
 	 return 1;
    }
-   return strcasecmp((*a)->d_name, (*b)->d_name);
+   return stringcasecmp((*a)->d_name, (*b)->d_name);
 }
 									/*}}}*/
 static void sendDirectoryListing(std::ostream &log, int const client, std::string const &dir,/*{{{*/
@@ -460,9 +461,9 @@ static bool parseFirstLine(std::ostream &log, int const client, std::string cons
    size_t httpstart = fileend;
    for (; request[httpstart] == ' '; ++httpstart);
    if (strncmp(request.c_str() + httpstart, "HTTP/1.1\r", 9) == 0)
-      closeConnection = strcasecmp(LookupTag(request, "Connection", "Keep-Alive").c_str(), "Keep-Alive") != 0;
+      closeConnection = stringcasecmp(LookupTag(request, "Connection", "Keep-Alive"), "Keep-Alive") != 0;
    else if (strncmp(request.c_str() + httpstart, "HTTP/1.0\r", 9) == 0)
-      closeConnection = strcasecmp(LookupTag(request, "Connection", "Keep-Alive").c_str(), "close") == 0;
+      closeConnection = stringcasecmp(LookupTag(request, "Connection", "Keep-Alive"), "close") == 0;
    else
    {
       sendError(log, client, 500, request, sendContent, "Not an HTTP/1.{0,1} request", headers);

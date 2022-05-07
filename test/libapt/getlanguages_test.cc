@@ -3,16 +3,11 @@
 #include <apt-pkg/aptconfiguration.h>
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
-#include <apt-pkg/fileutl.h>
 
 #include <algorithm>
-#include <iostream>
 #include <string>
 #include <vector>
-
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/types.h>
+#include <cstdlib>
 
 #include <gtest/gtest.h>
 

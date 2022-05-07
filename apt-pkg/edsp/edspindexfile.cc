@@ -13,12 +13,15 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/fileutl.h>
 #include <apt-pkg/indexfile.h>
+#include <apt-pkg/macros.h>
 #include <apt-pkg/pkgcache.h>
+#include <apt-pkg/pkgcachegen.h>
 #include <apt-pkg/pkgrecords.h>
 
+#include <cstddef>
+#include <cstdint>
 #include <memory>
 #include <string>
-#include <stddef.h>
 #include <unistd.h>
 									/*}}}*/
 
