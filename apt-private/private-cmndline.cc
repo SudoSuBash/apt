@@ -245,7 +245,7 @@ static bool addArgumentsAPTGet(std::vector<CommandLine::Args> &Args, char const 
    else if (CmdMatches("clean", "autoclean", "auto-clean", "check", "download", "changelog") ||
 	    CmdMatches("markauto", "unmarkauto")) // deprecated commands
       ;
-   else if (CmdMatches("moo"))
+   else if (CmdMatches("moo") || CmdMatches("🐮") || CmdMatches("🐄"))
       addArg(0, "color", "APT::Moo::Color", 0);
 
    if (CmdMatches("install", "reinstall", "remove", "purge", "upgrade", "dist-upgrade",

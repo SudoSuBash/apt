@@ -430,6 +430,8 @@ static std::vector<aptDispatchWithHelp> GetCommands()			/*{{{*/
       {"changelog", &DoChangelog, _("Download and display the changelog for the given package")},
       {"indextargets", &DoIndexTargets, nullptr},
       {"moo", &DoMoo, nullptr},
+      {"🐮", &DoMoo, nullptr},
+      {"🐄", &DoMoo, nullptr},
       {nullptr, nullptr, nullptr}
    };
 }
