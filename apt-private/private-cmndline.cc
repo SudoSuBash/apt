@@ -11,6 +11,7 @@
 
 #include <apt-private/private-cmndline.h>
 #include <apt-private/private-main.h>
+#include <apt-private/private-moo.h>
 
 #include <stdarg.h>
 #include <stdlib.h>
@@ -37,6 +38,7 @@ static bool CmdMatches_fn(char const *const Cmd, char const *const Match, Tail..
 }
 #define addArg(w, x, y, z) Args.emplace_back(CommandLine::MakeArgs(w, x, y, z))
 #define CmdMatches(...) (Cmd != nullptr && CmdMatches_fn(Cmd, __VA_ARGS__))
+#define CmdIsMoo() (Cmd != nullptr && IsMoo(Cmd))
 
 static bool addArgumentsAPTCache(std::vector<CommandLine::Args> &Args, char const * const Cmd)/*{{{*/
 {
@@ -245,7 +247,7 @@ static bool addArgumentsAPTGet(std::vector<CommandLine::Args> &Args, char const 
    else if (CmdMatches("clean", "autoclean", "auto-clean", "check", "download", "changelog") ||
 	    CmdMatches("markauto", "unmarkauto")) // deprecated commands
       ;
-   else if (CmdMatches("moo") || CmdMatches("🐮") || CmdMatches("🐄"))
+   else if (CmdIsMoo())
       addArg(0, "color", "APT::Moo::Color", 0);
 
    if (CmdMatches("install", "reinstall", "remove", "purge", "upgrade", "dist-upgrade",
@@ -545,9 +547,11 @@ std::vector<CommandLine::Dispatch> ParseCommandLine(CommandLine &CmdL, APT_CMD c
 
    char const * CmdCalled = nullptr;
    if (Cmds.empty() == false && Cmds[0].Handler != nullptr)
+   {
       CmdCalled = CommandLine::GetCommand(Cmds.data(), argc, argv);
-   if (CmdCalled != nullptr)
-      BinaryCommandSpecificConfiguration(argv[0], CmdCalled);
+      BinaryCommandSpecificConfiguration(argv[0], IsMoo(CmdCalled) ? "moo" : CmdCalled);
+   }
+
    std::string const conf = "Binary::" + _config->Find("Binary");
    _config->MoveSubTree(conf.c_str(), nullptr);
 
@@ -584,6 +588,8 @@ std::vector<CommandLine::Dispatch> ParseCommandLine(CommandLine &CmdL, APT_CMD c
       ShowCommonHelp(Binary, CmdL, CmdsWithHelp, ShowHelp);
       exit(1);
    }
+   if (CmdL.FileSize() && IsMoo(CmdL.FileList[0]))
+      CmdL.FileList[0] = "moo";
    return Cmds;
 }
 									/*}}}*/

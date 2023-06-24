@@ -45,6 +45,9 @@
 
 #include <apt-pkg/macros.h>
 
+#include <string>
+
+APT_PUBLIC bool IsMoo(const std::string&);
 
 class Configuration;
 

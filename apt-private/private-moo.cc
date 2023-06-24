@@ -175,7 +175,7 @@ bool DoMoo(CommandLine &CmdL)						/*{{{*/
    signed short SuperCow = 1;
    if (CmdL.FileSize() != 0)
       for (const char **Moo = CmdL.FileList + 1; *Moo != 0; Moo++)
-         if (strcasecmp(*Moo, "moo") == 0)
+         if (IsMoo(*Moo))
             SuperCow++;
 
    // time is random enough for our purpose

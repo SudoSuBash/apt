@@ -2,6 +2,7 @@
 #define APT_PRIVATE_MOO_H
 
 #include <apt-pkg/macros.h>
+#include <string>
 
 class CommandLine;
 
