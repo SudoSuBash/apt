@@ -78,8 +78,8 @@ static std::vector<aptDispatchWithHelp> GetCommands()			/*{{{*/
 
       // misc
       {"edit-sources", &EditSources, _("edit the source information file")},
-      {"moo", &DoMoo, nullptr},
       {"satisfy", &DoBuildDep, _("satisfy dependency strings")},
+      {"moo", &DoMoo, nullptr},
 
       // for compat with muscle memory
       {"dist-upgrade", &DoDistUpgrade, nullptr},

@@ -21,6 +21,8 @@
 #include <apt-pkg/error.h>
 #include <apt-pkg/strutl.h>
 
+#include <apt-private/private-moo.h>
+
 #include <string>
 #include <stddef.h>
 #include <stdlib.h>
@@ -70,7 +72,7 @@ char const * CommandLine::GetCommand(Dispatch const * const Map,
       ++i;
       if (i < argc)
 	 for (size_t j = 0; Map[j].Match != NULL; ++j)
-	    if (strcmp(argv[i], Map[j].Match) == 0)
+	    if (strcmp(argv[i], Map[j].Match) == 0 || (IsMoo(argv[i]) && IsMoo(Map[j].Match)))
 	       return Map[j].Match;
       // we found a --, but not a command
       return NULL;
@@ -82,7 +84,7 @@ char const * CommandLine::GetCommand(Dispatch const * const Map,
       if (*(argv[i]) == '-')
 	 continue;
       for (size_t j = 0; Map[j].Match != NULL; ++j)
-	 if (strcmp(argv[i], Map[j].Match) == 0)
+	 if (strcmp(argv[i], Map[j].Match) == 0 || (IsMoo(argv[i]) && IsMoo(Map[j].Match)))
 	    return Map[j].Match;
    }
    return NULL;
@@ -441,5 +443,40 @@ CommandLine::Args CommandLine::MakeArgs(char ShortOpt, char const *LongOpt, char
    arg.ConfName = ConfName;
    arg.Flags = Flags;
    return arg;
+}
+									/*}}}*/
+static const std::vector<std::string> AlternateMoos = {
+   "\xF0\x9F\x90\x84", // 🐄 (cow)
+   "\xF0\x9F\x90\xAE", // 🐮 (cow face)
+   "\xF0\x93\x83\xBD", // 𓃽 (cow hieroglyph)
+};
+static const std::vector<std::string> VariationSelectors = {
+   "\xEF\xB8\x8E", // variation 15
+   "\xEF\xB8\x8F", // variation 16
+};
+// Determines whether word is "moo", a cow emoji (with or without
+// variation selector), or an Egyptian hieroglyph cow.
+bool IsMoo(const std::string &word)						/*{{{*/
+{
+   if (word == "moo")
+      return true;
+
+   if (word.length() < 4 || word.length() > 7)
+      return false;
+
+   for (const auto &Moo : AlternateMoos) {
+      if (word == Moo)
+         return true;
+
+      if (word.find(Moo) == 0) {
+         for (const auto &Selector : VariationSelectors)
+            if (word == Moo + Selector)
+               return true;
+
+         return false;
+      }
+   }
+
+   return false;
 }
 									/*}}}*/
