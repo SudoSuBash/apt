@@ -1522,7 +1522,7 @@ bool pkgDPkgPM::Go(APT::Progress::PackageManager *progress)
    ExpandPendingCalls(List, Cache);
 
    /* if dpkg told us that it has already done everything to the package we wanted it to do,
-      we shouldn't ask it for "more" later. That can e.g. happen if packages without conffiles
+      we should not ask it for "more" later. That can e.g. happen if packages without conffiles
       are purged as they will have pass through the purge states on remove already */
    auto const StripAlreadyDoneFrom = [&](APT::VersionVector & Pending) {
       Pending.erase(std::remove_if(Pending.begin(), Pending.end(), [&](pkgCache::VerIterator const &Ver) {
@@ -1704,7 +1704,7 @@ bool pkgDPkgPM::Go(APT::Progress::PackageManager *progress)
 	 for (auto && P: currentStates.Purge())
 	    cleanStates.Install(P);
 	 if (cleanStates.Save(false) == false)
-	    return _error->Error("Couldn't clean the currently selected dpkg states");
+	    return _error->Error("Could not clean the currently selected dpkg states");
       }
    }
 
@@ -1712,9 +1712,9 @@ bool pkgDPkgPM::Go(APT::Progress::PackageManager *progress)
    {
       if (approvedStates.Save(false) == false)
       {
-	 _error->Error("Couldn't record the approved state changes as dpkg selection states");
+	 _error->Error("Could not record the approved state changes as dpkg selection states");
 	 if (currentStates.Save(false) == false)
-	    _error->Error("Couldn't restore dpkg selection states which were present before this interaction!");
+	    _error->Error("Could not restore dpkg selection states which were present before this interaction!");
 	 return false;
       }
 
@@ -1920,9 +1920,9 @@ bool pkgDPkgPM::Go(APT::Progress::PackageManager *progress)
 	 // we apply it again here as an explicit remove in the ordering will have cleared the purge state
 	 if (approvedStates.Save(false) == false)
 	 {
-	    _error->Error("Couldn't record the approved purges as dpkg selection states");
+	    _error->Error("Could not record the approved purges as dpkg selection states");
 	    if (currentStates.Save(false) == false)
-	       _error->Error("Couldn't restore dpkg selection states which were present before this interaction!");
+	       _error->Error("Could not restore dpkg selection states which were present before this interaction!");
 	    return false;
 	 }
 	 std::swap(approvedRemoves, approvedStates.Remove());
@@ -2123,7 +2123,7 @@ bool pkgDPkgPM::Go(APT::Progress::PackageManager *progress)
 
       if (waitpid_failure == true)
       {
-	 strprintf(d->dpkg_error, "Sub-process %s couldn't be waited for.",Args.front());
+	 strprintf(d->dpkg_error, "Sub-process %s could not be waited for.",Args.front());
 	 _error->Error("%s", d->dpkg_error.c_str());
 	 break;
       }
@@ -2131,7 +2131,7 @@ bool pkgDPkgPM::Go(APT::Progress::PackageManager *progress)
       // Check for an error code.
       if (WIFEXITED(Status) == 0 || WEXITSTATUS(Status) != 0)
       {
-	 // if it was set to "keep-dpkg-running" then we won't return
+	 // if it was set to "keep-dpkg-running" then we wo not return
 	 // here but keep the loop going and just report it as a error
 	 // for later
 	 bool const stopOnError = _config->FindB("Dpkg::StopOnError",true);
@@ -2164,13 +2164,13 @@ bool pkgDPkgPM::Go(APT::Progress::PackageManager *progress)
       std::move(undoPur.begin(), undoPur.end(), std::back_inserter(undo.Install()));
       approvedStates.clear();
       if (undo.Save(false) == false)
-	 _error->Error("Couldn't revert dpkg selection for approved remove/purge after an error was encountered!");
+	 _error->Error("Could not revert dpkg selection for approved remove/purge after an error was encountered!");
    }
 
    StripAlreadyDoneFrom(currentStates.Remove());
    StripAlreadyDoneFrom(currentStates.Purge());
    if (currentStates.Save(false) == false)
-      _error->Error("Couldn't restore dpkg selection states which were present before this interaction!");
+      _error->Error("Could not restore dpkg selection states which were present before this interaction!");
 
    if (pkgPackageManager::SigINTStop)
        _error->Warning(_("Operation was interrupted before it could finish"));

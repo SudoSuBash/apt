@@ -453,7 +453,7 @@ static bool parseFirstLine(std::ostream &log, int const client, std::string cons
    if (lineend == std::string::npos || filestart == std::string::npos ||
 	 fileend == std::string::npos || filestart == fileend)
    {
-      sendError(log, client, 500, request, sendContent, "Filename can't be extracted", headers);
+      sendError(log, client, 500, request, sendContent, "Filename cannot be extracted", headers);
       return false;
    }
 
@@ -505,7 +505,7 @@ static bool parseFirstLine(std::ostream &log, int const client, std::string cons
 	 if (auth.empty())
 	    sendError(log, client, 407, request, sendContent, "Proxy requires authentication", headers);
 	 else
-	    sendError(log, client, 407, request, sendContent, "Client wants to authenticate to proxy, but proxy doesn't need it", headers);
+	    sendError(log, client, 407, request, sendContent, "Client wants to authenticate to proxy, but proxy does not need it", headers);
 	return false;
       }
       if (authConf.empty() == false)
@@ -516,7 +516,7 @@ static bool parseFirstLine(std::ostream &log, int const client, std::string cons
 	    auth.erase(0, strlen(basic));
 	    if (auth != authConf)
 	    {
-	       sendError(log, client, 407, request, sendContent, "Proxy-Authentication doesn't match", headers);
+	       sendError(log, client, 407, request, sendContent, "Proxy-Authentication does not match", headers);
 	       return false;
 	    }
 	 }
@@ -544,7 +544,7 @@ static bool parseFirstLine(std::ostream &log, int const client, std::string cons
 	 if (auth.empty())
 	    sendError(log, client, 401, request, sendContent, "Server requires authentication", headers);
 	 else
-	    sendError(log, client, 401, request, sendContent, "Client wants to authenticate to server, but server doesn't need it", headers);
+	    sendError(log, client, 401, request, sendContent, "Client wants to authenticate to server, but server does not need it", headers);
 	 return false;
       }
       if (authConf.empty() == false)
@@ -555,7 +555,7 @@ static bool parseFirstLine(std::ostream &log, int const client, std::string cons
 	    auth.erase(0, strlen(basic));
 	    if (auth != authConf)
 	    {
-	       sendError(log, client, 401, request, sendContent, "Authentication doesn't match", headers);
+	       sendError(log, client, 401, request, sendContent, "Authentication does not match", headers);
 	       return false;
 	    }
 	 }
@@ -660,7 +660,7 @@ static bool handleOnTheFlyReconfiguration(std::ostream &log, int const client,/*
 	 sendData(client, headers, response);
 	 return true;
       }
-      sendError(log, client, 404, request, true, "Requested Configuration option doesn't exist", headers);
+      sendError(log, client, 404, request, true, "Requested Configuration option does not exist", headers);
       return false;
    }
    else if (pcount == 3 && parts[1] == "clear")
@@ -819,7 +819,7 @@ static void * handleClient(int const client, size_t const id)		/*{{{*/
 	       if (ranges.find(",bytes,") == std::string::npos)
 	       {
 		  // we handle it as an error here because we are a test server - a real one should just ignore it
-		  sendError(log, client, 400, *m, sendContent, "Client does range requests we don't support", headers);
+		  sendError(log, client, 400, *m, sendContent, "Client does range requests we do not support", headers);
 		  continue;
 	       }
 
@@ -967,14 +967,14 @@ int main(int const argc, const char * argv[])
    // create socket, bind and listen to it {{{
    // ignore SIGPIPE, this can happen on write() if the socket closes connection
    signal(SIGPIPE, SIG_IGN);
-   // ignore worker processes exiting, as we don't want to cause them to stay
+   // ignore worker processes exiting, as we do not want to cause them to stay
    // around as zombies because we're busy.
    signal(SIGCHLD, SIG_IGN);
 
    int sock = socket(AF_INET6, SOCK_STREAM, 0);
    if(sock < 0)
    {
-      _error->Errno("aptwerbserver", "Couldn't create socket");
+      _error->Errno("aptwerbserver", "Could not create socket");
       _error->DumpErrors(std::cerr);
       return 1;
    }
@@ -996,7 +996,7 @@ int main(int const argc, const char * argv[])
 
    if (bind(sock, (struct sockaddr*) &locAddr, sizeof(locAddr)) < 0)
    {
-      _error->Errno("aptwerbserver", "Couldn't bind");
+      _error->Errno("aptwerbserver", "Could not bind");
       _error->DumpErrors(std::cerr);
       return 2;
    }
@@ -1028,7 +1028,7 @@ int main(int const argc, const char * argv[])
       int const pidfilefd = GetLock(pidfilename);
       if (pidfilefd < 0 || pidfile.OpenDescriptor(pidfilefd, FileFd::WriteOnly) == false)
       {
-	 _error->Errno("aptwebserver", "Couldn't acquire lock on pidfile '%s'", pidfilename.c_str());
+	 _error->Errno("aptwebserver", "Could not acquire lock on pidfile '%s'", pidfilename.c_str());
 	 _error->DumpErrors(std::cerr);
 	 return 3;
       }
@@ -1077,7 +1077,7 @@ int main(int const argc, const char * argv[])
       {
 	 if (errno == EINTR)
 	    continue;
-	 _error->Errno("accept", "Couldn't accept client on socket %d", sock);
+	 _error->Errno("accept", "Could not accept client on socket %d", sock);
 	 _error->DumpErrors(std::cerr);
 	 return 6;
       }

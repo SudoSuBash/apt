@@ -77,7 +77,7 @@ bool StoreMethod::Fetch(FetchItem *Itm)					/*{{{*/
       if (OpenFileWithCompressorByName(From, Path, FileFd::ReadOnly, Binary) == false)
 	 return false;
       if(From.IsCompressed() && From.FileSize() == 0)
-	 return _error->Error(_("Empty files can't be valid archives"));
+	 return _error->Error(_("Empty files cannot be valid archives"));
    }
    else
       From.Open(Path, FileFd::ReadOnly, FileFd::Extension);

@@ -982,7 +982,7 @@ void HttpMethod::SendReq(FetchItem *Itm)
       sd_pid_get_unit(getpid(), &unit);
       if (unit != nullptr && *unit != '\0' && not APT::String::Startswith(unit, "user@") // user@ _is_ interactive
 	  && "packagekit.service"_sv != unit						 // packagekit likely is interactive
-	  && "dbus.service"_sv != unit)							 // aptdaemon and qapt don't have systemd services
+	  && "dbus.service"_sv != unit)							 // aptdaemon and qapt do not have systemd services
 	 Req << " non-interactive";
 
       free(unit);

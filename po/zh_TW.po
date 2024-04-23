@@ -25,13 +25,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -113,7 +113,7 @@ msgstr "寫入錯誤"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -133,14 +133,14 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -224,7 +224,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "找不到 %s 套件的某個檔案。這意味著您可能要手動修復這個套件。（因為找不到平"
@@ -232,7 +232,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr ""
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -302,7 +302,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -333,7 +333,7 @@ msgstr "正在取得檔案 %li/%li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr "套件 %s 需要重新安裝，但找不到它的套件檔。"
 
 #: apt-pkg/algorithms.cc
@@ -368,17 +368,17 @@ msgstr "編譯正規表示式時發生錯誤 - %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "無法找到主題 %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "無法找到套件 %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "無法找到套件 %s"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -388,28 +388,28 @@ msgstr "找不到套件 %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 
@@ -716,7 +716,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -738,7 +738,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "等待 %s 但是它並不存在"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -804,7 +804,7 @@ msgstr "讀取，仍有 %lu 未讀但已無空間"
 
 #: apt-pkg/contrib/fileutl.cc
 #, fuzzy, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "寫入，仍有 %lu 待寫入但已沒辨法"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -832,17 +832,17 @@ msgid "Unable to write to %s"
 msgstr "無法寫入 %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "不能 mmap 空白檔案"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "無法 mmap 到 %lu 位元組"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "無法開啟管線給 %s 使用"
 
 #: apt-pkg/contrib/mmap.cc
@@ -857,7 +857,7 @@ msgstr "無法 invoke "
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "無法 mmap 到 %lu 位元組"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1297,7 +1297,7 @@ msgstr "寫入 %i 筆紀綠，其中有 %i 個檔案遺失了，有 %i 個檔案
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr ""
 
 #: apt-pkg/indexcopy.cc
@@ -1696,7 +1696,7 @@ msgstr "套件 %s 沒有可安裝的候選版本"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr ""
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1776,12 +1776,12 @@ msgstr "發生了問題，且 -y 並沒有和 --force-yes 搭配使用"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "無法確認 %s 的未使用空間"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "在 %s 裡沒有足夠的的未使用空間。"
 
 #: apt-private/private-download.cc
@@ -1863,11 +1863,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "內部錯誤，排序未能完成"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr "怪哉... 檔案大小不符，請發信給 apt@packages.debian.org"
 
 #: apt-private/private-install.cc
@@ -2012,13 +2012,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "我們沒有計劃要刪除任何東西，無法啟動 AutoRemover"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "嗯，看起來 AutoRemover 弄壞了什麼東西，而這是不該發生的。\n"
 "請針對 apt 發佈錯誤回報。"
@@ -2119,7 +2119,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 
 #: apt-private/private-output.cc apt-private/private-show.cc
@@ -2385,7 +2385,7 @@ msgid "Package files:"
 msgstr "套件檔："
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr "快取資料未同步，無法 x-ref 套件檔"
 
 #. Show any packages have explicit pins
@@ -2811,7 +2811,7 @@ msgstr "無法取得 debconf 版本。是否有安裝 debconf？"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "無法找到套件 %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3863,7 +3863,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -3903,7 +3903,7 @@ msgstr "以下簽名無效：\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr "由於無法取得它們的公鑰，以下簽章無法進行驗證：\n"
 
@@ -3936,7 +3936,7 @@ msgid "Connection closed prematurely"
 msgstr "連線突然終止"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr ""
 
 #, fuzzy
@@ -4073,7 +4073,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr "無法滿足 %2$s 所要求的 %1$s 相依關係，因為找不到套件 %3$s"
 
@@ -4089,7 +4089,7 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "無法滿足 %2$s 所要求的 %1$s 相依關係，因為套件 %3$s 沒有版本符合其版本需求"
 
@@ -4237,7 +4237,7 @@ msgstr ""
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "在計算檔案相依性時找不到套件 %s %s"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "無法取得來源套件列表 %s 的狀態"
 
 #~ msgid "Collecting File Provides"
@@ -4253,7 +4253,7 @@ msgstr ""
 #~ msgid "Total dependency version space: "
 #~ msgstr "相依版本空間合計："
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "在 %s 裡沒有足夠的的未使用空間"
 
 #~ msgid "Done"
@@ -4284,7 +4284,7 @@ msgstr ""
 #~ msgstr "MD5Sum 不符"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr "找不到 %s 套件的某個檔案。這意味著您可能要手動修復這個套件。"
 
@@ -4354,13 +4354,13 @@ msgstr ""
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "在解析 MD5 時發生錯誤。位移 %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "無法切換至 %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "找不到可用的 control 檔"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "無法開啟管線給 %s 使用"
 
 #~ msgid "Read error from %s process"
@@ -4384,7 +4384,7 @@ msgstr ""
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "讀取，仍有 %lu 未讀但已無空間"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "寫入，仍有 %lu 待寫入但已沒辨法"
 
 #~ msgid "Error occurred while processing %s (NewPackage)"
@@ -4434,7 +4434,7 @@ msgstr ""
 #~ msgid "Malformed line %u in source list %s (vendor id)"
 #~ msgstr "來源列表 %2$s 中的第 %1$u 行的格式錯誤（提供者 ID）"
 
-#~ msgid "Couldn't access keyring: '%s'"
+#~ msgid "Could not access keyring: '%s'"
 #~ msgstr "無法存取鑰匙圈：'%s'"
 
 #~ msgid "Could not patch file"

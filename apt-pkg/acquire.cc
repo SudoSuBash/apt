@@ -113,7 +113,7 @@ static bool SetupAPTPartialDirectory(std::string const &grand, std::string const
    std::string const SandboxUser = _config->Find("APT::Sandbox::User");
    if (getuid() == 0)
    {
-      if (SandboxUser.empty() == false && SandboxUser != "root") // if we aren't root, we can't chown, so don't try it
+      if (SandboxUser.empty() == false && SandboxUser != "root") // if we are not root, we cannot chown, so do not try it
       {
 	 struct passwd const * const pw = getpwnam(SandboxUser.c_str());
 	 struct group const * const gr = getgrnam(ROOT_GROUP);
@@ -663,7 +663,7 @@ static void CheckDropPrivsMustBeDisabled(pkgAcquire const &Fetcher)
       // if destination file is inaccessible all hope is lost for privilege dropping
       if (IsAccessibleBySandboxUser((*I)->DestFile, true) == false)
       {
-	 _error->WarningE("pkgAcquire::Run", _("Download is performed unsandboxed as root as file '%s' couldn't be accessed by user '%s'."),
+	 _error->WarningE("pkgAcquire::Run", _("Download is performed unsandboxed as root as file '%s' could not be accessed by user '%s'."),
 	       (*I)->DestFile.c_str(), SandboxUser.c_str());
 	 _config->Set("APT::Sandbox::User", "");
 	 break;
@@ -681,7 +681,7 @@ static void CheckDropPrivsMustBeDisabled(pkgAcquire const &Fetcher)
 	 auto const filepath = DeQuoteString(source.Path);
 	 if (not IsAccessibleBySandboxUser(filepath, false))
 	 {
-	    _error->NoticeE("pkgAcquire::Run", _("Download is performed unsandboxed as root as file '%s' couldn't be accessed by user '%s'."),
+	    _error->NoticeE("pkgAcquire::Run", _("Download is performed unsandboxed as root as file '%s' could not be accessed by user '%s'."),
 			    filepath.c_str(), SandboxUser.c_str());
 	    _config->CndSet("Binary::file::APT::Sandbox::User", "root");
 	    _config->CndSet("Binary::copy::APT::Sandbox::User", "root");

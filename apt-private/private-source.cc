@@ -127,7 +127,7 @@ static pkgSrcRecords::Parser *FindSrc(const char *Name,
 	 bool fuzzy = false;
 	 // we have a default release, try to locate the pkg. we do it like
 	 // this because GetCandidateVer() will not "downgrade", that means
-	 // "apt-get source -t stable apt" won't work on a unstable system
+	 // "apt-get source -t stable apt" wo not work on a unstable system
 	 for (pkgCache::VerIterator Ver = Pkg.VersionList();; ++Ver)
 	 {
 	    // try first only exact matches, later fuzzy matches

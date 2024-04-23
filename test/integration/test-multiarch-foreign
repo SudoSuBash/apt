@@ -282,6 +282,6 @@ Inst cool-bar (1.0 unstable [amd64])
 Conf bar (1.0 unstable [amd64])
 Conf cool-bar (1.0 unstable [amd64])' aptget install cool-bar -s
 
-# a barbarian doesn't satisfy another either
+# a barbarian does not satisfy another either
 insertinstalledpackage 'bar-needer2' 's390x' '1.0' 'Depends: bar-provider'
 testfailure aptget check

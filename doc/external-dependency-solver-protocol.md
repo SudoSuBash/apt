@@ -311,7 +311,7 @@ this protocol makes no assumption on the fact that a subsequent
 invocation of an Autoremove action will actually remove the very same
 packages indicated by Autoremove stanzas in the former solution.
 
-A package can't be installed in multiple versions at the same time, so
+A package cannot be installed in multiple versions at the same time, so
 for each package there can at most one version be selected either for
 installation or removal. This especially means that a solver is neither
 allowed to represent package upgrades as a remove of the installed

@@ -30,7 +30,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 "Oppdatering fra et slikt depot kan ikke gjøres på sikkert vis, og er derfor "
@@ -38,7 +38,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -124,7 +124,7 @@ msgstr "Skrivefeil"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -146,14 +146,14 @@ msgstr "GPG-feil: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -240,7 +240,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Klarte ikke å finne en fil for pakken %s. Det kan bety at du må ordne pakken "
@@ -248,7 +248,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "Klarte ikke finne kilde for å laste ned versjon «%s» av «%s»"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -318,7 +318,7 @@ msgstr "Mangler sandkassebruker «%s» på systemet, kan ikke droppe privileger"
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -349,7 +349,7 @@ msgstr "Henter fil %li av %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "Pakka %s trenger å installeres på nytt, men jeg finner ikke lageret for den."
 
@@ -386,17 +386,17 @@ msgstr "Kompileringsfeil i regulært uttrykk - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Klarte ikke å finne oppgave «%s»"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Klarte ikke finne noen pakke med regex «%s»"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Klarte ikke finne noen pakke med glob «%s»"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -406,25 +406,25 @@ msgstr "Klarer ikke å finne pakken %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr "Klarte ikke velge versjoner fra pakken «%s» siden den er kun virtuell"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 "Klarte ikke velge nyeste versjon fra pakken «%s» siden den er kun virtuell"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 "Klarte ikke velge kandidatversjon fra pakken «%s» siden den ikke har noen "
 "kandidat"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 "Klarte ikke velge installert versjon fra pakken «%s» siden den ikke er "
 "installert"
@@ -432,7 +432,7 @@ msgstr ""
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "Klarte ikke velge installert eller kandidatversjon fra pakken «%s» siden den "
@@ -745,7 +745,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -767,7 +767,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Ventet på %s, men den ble ikke funnet"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -833,7 +833,7 @@ msgstr "lese, har fremdeles %llu igjen å lese, men ingen igjen"
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "skrive, har fremdeles %llu igjen å skrive, men klarte ikke å"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -861,17 +861,17 @@ msgid "Unable to write to %s"
 msgstr "Kan ikke skrive til %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Kan ikke utføre mmap på en tom fil"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Klarte ikke lage mmap av %llu bytes"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Klarte ikke duplisere fildeskriptor %i"
 
 #: apt-pkg/contrib/mmap.cc
@@ -884,7 +884,7 @@ msgstr "Klarte ikke synkronisere mmap"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Klarte ikke lage mmap av %lu bytes"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1345,7 +1345,7 @@ msgstr "Skrev %i poster med %i manglende filer og %i feile filer.\n"
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "Klarte ikke finne autentiseringsoppføring for: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1751,7 +1751,7 @@ msgstr "Pakken «%s» har ingen installasjonskandidat"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "Virtuelle pakker som «%s» kan ikke fjernes\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1837,12 +1837,12 @@ msgstr "Det oppsto problemer og «-y» ble brukt uten «--force-yes»"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Klarte ikke bestemme ledig plass i %s"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Dessverre, ikke nok ledig plass i %s"
 
 #: apt-private/private-download.cc
@@ -1929,11 +1929,11 @@ msgstr ""
 "held-packages."
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Intern feil, sortering fullførte ikke"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Så rart ... Størrelsene stemmer ikke overens, send en e-post til "
 "apt@packages.debian.org"
@@ -2086,13 +2086,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "Merk: Dette er gjort automatisk og med hensikt av dpkg."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "Vi skal ikke slette ting, kan ikke starte auto-fjerner (AutoRemover)"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Hmm, det ser ut som auto-fjerneren (AutoRemover) ødela noe, og det skal\n"
 "virkelig ikke skje. Send inn en feilmelding til apt-utviklerne."
@@ -2199,7 +2199,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "MERK: Dette er kun en simulering.\n"
 "      %s må ha root-rettigheter for reell utførelse.\n"
@@ -2471,7 +2471,7 @@ msgid "Package files:"
 msgstr "Pakkefiler:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 "Mellomlageret er ikke oppdatert, kan ikke kryssreferere til en pakkefil"
 
@@ -2908,7 +2908,7 @@ msgstr "Kan ikke fastslå debconf-versjonen. Er debconf installert?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Klarte ikke å finne pakken %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3974,7 +3974,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -4016,7 +4016,7 @@ msgstr "De følgende signaturene var ugyldige:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "De følgende signaturene kunne ikke verifiseres fordi den offentlige nøkkelen "
@@ -4051,7 +4051,7 @@ msgid "Connection closed prematurely"
 msgstr "Forbindelsen ble uventet stengt"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Tomme filer kan ikke være gyldige arkiver"
 
 #, fuzzy, c-format
@@ -4208,7 +4208,7 @@ msgstr "Tomme filer kan ikke være gyldige arkiver"
 
 #, fuzzy
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr "Kravet %s for %s kan ikke oppfylles fordi pakken %s ikke finnes"
 
@@ -4226,7 +4226,7 @@ msgstr "Tomme filer kan ikke være gyldige arkiver"
 #, fuzzy
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "Kravet %s for %s kan ikke oppfylles fordi det ikke finnes noen "
 #~ "tilgjengelige versjoner av pakken %s som oppfyller versjonskravene"
@@ -4373,7 +4373,7 @@ msgstr "Tomme filer kan ikke være gyldige arkiver"
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "Fant ikke pakken %s %s ved behandling av filkrav"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Klarte ikke finne informasjon om %s - lista over kildekodepakker"
 
 #~ msgid "Collecting File Provides"
@@ -4389,7 +4389,7 @@ msgstr "Tomme filer kan ikke være gyldige arkiver"
 #~ msgid "Total dependency version space: "
 #~ msgstr "Total plass for avhengighetsforhold/versjoner: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Du har ikke nok ledig plass i %s"
 
 #~ msgid "Done"
@@ -4438,7 +4438,7 @@ msgstr "Tomme filer kan ikke være gyldige arkiver"
 #~ msgstr "Feil MD5sum"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Klarte ikke å finne en fil for pakken %s. Det kan bety at du må ordne "
@@ -4513,13 +4513,13 @@ msgstr "Tomme filer kan ikke være gyldige arkiver"
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Feil ved tolking av MD5. Offset %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Klarte ikke å bytte til %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Fant ingen gyldig kontrollfil"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Klarte ikke å åpne rør for %s"
 
 #~ msgid "Read error from %s process"
@@ -4546,7 +4546,7 @@ msgstr "Tomme filer kan ikke være gyldige arkiver"
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "lese, har fremdeles %lu igjen å lese, men ingen igjen"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "skrive, har fremdeles %lu igjen å skrive, men klarte ikke å"
 
 #~ msgid ""
@@ -4604,7 +4604,7 @@ msgstr "Tomme filer kan ikke være gyldige arkiver"
 #~ msgid "Malformed line %u in source list %s (vendor id)"
 #~ msgstr "Feil på %u i kildelista %s (selgers id)"
 
-#~ msgid "Couldn't access keyring: '%s'"
+#~ msgid "Could not access keyring: '%s'"
 #~ msgstr "Klarte ikke å slå opp i nøkkelring; «%s»"
 
 #~ msgid "Could not patch file"

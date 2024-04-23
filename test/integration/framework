@@ -332,7 +332,7 @@ setupenvironment() {
 	if command -v gnustat >/dev/null 2>&1; then
 		stat=gnustat
 	fi
-	# privilege dropping and testing doesn't work if /tmp isn't world-writeable (as e.g. with libpam-tmpdir)
+	# privilege dropping and testing does not work if /tmp is not world-writeable (as e.g. with libpam-tmpdir)
 	if [ -n "$TMPDIR" ] && [ "$(id -u)" = '0' ] && [ "$($stat --format '%a' "$TMPDIR")" != '1777' ]; then
 		unset TMPDIR
 	fi
@@ -545,11 +545,11 @@ EOF
 		echo 'Acquire::Progress::Ignore::ShowErrorText "true";'
 		echo 'Acquire::Progress::Diffpercent "true";'
 		# in testcases, it can appear as if localhost has a rotation setup,
-		# hide this as we can't really deal with it properly
+		# hide this as we cannot really deal with it properly
 		echo 'Acquire::Failure::ShowIP "false";'
-		# randomess and tests don't play well together
+		# randomess and tests do not play well together
 		echo 'Acquire::IndexTargets::Randomized "false";'
-		# fakeroot can't fake everything, so disabled in production but good for tests
+		# fakeroot cannot fake everything, so disabled in production but good for tests
 		echo 'APT::Sandbox::Verify "true";'
 	} >> aptconfig.conf
 
@@ -633,8 +633,8 @@ configdpkg() {
 	if dpkg --assert-multi-arch >/dev/null 2>&1 ; then
 		local ARCHS="$(getarchitectures)"
 		local DPKGARCH="$(dpkg --print-architecture)"
-		# this ensures that even if multi-arch isn't active in the view
-		# of apt, given that dpkg can't be told which arch is native
+		# this ensures that even if multi-arch is not active in the view
+		# of apt, given that dpkg cannot be told which arch is native
 		# the arch apt treats as native might be foreign for dpkg
 		for ARCH in ${ARCHS}; do
 			if [ "${ARCH}" != "${DPKGARCH}" ]; then
@@ -657,7 +657,7 @@ configdpkg() {
 
 configdpkgnoopchroot() {
 	# create a library to noop chroot() and rewrite maintainer script executions
-	# via execvp() as used by dpkg as we don't want our rootdir to be a fullblown
+	# via execvp() as used by dpkg as we do not want our rootdir to be a fullblown
 	# chroot directory dpkg could chroot into to execute the maintainer scripts
 	msgtest 'Building library to preload to make maintainerscript work in' 'dpkg'
 	cat > noopchroot.c << EOF
@@ -1313,11 +1313,11 @@ signreleasefiles() {
 			SIGNERS=""
 		fi
 		SIGNERS="${SIGNERS#*,}"
-		# FIXME: This should be the full name, but we can't encode the space properly currently
+		# FIXME: This should be the full name, but we cannot encode the space properly currently
 		SIGUSERS="${SIGUSERS} -u ${SIGNER#* }"
 		if [ "${SIGNER}" = 'Rex Expired' ]; then
-			# the key is expired, so gpg doesn't allow one to sign with and the --faked-system-time
-			# option doesn't exist anymore (and using faketime would add a new obscure dependency)
+			# the key is expired, so gpg does not allow one to sign with and the --faked-system-time
+			# option does not exist anymore (and using faketime would add a new obscure dependency)
 			# therefore we 'temporary' make the key not expired and restore a backup after signing
 			cp "${REXKEY}.sec" "$SECEXPIREBAK"
 			cp "${REXKEY}.pub" "$PUBEXPIREBAK"
@@ -1422,7 +1422,7 @@ rewritesourceslist() {
 }
 
 # wait for up to 10s for a pid file to appear to avoid possible race
-# when a helper is started and doesn't write the PID quick enough
+# when a helper is started and does not write the PID quick enough
 waitforpidfile() {
         local PIDFILE="$1"
         for i in $(seq 10); do
@@ -1526,7 +1526,7 @@ EOF
 	find rootdir/etc/apt/sources.list.d/ -name 'apt-test-*.list' -delete
 	# start with an unmounted disk
 	mv "${CD}" "${CD}-unmounted"
-	# we don't want the disk to be modifiable
+	# we do not want the disk to be modifiable
 	addtrap 'prefix' "chmod -f -R +w '$(escape_shell "$PWD/rootdir/media/cdrom/dists/")' '$(escape_shell "$PWD/rootdir/media/cdrom-unmounted/dists/")' || true;"
 	chmod -R 555 rootdir/media/cdrom-unmounted/dists
 }
@@ -1686,12 +1686,12 @@ testequalor2() {
 
 testshowvirtual() {
 	msggroup 'testshowvirtual'
-	local VIRTUAL="N: Can't select versions from package '$1' as it is purely virtual"
+	local VIRTUAL="N: cannot select versions from package '$1' as it is purely virtual"
 	local PACKAGE="$1"
 	shift
 	while [ -n "$1" ]; do
 		VIRTUAL="${VIRTUAL}
-N: Can't select versions from package '$1' as it is purely virtual"
+N: cannot select versions from package '$1' as it is purely virtual"
 		PACKAGE="${PACKAGE} $1"
 		shift
 	done
@@ -1812,7 +1812,7 @@ msgfailoutput() {
 		echo "#### $CMD output ####"
 	elif [ "$1" = 'test' ]; then
 		echo >&2
-		# doesn't support ! or non-file flags
+		# does not support ! or non-file flags
 		msgfailoutputstatfile() {
 			local FILEFLAGS='^-[bcdefgGhkLOprsStuwx]$'
 			if expr match "$1" "$FILEFLAGS" >/dev/null; then
@@ -1993,7 +1993,7 @@ testfailure() {
 		local EXITCODE=$?
 		if expr match "$1" '^apt.*' >/dev/null; then
 			if [ "$1" = 'aptkey' ]; then
-				if grep -q " Can't check signature: 
+				if grep -q " cannot check signature: 
  BAD signature from 
  signature could not be verified" "$OUTPUT"; then
 					msgpass

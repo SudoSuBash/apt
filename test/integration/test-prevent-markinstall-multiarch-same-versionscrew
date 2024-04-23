@@ -101,7 +101,7 @@ rm -f rootdir/var/lib/dpkg/status
 insertinstalledpackage 'libsame2' 'i386' '1' 'Multi-Arch: same'
 insertinstalledpackage 'libsame3' 'i386' '1' 'Multi-Arch: same'
 
-# the error message isn't great, but better than nothing, right?
+# the error message is not great, but better than nothing, right?
 testfailureequal 'Reading package lists...
 Building dependency tree...
 Some packages could not be installed. This may mean that you have

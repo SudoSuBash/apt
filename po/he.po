@@ -115,7 +115,7 @@ msgid "Package files:"
 msgstr "קבצי חבילה:"
 
 #: cmdline/apt-cache.cc:1535 cmdline/apt-cache.cc:1622
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 
 #. Show any packages have explicit pins
@@ -710,7 +710,7 @@ msgid "Packages need to be removed but remove is disabled."
 msgstr ""
 
 #: cmdline/apt-get.cc:795
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr ""
 
 #: cmdline/apt-get.cc:811 cmdline/apt-get.cc:2072 cmdline/apt-get.cc:2105
@@ -723,7 +723,7 @@ msgid "The list of sources could not be read."
 msgstr "רשימת המקורות לא ניתנת לקריאה."
 
 #: cmdline/apt-get.cc:836
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 
 #: cmdline/apt-get.cc:841
@@ -749,12 +749,12 @@ msgstr "אחרי פריסה %sB נוספים ישוחררו.\n"
 #: cmdline/apt-get.cc:867 cmdline/apt-get.cc:870 cmdline/apt-get.cc:2249
 #: cmdline/apt-get.cc:2252
 #, fuzzy, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "אין לך מספיק מקום פנוי ב-%s."
 
 #: cmdline/apt-get.cc:880
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "אין לך מספיק מקום פנוי ב-%s."
 
 #: cmdline/apt-get.cc:896 cmdline/apt-get.cc:916
@@ -908,7 +908,7 @@ msgid "Unable to lock the list directory"
 msgstr ""
 
 #: cmdline/apt-get.cc:1464
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr ""
 
 #: cmdline/apt-get.cc:1513
@@ -930,7 +930,7 @@ msgstr ""
 #: cmdline/apt-get.cc:1521
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 
 #.
@@ -958,12 +958,12 @@ msgstr ""
 
 #: cmdline/apt-get.cc:1602
 #, c-format
-msgid "Couldn't find task %s"
+msgid "Could not find task %s"
 msgstr ""
 
 #: cmdline/apt-get.cc:1717 cmdline/apt-get.cc:1753
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr ""
 
 #: cmdline/apt-get.cc:1740
@@ -1043,7 +1043,7 @@ msgstr ""
 
 #: cmdline/apt-get.cc:2262
 #, c-format
-msgid "You don't have enough free space in %s"
+msgid "You do not have enough free space in %s"
 msgstr ""
 
 #: cmdline/apt-get.cc:2268
@@ -1189,7 +1189,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 
 #: cmdline/acqprogress.cc:55
@@ -1539,7 +1539,7 @@ msgstr ""
 
 #: apt-inst/deb/debfile.cc:110
 #, c-format
-msgid "Couldn't change to %s"
+msgid "Could not change to %s"
 msgstr ""
 
 #: apt-inst/deb/debfile.cc:140
@@ -1801,7 +1801,7 @@ msgstr "לא מצליח לכתוב ל-%s"
 
 #: methods/gpgv.cc:71
 #, c-format
-msgid "Couldn't access keyring: '%s'"
+msgid "Could not access keyring: '%s'"
 msgstr ""
 
 #: methods/gpgv.cc:107
@@ -1833,13 +1833,13 @@ msgstr "החבילות החדשות הבאות הולכות להיות מותק�
 
 #: methods/gpgv.cc:285
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 
 #: methods/gzip.cc:64
 #, c-format
-msgid "Couldn't open pipe for %s"
+msgid "Could not open pipe for %s"
 msgstr ""
 
 #: methods/gzip.cc:109
@@ -1926,12 +1926,12 @@ msgid "Internal error"
 msgstr ""
 
 #: apt-pkg/contrib/mmap.cc:76
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr ""
 
 #: apt-pkg/contrib/mmap.cc:81 apt-pkg/contrib/mmap.cc:187
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr ""
 
 #: apt-pkg/contrib/mmap.cc:234
@@ -2113,7 +2113,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc:444
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc:456
@@ -2148,7 +2148,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc:594
 #, c-format
-msgid "write, still have %lu to write but couldn't"
+msgid "write, still have %lu to write but could not"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc:669
@@ -2351,7 +2351,7 @@ msgstr ""
 #: apt-pkg/algorithms.cc:248
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 
 #: apt-pkg/algorithms.cc:1138
@@ -2529,7 +2529,7 @@ msgstr ""
 
 #: apt-pkg/pkgcachegen.cc:693
 #, c-format
-msgid "Couldn't stat source package list %s"
+msgid "Could not stat source package list %s"
 msgstr ""
 
 #: apt-pkg/pkgcachegen.cc:778
@@ -2560,14 +2560,14 @@ msgstr ""
 #: apt-pkg/acquire-item.cc:1216
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc:1275
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package."
 msgstr ""
 
@@ -2707,7 +2707,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc:536
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr ""
 
 #: apt-pkg/indexcopy.cc:542

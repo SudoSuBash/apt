@@ -29,7 +29,7 @@
  </refnamediv>
 
 <refsect1><title>Description</title>
-<para>This APT transport isn't implementing a protocol to access local or remote repositories
+<para>This APT transport is not implementing a protocol to access local or remote repositories
 on its own, but acquires a mirrorlist and redirects all requests to the mirror(s) picked from
 this list, accessing them via other transports like &apt-transport-http;. The basic functionality has
 been available since apt 0.7.24, but was undocumented until apt 1.6 which contained a complete
@@ -125,7 +125,7 @@ aspects of the selection. The following setup is assumed: The first mirror is a 
 accessible via the file method, but potentially incomplete. The second mirror has a great
 connection, but is a partial mirror insofar as it only contains files related
 to the architectures <literal>amd64</literal> and <literal>all</literal>. The remaining mirrors
-are average mirrors which should be contacted only if the earlier ones didn't work.
+are average mirrors which should be contacted only if the earlier ones did not work.
 </para>
 <literallayout>
 file:/srv/local/debian/mirror/	priority:1 type:index
@@ -136,7 +136,7 @@ https://deb.debian.org/debian/
 </literallayout>
 <para>In this setup with this mirrorlist the first mirror will be used to download all
 index files assuming the mirrorlist itself is accessed via a local transport like
-<literal>file</literal>. If it isn't, if the mirror is otherwise inaccessible or if it does not
+<literal>file</literal>. If it is not, if the mirror is otherwise inaccessible or if it does not
 contain the requested file another mirror will be used to acquire the file, chosen
 depending on the type of the file: An index file will be served by the last
 mirror in the list, while a package of architecture <literal>amd64</literal> is served by

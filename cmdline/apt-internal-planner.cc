@@ -131,7 +131,7 @@ int main(int argc,const char *argv[])					/*{{{*/
 	_config->Set("eipp::scenario", "/nonexistent/stdin");
 	FileFd output;
 	if (output.OpenDescriptor(STDOUT_FILENO, FileFd::WriteOnly | FileFd::BufferedWrite, true) == false)
-	   DIE("stdout couldn't be opened");
+	   DIE("stdout could not be opened");
 	int const input = STDIN_FILENO;
 	SetNonBlock(input, false);
 

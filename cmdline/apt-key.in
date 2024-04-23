@@ -221,7 +221,7 @@ update() {
 	fi
     fi
     if [ ! -f "$ARCHIVE_KEYRING" ]; then
-	apt_error "Can't find the archive-keyring (Is the &keyring-package; package installed?)"
+	apt_error "cannot find the archive-keyring (Is the &keyring-package; package installed?)"
 	exit 1
     fi
 
@@ -265,7 +265,7 @@ remove_key_from_keyring() {
 	    continue
 	fi
 	if [ ! -w "$KEYRINGFILE" ]; then
-	    apt_warn "Key ${KEY} is in keyring ${KEYRINGFILE}, but can't be removed as it is read only."
+	    apt_warn "Key ${KEY} is in keyring ${KEYRINGFILE}, but cannot be removed as it is read only."
 	    continue
 	fi
 	# check if it is the only key in the keyring and if so remove the keyring altogether
@@ -528,7 +528,7 @@ setup_merged_keyring() {
 	echo "#!/bin/sh
 exec sh '($(escape_shell "${GPG}")' --keyring '$(escape_shell "${TRUSTEDFILE}")' \"\$@\"" > "${GPGHOMEDIR}/gpg.1.sh"
 	GPG="${GPGHOMEDIR}/gpg.1.sh"
-	# ignore error as this "just" means we haven't found the forced keyid and the keyring will be empty
+	# ignore error as this "just" means we have not found the forced keyid and the keyring will be empty
 	import_keyring_into_keyring '' "$TRUSTEDFILE" "$FORCED_KEYID" || true
     elif [ -z "$FORCED_KEYRING" ]; then
 	merge_all_trusted_keyrings_into_pubring

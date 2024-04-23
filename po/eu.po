@@ -24,13 +24,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -112,7 +112,7 @@ msgstr "Idazketa errorea"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -132,14 +132,14 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -223,7 +223,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Ezin izan dut %s paketeko fitxategi bat lokalizatu. Beharbada eskuz konpondu "
@@ -231,7 +231,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr ""
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -301,7 +301,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -332,7 +332,7 @@ msgstr "%li fitxategia jasotzen %li-tik"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "%s paketea berriro instalatu behar da, baina ezin dut artxiborik aurkitu."
 
@@ -368,17 +368,17 @@ msgstr "Adierazpen erregularren konpilazio errorea - %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Ezin izan da %s zeregina aurkitu"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Ezin izan da %s paketea aurkitu"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Ezin izan da %s paketea aurkitu"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -388,28 +388,28 @@ msgstr "Ezin da %s paketea lokalizatu"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 
@@ -722,7 +722,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -744,7 +744,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "%s espero zen baina ez zegoen han"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -810,7 +810,7 @@ msgstr "irakurrita; oraindik %lu irakurtzeke, baina ez da ezer geratzen"
 
 #: apt-pkg/contrib/fileutl.cc
 #, fuzzy, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "idatzita; oraindik %lu idazteke, baina ezin da"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -838,17 +838,17 @@ msgid "Unable to write to %s"
 msgstr "%s : ezin da idatzi"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Ezin da fitxategi huts baten mmap egin"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Ezin izan da %lu byteren mmap egin"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Ezin izan da %s(r)en kanalizazioa ireki"
 
 #: apt-pkg/contrib/mmap.cc
@@ -863,7 +863,7 @@ msgstr "Ezin da deitu "
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Ezin izan da %lu byteren mmap egin"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1304,7 +1304,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr ""
 
 #: apt-pkg/indexcopy.cc
@@ -1710,7 +1710,7 @@ msgstr "%s paketeak ez du instalatzeko hautagairik"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr ""
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1790,12 +1790,12 @@ msgstr "Arazoak daude, eta -y erabili da --force-yes gabe"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Ezin da %s(e)n duzun leku librea atzeman."
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Ez daukazu nahikoa leku libre %s(e)n."
 
 #: apt-private/private-download.cc
@@ -1879,11 +1879,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Barne errorea, ez da ordenatzeaz amaitu"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Hau bitxia... Tamainak ez dira berdina, idatzi apt@packages.debian.org-ra "
 "berri emanez (ingelesez)"
@@ -2030,13 +2030,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "Suposatu ez dugun zerbait ezabatuko da, ezin da AutoRemover abiarazi"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Hmm, dirudienez AutoRemover-ek gertatu behar ez zen apurtu du\n"
 "Mesedez programa errore txosten bat bete mesedez."
@@ -2146,7 +2146,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 
 #: apt-private/private-output.cc apt-private/private-show.cc
@@ -2412,7 +2412,7 @@ msgid "Package files:"
 msgstr "Pakete Fitxategiak:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 "Katxea ez dago sinkronizatuta, ezin zaio erreferentziarik (x-ref) egin "
 "pakete fitxategi bati"
@@ -2843,7 +2843,7 @@ msgstr "Ezin da debconf bertsioa eskuratu. Debconf instalatuta dago?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Ezin izan da %s paketea aurkitu"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3907,7 +3907,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -3948,7 +3948,7 @@ msgstr "Ondorengo sinadurak baliogabeak dira:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "Ondorengo sinadurak ezin dira egiaztatu gako publikoa ez bait dago "
@@ -3983,7 +3983,7 @@ msgid "Connection closed prematurely"
 msgstr "Konexioa behar baino lehenago itxi da"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr ""
 
 #, fuzzy
@@ -4124,7 +4124,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "%2$s(r)en %1$s mendekotasuna ezin da bete, %3$s paketea ezin delako "
@@ -4146,7 +4146,7 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "%2$s(r)en %1$s mendekotasuna ezin da bete, ez baitago bertsio-eskakizunak "
 #~ "betetzen dituen %3$s paketearen bertsio erabilgarririk"
@@ -4303,7 +4303,7 @@ msgstr ""
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "%s %s paketea ez da aurkitu fitxategi mendekotasunak prozesatzean"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Ezin da atzitu %s iturburu paketeen zerrenda"
 
 #~ msgid "Collecting File Provides"
@@ -4319,7 +4319,7 @@ msgstr ""
 #~ msgid "Total dependency version space: "
 #~ msgstr "Guztira bertsio dependentzia lekua: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Ez daukazu nahikoa leku libre %s(e)n."
 
 #~ msgid "Done"
@@ -4351,7 +4351,7 @@ msgstr ""
 #~ msgstr "MD5Sum ez dator bat"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Ezin izan dut %s paketeko fitxategi bat lokalizatu. Beharbada eskuz "
@@ -4426,13 +4426,13 @@ msgstr ""
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Errorea MD5 analizatzean. Desplazamendua %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Ezin izan da %s(e)ra aldatu"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Ezin izan da baliozko kontrol fitxategi bat lokalizatu"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Ezin izan da %s(r)en kanalizazioa ireki"
 
 #~ msgid "Read error from %s process"
@@ -4456,7 +4456,7 @@ msgstr ""
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "irakurrita; oraindik %lu irakurtzeke, baina ez da ezer geratzen"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "idatzita; oraindik %lu idazteke, baina ezin da"
 
 #~ msgid "Error occurred while processing %s (NewPackage)"
@@ -4502,7 +4502,7 @@ msgstr ""
 #~ msgid "Malformed line %u in source list %s (vendor id)"
 #~ msgstr "Gaizki osatutako %u lerroa %s Iturburu zerrendan (hornitzaile id-a)"
 
-#~ msgid "Couldn't access keyring: '%s'"
+#~ msgid "Could not access keyring: '%s'"
 #~ msgstr "Ezin da eraztuna ebatzi: '%s'"
 
 #~ msgid "Could not patch file"

@@ -283,7 +283,7 @@ TEST(FileUtlTest, Popen)
    unsigned long long n = 0;
    std::vector<std::string> OpenFds;
 
-   // count Fds to ensure we don't have a resource leak
+   // count Fds to ensure we do not have a resource leak
    if(FileExists("/proc/self/fd"))
       OpenFds = Glob("/proc/self/fd/*");
 

@@ -41,7 +41,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 "Actualizarea dintr-un astfel de depozit nu poate fi efectuată în siguranță "
@@ -49,7 +49,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 "Datele dintr-un astfel de depozit nu pot fi autentificate și, prin urmare, "
@@ -137,7 +137,7 @@ msgstr "Eroare de semnătură"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 "Fișierul semnat în clar nu este valid, s-a primit „%s” (rețeaua necesită "
@@ -162,7 +162,7 @@ msgstr "Eroare GPG: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 "Se omite achiziționarea fișierului configurat „%s” deoarece depozitul „%s” "
@@ -172,7 +172,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 "Se omite achiziționarea fișierului configurat „%s” deoarece depozitul „%s” "
@@ -274,7 +274,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Nu s-a putut localiza un fișier pentru pachetul %s. Acest lucru ar putea "
@@ -283,7 +283,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "Nu se poate găsi o sursă pentru a descărca versiunea „%s” a „%s”"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -361,7 +361,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 "Descărcarea este efectuată în afara cutiei de nisip (celulei de probă) ca "
@@ -394,7 +394,7 @@ msgstr "Se descarcă fișierul %li din %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "Pachetul %s trebuie să fie reinstalat, dar nu se poate găsi o arhivă pentru "
 "acesta."
@@ -435,17 +435,17 @@ msgstr "Eroare de compilare expresie regulată - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Nu s-a putut găsi sarcina „%s”"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Nu s-a putut găsi niciun pachet cu ajutorul expresiei regulate „%s”"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr ""
 "Nu s-a putut găsi niciun pachet cu ajutorul expresiei regulate ce folosește "
 "caractere «jocker» „%s”"
@@ -457,28 +457,28 @@ msgstr "Nu s-a putut localiza pachetul %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 "Nu se pot selecta versiuni din pachetul „%s”, deoarece acesta este pur "
 "virtual"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 "Nu se poate selecta cea mai nouă versiune din pachetul „%s” deoarece acesta "
 "este pur virtual"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 "Nu se poate selecta versiunea candidată din pachetul %s deoarece acesta nu "
 "are o versiune candidată"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 "Nu se poate selecta versiunea instalată din pachetul %s deoarece nu este "
 "instalat"
@@ -486,7 +486,7 @@ msgstr ""
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "Nu se poate selecta nici versiunea instalată, nici versiunea candidată din "
@@ -819,7 +819,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "Lista de fișiere nu poate fi creată deoarece „%s” nu este un director"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -845,7 +845,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Se aștepta %s, dar nu era acolo"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -911,7 +911,7 @@ msgstr "citire, mai sunt încă %llu de citit, dar nimic nu mai este disponibil"
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "scriere, încă mai sunt %llu de scris, dar nu s-a putut"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -939,17 +939,17 @@ msgid "Unable to write to %s"
 msgstr "Nu s-a putut scrie în %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Nu s-a putut efectua mmap() alocarea în memorie a unui fișier gol"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Nu s-a putut efectua cu mmap() alocarea în memorie a %llu octeți"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Nu s-a putut duplica descriptorul de fișier %i"
 
 #: apt-pkg/contrib/mmap.cc
@@ -962,7 +962,7 @@ msgstr "Nu s-a putut sincroniza mmap()"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Nu s-a putut efectua cu mmap() alocarea în memorie a %lu octeți"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1439,7 +1439,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "Nu se poate găsi înregistrarea de autentificare pentru: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1873,7 +1873,7 @@ msgstr "Pachetul „%s” nu are un candidat pentru instalare"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "Pachetele virtuale precum „%s” nu pot fi eliminate\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1965,12 +1965,12 @@ msgstr ""
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Nu s-a putut determina spațiul liber din %s"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Nu aveți suficient spațiu liber în %s."
 
 #: apt-private/private-download.cc
@@ -2064,11 +2064,11 @@ msgstr ""
 "opțiunea „--allow-change-held-packages”."
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Eroare internă, execuția funcției de sortare a fost întreruptă"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Ce ciudat... Dimensiunile nu se potrivesc, trimiteți un mesaj la "
 "apt@packages.debian.org"
@@ -2240,7 +2240,7 @@ msgstr ""
 # adaptări ale acestui mesaj, decît o
 # traducere a sa.
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr ""
 "Se presupune că nu se vor șterge lucruri, nu se poate iniția "
 "„AutoRemover()”, (funcția de auto-eliminare a apt)"
@@ -2248,7 +2248,7 @@ msgstr ""
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Hmm, se pare că AutoRemover() a distrus ceva, lucru care n-ar trebui\n"
 "să se întâmple. Trimiteți un raport de eroare pentru pachetul „apt”."
@@ -2358,7 +2358,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "NOTĂ: Aceasta este doar o simulare!\n"
 "      %s are nevoie de privilegii de root pentru o execuție reală.\n"
@@ -2631,7 +2631,7 @@ msgid "Package files:"
 msgstr "Fișiere pachet:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 "Zona de prestocare(cache) nu este sincronizată, nu se poate găsi legătura "
 "către fișierul pachetului"
@@ -3113,7 +3113,7 @@ msgstr "Nu s-a putut obține versiunea de «debconf». Este «debconf» instalat
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Nu s-a putut găsi pachetul %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -4185,7 +4185,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 "Fișierul semnat nu este valid, a primit „%s” (rețeaua necesită "
 "autentificare?)."
@@ -4234,7 +4234,7 @@ msgstr "Următoarele semnături nu au fost valide:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "Următoarele semnături n-au putut fi verificate, deoarece cheia publică nu "
@@ -4270,7 +4270,7 @@ msgid "Connection closed prematurely"
 msgstr "Conexiune închisă prematur"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Fișierele goale nu pot fi arhive valide"
 
 #, fuzzy, c-format
@@ -4419,7 +4419,7 @@ msgstr "Fișierele goale nu pot fi arhive valide"
 
 #, fuzzy
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "Dependența lui %s de %s nu poate fi satisfăcută deoarece pachetul %s nu "
@@ -4441,7 +4441,7 @@ msgstr "Fișierele goale nu pot fi arhive valide"
 #, fuzzy
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "Dependența lui %s de %s nu poate fi satisfăcută deoarece nici o versiune "
 #~ "disponibilă a pachetului %s nu poate satisface versiunile cerute"
@@ -4598,7 +4598,7 @@ msgstr "Fișierele goale nu pot fi arhive valide"
 #~ msgstr ""
 #~ "Nu s-a găsit pachetul %s %s în timpul procesării dependențelor de fișiere"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Nu pot determina starea listei surse de pachete %s"
 
 #~ msgid "Collecting File Provides"
@@ -4614,7 +4614,7 @@ msgstr "Fișierele goale nu pot fi arhive valide"
 #~ msgid "Total dependency version space: "
 #~ msgstr "Total spațiu versiuni ale dependențelor: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Nu aveți suficient spațiu în %s"
 
 #~ msgid "Done"
@@ -4647,7 +4647,7 @@ msgstr "Fișierele goale nu pot fi arhive valide"
 #~ msgstr "Nepotrivire MD5Sum"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "N-am putut localiza un fișier pentru pachetul %s. Aceasta ar putea "
@@ -4725,13 +4725,13 @@ msgstr "Fișierele goale nu pot fi arhive valide"
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Eroare la analiza MD5. Deplasamentul este %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Nu s-a putut schimba directorul la %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Eșec la localizare a unui fișier de control valid"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Nu s-a putut deschide conexiunea pentru %s"
 
 #~ msgid "Read error from %s process"
@@ -4755,7 +4755,7 @@ msgstr "Fișierele goale nu pot fi arhive valide"
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "citire, încă mai am %lu de citit dar n-a mai rămas nimic"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "scriere, încă mai am %lu de scris dar nu pot"
 
 #~ msgid "Error occurred while processing %s (NewPackage)"
@@ -4802,7 +4802,7 @@ msgstr "Fișierele goale nu pot fi arhive valide"
 #~ msgid "Malformed line %u in source list %s (vendor id)"
 #~ msgstr "Linie greșită %u în lista sursă %s (identificator vânzător)"
 
-#~ msgid "Couldn't access keyring: '%s'"
+#~ msgid "Could not access keyring: '%s'"
 #~ msgstr "Nu s-a putut accesa inelul de chei: '%s'"
 
 #~ msgid "Could not patch file"

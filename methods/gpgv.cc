@@ -192,11 +192,11 @@ string GPGVMethod::VerifyGetSigners(const char *file, const char *outfile,
    int fd[2];
 
    if (pipe(fd) < 0)
-      return "Couldn't create pipe";
+      return "Could not create pipe";
 
    pid_t pid = fork();
    if (pid < 0)
-      return string("Couldn't spawn new process") + strerror(errno);
+      return string("Could not spawn new process") + strerror(errno);
    else if (pid == 0)
    {
       std::ostringstream keys;
@@ -432,7 +432,7 @@ string GPGVMethod::VerifyGetSigners(const char *file, const char *outfile,
       // acquire system checks for "NODATA" to generate GPG errors (the others are only warnings)
       std::string errmsg;
       //TRANSLATORS: %s is a single techy word like 'NODATA'
-      strprintf(errmsg, _("Clearsigned file isn't valid, got '%s' (does the network require authentication?)"), "NODATA");
+      strprintf(errmsg, _("Clearsigned file is not valid, got '%s' (does the network require authentication?)"), "NODATA");
       return errmsg;
    }
    else if (gotNODATA)
@@ -440,7 +440,7 @@ string GPGVMethod::VerifyGetSigners(const char *file, const char *outfile,
       // acquire system checks for "NODATA" to generate GPG errors (the others are only warnings)
       std::string errmsg;
       //TRANSLATORS: %s is a single techy word like 'NODATA'
-      strprintf(errmsg, _("Signed file isn't valid, got '%s' (does the network require authentication?)"), "NODATA");
+      strprintf(errmsg, _("Signed file is not valid, got '%s' (does the network require authentication?)"), "NODATA");
       return errmsg;
    }
    else if (WEXITSTATUS(status) == 0)
@@ -594,7 +594,7 @@ bool GPGVMethod::URIAcquire(std::string const &Message, FetchItem *Itm)
          }
          if (!Signers.NoPubKey.empty())
          {
-             errmsg += _("The following signatures couldn't be verified because the public key is not available:\n");
+             errmsg += _("The following signatures could not be verified because the public key is not available:\n");
             for (auto const &I : Signers.NoPubKey)
                errmsg.append(I).append("\n");
          }

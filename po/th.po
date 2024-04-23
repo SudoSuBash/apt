@@ -23,13 +23,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -110,7 +110,7 @@ msgstr "การเขียนข้อมูลผิดพลาด"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 "แฟ้มที่เซ็นกำกับครอบข้อความมีเนื้อหาไม่ถูกต้อง ได้รับผลลัพธ์ '%s' "
@@ -134,14 +134,14 @@ msgstr "ข้อผิดพลาดจาก GPG: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -232,13 +232,13 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr "ไม่พบแฟ้มสำหรับแพกเกจ %s คุณอาจต้องแก้ปัญหาแพกเกจนี้เอง (ไม่มี arch)"
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "ไม่พบแหล่งที่จะดาวน์โหลดรุ่น '%s' ของ '%s' ได้"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -308,7 +308,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -339,7 +339,7 @@ msgstr "กำลังดาวน์โหลดแฟ้มที่ %li จ�
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr "จำเป็นต้องติดตั้งแพกเกจ %s ซ้ำ แต่หาตัวแพกเกจไม่พบ"
 
 #: apt-pkg/algorithms.cc
@@ -374,17 +374,17 @@ msgstr "คอมไพล์นิพจน์เรกิวลาร์ไม
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "ไม่พบงานติดตั้ง '%s'"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "ไม่พบแพกเกจที่ตรงกับนิพจน์เรกิวลาร์ '%s'"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "ไม่พบแพกเกจที่ตรงกับ glob '%s'"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -394,28 +394,28 @@ msgstr "ไม่พบแพกเกจ %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr "ไม่สามารถเลือกรุ่นต่างๆ ของแพกเกจ '%s' ได้ เนื่องจากเป็นแพกเกจเสมือนอย่างแท้จริง"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr "ไม่สามารถเลือกรุ่นใหม่ที่สุดของแพกเกจ '%s' ได้ เนื่องจากเป็นแพกเกจเสมือนอย่างแท้จริง"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr "ไม่สามารถเลือกรุ่นสำหรับติดตั้งของแพกเกจ '%s' ได้ เนื่องจากไม่มีรุ่นสำหรับติดตั้ง"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr "ไม่สามารถเลือกรุ่นที่ติดตั้งไว้ของแพกเกจ '%s' ได้ เนื่องจากแพกเกจไม่ได้ติดตั้งไว้"
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "ไม่สามารถเลือกรุ่นที่ติดตั้งไว้หรือรุ่นสำหรับติดตั้งของแพกเกจ '%s' ได้ เนื่องจากไม่มีทั้งสองอย่าง"
@@ -725,7 +725,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "ไม่สามารถสร้างรายชื่อแฟ้มได้ เนื่องจาก '%s' ไม่ใช่ไดเรกทอรี"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -747,7 +747,7 @@ msgstr "จะละเลย '%s' ในไดเรกทอรี '%s' เน
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "รอโพรเซส %s แต่ตัวโพรเซสไม่อยู่"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -813,7 +813,7 @@ msgstr "read: ยังเหลือ %llu ที่ยังไม่ได้
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "write: ยังเหลือ %llu ที่ยังไม่ได้เขียน แต่ไม่สามารถเขียนได้"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -841,17 +841,17 @@ msgid "Unable to write to %s"
 msgstr "ไม่สามารถเขียนลงแฟ้ม %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "ไม่สามารถ mmap แฟ้มเปล่า"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "ไม่สามารถสร้าง mmap ขนาด %llu ไบต์"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "ไม่สามารถทำซ้ำ file descriptor %i"
 
 #: apt-pkg/contrib/mmap.cc
@@ -864,7 +864,7 @@ msgstr "ไม่สามารถปรับ mmap ให้ตรงกัน
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "ไม่สามารถสร้าง mmap ขนาด %lu ไบต์"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1317,7 +1317,7 @@ msgstr "เขียนแล้ว %i ระเบียน โดยมีแ�
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "ไม่พบระเบียนยืนยันความแท้สำหรับ: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1720,7 +1720,7 @@ msgstr "แพกเกจ '%s' ไม่มีรุ่นที่จะใช
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "แพกเกจเสมือนอย่าง '%s' ไม่สามารถถอดถอนได้\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1800,12 +1800,12 @@ msgstr "มีปัญหาบางประการ และมีกา�
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "ไม่สามารถคำนวณพื้นที่ว่างใน %s"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "คุณมีพื้นที่ว่างเหลือไม่พอใน %s"
 
 #: apt-private/private-download.cc
@@ -1888,11 +1888,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "ข้อผิดพลาดภายใน: การเรียงลำดับไม่เสร็จสิ้น"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr "แปลกประหลาด... ขนาดไม่ตรงกัน กรุณาอีเมลแจ้ง apt@packages.debian.org"
 
 #: apt-private/private-install.cc
@@ -2039,13 +2039,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "หมายเหตุ: นี่เป็นสิ่งที่ dpkg ทำโดยอัตโนมัติโดยเจตนา"
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "apt ถูกกำหนดไม่ให้มีการลบใดๆ จึงไม่สามารถดำเนินการถอดถอนอัตโนมัติได้"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "ดูเหมือนการถอดถอนอัตโนมัติได้สร้างความเสียหายบางอย่าง ซึ่งไม่ควรเกิดขึ้น\n"
 "กรุณารายงานบั๊กนี้ของแพกเกจ apt"
@@ -2142,7 +2142,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "หมายเหตุ: นี่เป็นเพียงการจำลองการทำงานเท่านั้น!\n"
 "         การทำงานจริงของ %s ต้องอาศัยสิทธิ์ผู้ดูแลระบบ\n"
@@ -2408,7 +2408,7 @@ msgid "Package files:"
 msgstr "แฟ้มแพกเกจ:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr "ข้อมูลแคชไม่ตรงกับความเป็นจริงแล้ว ไม่สามารถอ้างอิงไขว้ระหว่างแฟ้มแพกเกจ"
 
 #. Show any packages have explicit pins
@@ -2841,7 +2841,7 @@ msgstr "ไม่สามารถอ่านรุ่นของ debconf ไ
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "ไม่พบแพกเกจ %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3890,7 +3890,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, fuzzy, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 "แฟ้มที่เซ็นกำกับครอบข้อความมีเนื้อหาไม่ถูกต้อง ได้รับผลลัพธ์ '%s' "
 "(เครือข่ายต้องยืนยันตัวบุคคลหรือไม่?)"
@@ -3931,7 +3931,7 @@ msgstr "ลายเซ็นต่อไปนี้ใช้การไม่
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr "ลายเซ็นต่อไปนี้ไม่สามารถตรวจสอบได้ เพราะไม่มีกุญแจสาธารณะ:\n"
 
@@ -3964,7 +3964,7 @@ msgid "Connection closed prematurely"
 msgstr "การเชื่อมต่อถูกปิดก่อนเวลาอันควร"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "แฟ้มว่างเปล่าไม่สามารถเป็นแฟ้มจัดเก็บที่ใช้การได้"
 
 #, fuzzy, c-format
@@ -4115,7 +4115,7 @@ msgstr "แฟ้มว่างเปล่าไม่สามารถเป
 #~ msgstr "ไดเรกทอรี %s ถูก divert"
 
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "ไม่สามารถติดตั้งสิ่งเชื่อมโยง %s สำหรับ %s ได้ เพราะไม่สามารถใช้ %s กับแพกเกจ '%s' ได้"
@@ -4131,7 +4131,7 @@ msgstr "แฟ้มว่างเปล่าไม่สามารถเป
 
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "ไม่สามารถติดตั้งสิ่งเชื่อมโยง %s สำหรับ %s ได้ เพราะไม่มีแพกเกจ %s "
 #~ "รุ่นที่จะสอดคล้องกับความต้องการรุ่นของแพกเกจได้"
@@ -4202,7 +4202,7 @@ msgstr "แฟ้มว่างเปล่าไม่สามารถเป
 #~ "  -d   CD-ROM mount point\n"
 #~ "  -r   Rename a recognized CD-ROM\n"
 #~ "  -m   No mounting\n"
-#~ "  -f   Fast mode, don't check package files\n"
+#~ "  -f   Fast mode, do not check package files\n"
 #~ "  -a   Thorough scan mode\n"
 #~ "  --no-auto-detect Do not try to auto detect drive and mount point\n"
 #~ "  -c=? Read this configuration file\n"
@@ -4330,7 +4330,7 @@ msgstr "แฟ้มว่างเปล่าไม่สามารถเป
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "ไม่พบแพกเกจ %s %s ขณะประมวลผลความขึ้นต่อแฟ้ม"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "ไม่สามารถ stat รายการแพกเกจซอร์ส %s"
 
 #~ msgid "Collecting File Provides"
@@ -4349,7 +4349,7 @@ msgstr "แฟ้มว่างเปล่าไม่สามารถเป
 #~ msgid "Total dependency version space: "
 #~ msgstr "ขนาดของพื้นที่ความเชื่อมโยงระหว่างแพกเกจทั้งหมด: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "คุณมีพื้นที่ว่างเหลือไม่พอใน %s"
 
 #~ msgid "Done"
@@ -4399,7 +4399,7 @@ msgstr "แฟ้มว่างเปล่าไม่สามารถเป
 #~ msgstr "MD5Sum ไม่ตรงกัน"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr "ไม่พบแฟ้มสำหรับแพกเกจ %s คุณอาจต้องแก้ปัญหาแพกเกจนี้เอง"
 
@@ -4467,13 +4467,13 @@ msgstr "แฟ้มว่างเปล่าไม่สามารถเป
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "เกิดข้อผิดพลาดขณะแจง MD5 ที่ออฟเซ็ต %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "ไม่สามารถเปลี่ยนไดเรกทอรีไปยัง %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "ไม่พบแฟ้มควบคุมที่ใช้การได้"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "ไม่สามารถเปิดไปป์สำหรับ %s"
 
 #~ msgid "Read error from %s process"
@@ -4497,7 +4497,7 @@ msgstr "แฟ้มว่างเปล่าไม่สามารถเป
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "read: ยังเหลือ %lu ที่ยังไม่ได้อ่าน แต่ข้อมูลหมดแล้ว"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "write: ยังเหลือ %lu ที่ยังไม่ได้เขียน แต่ไม่สามารถเขียนได้"
 
 #~ msgid "Error occurred while processing %s (NewPackage)"
@@ -4539,7 +4539,7 @@ msgstr "แฟ้มว่างเปล่าไม่สามารถเป
 #~ msgid "Malformed line %u in source list %s (vendor id)"
 #~ msgstr "บรรทัด %u ในแฟ้มรายชื่อแหล่งแพกเกจ %s ผิดรูปแบบ (id ผู้ผลิต)"
 
-#~ msgid "Couldn't access keyring: '%s'"
+#~ msgid "Could not access keyring: '%s'"
 #~ msgstr "ไม่สามารถเข้าใช้พวงกุญแจ: '%s'"
 
 #~ msgid "Could not patch file"

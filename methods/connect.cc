@@ -584,12 +584,12 @@ ResultState UnwrapSocks(std::string Host, int Port, URI Proxy, std::unique_ptr<M
    return ResultState::TRANSIENT_ERROR
    if (Host.length() > 255)
    {
-      _error->Error("Can't use SOCKS5h as hostname %s is too long!", Host.c_str());
+      _error->Error("cannot use SOCKS5h as hostname %s is too long!", Host.c_str());
       return ResultState::FATAL_ERROR;
    }
    if (Proxy.User.length() > 255 || Proxy.Password.length() > 255)
    {
-      _error->Error("Can't use user&pass auth as they are too long (%lu and %lu) for the SOCKS5!", Proxy.User.length(), Proxy.Password.length());
+      _error->Error("cannot use user&pass auth as they are too long (%lu and %lu) for the SOCKS5!", Proxy.User.length(), Proxy.Password.length());
       return ResultState::FATAL_ERROR;
    }
    if (Proxy.User.empty())

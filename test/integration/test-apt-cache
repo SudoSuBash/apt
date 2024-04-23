@@ -164,7 +164,7 @@ testsuccessequal 'specific
 
 ## rdepends
 
-# Note that specific does not appear in this list as it doesn't depend on foo,
+# Note that specific does not appear in this list as it does not depend on foo,
 # but on an arch-specific foo!
 testsuccessequal 'foo
 Reverse Depends:

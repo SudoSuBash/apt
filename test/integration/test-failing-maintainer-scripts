@@ -26,7 +26,7 @@ createfailure 'postrm'
 
 setupaptarchive
 
-# setup some pre- and post- invokes to check the output isn't garbled later
+# setup some pre- and post- invokes to check the output is not garbled later
 APTHOOK="${TMPWORKINGDIRECTORY}/rootdir/usr/bin/apthook"
 echo '#!/bin/sh
 echo "$1: START"

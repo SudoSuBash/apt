@@ -5,7 +5,7 @@
    to two 'real' streambufs emulating '| tee' on the shell
 
    The main use is streaming debug output to std::clog as well as
-   a logfile easily, so don't expect that to be a bulletproof
+   a logfile easily, so do not expect that to be a bulletproof
    implementation. */
 
 #include <apt-pkg/macros.h>

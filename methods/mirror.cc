@@ -362,7 +362,7 @@ bool MirrorMethod::URIAcquire(std::string const &Message, FetchItem *Itm) /*{{{*
    std::string const mirrorfileuri = GetMirrorFileURI(Message, Itm);
    if (mirrorfileuri.empty())
    {
-      _error->Error("Couldn't determine mirror list to query for %s", Itm->Uri.c_str());
+      _error->Error("Could not determine mirror list to query for %s", Itm->Uri.c_str());
       return false;
    }
    if (DebugEnabled())

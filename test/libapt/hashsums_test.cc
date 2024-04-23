@@ -223,12 +223,12 @@ TEST(HashSumsTest, HashStringList)
    EXPECT_EQ(NULL, list.find("SHA1"));
    EXPECT_EQ(0u, list.FileSize());
 
-   // empty lists aren't equal
+   // empty lists are not equal
    HashStringList list2;
    EXPECT_FALSE(list == list2);
    EXPECT_TRUE(list != list2);
 
-   // some hashes don't really contribute to usability
+   // some hashes do not really contribute to usability
    list.push_back(HashString("Checksum-FileSize", "29"));
    EXPECT_FALSE(list.empty());
    EXPECT_FALSE(list.usable());

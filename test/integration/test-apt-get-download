@@ -30,7 +30,7 @@ find aptarchive/dists -name '*Release*' -type f | while read file; do
 	testaccessrights "$file" '640'
 done
 if [ "$(id -u)" = '0' ]; then
-	# Release file can't be accessed by _apt
+	# Release file cannot be accessed by _apt
 	testsuccesswithnotice aptget update
 fi
 
@@ -76,8 +76,8 @@ DEBFILE="$(readlink -f ../aptarchive)/pool/apt_2.0_all.deb"
 testequal "'file:${DEBFILE}' apt_2.0_all.deb $(stat -c%s "$DEBFILE") SHA512:$(sha512sum "$DEBFILE" | cut -d' ' -f 1)" aptget download apt --print-uris
 
 # deb:677887
-testequal "E: Can't find a source to download version '1.0' of 'vrms:i386'" aptget download vrms --print-uris
-testequal "E: Can't find a source to download version '1.0' of 'vrms:i386'" aptget download vrms
+testequal "E: cannot find a source to download version '1.0' of 'vrms:i386'" aptget download vrms --print-uris
+testequal "E: cannot find a source to download version '1.0' of 'vrms:i386'" aptget download vrms
 
 # deb:736962
 testsuccess aptget download apt
@@ -98,7 +98,7 @@ testdownload apt_2.0_all.deb apt apt apt/unstable apt=2.0
 #chmod -f -R +w "$PWD/rootdir/var/cache/apt/archives"
 #rm -rf rootdir/var/cache/apt/archives/
 
-# file: debs aren't copied to archives, so change to http which obviously are
+# file: debs are not copied to archives, so change to http which obviously are
 #changetowebserver
 #testsuccess aptget update
 

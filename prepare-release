@@ -84,7 +84,7 @@ elif [ "$1" = 'pre-build' ]; then
 		fi
 		NEWSDISTRIBUTION=$(dpkg-parsechangelog -l debian/NEWS -S 'Distribution')
 		if [ "$NEWSDISTRIBUTION" = 'UNRELEASED' ]; then
-			 echo "changelog (${VERSION}) has a distribution (${DISTRIBUTION}) set, while the NEWS file hasn't!"
+			 echo "changelog (${VERSION}) has a distribution (${DISTRIBUTION}) set, while the NEWS file has not!"
 			echo "You probably want to edit »debian/NEWS« to fix this."
 			exit 1
 		fi
@@ -221,7 +221,7 @@ elif [ "$1" = 'spellcheckers' -o "$1" = 'lint' ]; then
 		if dpkg-checkbuilddeps -d "$1" 2>/dev/null; then
 			return 0
 		fi
-		echo "### SKIPPING ${2:-$1} functionality as ${1} isn't installed"
+		echo "### SKIPPING ${2:-$1} functionality as ${1} is not installed"
 	}
 	if is_available 'codespell'; then
 		echo '### codespell in source directories:'

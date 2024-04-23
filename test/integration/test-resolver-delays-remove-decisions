@@ -17,7 +17,7 @@ insertpackage 'unstable' 'bar' 'all' '1'
 
 setupaptarchive
 
-# We are needlessly removing "stuff" if we don't delay its marking here
+# We are needlessly removing "stuff" if we do not delay its marking here
 # as we do not question the remove later on
 testsuccessequal "Reading package lists...
 Building dependency tree...
@@ -26,8 +26,8 @@ Building dependency tree...
      Delayed Removing: stuff:amd64 as upgrade is not an option for foo:amd64 (1)
     MarkInstall foo:amd64 < none -> 1 @un uN Ib > FU=0
     Installing foo-dep:amd64 as Depends of foo:amd64
-      foo-dep:amd64 Depends on uninstallable:amd64 < none @un H > can't be satisfied!
-      foo:amd64 Depends on foo-dep:amd64 < none @un H > can't be satisfied! (dep)
+      foo-dep:amd64 Depends on uninstallable:amd64 < none @un H > cannot be satisfied!
+      foo:amd64 Depends on foo-dep:amd64 < none @un H > cannot be satisfied! (dep)
   Installing bar:amd64 as Depends of foobar:amd64
     MarkInstall bar:amd64 < none -> 1 @un uN > FU=0
 Starting pkgProblemResolver with broken count: 0

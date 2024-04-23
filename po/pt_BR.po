@@ -23,13 +23,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -111,7 +111,7 @@ msgstr "Erro de escrita"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -131,14 +131,14 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -222,7 +222,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Não foi possível localizar um arquivo para o pacote %s. Isto pode significar "
@@ -231,7 +231,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr ""
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -302,7 +302,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -333,7 +333,7 @@ msgstr "Obtendo arquivo %li de %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "O pacote %s precisa ser reinstalado, mas não foi possível encontrar um "
 "arquivo para o mesmo."
@@ -372,17 +372,17 @@ msgstr "Erro de compilação de regex - %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Impossível achar tarefa %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Impossível achar pacote %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Impossível achar pacote %s"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -392,28 +392,28 @@ msgstr "Impossível encontrar o pacote %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 
@@ -725,7 +725,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -747,7 +747,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Esperado %s mas este não estava lá"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -813,7 +813,7 @@ msgstr "leitura, ainda restam %lu para serem lidos mas nenhum deixado"
 
 #: apt-pkg/contrib/fileutl.cc
 #, fuzzy, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "escrita, ainda restam %lu para gravar mas não foi possível"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -841,17 +841,17 @@ msgid "Unable to write to %s"
 msgstr "Impossível escrever para %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Não foi possível fazer \"mmap\" de um arquivo vazio"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Não foi possível fazer \"mmap\" de %lu bytes"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Não foi possível abrir \"pipe\" para %s"
 
 #: apt-pkg/contrib/mmap.cc
@@ -866,7 +866,7 @@ msgstr "Impossível invocar "
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Não foi possível fazer \"mmap\" de %lu bytes"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1306,7 +1306,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr ""
 
 #: apt-pkg/indexcopy.cc
@@ -1717,7 +1717,7 @@ msgstr "O pacote %s não tem candidato para instalação"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr ""
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1797,12 +1797,12 @@ msgstr "Há problemas e -y foi usado sem --force-yes"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Não foi possível determinar o espaço livre em %s"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Você não possui espaço suficiente em %s."
 
 #: apt-private/private-download.cc
@@ -1886,11 +1886,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Erro interno, Ordenação não finalizou"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Que estranho... Os tamanhos não batem, mande e-mail para apt@packages.debian."
 "org"
@@ -2038,13 +2038,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "Nós não deveríamos apagar coisas, impossível iniciar AutoRemover"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Hmm, parece que o AutoRemover destruiu algo o que realmente não deveria\n"
 "acontecer. Por favor, reporte um bug contra o apt."
@@ -2154,7 +2154,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 
 #: apt-private/private-output.cc apt-private/private-show.cc
@@ -2421,7 +2421,7 @@ msgid "Package files:"
 msgstr "Arquivos de pacote:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 "O cache está fora de sincronia, não foi possível fazer a referência cruzada "
 "de um arquivo de pacote"
@@ -2854,7 +2854,7 @@ msgstr "Não foi possível obter a versão do debconf. O debconf está instalado
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Impossível achar pacote %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3922,7 +3922,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -3966,7 +3966,7 @@ msgstr "As seguintes assinaturas eram inválidas:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "As assinaturas a seguir não puderam ser verificadas devido à chave pública "
@@ -4001,7 +4001,7 @@ msgid "Connection closed prematurely"
 msgstr "Conexão encerrada prematuramente"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr ""
 
 #, fuzzy
@@ -4141,7 +4141,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "a dependência de %s por %s não pode ser satisfeita porque o pacote %s não "
@@ -4163,7 +4163,7 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "a dependência de %s por %s não pode ser satisfeita porque nenhuma versão "
 #~ "disponível do pacote %s pode satisfazer os requerimentos de versão"
@@ -4327,7 +4327,7 @@ msgstr ""
 #~ "Pacote %s %s não foi encontrado enquanto processando dependências de "
 #~ "arquivo"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Não foi possível executar \"stat\" na lista de pacotes fonte %s"
 
 #~ msgid "Collecting File Provides"
@@ -4343,7 +4343,7 @@ msgstr ""
 #~ msgid "Total dependency version space: "
 #~ msgstr "Total de espaço de dependência de versão: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Você não possui espaço livre suficiente em %s"
 
 #~ msgid "Done"
@@ -4375,7 +4375,7 @@ msgstr ""
 #~ msgstr "MD5Sum incorreto"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Não foi possível localizar arquivo para o pacote %s. Isto pode significar "
@@ -4449,13 +4449,13 @@ msgstr ""
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Erro analisando MD5. Posição %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Não foi possível mudar para %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Falhou ao localizar um arquivo de controle válido"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Não foi possível abrir \"pipe\" para %s"
 
 #~ msgid "Read error from %s process"
@@ -4479,7 +4479,7 @@ msgstr ""
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "leitura, ainda restam %lu para serem lidos mas nenhum deixado"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "escrita, ainda restam %lu para gravar mas não foi possível"
 
 #~ msgid "Error occurred while processing %s (NewPackage)"
@@ -4529,7 +4529,7 @@ msgstr ""
 #~ msgid "Malformed line %u in source list %s (vendor id)"
 #~ msgstr "Linha mal formada %u na lista de fontes %s (id de fornecedor)"
 
-#~ msgid "Couldn't access keyring: '%s'"
+#~ msgid "Could not access keyring: '%s'"
 #~ msgstr "Não foi possível acessar o chaveiro: '%s'"
 
 #~ msgid "Could not patch file"
@@ -4617,7 +4617,7 @@ msgstr ""
 #~ "as dependências de construção.\n"
 #~ "Você pode querer rodar 'apt --fix-broken install' para corrigí-los."
 
-#~ msgid "Sorry, you don't have enough free space in %s to hold all the .debs."
+#~ msgid "Sorry, you do not have enough free space in %s to hold all the .debs."
 #~ msgstr ""
 #~ "Desculpe, você não tem espaço livre o suficiente em %s para guardar os ."
 #~ "debs."
@@ -4640,7 +4640,7 @@ msgstr ""
 #~ msgid "Failed to rename %s.new to %s"
 #~ msgstr "Falha ao baixar %s  %s\n"
 
-#~ msgid "Couldn't wait for subprocess"
+#~ msgid "Could not wait for subprocess"
 #~ msgstr "Não foi possível checar a lista de pacotes fonte %s"
 
 #~ msgid " files "

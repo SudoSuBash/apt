@@ -58,7 +58,7 @@
 	   installed if required to satisfy dependencies, but existing
 	   packages will never be removed. If an upgrade for a package requires
 	   the removal of an installed package the upgrade for this package
-	   isn't performed.
+	   is not performed.
      </para>
      <para>When a package is supplied as an argument, the package will be
      installed prior to the upgrade action.</para>

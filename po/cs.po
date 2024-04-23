@@ -24,7 +24,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 "Aktualizaci z takového repositáře nelze provést zabezpečeně a je proto "
@@ -32,7 +32,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 "Data z takového repositáře nelze ověřit a proto je jejich použití "
@@ -118,7 +118,7 @@ msgstr "Chyba podpisu"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 "Podepsaný soubor není platný, obdrženo „%s“ (vyžaduje přístup na síť "
@@ -142,7 +142,7 @@ msgstr "Chyba GPG: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 "Přeskakuje se stažení souboru „%s“, protože repositář „%s“ neobsahuje "
@@ -151,7 +151,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 "Přeskakuje se stažení souboru „%s“, protože repositář „%s“ nepodporuje "
@@ -247,7 +247,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Nebylo možné nalézt soubor s balíkem %s. To by mohlo znamenat, že tento "
@@ -255,7 +255,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "Nelze najít zdroj pro stažení verze „%s“ balíku „%s“"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -328,7 +328,7 @@ msgstr "V systému neexistuje omezený uživatel „%s“, nelze se zbavit oprá
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 "Stažení probíhá nechráněně pod uživatelem root, jelikož soubor „%s“ nebyl "
@@ -361,7 +361,7 @@ msgstr "Stahuje se soubor %li z %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr "Balík %s je potřeba přeinstalovat, ale nemohu pro něj nalézt archiv."
 
 #: apt-pkg/algorithms.cc
@@ -397,17 +397,17 @@ msgstr "Chyba při kompilaci regulárního výrazu - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Nelze najít úlohu „%s“"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Nelze najít balík vyhovující regulárnímu výrazu „%s“"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Nelze najít balík vyhovující masce „%s“"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -417,28 +417,28 @@ msgstr "Nelze najít balík %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr "Nelze vybrat verze balíku „%s“, protože je čistě virtuální"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr "Nelze vybrat nejnovější verzi balíku „%s“, protože je čistě virtuální"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr "Nelze vybrat kandidátskou verzi balíku %s, protože žádnou nemá"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr "Nelze vybrat nainstalované verze balíku %s, protože není nainstalován"
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "Nelze vybrat nainstalovanou ani kandidátskou verzi balíku „%s“, protože "
@@ -756,7 +756,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "Seznam souborů nelze vytvořit, jelikož „%s“ není adresář"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -778,7 +778,7 @@ msgstr "Ignoruji soubor „%s“ v adresáři „%s“, jelikož má neplatnou p
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Čekali jsme na %s, ale nebyl tam"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -844,7 +844,7 @@ msgstr "čtení, stále se má přečíst %llu, ale už nic nezbývá"
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "zápis, stále se má zapsat %llu, ale nejde to"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -872,17 +872,17 @@ msgid "Unable to write to %s"
 msgstr "Nelze zapsat do %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Nelze provést mmap prázdného souboru"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Nešlo mmapovat %llu bajtů"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Nelze duplikovat popisovač souboru %i"
 
 #: apt-pkg/contrib/mmap.cc
@@ -895,7 +895,7 @@ msgstr "Nelze synchronizovat mmap"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Nešlo mmapovat %lu bajtů"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1350,7 +1350,7 @@ msgstr "Zapsáno %i záznamů s chybějícími (%i) a nesouhlasícími (%i) soub
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "Nelze najít autentizační záznam pro: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1754,7 +1754,7 @@ msgstr "Balík „%s“ nemá kandidáta pro instalaci"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "Virtuální balíky jako „%s“ nemohou být odstraněny\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1840,12 +1840,12 @@ msgstr ""
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Nelze určit volné místo v %s"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "V %s nemáte dostatek volného místa."
 
 #: apt-private/private-download.cc
@@ -1932,11 +1932,11 @@ msgstr ""
 "packages."
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Vnitřní chyba, řazení nedoběhlo do konce"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Jak podivné… velikosti nesouhlasí, ohlaste to na apt@packages.debian.org"
 
@@ -2091,13 +2091,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "Poznámka: Toto má svůj důvod a děje se automaticky v dpkg."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "Neměli bychom mazat věci, nelze spustit AutoRemover"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Hmm, zdá se, že AutoRemover zničil něco, co neměl.\n"
 "Nahlaste prosím chybu v apt."
@@ -2205,7 +2205,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "INFO: Toto je pouze simulace!\n"
 "      %s vyžaduje pro skutečný běh rootovská oprávnění.\n"
@@ -2458,7 +2458,7 @@ msgid "Package files:"
 msgstr "Soubory balíku:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr "Cache není synchronizovaná, nelze se odkázat na soubor balíku"
 
 #. Show any packages have explicit pins
@@ -2912,7 +2912,7 @@ msgstr "Nelze určit verzi programu debconf. Je debconf nainstalován?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Nelze najít balík %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3956,7 +3956,7 @@ msgstr "nedůvěryhodný algoritmus veřejného klíče: %s"
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 "Podepsaný soubor není platný, obdrženo „%s“ (vyžaduje přístup na síť "
 "ověření?)"
@@ -3999,7 +3999,7 @@ msgstr "Následující podpisy jsou neplatné:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "Následující podpisy nemohly být ověřeny, protože není dostupný veřejný "
@@ -4034,7 +4034,7 @@ msgid "Connection closed prematurely"
 msgstr "Spojení bylo předčasně ukončeno"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Prázdné soubory nejsou platnými archivy"
 
 #, c-format
@@ -4177,7 +4177,7 @@ msgstr "Prázdné soubory nejsou platnými archivy"
 #~ msgstr "K následujícím ID klíčů není dostupný veřejný klíč:\n"
 
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "závislost %s pro %s nemůže být splněna, protože %s není na balících „%s“ "
@@ -4196,7 +4196,7 @@ msgstr "Prázdné soubory nejsou platnými archivy"
 
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "závislost %s pro %s nemůže být splněna, protože kandidátská verze balíku "
 #~ "%s nesplňuje požadavek na verzi"
@@ -4389,7 +4389,7 @@ msgstr "Prázdné soubory nejsou platnými archivy"
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "Při zpracování závislostí nebyl nalezen balík %s %s"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Nešlo vyhodnotit seznam zdrojových balíků %s"
 
 #~ msgid "Collecting File Provides"
@@ -4404,7 +4404,7 @@ msgstr "Prázdné soubory nejsou platnými archivy"
 #~ msgid "Total dependency version space: "
 #~ msgstr "Celkem místa závislých verzí: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Na %s nemáte dostatek volného místa"
 
 #~ msgid "Done"
@@ -4453,7 +4453,7 @@ msgstr "Prázdné soubory nejsou platnými archivy"
 #~ msgstr "Neshoda MD5 součtů"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Nebylo možné nalézt soubor s balíkem %s. Asi budete muset tento balík "
@@ -4526,13 +4526,13 @@ msgstr "Prázdné soubory nejsou platnými archivy"
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Chyba při zpracování MD5. Offset %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Nelze přejít do %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Nelze najít platný kontrolní soubor"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Nelze otevřít rouru pro %s"
 
 #~ msgid "Read error from %s process"
@@ -4559,7 +4559,7 @@ msgstr "Prázdné soubory nejsou platnými archivy"
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "čtení, stále mám k přečtení %lu, ale už nic nezbývá"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "zápis, stále mám %lu k zápisu, ale nejde to"
 
 #~ msgid ""
@@ -4618,7 +4618,7 @@ msgstr "Prázdné soubory nejsou platnými archivy"
 #~ msgid "Malformed line %u in source list %s (vendor id)"
 #~ msgstr "Zkomolený řádek %u v seznamu zdrojů %s (id výrobce)"
 
-#~ msgid "Couldn't access keyring: '%s'"
+#~ msgid "Could not access keyring: '%s'"
 #~ msgstr "Nelze přistoupit ke klíčence: „%s“"
 
 #~ msgid "Could not patch file"

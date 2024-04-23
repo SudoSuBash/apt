@@ -25,13 +25,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -113,7 +113,7 @@ msgstr "Napaka pisanja"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -135,14 +135,14 @@ msgstr "Napaka GPG: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -233,7 +233,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Ni bilo mogoče najti datoteke za paket %s. Morda boste morali ročno "
@@ -241,7 +241,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "Ni mogoče najti vira za prejem različice '%s' paketa '%s'"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -311,7 +311,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -342,7 +342,7 @@ msgstr "Pridobivanje datoteke %li od %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr "Paket %s mora biti znova nameščen, vendar ni mogoče najti arhiva zanj."
 
 #: apt-pkg/algorithms.cc
@@ -377,17 +377,17 @@ msgstr "Napaka med prevajanjem logičnega izraza - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Ni mogoče najti naloge '%s'"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Z logičnim izrazom '%s' ni mogoče najti nobenega paketa"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Z logičnim izrazom '%s' ni mogoče najti nobenega paketa"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -397,30 +397,30 @@ msgstr "Ni mogoče najti paketa %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr "Ni mogoče izbrati različic in paketa '%s', saj je popolnoma navidezen"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 "Ni mogoče izbrati najnovejše različice iz paketa '%s', saj je popolnoma "
 "navidezen"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr "Ni mogoče izbrati različice kandidata iz paketa %s, ker nima kandidata"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr "Ni mogoče izbrati nameščene različice iz paketa %s, saj ni nameščen"
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "Ni mogoče izbrati nameščene različice ali različice kandidata iz paketa "
@@ -735,7 +735,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "Seznama datotek ni mogoče ustvariti, ker '%s' ni mapa"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -758,7 +758,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Program je čakal na %s a ga ni bilo tam"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -824,7 +824,7 @@ msgstr "Prebrano, še vedno je treba prebrati %llu bajtov, vendar ni nič ostalo
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "pisanje, preostalo je še %llu za pisanje, vendar ni bilo mogoče pisati"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -852,17 +852,17 @@ msgid "Unable to write to %s"
 msgstr "Ni mogoče pisati na %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "mmap prazne datoteke ni mogoč"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Ni mogoče narediti mmap %llu bajtov"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Ni mogoče podvojiti opisnika datotek %i"
 
 #: apt-pkg/contrib/mmap.cc
@@ -875,7 +875,7 @@ msgstr "Ni mogoče uskladiti mmap"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Ni mogoče narediti mmap %lu bajtov"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1340,7 +1340,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "Ni mogoče najti zapisa overitve za: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1748,7 +1748,7 @@ msgstr "Paket '%s' nima namestitvenega kandidata"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "Navideznih paketov kot je '%s' ni mogoče odstraniti\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1829,12 +1829,12 @@ msgstr "Prišlo je do težav in -y je bil uporabljen brez --force-yes"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Ni mogoče določiti prostega prostora v %s"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Na %s je premalo prostora."
 
 #: apt-private/private-download.cc
@@ -1918,11 +1918,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Notranja napaka, Urejanje se ni končalo"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Kako čudno ... Velikosti se ne ujemata, pošljite sporočilo na apt@packages."
 "debian.org"
@@ -2080,7 +2080,7 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "Opomba: To je dpkg storil samodejno in namenoma."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr ""
 "Program ne bi smel brisati stvari, ni mogoče zagnati "
 "SamodejnegaOdstranjevalnika"
@@ -2088,7 +2088,7 @@ msgstr ""
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Videti je, da je SamodejniOdstranjevalnik nekaj uničil, kar se ne bi smelo "
 "zgoditi\n"
@@ -2199,7 +2199,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "OPOMBA: To je samo simulacija!\n"
 "     %s za pravo izvajanje potrebuje privilegije skrbnika.\n"
@@ -2471,7 +2471,7 @@ msgid "Package files:"
 msgstr "Datoteke paketa:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr "Predpomnilnik ni usklajen, x-ref datoteke paketa ni mogoč"
 
 #. Show any packages have explicit pins
@@ -2907,7 +2907,7 @@ msgstr "Ni mogoče ugotoviti različice debconfa. Je sploh nameščen?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Ni mogoče najti paketa %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3971,7 +3971,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -4012,7 +4012,7 @@ msgstr "Naslednji podpisi so bili neveljavni:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "Naslednjih podpisov ni mogoče preveriti, ker javni ključ ni na voljo:\n"
@@ -4046,7 +4046,7 @@ msgid "Connection closed prematurely"
 msgstr "Povezava se je prezgodaj zaprla"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Prazne datoteke ne morejo biti veljavni arhivi"
 
 #, fuzzy, c-format
@@ -4202,7 +4202,7 @@ msgstr "Prazne datoteke ne morejo biti veljavni arhivi"
 #~ msgstr "Mapa %s je odklonjena"
 
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "odvisnosti %s za %s ni mogoče zadovoljiti, ker %s ni dovoljen na paketih "
@@ -4221,7 +4221,7 @@ msgstr "Prazne datoteke ne morejo biti veljavni arhivi"
 
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "odvisnosti %s za %s ni mogoče zadovoljiti, ker je različica kandidata "
 #~ "paketa %s ne more zadostiti zahtev različice"
@@ -4284,7 +4284,7 @@ msgstr "Prazne datoteke ne morejo biti veljavni arhivi"
 #~ "  -d   CD-ROM mount point\n"
 #~ "  -r   Rename a recognized CD-ROM\n"
 #~ "  -m   No mounting\n"
-#~ "  -f   Fast mode, don't check package files\n"
+#~ "  -f   Fast mode, do not check package files\n"
 #~ "  -a   Thorough scan mode\n"
 #~ "  --no-auto-detect Do not try to auto detect drive and mount point\n"
 #~ "  -c=? Read this configuration file\n"
@@ -4428,7 +4428,7 @@ msgstr "Prazne datoteke ne morejo biti veljavni arhivi"
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "Paketa %s %s ni bilo mogoče najti med obdelavo odvisnosti datotek"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Ni mogoče določiti seznama izvornih paketov %s"
 
 #~ msgid "Collecting File Provides"
@@ -4447,7 +4447,7 @@ msgstr "Prazne datoteke ne morejo biti veljavni arhivi"
 #~ msgid "Total dependency version space: "
 #~ msgstr "Celotna velikost z odvisnostmi različice: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Nimate dovolj prostora na %s"
 
 #~ msgid "Done"
@@ -4494,7 +4494,7 @@ msgstr "Prazne datoteke ne morejo biti veljavni arhivi"
 #~ msgstr "Neujemanje vsote MD5"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Ni bilo mogoče najti datoteke za paket %s. Morda boste morali ročno "
@@ -4568,13 +4568,13 @@ msgstr "Prazne datoteke ne morejo biti veljavni arhivi"
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Napaka med razčlenjevanjem MD5. Odmik %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Ni mogoče spremeniti v %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Ni mogoče najti veljavne nadzorne datoteke"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Ni mogoče odprti cevi za %s"
 
 #~ msgid "Read error from %s process"
@@ -4598,7 +4598,7 @@ msgstr "Prazne datoteke ne morejo biti veljavni arhivi"
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "branje, še vedno %lu za branje, a nobeden ni ostal"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "pisanje, še vedno %lu za pisanje, a ni mogoče"
 
 #~ msgid "Error occurred while processing %s (NewPackage)"

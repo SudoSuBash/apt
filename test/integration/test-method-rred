@@ -179,7 +179,7 @@ failrred 'Empty spaces lines between commands' '17d
   	   
 7d'
 
-# the line before the first one can't be deleted/changed
+# the line before the first one cannot be deleted/changed
 failrred 'zero line delete' '0d'
 failrred 'zero line change' '0c
 Package: supercoolstuff

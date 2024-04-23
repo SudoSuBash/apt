@@ -730,7 +730,7 @@ bool pkgCacheGenerator::NewPackage(pkgCache::PkgIterator &Pkg, StringView Name,
 	 }
 	 if (unlikely(PkgA.end()))
 	    return _error->Fatal("NewPackage was successful for %s:%s,"
-		  "but the package doesn't exist anyhow!",
+		  "but the package does not exist anyhow!",
 		  NameA.to_string().c_str(), ArchA.to_string().c_str());
 	 else
 	 {
@@ -1404,7 +1404,7 @@ static bool CheckValidity(FileFd &CacheFile, std::string const &CacheFileName,
    if (CacheFile.Open(CacheFileName, FileFd::ReadOnly, FileFd::None) == false)
    {
       if (Debug == true)
-	 std::clog << "CacheFile " << CacheFileName << " doesn't exist" << std::endl;
+	 std::clog << "CacheFile " << CacheFileName << " does not exist" << std::endl;
       return false;
    }
 
@@ -1462,7 +1462,7 @@ static bool CheckValidity(FileFd &CacheFile, std::string const &CacheFileName,
       if (RlsVisited[I] == false)
       {
 	 if (Debug == true)
-	    std::clog << "RlsFile with ID" << I << " wasn't visited" << std::endl;
+	    std::clog << "RlsFile with ID" << I << " was not visited" << std::endl;
 	 return false;
       }
 
@@ -1479,7 +1479,7 @@ static bool CheckValidity(FileFd &CacheFile, std::string const &CacheFileName,
       if ((*PkgFile)->Exists() == false)
       {
          if (Debug == true)
-	    std::clog << "file doesn't exist" << std::endl;
+	    std::clog << "file does not exist" << std::endl;
 	 continue;
       }
 
@@ -1501,7 +1501,7 @@ static bool CheckValidity(FileFd &CacheFile, std::string const &CacheFileName,
       if (Visited[I] == false)
       {
 	 if (Debug == true)
-	    std::clog << "PkgFile with ID" << I << " wasn't visited" << std::endl;
+	    std::clog << "PkgFile with ID" << I << " was not visited" << std::endl;
 	 return false;
       }
 

@@ -1653,7 +1653,7 @@ static bool MarkInstall_InstallDependencies(pkgDepCache &Cache, bool const Debug
 	 break;
       }
       if (DebugMarker && not foundSolution)
-	 std::clog << OutputInDepth(Depth+1) << APT::PrettyDep(&Cache, Copy) << " can't be satisfied! (dep)\n";
+	 std::clog << OutputInDepth(Depth+1) << APT::PrettyDep(&Cache, Copy) << " cannot be satisfied! (dep)\n";
       if (not foundSolution && IsCriticalDep)
       {
 	 failedToInstallSomething = true;
@@ -1914,7 +1914,7 @@ bool pkgDepCache::IsInstallOkDependenciesSatisfiableByCandidates(PkgIterator con
 	 continue;
 
       if (DebugAutoInstall == true)
-	 std::clog << OutputInDepth(Depth) << APT::PrettyDep(this, Start) << " can't be satisfied!" << std::endl;
+	 std::clog << OutputInDepth(Depth) << APT::PrettyDep(this, Start) << " cannot be satisfied!" << std::endl;
 
       // the dependency is critical, but can't be installed, so discard the candidate
       // as the problemresolver will trip over it otherwise trying to install it (#735967)
@@ -2027,7 +2027,7 @@ bool pkgDepCache::SetCandidateRelease(pkgCache::VerIterator TargetVer,
    ActionGroup group(*this);
    SetCandidateVersion(TargetVer);
 
-   if (TargetRel == "installed" || TargetRel == "candidate") // both doesn't make sense in this context
+   if (TargetRel == "installed" || TargetRel == "candidate") // both does not make sense in this context
       return true;
 
    pkgVersionMatch Match(TargetRel, pkgVersionMatch::Release);

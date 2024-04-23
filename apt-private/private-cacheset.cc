@@ -396,7 +396,7 @@ pkgCache::VerIterator CacheSetHelperAPTGet::canNotFindNewestVer(pkgCacheFile &Ca
       if (verset.empty() == false)
 	 return *(verset.begin());
       if (ShowError == true)
-	 ioprintf(out, _("Virtual packages like '%s' can't be removed\n"), Pkg.FullName(true).c_str());
+	 ioprintf(out, _("Virtual packages like '%s' cannot be removed\n"), Pkg.FullName(true).c_str());
    }
    else
    {

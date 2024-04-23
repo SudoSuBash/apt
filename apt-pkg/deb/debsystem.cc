@@ -436,7 +436,7 @@ pid_t debSystem::ExecDpkg(std::vector<std::string> const &sArgs, int * const inp
    if (inputFd != nullptr || outputFd != nullptr)
       if (pipe(external) != 0)
       {
-	 _error->WarningE("dpkg", "Can't create IPC pipe for dpkg call");
+	 _error->WarningE("dpkg", "cannot create IPC pipe for dpkg call");
 	 return -1;
       }
 
@@ -470,7 +470,7 @@ pid_t debSystem::ExecDpkg(std::vector<std::string> const &sArgs, int * const inp
 	 setenv("PATH", _config->Find("DPkg::Path", "").c_str(), 1);
 
       execvp(Args[0], (char**) &Args[0]);
-      _error->WarningE("dpkg", "Can't execute dpkg!");
+      _error->WarningE("dpkg", "cannot execute dpkg!");
       _exit(100);
    }
    if (outputFd != nullptr)
@@ -503,7 +503,7 @@ bool debSystem::AssertFeature(std::string const &feature) /*{{{*/
       {
 	 if (errno == EINTR)
 	    continue;
-	 _error->WarningE("dpkgGo", _("Waited for %s but it wasn't there"), "dpkg --assert-multi-arch");
+	 _error->WarningE("dpkgGo", _("Waited for %s but it was not there"), "dpkg --assert-multi-arch");
 	 break;
       }
       if (WIFEXITED(Status) == true && WEXITSTATUS(Status) == 0)

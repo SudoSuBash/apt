@@ -45,7 +45,7 @@ The following packages will be REMOVED:
 0 upgraded, 0 newly installed, 1 to remove and 0 not upgraded.
 Purg compiz-core-${PKG}" aptget purge compiz-core-${PKG} -s "$@"
 	else
-		# check that the rc-version isn't passed to the external resolver if its only in dpkg/status
+		# check that the rc-version is not passed to the external resolver if its only in dpkg/status
 		export APT_EDSP_DUMP_FILENAME="${TMPWORKINGDIRECTORY}/dump-${PKG}.edsp"
 		testfailure aptget purge compiz-core-${PKG} -y "$@" -s --solver dump
 		testsuccessequal '2' grep -c "^Package: compiz-core-${PKG}\$" "$APT_EDSP_DUMP_FILENAME"

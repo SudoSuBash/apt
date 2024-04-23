@@ -33,7 +33,7 @@ quiet "<INT>" {
   NoUpdate "<BOOL>"; // never update progress information - included in -q=1
   NoProgress "<BOOL>"; // disables the 0% → 100% progress on cache generation and stuff
   NoStatistic "<BOOL>"; // no "42 kB downloaded" stats in update
-  ReleaseInfoChange "<BOOL>" // don't even print the notices if the info change is allowed
+  ReleaseInfoChange "<BOOL>" // do not even print the notices if the info change is allowed
   {
     Origin "<BOOL>";
     Label "<BOOL>";
@@ -258,8 +258,8 @@ Acquire
   AllowTLS "<BOOL>";    // whether support for tls is enabled
 
   PDiffs "<BOOL>"; // try to get the IndexFile diffs
-  PDiffs::FileLimit "<INT>"; // don't use diffs if we would need more than 4 diffs
-  PDiffs::SizeLimit "<INT>"; // don't use diffs if size of all patches excess X% of the size of the original file
+  PDiffs::FileLimit "<INT>"; // do not use diffs if we would need more than 4 diffs
+  PDiffs::SizeLimit "<INT>"; // do not use diffs if size of all patches excess X% of the size of the original file
   PDiffs::Merge "<BOOL>";
 
   Check-Valid-Until "<BOOL>";
@@ -509,7 +509,7 @@ DPkg
    ConfigurePending "<BOOL>";
    TriggersPending "<BOOL>";
 
-   // Probably don't want to use force-downgrade..
+   // Probably do not want to use force-downgrade..
    Options {"--force-overwrite";"--force-downgrade";}
 
    // Defaults to /usr/sbin:/usr/bin:/sbin:/bin, might be set to empty
@@ -538,7 +538,7 @@ DPkg
    Install::Recursive "<BOOL>" // avoid long commandlines by recursive install in a tmpdir
    {
       force "<BOOL>"; // not all dpkg versions support this, so autodetection is default
-      minimum "<INT>"; // don't bother if its just a few packages
+      minimum "<INT>"; // do not bother if its just a few packages
       numbered "<BOOL>"; // avoid M-A:same ordering bug in dpkg
    };
 

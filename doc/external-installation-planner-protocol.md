@@ -112,10 +112,10 @@ additions calculated by a dependency resolver which the user has
 accepted.
 
 An installation planner is not allowed to suggest the modification of
-package states (e.g. removing additional packages) even if it can't
+package states (e.g. removing additional packages) even if it cannot
 calculate a solution otherwise – the planner must error out in such
 a case. An exception is made for scenarios which contain packages which
-aren't completely installed (like half-installed or trigger-awaiting):
+are not completely installed (like half-installed or trigger-awaiting):
 Solvers are free to move these packages to a fully installed state (but
 are still forbidden to remove them).
 
@@ -164,7 +164,7 @@ The following **preference fields** are supported in request stanzas:
 
 - **Immediate-Configuration:** (option, unset by default) A boolean
   value defining if the planner should try to configure all packages as
-  quickly as possible (true) or shouldn't perform any kind of immediate
+  quickly as possible (true) or should not perform any kind of immediate
   configuration at all (false). If not explicitly set with this field
   the planner is free to pick either mode or implementing e.g. a mode
   which configures only packages immediately if they are flagged as
@@ -241,12 +241,12 @@ these instances with the Configure or Remove field respectively.
 The order of the stanzas is significant (unlike in the EDSP protocol),
 with the first stanza being the first performed action. If multiple
 stanzas of the same type appear in direct succession the order in such
-a set isn't significant through.
+a set is not significant through.
 
 The solution needs to be valid (it is not allowed to configure a package
 before it was unpacked, dependency relations must be satisfied, …), but
-they don't need to be complete: A planner can and should expect that any
-package which wasn't explicitly configured will be configured at the end
+they do not need to be complete: A planner can and should expect that any
+package which was not explicitly configured will be configured at the end
 automatically. That also means through that a planner is not allowed to
 produce a solution in which a package remains unconfigured. Also,
 packages which are requested to be removed will be automatically removed

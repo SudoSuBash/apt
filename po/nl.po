@@ -28,7 +28,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 "Bijwerken van de pakketlijst uit een dergelijke pakketbron kan niet veilig "
@@ -36,7 +36,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 "Gegevens uit een dergelijke pakketbron kunnen niet geauthenticeerd worden en "
@@ -124,7 +124,7 @@ msgstr "Ondertekenigsfout"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 "Bestand met niet-versleutelde ondertekening is ongeldig; kreeg '%s' (vereist "
@@ -149,7 +149,7 @@ msgstr "GPG-fout: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 "Opvragen van het in de configuratie vermeld bestand '%s' overgeslagen, "
@@ -159,7 +159,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 "Opvragen van het in de configuratie vermeld bestand '%s' overgeslagen, "
@@ -262,7 +262,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Er kon geen bestand gevonden worden voor pakket %s. Dit kan betekenen dat u "
@@ -270,7 +270,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "Kan geen bron vinden om versie '%s' van '%s' op te halen"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -346,7 +346,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 "Het downloaden gebeurt door root (de systeembeheerder) en niet in een "
@@ -380,7 +380,7 @@ msgstr "Bestand %li van %li wordt opgehaald"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "Pakket %s moet opnieuw geïnstalleerd worden, maar er kan geen archief voor "
 "gevonden worden."
@@ -420,17 +420,17 @@ msgstr "Regex-compilatiefout - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Kon taak '%s' niet vinden"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Kon geen enkel pakket vinden via regex '%s'"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Kon geen enkel pakket vinden via expansie (glob) '%s'"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -440,27 +440,27 @@ msgstr "Kan pakket %s niet vinden"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 "Kan geen versies selecteren voor pakket '%s' omdat het puur virtueel is"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 "Kan de nieuwste versie van het pakket '%s' niet selecteren omdat het puur "
 "virtueel is"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 "Kan de kandidaat-versie van het pakket %s niet selecteren omdat het geen "
 "kandidaat heeft"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 "Kan de geïnstalleerde versie van het pakket %s niet selecteren omdat het "
 "niet geïnstalleerd is"
@@ -468,7 +468,7 @@ msgstr ""
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "Kan noch de geïnstalleerde, noch de kandidaat-versie van het pakket '%s' "
@@ -795,7 +795,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "Bestandenlijst kan niet aangemaakt worden, omdat '%s' geen map is"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -820,7 +820,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Er is gewacht op %s, maar die kwam niet"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -886,7 +886,7 @@ msgstr "lezen; moet er nog %llu lezen, maar er schieten er geen meer over"
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "schrijven; de laatste %llu konden niet weggeschreven worden"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -914,17 +914,17 @@ msgid "Unable to write to %s"
 msgstr "Kan niet naar %s schrijven"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Kan systeem-aanroep mmap niet op een leeg bestand toepassen"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Kon het omslaan naar het geheugen van %llu bytes niet uitvoeren"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Kon de bestandsindicator %i niet dupliceren"
 
 #: apt-pkg/contrib/mmap.cc
@@ -937,7 +937,7 @@ msgstr "Kan de 'mmap' niet synchronizeren"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Kon het omslaan naar het geheugen van %lu bytes niet uitvoeren"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1408,7 +1408,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "Kan geen authenticiteitsrecord vinden voor: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1825,7 +1825,7 @@ msgstr "Pakket '%s' heeft geen kandidaat voor installatie"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "Virtuele pakketten zoals '%s' kunnen niet worden verwijderd\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1917,12 +1917,12 @@ msgstr ""
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Kon de hoeveelheid vrije schijfruimte op %s niet bepalen"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "U heeft onvoldoende vrije schijfruimte op %s."
 
 #: apt-private/private-download.cc
@@ -2012,11 +2012,11 @@ msgstr ""
 "change-held-packages."
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Interne fout. Rangschikken is niet voltooid"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Merkwaardig... De groottes kwamen niet overeen. Gelieve apt@packages.debian."
 "org te mailen"
@@ -2170,13 +2170,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "Let op: dit wordt automatisch en bewust gedaan door dpkg."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "We mogen geen dingen verwijderen, kan AutoRemover niet starten"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Hmm, het lijkt erop dat de AutoRemover iets vernietigd heeft. Dit zou\n"
 "niet mogen kunnen. Gelieve een bug-rapport voor apt in te sturen."
@@ -2286,7 +2286,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "OPMERKING: Dit is slechts een simulatie!\n"
 "    Voor daadwerkelijke uitvoering heeft %s beheerdersrechten nodig.\n"
@@ -2552,7 +2552,7 @@ msgid "Package files:"
 msgstr "Pakketbestanden:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 "Cache loopt niet synchroon, kruisverwijzing naar pakketbestand lukt niet"
 
@@ -3023,7 +3023,7 @@ msgstr "Kan versie van debconf niet bepalen. Is debconf geïnstalleerd?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Kon pakket %s niet vinden"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -4093,7 +4093,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 "Ondertekend bestand is ongeldig; kreeg '%s' (vereist het netwerk "
 "authenticatie?)"
@@ -4144,7 +4144,7 @@ msgstr "De volgende ondertekeningen waren ongeldig:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "De volgende ondertekeningen konden niet geverifieerd worden omdat de "
@@ -4180,7 +4180,7 @@ msgid "Connection closed prematurely"
 msgstr "Verbinding werd voortijdig afgebroken"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Lege bestanden kunnen geen geldige archieven zijn"
 
 #, fuzzy, c-format

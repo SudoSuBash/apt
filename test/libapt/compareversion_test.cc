@@ -76,7 +76,7 @@ TEST(CompareVersionTest,Basic)
    EXPECT_VERSION("1.3", GREATER, "1.2.2-2");
    EXPECT_VERSION("1.3", GREATER, "1.2.2");
 
-   /* disabled as dpkg doesn't like them… (versions have to start with a number)
+   /* disabled as dpkg does not like them… (versions have to start with a number)
    EXPECT_VERSION("-", LESS, ".");
    EXPECT_VERSION("p", LESS, "-");
    EXPECT_VERSION("a", LESS, "-");
@@ -85,7 +85,7 @@ TEST(CompareVersionTest,Basic)
    EXPECT_VERSION("z", LESS, ".");
    // */
 
-   /* disabled as dpkg doesn't like them… (versions have to start with a number)
+   /* disabled as dpkg does not like them… (versions have to start with a number)
    EXPECT_VERSION("III-alpha9.8", LESS, "III-alpha9.8-1.5");
    // */
 
@@ -153,7 +153,7 @@ TEST(CompareVersionTest,CuptTests)
    EXPECT_VERSION("009ab5", EQUAL, "9ab5"); // there as well
    EXPECT_VERSION("1.2.3", LESS, "1.2.3-1"); // added non-zero revision
    EXPECT_VERSION("1.2.3", LESS, "1.2.4"); // just bigger
-   EXPECT_VERSION("1.2.4", GREATER, "1.2.3"); // order doesn't matter
+   EXPECT_VERSION("1.2.4", GREATER, "1.2.3"); // order does not matter
    EXPECT_VERSION("1.2.24", GREATER, "1.2.3"); // bigger, eh?
    EXPECT_VERSION("0.10.0", GREATER, "0.8.7"); // bigger, eh?
    EXPECT_VERSION("3.2", GREATER, "2.3"); // major number rocks
@@ -163,20 +163,20 @@ TEST(CompareVersionTest,CuptTests)
    EXPECT_VERSION("1.3.2a", LESS, "1.3.2b"); // but there is another letter
    EXPECT_VERSION("1:1.2.3", GREATER, "1.2.4"); // epoch rocks
    EXPECT_VERSION("1:1.2.3", LESS, "1:1.2.4"); // bigger anyway
-   EXPECT_VERSION("1.2a+~bCd3", LESS, "1.2a++"); // tilde doesn't rock
+   EXPECT_VERSION("1.2a+~bCd3", LESS, "1.2a++"); // tilde does not rock
    EXPECT_VERSION("1.2a+~bCd3", GREATER, "1.2a+~"); // but first is longer!
    EXPECT_VERSION("5:2", GREATER, "304-2"); // epoch rocks
    EXPECT_VERSION("5:2", LESS, "304:2"); // so big epoch?
    EXPECT_VERSION("25:2", GREATER, "3:2"); // 25 > 3, obviously
    EXPECT_VERSION("1:2:123", LESS, "1:12:3"); // 12 > 2
    EXPECT_VERSION("1.2-5", LESS, "1.2-3-5"); // 1.2 < 1.2-3
-   EXPECT_VERSION("5.10.0", GREATER, "5.005"); // preceding zeroes don't matters
+   EXPECT_VERSION("5.10.0", GREATER, "5.005"); // preceding zeroes do not matters
    EXPECT_VERSION("3a9.8", LESS, "3.10.2"); // letters are before all letter symbols
    EXPECT_VERSION("3a9.8", GREATER, "3~10"); // but after the tilde
    EXPECT_VERSION("1.4+OOo3.0.0~", LESS, "1.4+OOo3.0.0-4"); // another tilde check
    EXPECT_VERSION("2.4.7-1", LESS, "2.4.7-z"); // revision comparing
    EXPECT_VERSION("1.002-1+b2", GREATER, "1.00"); // whatever...
-   /* disabled as dpkg doesn't like them… (versions with illegal char)
+   /* disabled as dpkg does not like them… (versions with illegal char)
    EXPECT_VERSION("2.2.4-47978_Debian_lenny", EQUAL, "2.2.4-47978_Debian_lenny"); // and underscore...
    // */
 }

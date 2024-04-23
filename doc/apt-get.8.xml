@@ -630,9 +630,9 @@
      </varlistentry>
 
      <varlistentry><term><option>--allow-unauthenticated</option></term>
-     <listitem><para>Ignore if packages can't be authenticated and don't prompt
+     <listitem><para>Ignore if packages cannot be authenticated and do not prompt
 	   about it.  This can be useful while working with local repositories,
-	   but is a huge security risk if data authenticity isn't ensured in
+	   but is a huge security risk if data authenticity is not ensured in
 	   another way by the user itself.  The usage of the
 	   <option>Trusted</option> option for &sources-list; entries should
 	   usually be preferred over this global override.  Configuration Item:

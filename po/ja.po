@@ -26,7 +26,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 "このようなリポジトリから更新を安全に行うことができないので、デフォルトでは更"
@@ -34,7 +34,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 "このようなリポジトリから取得したデータは認証できないので、データの使用は潜在"
@@ -120,7 +120,7 @@ msgstr "署名エラー"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 "クリアサインされたファイルが有効ではなく、'%s' を得ました (認証にネットワーク"
@@ -144,10 +144,10 @@ msgstr "GPG エラー: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, fuzzy, c-format
 #| msgid ""
-#| "Skipping acquire of configured file '%s' as repository '%s' doesn't "
+#| "Skipping acquire of configured file '%s' as repository '%s' does not "
 #| "support architecture '%s'"
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 "リポジトリ '%2$s' がアーキテクチャ '%3$s' をサポートしないため設定ファイル "
@@ -156,7 +156,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 "リポジトリ '%2$s' がアーキテクチャ '%3$s' をサポートしないため設定ファイル "
@@ -165,7 +165,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, fuzzy, c-format
 #| msgid ""
-#| "Skipping acquire of configured file '%s' as repository '%s' doesn't "
+#| "Skipping acquire of configured file '%s' as repository '%s' does not "
 #| "support architecture '%s'"
 msgid ""
 "Skipping acquire of configured file '%s' as repository '%s' does not seem to "
@@ -258,7 +258,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "パッケージ %s のファイルの位置を特定できません。おそらくこのパッケージを手動"
@@ -266,7 +266,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "'%2$s' のバージョン '%1$s' をダウンロードするソースが見つかりません"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -339,7 +339,7 @@ msgstr "システムにサンドボックスユーザ '%s' がありません。
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 "ファイル '%s' がユーザ '%s' からアクセスできないため、ダウンロードは root で"
@@ -372,7 +372,7 @@ msgstr "ファイルを取得しています %li/%li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "パッケージ %s を再インストールする必要がありますが、そのためのアーカイブを見"
 "つけることができませんでした。"
@@ -413,17 +413,17 @@ msgstr "正規表現の展開エラー - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "タスク '%s' が見つかりません"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "正規表現 '%s' ではパッケージは見つかりませんでした"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "'%s' に一致するパッケージは見つかりませんでした"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -433,23 +433,23 @@ msgstr "パッケージ %s が見つかりません"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr "純粋な仮想パッケージのため、パッケージ '%s' のバージョンを選べません"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 "純粋な仮想パッケージのため、パッケージ '%s' の最新バージョンを選べません"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr "候補が存在しないので、パッケージ %s の候補バージョンを選べません"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 "インストールされていないので、パッケージ %s のインストール済みバージョンを選"
 "べません。"
@@ -457,7 +457,7 @@ msgstr ""
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "パッケージ '%s' のインストール済みまたは候補のバージョンはいずれも存在しない"
@@ -776,7 +776,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "'%s' がディレクトリではないため、ファイルの一覧を作成できません"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -801,7 +801,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "%s を待ちましたが、そこにはありませんでした"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -867,7 +867,7 @@ msgstr "読み込みが %llu 残っているはずですが、何も残ってい
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "あと %llu 書き込む必要がありますが、書き込むことができませんでした"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -895,17 +895,17 @@ msgid "Unable to write to %s"
 msgstr "%s に書き込めません"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "空のファイルを mmap できません"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "%llu バイトの mmap ができませんでした"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "ファイルデスクリプタ %i は重複できません"
 
 #: apt-pkg/contrib/mmap.cc
@@ -918,7 +918,7 @@ msgstr "mmap を同期できません"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "%lu バイトの mmap ができませんでした"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1391,7 +1391,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "認証レコードが見つかりません: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1802,7 +1802,7 @@ msgstr "パッケージ '%s' にはインストール候補がありません"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "'%s' のような仮想パッケージを削除することはできません\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1891,12 +1891,12 @@ msgstr ""
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "%s の空き領域を測定できません"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "%s に充分な空きスペースがありません。"
 
 #: apt-private/private-download.cc
@@ -1985,11 +1985,11 @@ msgstr ""
 "使用されました。"
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "内部エラー、調整が終わっていません"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "おっと、サイズがマッチしません。apt@packages.debian.org にメールしてください"
 
@@ -2137,14 +2137,14 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "注意: これは dpkg により自動かつ意図的に実施されます。"
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr ""
 "一連のものを削除するようになっていないので、AutoRemover を開始できません"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "AutoRemover が、本来起きるべきでない何かを壊したようです。\n"
 "apt にバグ報告を送ってください。"
@@ -2248,7 +2248,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "注意: これはシミュレーションにすぎません!\n"
 "      %s は実際の実行に root 権限を必要とします。\n"
@@ -2514,7 +2514,7 @@ msgid "Package files:"
 msgstr "パッケージファイル:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr "キャッシュが同期しておらず、パッケージファイルを相互参照できません"
 
 #. Show any packages have explicit pins
@@ -2973,7 +2973,7 @@ msgstr ""
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "パッケージ %s が見つかりません"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -4036,7 +4036,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 "署名されたファイルが有効ではなく、'%s' を得ました (ネットワークに認証が必要?)"
 
@@ -4079,7 +4079,7 @@ msgstr "以下の署名が無効です:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr "公開鍵を利用できないため、以下の署名は検証できませんでした:\n"
 
@@ -4112,7 +4112,7 @@ msgid "Connection closed prematurely"
 msgstr "途中で接続がクローズされました"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "空のファイルは有効なアーカイブと認められません"
 
 #, fuzzy, c-format

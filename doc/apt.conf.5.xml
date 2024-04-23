@@ -104,7 +104,7 @@ DPkg::Pre-Install-Pkgs {"/usr/sbin/dpkg-preconfigure --apt";};
    previous example you could use <literal>dpkg::pre-install-pkgs</literal>.</para>
 
    <para>Names for the configuration items are optional if a list is defined as can be seen in
-   the <literal>DPkg::Pre-Install-Pkgs</literal> example above. If you don't specify a name a
+   the <literal>DPkg::Pre-Install-Pkgs</literal> example above. If you do not specify a name a
    new entry will simply add a new option to the list. If you specify a name you can override
    the option in the same way as any other option by reassigning a new value to the option.</para>
 
@@ -122,7 +122,7 @@ DPkg::Pre-Install-Pkgs {"/usr/sbin/dpkg-preconfigure --apt";};
    a complete scope. Reopening a scope (or using the syntax described below
    with an appended <literal>::</literal>) will <emphasis>not</emphasis>
    override previously written entries. Options can only be overridden by
-   addressing a new value to them - lists and scopes can't be overridden,
+   addressing a new value to them - lists and scopes cannot be overridden,
    only cleared.
    </para>
 
@@ -131,7 +131,7 @@ DPkg::Pre-Install-Pkgs {"/usr/sbin/dpkg-preconfigure --apt";};
    name (<literal>APT::Get::Assume-Yes</literal> for instance) followed by an equals
    sign then the new value of the option. To append a new element to a list, add a
    trailing <literal>::</literal> to the name of the list.
-   (As you might suspect, the scope syntax can't be used on the command line.)</para>
+   (As you might suspect, the scope syntax cannot be used on the command line.)</para>
 
    <para>
    Note that appending items to a list using <literal>::</literal> only works
@@ -145,7 +145,7 @@ DPkg::Pre-Install-Pkgs {"/usr/sbin/dpkg-preconfigure --apt";};
    achieve the opposite, as only the last assignment for this option
    "<literal>::</literal>" will be used. Future versions of APT will raise
    errors and stop working if they encounter this misuse, so please correct
-   such statements now while APT doesn't explicitly complain about them.
+   such statements now while APT does not explicitly complain about them.
    </para>
  </refsect1>
 
@@ -216,7 +216,7 @@ APT::Color::Action::Upgrade "bold action::install";
      <varlistentry><term><option>Compressor</option></term>
      <listitem><para>
      This scope defines which compression formats are supported, how compression
-     and decompression can be performed if support for this format isn't built
+     and decompression can be performed if support for this format is not built
      into apt directly and a cost-value indicating how costly it is to compress
      something in this format. As an example the following configuration stanza
      would allow apt to download and uncompress as well as create and store
@@ -443,7 +443,7 @@ APT::Compressor::rev {
      that are no longer updated - but the feature depends on the
      correctness of the clock on the user system. Archive maintainers are
      encouraged to create Release files with the
-     <literal>Valid-Until</literal> header, but if they don't or a
+     <literal>Valid-Until</literal> header, but if they do not or a
      stricter value is desired the <literal>Max-ValidTime</literal>
      option below can be used.
      The <option>Check-Valid-Until</option> option of &sources-list; entries should be
@@ -615,7 +615,7 @@ APT::Compressor::rev {
      <para>Note that the
      <literal>Dir::Bin::<replaceable>Methodname</replaceable></literal>
      will be checked at run time. If this option has been set and support for
-     this format isn't directly built into apt, the method will only be used if
+     this format is not directly built into apt, the method will only be used if
      this file exists; e.g. for the <literal>bzip2</literal> method (the
      inbuilt) setting is: <literallayout>Dir::Bin::bzip2 "/bin/bzip2";</literallayout>
      Note also that list entries specified on the command line will be added at the end of the list
@@ -623,7 +623,7 @@ APT::Compressor::rev {
      over the ones specified in the configuration files you can set the option direct - not in list style.
      This will not override the defined list; it will only prefix the list with this type.</para>
      <para>The special type <literal>uncompressed</literal> can be used to give uncompressed files a
-     preference, but note that most archives don't provide uncompressed files so this is mostly only
+     preference, but note that most archives do not provide uncompressed files so this is mostly only
      usable for local mirrors.</para></listitem>
      </varlistentry>
 
@@ -723,7 +723,7 @@ APT::Compressor::rev {
      <varlistentry><term><option>Changelogs::URI</option> scope</term>
 	<listitem><para>
 	  Acquiring changelogs can only be done if an URI is known from where to get them.
-	  Preferable the Release file indicates this in a 'Changelogs' field. If this isn't
+	  Preferable the Release file indicates this in a 'Changelogs' field. If this is not
 	  available the Label/Origin field of the Release file is used to check if a
 	  <literal>Acquire::Changelogs::URI::Label::<replaceable>LABEL</replaceable></literal> or
 	  <literal>Acquire::Changelogs::URI::Origin::<replaceable>ORIGIN</replaceable></literal> option
@@ -742,7 +742,7 @@ APT::Compressor::rev {
 	  and between the fourth and fifth part is an underscore ('<literal>_</literal>').
 
 	  The special value '<literal>no</literal>' is available for this option indicating that
-	  this source can't be used to acquire changelog files from. Another source will be tried
+	  this source cannot be used to acquire changelog files from. Another source will be tried
 	  if available in this case.
 	</para></listitem>
 </varlistentry>
@@ -750,7 +750,7 @@ APT::Compressor::rev {
      <varlistentry><term><option>Snapshots::URI</option> scope</term>
 	<listitem><para>
 	  Like changelogs, snapshots can only be acquired if an URI is known from where to get them.
-	  Preferable the Release file indicates this in a 'Snapshots' field. If this isn't
+	  Preferable the Release file indicates this in a 'Snapshots' field. If this is not
 	  available the Label/Origin field of the Release file is used to check if a
 	  <literal>Acquire::Snapshots::URI::Label::<replaceable>LABEL</replaceable></literal> or
 	  <literal>Acquire::Snapshots::URI::Origin::<replaceable>ORIGIN</replaceable></literal> option
@@ -783,7 +783,7 @@ APT::Compressor::rev {
        scope. Setting the option <option>APT::Get::Show-Versions</option> for
        the <command>apt</command> only can e.g. by done by setting
        <option>Binary::apt::APT::Get::Show-Versions</option> instead.</para>
-    <para>Note that as seen in the DESCRIPTION section further above you can't
+    <para>Note that as seen in the DESCRIPTION section further above you cannot
        set binary-specific options on the commandline itself nor in
        configuration files loaded via the commandline.</para>
  </refsect1>
@@ -951,7 +951,7 @@ APT::Compressor::rev {
      <para>The version of the protocol to be used for the command
      <literal><replaceable>cmd</replaceable></literal> can be chosen by setting
      <literal>DPkg::Tools::options::<replaceable>cmd</replaceable>::Version</literal>
-     accordingly, the default being version 1. If APT isn't supporting the requested
+     accordingly, the default being version 1. If APT is not supporting the requested
      version it will send the information in the highest version it has support for instead.
      </para>
 
@@ -1033,7 +1033,7 @@ APT::Compressor::rev {
 	 <para>
 	   <literal>Debug::IdentCdrom</literal> disables the inclusion
 	   of statfs data in CD-ROM IDs.  <!-- TODO: provide a
-	   motivating example, except I haven't a clue why you'd want
+	   motivating example, except I have not a clue why you'd want
 	   to do this. -->
 	 </para>
        </listitem>

@@ -481,7 +481,7 @@ class Patch {
 		  break;
 	       case 'c':
 		  if (unlikely(s == 0))
-		     return _error->Error("Parsing patchfile %s failed: Change command can't effect line zero", f.Name().c_str());
+		     return _error->Error("Parsing patchfile %s failed: Change command cannot effect line zero", f.Name().c_str());
 		  cmdwanted = false;
 		  ch.add = NULL;
 		  ch.add_cnt = 0;
@@ -491,7 +491,7 @@ class Patch {
 		  break;
 	       case 'd':
 		  if (unlikely(s == 0))
-		     return _error->Error("Parsing patchfile %s failed: Delete command can't effect line zero", f.Name().c_str());
+		     return _error->Error("Parsing patchfile %s failed: Delete command cannot effect line zero", f.Name().c_str());
 		  ch.offset = s - 1;
 		  ch.del_cnt = e - s + 1;
 		  ch.add = NULL;
@@ -507,7 +507,7 @@ class Patch {
 	    if (strcmp(buffer, ".\n") == 0) {
 	       cmdwanted = true;
 	       if (not filechanges.add_change(ch))
-		  return _error->Error("Parsing patchfile %s failed: Data couldn't be added for command (1)", f.Name().c_str());
+		  return _error->Error("Parsing patchfile %s failed: Data could not be added for command (1)", f.Name().c_str());
 	    } else {
 	       char *last = NULL;
 	       char *add;
@@ -522,7 +522,7 @@ class Patch {
 	       } else {
 		  if (ch.add) {
 		     if (not filechanges.add_change(ch))
-			return _error->Error("Parsing patchfile %s failed: Data couldn't be added for command (2)", f.Name().c_str());
+			return _error->Error("Parsing patchfile %s failed: Data could not be added for command (2)", f.Name().c_str());
 		     ch.del_cnt = 0;
 		  }
 		  ch.offset += ch.add_cnt;
@@ -731,7 +731,7 @@ class RredMethod : public aptMethod {
 	    Hashes start_hash(StartHashes);
 	    patch.apply_against_file(out, inp, &start_hash, &end_hash);
 	    if (start_hash.GetHashStringList() != StartHashes)
-	       _error->Error("The input file hadn't the expected hash!");
+	       _error->Error("The input file had not the expected hash!");
 	 }
 	 else
 	    patch.apply_against_file(out, inp, nullptr, &end_hash);

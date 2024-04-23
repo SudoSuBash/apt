@@ -4,7 +4,7 @@ set -e
 # apt-key is a shell script, so relatively prune to be effected by 'crazy' things:
 # confuses config parser as there exists no way of escaping " currently.
 #TMPDIR="$(mktemp -d)/This is \"fü\$\$ing cràzy\", \$(man man | head -n1 | cut -d' ' -f 1)\$!"
-# gpg doesn't like | in path names – documented e.g. in the man gpg2 --agent-program
+# gpg does not like | in path names – documented e.g. in the man gpg2 --agent-program
 #TMPDIR="$(mktemp -d)/This is fü\$\$ing cràzy, \$(man man | head -n1 | cut -d' ' -f 1)\$!"
 TMPDIR_ADD="This is fü\$\$ing cràzy, \$(apt -v)\$!"
 
@@ -26,7 +26,7 @@ cleanplate() {
 }
 testmultigpg() {
 	testfailure --nomsg aptkey --quiet --readonly "$@"
-	testsuccess grep "^gpgv: Can't check signature" "${ROOTDIR}/tmp/testfailure.output"
+	testsuccess grep "^gpgv: cannot check signature" "${ROOTDIR}/tmp/testfailure.output"
 	testsuccess grep '^gpgv: Good signature from' "${ROOTDIR}/tmp/testfailure.output"
 }
 testaptkeyskeyring() {
@@ -102,7 +102,7 @@ gpg:              unchanged: 1' aptkey --fakeroot update
 
 	testaptkeys 'Joe Sixpack'
 
-	msgtest "Try to remove a key which exists, but isn't in the" 'forced keyring'
+	msgtest "Try to remove a key which exists, but is not in the" 'forced keyring'
 	testsuccess --nomsg aptkey --fakeroot --keyring "${ROOTDIR}/etc/apt/trusted.gpg" del DBAC8DAE
 
 	testaptkeys 'Joe Sixpack'
@@ -297,7 +297,7 @@ gpg:              unchanged: 1' aptkey --fakeroot update
 		testfailure --nomsg aptkey --quiet --readonly --keyring "${KEYDIR}/does-not-exist.pub.${EXT}" verify "${SIGNATURE}.gpg" "${SIGNATURE}"
 		testfailure test -e "${KEYDIR}/does-not-exist.pub.${EXT}"
 
-		# note: this isn't how apts gpgv method implements keyid for verify
+		# note: this is not how apts gpgv method implements keyid for verify
 		msgtest 'Test verify a file' 'with good keyid'
 		${TESTSTATE} --nomsg aptkey --quiet --readonly --keyid 'Paranoid' verify "${SIGNATURE}.gpg" "${SIGNATURE}"
 
@@ -350,7 +350,7 @@ gpg:              unchanged: 1' aptkey --fakeroot update
 		testfailure --nomsg aptkey --quiet --readonly --keyring "${KEYDIR}/does-not-exist.pub.${EXT}" verify "${SIGNATURE}.gpg" "${SIGNATURE}"
 		testfailure test -e "${KEYDIR}/does-not-exist.pub.${EXT}"
 
-		# note: this isn't how apts gpgv method implements keyid for verify
+		# note: this is not how apts gpgv method implements keyid for verify
 		msgtest 'Test verify a doublesigned file' 'with good keyid'
 		testmultigpg --keyid 'Paranoid' verify "${SIGNATURE}.gpg" "${SIGNATURE}"
 
@@ -416,7 +416,7 @@ rm -f "${ROOTDIR}/etc/apt/apt.conf.d/00gpgcmd"
 testrun 'asc'
 
 msgmsg 'Tests to be run with' 'bad files'
-# don't let the plate be so clean anymore
+# do not let the plate be so clean anymore
 cleanplate() {
 	rm -rf "${ROOTDIR}/etc/apt/trusted.gpg.d/" "${ROOTDIR}/etc/apt/trusted.gpg"
 	mkdir "${ROOTDIR}/etc/apt/trusted.gpg.d/"

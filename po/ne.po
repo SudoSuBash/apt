@@ -22,13 +22,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -111,7 +111,7 @@ msgstr "त्रुटि लेख्नुहोस्"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -131,14 +131,14 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -222,7 +222,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "%s प्याकेजको लागि मैले फाइल स्थित गर्न सकिन । यसको मतलब तपाईँले म्यानुल्ली यो प्याकेज "
@@ -230,7 +230,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr ""
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -300,7 +300,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -331,7 +331,7 @@ msgstr "%li को %li फाइल पुन:प्राप्त गरिद
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr "प्याकेज %s पुन:स्थापना हुन चाहन्छ, तर यसको लागि मैले एउटा संग्रह फेला पार्न सकिन ।"
 
 #: apt-pkg/algorithms.cc
@@ -366,17 +366,17 @@ msgstr "संकलन त्रुटि रिजेक्स गर्नु
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "प्याकेज फेला पार्न सकिएन  %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "प्याकेज फेला पार्न सकिएन  %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "प्याकेज फेला पार्न सकिएन  %s"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -386,28 +386,28 @@ msgstr "प्याकेज %s तोक्न असक्षम भयो"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 
@@ -715,7 +715,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -737,7 +737,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr " %s को लागि पर्खिरहेको तर यो त्यहाँ छैन"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -803,7 +803,7 @@ msgstr "पड्नुहोस्, अहिले सम्म %lu पढ्�
 
 #: apt-pkg/contrib/fileutl.cc
 #, fuzzy, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "लेख्नुहोस्, अहिले सम्म %lu लेख्न छ तर सकिदैन "
 
 #: apt-pkg/contrib/fileutl.cc
@@ -831,17 +831,17 @@ msgid "Unable to write to %s"
 msgstr " %s मा लेख्न असक्षम"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "एउटा खाली फाइल mmap बनाउन सकिएन"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "%lu बाइटहरुको mmap बनाउन सकिएन"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "%s को लागि पाइप खोल्न सकिएन"
 
 #: apt-pkg/contrib/mmap.cc
@@ -856,7 +856,7 @@ msgstr "आह्वान गर्न असक्षम भयो"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "%lu बाइटहरुको mmap बनाउन सकिएन"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1296,7 +1296,7 @@ msgstr "हराइरहेको फाइल %i हरू र मेल न�
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr ""
 
 #: apt-pkg/indexcopy.cc
@@ -1702,7 +1702,7 @@ msgstr "प्याकेज %s संग कुनै स्थापना �
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr ""
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1783,12 +1783,12 @@ msgstr "त्यहाँ समस्याहरू छन् र हुन�
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr " %s मा खाली ठाऊँ निर्धारण गर्न सकिएन"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "तपाईँ संग %s मा पर्याप्त खाली ठाऊँ छैन ।"
 
 #: apt-private/private-download.cc
@@ -1873,11 +1873,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "आन्तरिक त्रुटि, आदेश समाप्त भएको छैन"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr "कस्तो नमिलेको.. साइजहरू मेल खाएन, apt@packages.debian.org इमेल गर्नुहोस्"
 
 #: apt-private/private-install.cc
@@ -2023,13 +2023,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr ""
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 
 #: apt-private/private-install.cc
@@ -2130,7 +2130,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 
 #: apt-private/private-output.cc apt-private/private-show.cc
@@ -2393,7 +2393,7 @@ msgid "Package files:"
 msgstr "प्याकेज फाइलहरू:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr "क्यास sync  भन्दा बाहिर छ, प्याकेज फाइल x-ref गर्न सक्दैन"
 
 #. Show any packages have explicit pins
@@ -2821,7 +2821,7 @@ msgstr " debconf संस्करण प्राप्त गर्न सक
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "प्याकेज फेला पार्न सकिएन  %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3880,7 +3880,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -3920,7 +3920,7 @@ msgstr "निम्न हस्ताक्षरहरू अवैध छन
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr "निम्न हस्ताक्षरहरू रूजू हुन सक्दैन किन भने सार्वजनिक कुञ्जी उपलब्ध छैन:\n"
 
@@ -3953,7 +3953,7 @@ msgid "Connection closed prematurely"
 msgstr "जडान असमायिक बन्द भयो"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr ""
 
 #, fuzzy
@@ -4091,7 +4091,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr "%s को लागि %s निर्भरता सन्तुष्ट हुन सकेन किनभने प्याकेज %s फेला पार्न सकिएन"
 
@@ -4108,7 +4108,7 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "%sको लागि %s निर्भरता सन्तुष्ट हुन सकेन किन भने प्याकेज %s को कुनै उपलब्ध संस्करणले "
 #~ "संस्करण आवश्यकताहरुलाई सन्तुष्ट पार्न सकेन "
@@ -4262,7 +4262,7 @@ msgstr ""
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "फाइल निर्भरताहरू प्रक्रिया गर्दा प्याकेज %s %s फेला परेन"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "स्रोत प्याकेज सूची %s स्थिर गर्न सकिएन "
 
 #~ msgid "Collecting File Provides"
@@ -4278,7 +4278,7 @@ msgstr ""
 #~ msgid "Total dependency version space: "
 #~ msgstr "कूल निर्भरता संस्करण खाली ठाऊँ:"
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "तपाईँ संग %s मा पर्याप्त खाली ठाऊँ छैन"
 
 #~ msgid "Done"
@@ -4310,7 +4310,7 @@ msgstr ""
 #~ msgstr "MD5Sum मेल भएन"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "%s प्याकेजको लागि मैले फाइल स्थित गर्न सकिन । यसको मतलब तपाईँले म्यानुल्ली यो प्याकेज "
@@ -4379,13 +4379,13 @@ msgstr ""
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "MD5 पद वर्णन गर्दा त्रुटि । अफसेट %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "%s मा परिवर्तन गर्न सकिदैन"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "वैध नियन्त्रण फाइल स्थित गर्नु असफल भयो"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "%s को लागि पाइप खोल्न सकिएन"
 
 #~ msgid "Read error from %s process"
@@ -4409,7 +4409,7 @@ msgstr ""
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "पड्नुहोस्, अहिले सम्म %lu पढ्न छ तर कुनै बाँकी छैन"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "लेख्नुहोस्, अहिले सम्म %lu लेख्न छ तर सकिदैन "
 
 #~ msgid "Error occurred while processing %s (NewPackage)"
@@ -4457,7 +4457,7 @@ msgstr ""
 #~ msgid "Malformed line %u in source list %s (vendor id)"
 #~ msgstr "वैरुप्य लाइन %u स्रोत सूचिमा %s (बिक्रता आइडी)"
 
-#~ msgid "Couldn't access keyring: '%s'"
+#~ msgid "Could not access keyring: '%s'"
 #~ msgstr "कुञ्जी घण्टी पहुँच गर्न सकिएन: '%s'"
 
 #, fuzzy

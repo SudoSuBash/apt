@@ -27,7 +27,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 "No es pot actualitzar des d'un dipòsit com aquest de forma segura i per tant "
@@ -35,7 +35,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 "Les dades d'un dipòsit com aquest no es poden autenticar i per tant és "
@@ -121,7 +121,7 @@ msgstr "Hi ha hagut un error en la signatura"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 "El fitxer signat en clar no és vàlid, s'ha obtingut «%s» (la xarxa requereix "
@@ -146,7 +146,7 @@ msgstr "Error GPG: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 "S'omet l'ús del fitxer configurat «%s» ja que el dipòsit «%s» no té el "
@@ -155,7 +155,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 "S'omet l'ús del fitxer configurat «%s» ja que el dipòsit «%s» no admet "
@@ -253,7 +253,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "No ha estat possible localitzar un fitxer pel paquet %s. És possible que "
@@ -261,7 +261,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "No es troba una font per baixar la versió «%s» de «%s»"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -335,7 +335,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 "La baixada es duu a terme fora de l'entorn segur com a root ja que el fitxer "
@@ -368,7 +368,7 @@ msgstr "S'està obtenint el fitxer %li de %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr "Cal reinstal·lar el paquet %s, però no se'n troba un arxiu."
 
 #: apt-pkg/algorithms.cc
@@ -406,17 +406,17 @@ msgstr "S'ha produït un error de compilació de l'expressió regular - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "No s'ha trobat la tasca «%s»"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "No s'ha trobat cap paquet a través de l'expressió regular «%s»"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "No s'ha trobat cap paquet a través del glob «%s»"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -426,27 +426,27 @@ msgstr "No s'ha trobat el paquet %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 "No es poden seleccionar versions del paquet «%s» perquè és purament virtual"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 "No es pot seleccionar l'última versió del paquet «%s» perquè és purament "
 "virtual"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 "No es pot seleccionar la versió candidata del paquet %s perquè no té "
 "candidata"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 "No es pot seleccionar la versió instal·lada del paquet %s perquè no està "
 "instal·lada"
@@ -454,7 +454,7 @@ msgstr ""
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "No es pot seleccionar la versió instal·lada ni la candidata del paquet «%s» "
@@ -776,7 +776,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "No es pot crear la llista de fitxers perquè «%s» no és un directori"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -802,7 +802,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "S'esperava %s però no hi era"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -868,7 +868,7 @@ msgstr "llegits, encara falten %llu per llegir però no en queda cap"
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr ""
 "escrits, encara falten %llu per escriure però \\\n"
 "no s'ha pogut"
@@ -898,17 +898,17 @@ msgid "Unable to write to %s"
 msgstr "No es pot escriure a %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "No es pot fer «mmap» a un fitxer buit"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "No s'ha pogut crear un «mmap» de %llu bytes"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "No s'ha pogut duplicar el descriptor del fitxer %i"
 
 #: apt-pkg/contrib/mmap.cc
@@ -921,7 +921,7 @@ msgstr "No es pot sincronitzar el «mmap»"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "No s'ha pogut crear un «mmap» de %lu bytes"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1391,7 +1391,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "No s'ha pogut trobar el registre d'autenticació per a: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1814,7 +1814,7 @@ msgstr "El paquet «%s» no té candidat d'instal·lació"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "Els paquets virtuals com «%s» no es poden suprimir\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1905,12 +1905,12 @@ msgstr ""
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "No s'ha pogut determinar l'espai lliure en %s"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "No teniu prou espai lliure a %s."
 
 #: apt-private/private-download.cc
@@ -2001,11 +2001,11 @@ msgstr ""
 "change-held-packages."
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "S'ha produït un error intern. L'ordenació no ha acabat"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Que estrany… Les mides no coincideixen, informeu-ho a apt@packages.debian.org"
 
@@ -2157,7 +2157,7 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "Nota: Això ho fa el dpkg automàticament i a propòsit."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr ""
 "Se suposa que no hauríem de suprimir coses. No es pot iniciar el supressor "
 "automàtic"
@@ -2165,7 +2165,7 @@ msgstr ""
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Sembla que el supressor automàtic ha destruït alguna cosa que no deuria.\n"
 "Si us plau, envieu un informe d'error per a l'apt."
@@ -2273,7 +2273,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "NOTA: Això només és una simulació!\n"
 "      L'%s necessita privilegis de root per a l'execució real.\n"
@@ -2540,7 +2540,7 @@ msgid "Package files:"
 msgstr "Fitxers de paquets:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 "Memòria cau no sincronitzada, no es pot fer x-ref a un fitxer del paquet"
 
@@ -3013,7 +3013,7 @@ msgstr "No es pot determinar la versió de debconf. Està instal·lat debconf?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "No s'ha pogut trobar el paquet %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -4078,7 +4078,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 "El fitxer signat no és vàlid, s'ha obtingut «%s». Comproveu si la xarxa "
 "requereix autenticació."
@@ -4125,7 +4125,7 @@ msgstr "Les signatures següents no són vàlides:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "Les signatures següents no s'han pogut verificar perquè la clau pública no "
@@ -4162,7 +4162,7 @@ msgid "Connection closed prematurely"
 msgstr "La connexió s'ha tancat prematurament"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Els fitxers buits no poden ser arxius vàlids"
 
 #, fuzzy, c-format

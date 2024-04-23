@@ -52,10 +52,10 @@ wasmergeused() {
 		if echo "$*" | grep -q -- '-o Acquire::PDiffs::Merge=1'; then
 			msgpass
 		else
-			msgfail "Merge shouldn't have been used, but was"
+			msgfail "Merge should not have been used, but was"
 		fi
 	elif echo "$*" | grep -q -- '-o Acquire::PDiffs::Merge=1'; then
-		msgfail "Merge should have been used, but wasn't"
+		msgfail "Merge should have been used, but was not"
 	else
 		msgpass
 	fi

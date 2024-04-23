@@ -47,7 +47,7 @@
    <para>
    Starting with version 0.6, <command>APT</command> contains code that does
    signature checking of the Release file for all repositories. This ensures
-   that data like packages in the archive can't be modified by people who
+   that data like packages in the archive cannot be modified by people who
    have no access to the Release file signing key. Starting with version 1.1
    <command>APT</command> requires repositories to provide recent authentication
    information for unimpeded usage of the repository. Since version 1.5 changes
@@ -227,7 +227,7 @@
 
       <listitem><para>
       <emphasis>Provide instructions on how to add your archive and key</emphasis>.
-      If your users can't acquire your key securely the chain of trust described above is broken.
+      If your users cannot acquire your key securely the chain of trust described above is broken.
       How you can help users add your key depends on your archive and target audience ranging
       from having your keyring package included in another archive users already have configured
       (like the default repositories of their distribution) to leveraging the web of trust.

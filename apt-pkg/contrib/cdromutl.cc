@@ -189,7 +189,7 @@ bool IdentCdrom(string CD,string &Res,unsigned int Version)
       return _error->Errno("open",_("Unable to read %s"),CD.c_str());
 
    // if we are on a writable medium (like a usb-stick) that is just
-   // used like a cdrom don't use "." as it will constantly change,
+   // used like a cdrom do not use "." as it will constantly change,
    // use .disk instead
    if (faccessat(dirfd, ".", W_OK, 0) == 0)
    {

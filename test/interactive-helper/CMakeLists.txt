@@ -1,7 +1,7 @@
 if(USE_SYSTEM_APTPKG)
    find_library(aptpkg NAMES apt-pkg NO_PACKAGE_ROOT_PATH REQUIRED)
    set(APTPKG_LIB "${aptpkg}")
-   # it isn't easy to link against -private, but that is by design
+   # it is not easy to link against -private, but that is by design
    set(APTPRIVATE_LIB "/usr/lib/${CMAKE_LIBRARY_ARCHITECTURE}/libapt-private.so.0.0")
    set(APTPRIVATE_INCLUDE_DIRS "${PROJECT_SOURCE_DIR}")
 else()

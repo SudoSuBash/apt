@@ -49,7 +49,7 @@ testrun() {
 	testfailure aptget download cool
 	testfilemissing cool_1.0_i386.deb
 
-	testfailure aptget download cool --allow-unauthenticated  # unauthenticated doesn't mean unchecked
+	testfailure aptget download cool --allow-unauthenticated  # unauthenticated does not mean unchecked
 	testfilemissing cool_1.0_i386.deb
 
 	rm -f ../aptarchive/pool/cool_1.0_i386.deb

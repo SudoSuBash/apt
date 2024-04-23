@@ -151,7 +151,7 @@ Reverse Provides: '
 
 testempty aptcache search nonexistentstring
 
-# packages without a description can't be found
+# packages without a description cannot be found
 testsuccessequal 'apt-normal - commandline package manager
 apt-both-below - commandline package manager
 apt-both-middle - commandline package manager

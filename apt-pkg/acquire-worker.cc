@@ -1006,7 +1006,7 @@ void pkgAcquire::Worker::PrepareFiles(char const * const caller, pkgAcquire::Que
 	    // different disks, so use symlink as poor-men replacement.
 	    // FIXME: Real copying as last fallback, but that is costly, so offload to a method preferable
 	    if (symlink(filename.c_str(), Owner->DestFile.c_str()) != 0)
-	       _error->Error("Can't create (sym)link of file %s to %s", filename.c_str(), Owner->DestFile.c_str());
+	       _error->Error("cannot create (sym)link of file %s to %s", filename.c_str(), Owner->DestFile.c_str());
 	 }
       }
    }

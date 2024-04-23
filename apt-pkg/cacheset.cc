@@ -707,19 +707,19 @@ void CacheSetHelper::canNotFindPackage(enum PkgSelector const select,
 // canNotFindTask - handle the case no package is found for a task	/*{{{*/
 void CacheSetHelper::canNotFindTask(PackageContainerInterface * const /*pci*/, pkgCacheFile &/*Cache*/, std::string pattern) {
 	if (ShowError == true)
-		_error->Insert(ErrorType, _("Couldn't find task '%s'"), pattern.c_str());
+		_error->Insert(ErrorType, _("Could not find task '%s'"), pattern.c_str());
 }
 									/*}}}*/
 // canNotFindRegEx - handle the case no package is found by a regex	/*{{{*/
 void CacheSetHelper::canNotFindRegEx(PackageContainerInterface * const /*pci*/, pkgCacheFile &/*Cache*/, std::string pattern) {
 	if (ShowError == true)
-		_error->Insert(ErrorType, _("Couldn't find any package by regex '%s'"), pattern.c_str());
+		_error->Insert(ErrorType, _("Could not find any package by regex '%s'"), pattern.c_str());
 }
 									/*}}}*/
 // canNotFindFnmatch - handle the case no package is found by a fnmatch	/*{{{*/
    void CacheSetHelper::canNotFindFnmatch(PackageContainerInterface * const /*pci*/, pkgCacheFile &/*Cache*/, std::string pattern) {
 	if (ShowError == true)
-		_error->Insert(ErrorType, _("Couldn't find any package by glob '%s'"), pattern.c_str());
+		_error->Insert(ErrorType, _("Could not find any package by glob '%s'"), pattern.c_str());
 }
 									/*}}}*/
 // canNotFindPackage - handle the case no package is found from a string/*{{{*/
@@ -754,7 +754,7 @@ void CacheSetHelper::canNotFindVersion(enum VerSelector const select, VersionCon
 void CacheSetHelper::canNotFindAllVer(VersionContainerInterface * const /*vci*/, pkgCacheFile &/*Cache*/,
 		pkgCache::PkgIterator const &Pkg) {
 	if (ShowError == true)
-		_error->Insert(ErrorType, _("Can't select versions from package '%s' as it is purely virtual"), Pkg.FullName(true).c_str());
+		_error->Insert(ErrorType, _("cannot select versions from package '%s' as it is purely virtual"), Pkg.FullName(true).c_str());
 }
 									/*}}}*/
 // canNotFindInstCandVer						/*{{{*/
@@ -791,7 +791,7 @@ pkgCache::VerIterator CacheSetHelper::canNotGetVersion(enum VerSelector const se
 pkgCache::VerIterator CacheSetHelper::canNotFindNewestVer(pkgCacheFile &Cache,
 		pkgCache::PkgIterator const &Pkg) {
 	if (ShowError == true)
-		_error->Insert(ErrorType, _("Can't select newest version from package '%s' as it is purely virtual"), Pkg.FullName(true).c_str());
+		_error->Insert(ErrorType, _("cannot select newest version from package '%s' as it is purely virtual"), Pkg.FullName(true).c_str());
 	return pkgCache::VerIterator(Cache, 0);
 }
 									/*}}}*/
@@ -799,7 +799,7 @@ pkgCache::VerIterator CacheSetHelper::canNotFindNewestVer(pkgCacheFile &Cache,
 pkgCache::VerIterator CacheSetHelper::canNotFindCandidateVer(pkgCacheFile &Cache,
 		pkgCache::PkgIterator const &Pkg) {
 	if (ShowError == true)
-		_error->Insert(ErrorType, _("Can't select candidate version from package %s as it has no candidate"), Pkg.FullName(true).c_str());
+		_error->Insert(ErrorType, _("cannot select candidate version from package %s as it has no candidate"), Pkg.FullName(true).c_str());
 	return pkgCache::VerIterator(Cache, 0);
 }
 									/*}}}*/
@@ -807,7 +807,7 @@ pkgCache::VerIterator CacheSetHelper::canNotFindCandidateVer(pkgCacheFile &Cache
 pkgCache::VerIterator CacheSetHelper::canNotFindInstalledVer(pkgCacheFile &Cache,
 		pkgCache::PkgIterator const &Pkg) {
 	if (ShowError == true)
-		_error->Insert(ErrorType, _("Can't select installed version from package %s as it is not installed"), Pkg.FullName(true).c_str());
+		_error->Insert(ErrorType, _("cannot select installed version from package %s as it is not installed"), Pkg.FullName(true).c_str());
 	return pkgCache::VerIterator(Cache, 0);
 }
 									/*}}}*/
@@ -815,7 +815,7 @@ pkgCache::VerIterator CacheSetHelper::canNotFindInstalledVer(pkgCacheFile &Cache
 pkgCache::VerIterator CacheSetHelper::canNotGetInstCandVer(pkgCacheFile &Cache,
 		pkgCache::PkgIterator const &Pkg) {
 	if (ShowError == true)
-		_error->Insert(ErrorType, _("Can't select installed nor candidate version from package '%s' as it has neither of them"), Pkg.FullName(true).c_str());
+		_error->Insert(ErrorType, _("cannot select installed nor candidate version from package '%s' as it has neither of them"), Pkg.FullName(true).c_str());
 	return pkgCache::VerIterator(Cache, 0);
 }
 									/*}}}*/
@@ -823,7 +823,7 @@ pkgCache::VerIterator CacheSetHelper::canNotGetInstCandVer(pkgCacheFile &Cache,
 pkgCache::VerIterator CacheSetHelper::canNotGetCandInstVer(pkgCacheFile &Cache,
 		pkgCache::PkgIterator const &Pkg) {
 	if (ShowError == true)
-		_error->Insert(ErrorType, _("Can't select installed nor candidate version from package '%s' as it has neither of them"), Pkg.FullName(true).c_str());
+		_error->Insert(ErrorType, _("cannot select installed nor candidate version from package '%s' as it has neither of them"), Pkg.FullName(true).c_str());
 	return pkgCache::VerIterator(Cache, 0);
 }
 									/*}}}*/

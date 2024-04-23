@@ -153,17 +153,17 @@ TEST(GlobalErrorTest,MultiLineMessage)
    GlobalError e;
    std::string text;
 
-   EXPECT_FALSE(e.Warning("Sometimes one line isn't enough.\nYou do know what I mean, right?\r\n%s?\rGood because I don't.", "Right"));
+   EXPECT_FALSE(e.Warning("Sometimes one line is not enough.\nYou do know what I mean, right?\r\n%s?\rGood because I do not.", "Right"));
    EXPECT_FALSE(e.PopMessage(text));
-   EXPECT_EQ("Sometimes one line isn't enough.\nYou do know what I mean, right?\r\nRight?\rGood because I don't.", text);
+   EXPECT_EQ("Sometimes one line is not enough.\nYou do know what I mean, right?\r\nRight?\rGood because I do not.", text);
 
-   EXPECT_FALSE(e.Warning("Sometimes one line isn't enough.\nYou do know what I mean, right?\r\n%s?\rGood because I don't.", "Right"));
+   EXPECT_FALSE(e.Warning("Sometimes one line is not enough.\nYou do know what I mean, right?\r\n%s?\rGood because I do not.", "Right"));
    std::ostringstream out;
    e.DumpErrors(out);
-   EXPECT_EQ("W: Sometimes one line isn't enough.\n   You do know what I mean, right?\n   Right?\n   Good because I don't.\n", out.str());
+   EXPECT_EQ("W: Sometimes one line is not enough.\n   You do know what I mean, right?\n   Right?\n   Good because I do not.\n", out.str());
 
-   EXPECT_FALSE(e.Warning("Sometimes one line isn't enough.\nYou do know what I mean, right?\r\n%s?\rGood because I don't.\n", "Right"));
+   EXPECT_FALSE(e.Warning("Sometimes one line is not enough.\nYou do know what I mean, right?\r\n%s?\rGood because I do not.\n", "Right"));
    std::ostringstream out2;
    e.DumpErrors(out2);
-   EXPECT_EQ("W: Sometimes one line isn't enough.\n   You do know what I mean, right?\n   Right?\n   Good because I don't.\n", out2.str());
+   EXPECT_EQ("W: Sometimes one line is not enough.\n   You do know what I mean, right?\n   Right?\n   Good because I do not.\n", out2.str());
 }
