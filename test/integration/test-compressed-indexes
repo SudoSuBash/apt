@@ -13,7 +13,7 @@ buildsimplenativepackage 'testpkg' 'i386' '1.0'
 
 buildaptarchive
 setupdistsaptarchive
-# fake a pdiff setup as apt wouldn't try pdiffs otherwise
+# fake a pdiff setup as apt would not try pdiffs otherwise
 find aptarchive -name 'Packages' -o -name 'Sources' | while read file; do
 	mkdir "${file}.diff"
 	PATCHINDEX="${file}.diff/Index"
@@ -39,7 +39,7 @@ testrun() {
 		test -e rootdir/var/lib/apt/lists/*_Sources.$LOWCOSTEXT || F=1
 		test -e rootdir/var/lib/apt/lists/*_Translation-en.$LOWCOSTEXT || F=1
 		# there is no point in trying pdiff if we have compressed indexes
-		# as we can't patch compressed files (well, we can, but what is the point?)
+		# as we cannot patch compressed files (well, we can, but what is the point?)
 		! test -e rootdir/var/lib/apt/lists/*diff_Index || F=1
 	else
 		# clear the faked pdiff indexes so the glob below works

@@ -26,8 +26,8 @@ cd - > /dev/null
 
 aptcdromlog() {
 	rm -f rootdir/tmp/apt-cdrom.log
-	test ! -e rootdir/media/cdrom || echo "CD-ROM is mounted, but shouldn't be!"
-	test -e rootdir/media/cdrom-unmounted || echo "Unmounted CD-ROM doesn't exist, but it should!"
+	test ! -e rootdir/media/cdrom || echo "CD-ROM is mounted, but should not be!"
+	test -e rootdir/media/cdrom-unmounted || echo "Unmounted CD-ROM does not exist, but it should!"
 	aptcdrom "$@" -o quiet=1 >rootdir/tmp/apt-cdrom.log 2>&1 </dev/null
 	sed -e '/gpgv\?:\s*Signature made/ d' \
 		-e '/gpgv\?:\s*Good signature/ d' \
@@ -35,8 +35,8 @@ aptcdromlog() {
 		-e '/gpgv\?:\s*issuer/ d' \
 		-e '/^Identifying/ d' \
 		-e '/Reading / d' rootdir/tmp/apt-cdrom.log
-	test ! -e rootdir/media/cdrom || echo "CD-ROM is mounted, but shouldn't be!"
-	test -e rootdir/media/cdrom-unmounted || echo "Unmounted CD-ROM doesn't exist, but it should!"
+	test ! -e rootdir/media/cdrom || echo "CD-ROM is mounted, but should not be!"
+	test -e rootdir/media/cdrom-unmounted || echo "Unmounted CD-ROM does not exist, but it should!"
 }
 aptautotest_aptcdromlog_add() { aptautotest_aptget_update "$@"; }
 
@@ -155,9 +155,9 @@ $CDROM_POST" aptcdromlog add
 msgtest 'Test for the english description translation of' 'testing'
 aptcache show testing -o Acquire::Languages=en | grep -q '^Description-en: ' && msgpass || msgfail
 
-# ensure cdrom method isn't trying to mount the cdrom
+# ensure cdrom method is not trying to mount the cdrom
 mv rootdir/media/cdrom-unmounted rootdir/media/cdrom-ejected
-msgmsg "ensure an update doesn't mess with cdrom sources"
+msgmsg "ensure an update does not mess with cdrom sources"
 testsuccess aptget update
 testfileequal rootdir/tmp/testsuccess.output 'Hit:1 cdrom://Debian APT Testdisk 0.8.15 stable InRelease
 Reading package lists...'

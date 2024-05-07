@@ -25,13 +25,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -113,7 +113,7 @@ msgstr "Rašymo klaida"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -133,14 +133,14 @@ msgstr "GPG klaida: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -224,13 +224,13 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr ""
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -300,7 +300,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -331,7 +331,7 @@ msgstr "Parsiunčiamas %li failas iš %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 
 #: apt-pkg/algorithms.cc
@@ -366,17 +366,17 @@ msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Nepavyko rasti užduoties %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Nepavyko rasti paketo %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Nepavyko rasti paketo %s"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -386,28 +386,28 @@ msgstr "Nepavyko rasti paketo %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 
@@ -714,7 +714,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -736,7 +736,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -802,7 +802,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -830,17 +830,17 @@ msgid "Unable to write to %s"
 msgstr "Nepavyko įrašyti į %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr ""
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr ""
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr ""
 
 #: apt-pkg/contrib/mmap.cc
@@ -855,7 +855,7 @@ msgstr "Nepavyko pakeisti į %s"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr ""
 
 #: apt-pkg/contrib/mmap.cc
@@ -1294,7 +1294,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr ""
 
 #: apt-pkg/indexcopy.cc
@@ -1695,7 +1695,7 @@ msgstr "Paketas %s neturi diegimo kandidatų"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr ""
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1775,12 +1775,12 @@ msgstr "Atsirado problemų ir -y buvo panaudotas be --force-yes"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Nepavyko nustatyti %s laisvos vietos"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "%s nėra pakankamai laisvos vietos."
 
 #: apt-private/private-download.cc
@@ -1864,11 +1864,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr "Keista... Dydis neatitinka, Parašykite laišką apt@packages.debian.org"
 
 #: apt-private/private-install.cc
@@ -2012,13 +2012,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr ""
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 
 #: apt-private/private-install.cc
@@ -2120,7 +2120,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 
 #: apt-private/private-output.cc apt-private/private-show.cc
@@ -2382,7 +2382,7 @@ msgid "Package files:"
 msgstr "Paketų failai:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 
 #. Show any packages have explicit pins
@@ -2812,7 +2812,7 @@ msgstr "Nepavyko sužinoti debconf versijos. Ar įdiegtas debconf?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Nepavyko rasti paketo %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3871,7 +3871,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -3910,7 +3910,7 @@ msgstr "Šie parašai buvo nevalidūs:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr "Šių parašų nebuvo galima patikrinti, nes nėra viešojo rakto:\n"
 
@@ -3943,7 +3943,7 @@ msgid "Connection closed prematurely"
 msgstr ""
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr ""
 
 #, fuzzy
@@ -4006,7 +4006,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "%s priklausomybė %s paketui negali būti patenkinama, nes paketas %s "
@@ -4028,7 +4028,7 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "%s priklausomybė %s paketui negali būti patenkinama, nes nėra tinkamos "
 #~ "versijos %s paketo"
@@ -4095,7 +4095,7 @@ msgstr ""
 #~ msgid "Unable to find hash sum for '%s' in Release file"
 #~ msgstr "Nepavyko atverti DB failo %s: %s"
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Neturite pakankamai laisvos vietos %s"
 
 #~ msgid "Done"
@@ -4126,7 +4126,7 @@ msgstr ""
 #~ msgstr "Skaitomas failų sąrašas"
 
 #, fuzzy
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Nepavyko atverti failo %s"
 
 #~ msgid "Malformed override %s line %lu #1"

@@ -556,7 +556,7 @@ extension blocks.
 
 <section id="s2.1"><title>The .deb archive format</title>
 <para>
-The main principal of the new-format Debian archive (I won't describe the old
+The main principal of the new-format Debian archive (I wo not describe the old
 format - for that have a look at deb-old.5), is that the archive really is an
 archive - as used by "ar" and friends. However, dpkg-deb uses this format
 internally, rather than calling "ar". Inside this archive, there are usually
@@ -750,7 +750,7 @@ an architecture field.
 <listitem>
 <para>
 Next, dpkg-deb checks for the &lt;dir&gt;/DEBIAN directory. It complains if it
-doesn't exist, or if it has permissions &lt; 0755, or &gt; 0775.
+does not exist, or if it has permissions &lt; 0755, or &gt; 0775.
 </para>
 </listitem>
 <listitem>

@@ -333,7 +333,7 @@ bool pkgApplyStatus(pkgDepCache &Cache)
 	       Cache.MarkInstall(I, false, 0, false);
 	    else
 	       return _error->Error(_("The package %s needs to be reinstalled, "
-				    "but I can't find an archive for it."),I.FullName(true).c_str());
+				    "but I cannot find an archive for it."),I.FullName(true).c_str());
 	 }
 	 
 	 continue;
@@ -368,7 +368,7 @@ bool pkgApplyStatus(pkgDepCache &Cache)
 	 default:
 	 if (I->InstState != pkgCache::State::Ok)
 	    return _error->Error("The package %s is not ok and I "
-				 "don't know how to fix it!",I.FullName(false).c_str());
+				 "do not know how to fix it!",I.FullName(false).c_str());
       }
    }
    return true;
@@ -1120,12 +1120,12 @@ bool pkgProblemResolver::ResolveInternal(bool const BrokenFix)
 		     Cache.MarkInstall(I, false, 0, false);
 		  
 		  if (Debug == true)
-		     clog << "  Holding Back " << I.FullName(false) << " because I can't find " << Start.TargetPkg().FullName(false) << endl;
+		     clog << "  Holding Back " << I.FullName(false) << " because I cannot find " << Start.TargetPkg().FullName(false) << endl;
 	       }	       
 	       else
 	       {
 		  if (Debug == true)
-		     clog << "  Removing " << I.FullName(false) << " because I can't find " << Start.TargetPkg().FullName(false) << endl;
+		     clog << "  Removing " << I.FullName(false) << " because I cannot find " << Start.TargetPkg().FullName(false) << endl;
 		  if (InOr == false)
 		     Cache.MarkDelete(I, false, 0, false);
 	       }

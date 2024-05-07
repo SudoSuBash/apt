@@ -26,7 +26,7 @@ static void EXPECT_SUCCESSFUL_PARSE(std::string const &tempfile)
 
 TEST(OpenMaybeClearSignedFileTest,SimpleSignedFile)
 {
-   // Using c++11 raw-strings would be nifty, but travis doesn't support it…
+   // Using c++11 raw-strings would be nifty, but travis does not support it…
    auto const file = createTemporaryFile("simplesignedfile", "-----BEGIN PGP SIGNED MESSAGE-----\n"
 "Hash: SHA512\n"
 "\n"
@@ -267,7 +267,7 @@ TEST(OpenMaybeClearSignedFileTest,BogusNoSig)
 "\n"
 "Test");
    EXPECT_TRUE(StartsWithGPGClearTextSignature(file.Name()));
-   EXPECT_FAILED_PARSE(file.Name(), "Splitting of clearsigned file " + file.Name() + " failed as it doesn't contain all expected parts");
+   EXPECT_FAILED_PARSE(file.Name(), "Splitting of clearsigned file " + file.Name() + " failed as it does not contain all expected parts");
 }
 
 TEST(OpenMaybeClearSignedFileTest,BogusSigStart)
@@ -278,7 +278,7 @@ TEST(OpenMaybeClearSignedFileTest,BogusSigStart)
 "Test\n"
 "-----BEGIN PGP SIGNATURE-----");
    EXPECT_TRUE(StartsWithGPGClearTextSignature(file.Name()));
-   EXPECT_FAILED_PARSE(file.Name(), "Signature in file " + file.Name() + " wasn't closed");
+   EXPECT_FAILED_PARSE(file.Name(), "Signature in file " + file.Name() + " was not closed");
 }
 
 TEST(OpenMaybeClearSignedFileTest,DashedSignedFile)

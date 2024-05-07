@@ -48,12 +48,12 @@ testsuccess aptget update -o Debug::pkgAcquire::Worker=1
 cp -a rootdir/tmp/testsuccess.output rootdir/tmp/update.output
 testsuccess grep '%0aAlt-Filename:%20' rootdir/tmp/update.output
 
-# the release files aren't an IMS-hit, but the indexes are
+# the release files are not an IMS-hit, but the indexes are
 redatereleasefiles '+1 hour'
 
-# we don't download the index if it isn't updated
+# we do not download the index if it is not updated
 testsuccess aptget update -o Debug::pkgAcquire::Auth=1
-# file:/ isn't shown in the log, so see if it was downloaded anyhow
+# file:/ is not shown in the log, so see if it was downloaded anyhow
 cp -a rootdir/tmp/testsuccess.output rootdir/tmp/update.output
 canary="SHA512:$(bzcat aptarchive/dists/unstable/main/binary-all/Packages.bz2 | sha512sum |cut -f1 -d' ')"
 testfailure grep -- "$canary" rootdir/tmp/update.output
@@ -66,12 +66,12 @@ testfoo() {
 }
 testfoo
 
-# the release file is new again, the index still isn't, but it is somehow gone now from disk
+# the release file is new again, the index still is not, but it is somehow gone now from disk
 redatereleasefiles '+2 hour'
 find rootdir/var/lib/apt/lists -name '*_Packages*' -delete
 
 testsuccess aptget update -o Debug::pkgAcquire::Auth=1
-# file:/ isn't shown in the log, so see if it was downloaded anyhow
+# file:/ is not shown in the log, so see if it was downloaded anyhow
 cp -a rootdir/tmp/testsuccess.output rootdir/tmp/update.output
 canary="SHA512:$(bzcat aptarchive/dists/unstable/main/binary-all/Packages.bz2 | sha512sum |cut -f1 -d' ')"
 testsuccess grep -- "$canary" rootdir/tmp/update.output

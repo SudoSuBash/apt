@@ -144,7 +144,7 @@ bool RunScripts(const char *Cnf)
    {
       if (errno == EINTR)
 	 continue;
-      return _error->Errno("waitpid","Couldn't wait for subprocess");
+      return _error->Errno("waitpid","Could not wait for subprocess");
    }
 
    // Check for an error code.
@@ -456,7 +456,7 @@ std::vector<string> GetListOfFilesInDir(string const &Dir, std::vector<string> c
 
    if (DirectoryExists(Dir) == false)
    {
-      _error->Error(_("List of files can't be created as '%s' is not a directory"), Dir.c_str());
+      _error->Error(_("List of files cannot be created as '%s' is not a directory"), Dir.c_str());
       return List;
    }
 
@@ -575,7 +575,7 @@ std::vector<string> GetListOfFilesInDir(string const &Dir, bool SortList)
 
    if (DirectoryExists(Dir) == false)
    {
-      _error->Error(_("List of files can't be created as '%s' is not a directory"), Dir.c_str());
+      _error->Error(_("List of files cannot be created as '%s' is not a directory"), Dir.c_str());
       return List;
    }
 
@@ -963,7 +963,7 @@ bool ExecWait(pid_t Pid,const char *Name,bool Reap)
       if (Reap == true)
 	 return false;
       
-      return _error->Error(_("Waited for %s but it wasn't there"),Name);
+      return _error->Error(_("Waited for %s but it was not there"),Name);
    }
 
    
@@ -1234,7 +1234,7 @@ public:
       }
 
       if (filefd->OpenInternDescriptor(openmode, compressor) == false)
-	 return filefd->FileFdError("Seek on file %s because it couldn't be reopened", filefd->FileName.c_str());
+	 return filefd->FileFdError("Seek on file %s because it could not be reopened", filefd->FileName.c_str());
 
       buffer.reset();
       set_seekpos(0);
@@ -2204,7 +2204,7 @@ public:
 	 return filefd->FileFdError("ReadWrite mode is not supported for file %s", filefd->FileName.c_str());
       if (compressor.Binary == "false")
 	 return filefd->FileFdError("libapt has inbuilt support for the %s compression,"
-	       " but was forced to ignore it in favor of an external binary – which isn't installed.", compressor.Name.c_str());
+	       " but was forced to ignore it in favor of an external binary – which is not installed.", compressor.Name.c_str());
 
       bool const Comp = (Mode & FileFd::WriteOnly) == FileFd::WriteOnly;
       if (Comp == false && filefd->iFd != -1)
@@ -2488,11 +2488,11 @@ bool FileFd::Open(string FileName,unsigned int const Mode,CompressMode Compress,
 	 if (compressor->Name == name)
 	    break;
       if (compressor == compressors.end())
-	 return FileFdError("Can't find a configured compressor %s for file %s", name.c_str(), FileName.c_str());
+	 return FileFdError("cannot find a configured compressor %s for file %s", name.c_str(), FileName.c_str());
    }
 
    if (compressor == compressors.end())
-      return FileFdError("Can't find a match for specified compressor mode for file %s", FileName.c_str());
+      return FileFdError("cannot find a match for specified compressor mode for file %s", FileName.c_str());
    return Open(FileName, Mode, *compressor, AccessMode);
 }
 bool FileFd::Open(string FileName,unsigned int const Mode,APT::Configuration::Compressor const &compressor, unsigned long const AccessMode)
@@ -2501,7 +2501,7 @@ bool FileFd::Open(string FileName,unsigned int const Mode,APT::Configuration::Co
    Flags = AutoClose;
 
    if ((Mode & WriteOnly) != WriteOnly && (Mode & (Atomic | Create | Empty | Exclusive)) != 0)
-      return FileFdError("ReadOnly mode for %s doesn't accept additional flags!", FileName.c_str());
+      return FileFdError("ReadOnly mode for %s does not accept additional flags!", FileName.c_str());
    if ((Mode & ReadWrite) == 0)
       return FileFdError("No openmode provided in FileFd::Open for %s", FileName.c_str());
 
@@ -2610,7 +2610,7 @@ bool FileFd::OpenDescriptor(int Fd, unsigned int const Mode, CompressMode Compre
    {
       if (AutoClose == true && Fd != -1)
 	 close(Fd);
-      return FileFdError("Can't find a configured compressor %s for file %s", name.c_str(), FileName.c_str());
+      return FileFdError("cannot find a configured compressor %s for file %s", name.c_str(), FileName.c_str());
    }
    return OpenDescriptor(Fd, Mode, *compressor, AutoClose);
 }
@@ -2846,7 +2846,7 @@ bool FileFd::Write(const void *From,unsigned long long Size)
    if (Size == 0)
       return true;
 
-   return FileFdError(_("write, still have %llu to write but couldn't"), Size);
+   return FileFdError(_("write, still have %llu to write but could not"), Size);
 }
 bool FileFd::Write(int Fd, const void *From, unsigned long long Size)
 {
@@ -2870,7 +2870,7 @@ bool FileFd::Write(int Fd, const void *From, unsigned long long Size)
    if (Size == 0)
       return true;
 
-   return _error->Error(_("write, still have %llu to write but couldn't"), Size);
+   return _error->Error(_("write, still have %llu to write but could not"), Size);
 }
 									/*}}}*/
 // FileFd::Seek - Seek in the file					/*{{{*/

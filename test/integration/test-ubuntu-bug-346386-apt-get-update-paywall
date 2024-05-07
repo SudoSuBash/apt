@@ -80,7 +80,7 @@ testfailureequal "Err:1 http://localhost:${APTHTTPPORT} unstable InRelease
 Reading package lists...
 E: Failed to fetch http://localhost:${APTHTTPPORT}/dists/unstable/InRelease  511  Network Authentication Required
 E: The repository 'http://localhost:${APTHTTPPORT} unstable InRelease' is not signed.
-N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: Updating from such a repository cannot be done securely, and is therefore disabled by default.
 N: See apt-secure(8) manpage for repository creation and user configuration details." aptget update
 
 # on S3 all files get a 403. If we accept unsigned, lets be liberal in non-existence acceptance
@@ -91,7 +91,7 @@ testfailureequal "Err:1 http://localhost:${APTHTTPPORT} unstable InRelease
 Reading package lists...
 E: Failed to fetch http://localhost:${APTHTTPPORT}/dists/unstable/InRelease  403  Forbidden
 E: The repository 'http://localhost:${APTHTTPPORT} unstable InRelease' is not signed.
-N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: Updating from such a repository cannot be done securely, and is therefore disabled by default.
 N: See apt-secure(8) manpage for repository creation and user configuration details." apt update
 
 sed -i 's#^deb\(-src\)\? #deb\1 [allow-insecure=yes] #' rootdir/etc/apt/sources.list.d/*

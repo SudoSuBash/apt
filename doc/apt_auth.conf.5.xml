@@ -33,7 +33,7 @@
 for everyone using apt tools on the system to have access to all package-related
 information like the available packages in a repository. Login information
 needed to connect to a proxy or to download data from a repository on the other
-hand shouldn't always be accessible by everyone and can hence not be placed in a
+hand should not always be accessible by everyone and can hence not be placed in a
 file with world-readable file permissions.</para>
 
 <para>The APT auth.conf file <filename>/etc/apt/auth.conf</filename>, and .conf files inside

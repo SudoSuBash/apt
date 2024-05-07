@@ -496,7 +496,7 @@ bool SigVerify::Verify(string prefix, string file, metaIndex *MetaIndex)
 
    if (!Record)
    {
-      _error->Warning(_("Can't find authentication record for: %s"), file.c_str());
+      _error->Warning(_("cannot find authentication record for: %s"), file.c_str());
       return false;
    }
 

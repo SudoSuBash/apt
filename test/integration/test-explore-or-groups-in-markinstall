@@ -112,7 +112,7 @@ TEST_WITH_APTITUDE=false
 msgtest 'Check if aptitude is available for additional tests'
 if dpkg-checkbuilddeps -d 'aptitude' /dev/null >/dev/null 2>&1; then
 	TEST_WITH_APTITUDE=true
-	# we don't document aptitude config options
+	# we do not document aptitude config options
 	sed -i -e '/^#x-apt-configure-index/ d' "$(getaptconfig)"
 	msgpass
 else

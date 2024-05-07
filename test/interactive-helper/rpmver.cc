@@ -79,7 +79,7 @@ int rpmvercmp(const char * a, const char * b)
 	}
 
 	/* strcmp will return which one is greater - even if the two */
-	/* segments are alpha or if they are numeric.  don't return  */
+	/* segments are alpha or if they are numeric.  do not return  */
 	/* if they are equal because there might be more segments to */
 	/* compare */
 	int rc = strcmp(one, two);

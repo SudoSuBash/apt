@@ -186,7 +186,7 @@
        <term><code>?reverse-<replaceable>depType</replaceable>(PATTERN)</code></term>
        <term><code>~R<replaceable>DepType</replaceable>:PATTERN</code></term>
        <listitem><para>Opposite of <code>?depends</code> and friends - selects all packages that have reverse-dependencies (versions) matching PATTERN.</para>
-         <para><replaceable>depType</replaceable> is one of the dependency types such as <code>depends</code>, so that we don't have to repeat the entire list from the first paragraph here.</para>
+         <para><replaceable>depType</replaceable> is one of the dependency types such as <code>depends</code>, so that we do not have to repeat the entire list from the first paragraph here.</para>
        </listitem>
      </varlistentry>
 

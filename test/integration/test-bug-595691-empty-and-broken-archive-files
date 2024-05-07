@@ -13,7 +13,7 @@ setupflataptarchive
 failureupdate() {
 	rm -rf rootdir/var/lib/apt
 	testfailure aptget update --allow-insecure-repositories
-	testsuccess grep "^E: Failed to fetch store:${1}  Empty files can't be valid archives$" rootdir/tmp/testfailure.output
+	testsuccess grep "^E: Failed to fetch store:${1}  Empty files cannot be valid archives$" rootdir/tmp/testfailure.output
 }
 successupdate() {
 	rm -rf rootdir/var/lib/apt

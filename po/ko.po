@@ -20,13 +20,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -108,7 +108,7 @@ msgstr "쓰기 오류"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -130,14 +130,14 @@ msgstr "GPG 오류: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -221,7 +221,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "%s 패키지의 파일을 찾을 수 없습니다. 수동으로 이 패키지를 고쳐야 할 수도 있습"
@@ -229,7 +229,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr ""
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -300,7 +300,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -331,7 +331,7 @@ msgstr "파일 받아오는 중: %2$li 중 %1$li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "%s 패키지를 다시 설치해야 하지만, 이 패키지의 아카이브를 찾을 수 없습니다."
 
@@ -367,17 +367,17 @@ msgstr "정규식 컴파일 오류 - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "'%s' 작업을 찾을 수 없습니다"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "'%s' 정규식에 해당하는 패키지가 없습니다"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "'%s' 정규식에 해당하는 패키지가 없습니다"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -387,28 +387,28 @@ msgstr "%s 패키지를 찾을 수 없습니다"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr "'%s' 패키지는 가상 패키지이므로 버전을 선택할 수 없습니다"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr "'%s' 패키지에서 최신 버전을 선택할 수 없습니다. 가상 패키지입니다."
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr "'%s' 패키지에서 후보 버전을 선택할 수 없습니다. 후보가 없습니다."
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr "'%s' 패키지에서 설치한 버전을 선택할 수 없습니다. 설치하지 않았습니다."
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "'%s' 패키지에서 설치한 버전이나 후보 버전을 선택할 수 없습니다. 둘 다 아닙니"
@@ -719,7 +719,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -741,7 +741,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "%s 프로세스를 기다렸지만 해당 프로세스가 없습니다"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -807,7 +807,7 @@ msgstr "%lu만큼 더 읽어야 하지만 더 이상 읽을 데이터가 없습�
 
 #: apt-pkg/contrib/fileutl.cc
 #, fuzzy, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "%lu만큼 더 써야 하지만 더 이상 쓸 수 없습니다"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -835,17 +835,17 @@ msgid "Unable to write to %s"
 msgstr "%s에 쓸 수 없습니다"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "빈 파일에 메모리 매핑할 수 없습니다"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "%lu바이트를 메모리 매핑할 수 없습니다"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "%i 파일 디스크립터를 복사할 수 없습니다"
 
 #: apt-pkg/contrib/mmap.cc
@@ -858,7 +858,7 @@ msgstr "mmap을 동기화할 수 없습니다"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "%lu바이트를 메모리 매핑할 수 없습니다"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1314,7 +1314,7 @@ msgstr "레코드 %i개를 파일 %i개가 빠지고 %i개가 맞지 않은 상�
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "다음의 인증 기록을 찾을 수 없습니다: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1723,7 +1723,7 @@ msgstr "'%s' 패키지는 설치할 수 있는 후보가 없습니다"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "'%s' 패키지와 같은 가상 패키지는 제거할 수 없습니다\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1803,12 +1803,12 @@ msgstr "문제가 발생했고 -y 옵션이 --force-yes 옵션 없이 사용되�
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "%s의 여유 공간의 크기를 파악할 수 없습니다"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "%s 안에 충분한 여유 공간이 없습니다."
 
 #: apt-private/private-download.cc
@@ -1891,11 +1891,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "내부 오류. 순서변경작업이 끝나지 않았습니다"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "이상하게도 크기가 서로 다릅니다. apt@packages.debian.org로 이메일을 보내주십"
 "시오."
@@ -2045,13 +2045,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "주의: dpkg에서 자동으로 의도적으로 수행했습니다."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "삭제를 할 수 없으므로 AutoRemover를 실행하지 못합니다"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "AutoRemover가 뭔가를 망가뜨린 것으로 보입니다. 이 문제는 실제 일어나서는\n"
 "안 됩니다. apt에 대해 버그 보고를 하십시오."
@@ -2149,7 +2149,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "알림: 시험 동작입니다!\n"
 "      실행하려면 %s을 실행할 때 루트 권한이 필요합니다.\n"
@@ -2417,7 +2417,7 @@ msgid "Package files:"
 msgstr "패키지 파일:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr "캐시가 동기화되지 않았습니다. 패키지 파일을 상호 참조할 수 없습니다"
 
 #. Show any packages have explicit pins
@@ -2845,7 +2845,7 @@ msgstr "debconf 버전을 알 수 없습니다. debconf가 설치되었습니까
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "%s 패키지를 찾을 수 없습니다"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3903,7 +3903,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -3944,7 +3944,7 @@ msgstr "다음 서명이 올바르지 않습니다:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr "다음 서명들은 공개키가 없기 때문에 인증할 수 없습니다:\n"
 
@@ -3977,7 +3977,7 @@ msgid "Connection closed prematurely"
 msgstr "연결이 너무 빨리 끊어졌습니다"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr ""
 
 #, fuzzy
@@ -4122,7 +4122,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "%2$s에 대한 %1$s 의존성을 만족시킬 수 없습니다. %3$s 패키지를 찾을 수 없습"
@@ -4144,7 +4144,7 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "%2$s에 대한 %1$s 의존성을 만족시킬 수 없습니다. %3$s 패키지의 사용 가능한 "
 #~ "버전 중에서는 이 버전 요구사항을 만족시킬 수 없습니다"
@@ -4295,7 +4295,7 @@ msgstr ""
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "파일 의존성을 처리하는 데, %s %s 패키지가 없습니다"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "소스 패키지 목록 %s의 정보를 읽을 수 없습니다"
 
 #~ msgid "Collecting File Provides"
@@ -4311,7 +4311,7 @@ msgstr ""
 #~ msgid "Total dependency version space: "
 #~ msgstr "전체 의존성 버전 용량: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "%s에 충분한 공간이 없습니다"
 
 #~ msgid "Done"
@@ -4359,7 +4359,7 @@ msgstr ""
 #~ msgstr "MD5Sum이 맞지 않습니다"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "%s 패키지의 파일을 찾을 수 없습니다. 수동으로 이 패키지를 고쳐야 할 수도 "
@@ -4431,13 +4431,13 @@ msgstr ""
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "MD5 분석에 오류가 있습니다. 오프셋 %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "%s 디렉토리로 이동할 수 없습니다"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "올바른 control 파일을 찾는데 실패했습니다"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "%s에 대한 파이프를 열 수 없습니다"
 
 #~ msgid "Read error from %s process"
@@ -4464,7 +4464,7 @@ msgstr ""
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "%lu만큼 더 읽어야 하지만 더 이상 읽을 데이터가 없습니다"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "%lu만큼 더 써야 하지만 더 이상 쓸 수 없습니다"
 
 #~ msgid ""

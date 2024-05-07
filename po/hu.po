@@ -24,7 +24,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 "Az ilyen tárolóból való frissítés nem végezhető el biztonságosan, így "
@@ -32,7 +32,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 "Az ilyen tárolóból való adatok nem hitelesíthetők, így használatuk veszélyes "
@@ -121,7 +121,7 @@ msgstr "Aláírási hiba"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 "A digitálisan aláírt fájl nem érvényes, érkezett: „%s” (igényel a hálózat "
@@ -145,10 +145,10 @@ msgstr "GPG hiba: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, fuzzy, c-format
 #| msgid ""
-#| "Skipping acquire of configured file '%s' as repository '%s' doesn't "
+#| "Skipping acquire of configured file '%s' as repository '%s' does not "
 #| "support architecture '%s'"
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 "A beállított „%s” fájl beszerzésének kihagyása, mert a(z) „%s” tároló nem "
@@ -157,7 +157,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 "A beállított „%s” fájl beszerzésének kihagyása, mert a(z) „%s” tároló nem "
@@ -166,7 +166,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, fuzzy, c-format
 #| msgid ""
-#| "Skipping acquire of configured file '%s' as repository '%s' doesn't "
+#| "Skipping acquire of configured file '%s' as repository '%s' does not "
 #| "support architecture '%s'"
 msgid ""
 "Skipping acquire of configured file '%s' as repository '%s' does not seem to "
@@ -257,7 +257,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Egy fájl nem található a(z) %s csomaghoz. Ez azt jelentheti, hogy kézzel "
@@ -265,7 +265,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "Nem található forrás a(z) „%2$s” „%1$s” verziójának letöltéséhez"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -337,10 +337,10 @@ msgstr "Nincs „%s” felhasználó a rendszeren, a jogosultságok nem dobható
 #: apt-pkg/acquire.cc
 #, fuzzy, c-format
 #| msgid ""
-#| "Can't drop privileges for downloading as file '%s' couldn't be accessed "
+#| "cannot drop privileges for downloading as file '%s' could not be accessed "
 #| "by user '%s'."
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 "Nem dobhatók el a jogosultságok a letöltéshez, mivel a(z) „%s” fájl nem "
@@ -373,7 +373,7 @@ msgstr "%li/%li fájl letöltése"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "A(z) %s csomagot újra kell telepíteni, de nem található hozzá archívum."
 
@@ -411,17 +411,17 @@ msgstr "Regex fordítási hiba - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "„%s” feladat nem található"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Nem található csomag a(z) „%s” reguláris kifejezéssel"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Nem található csomag a(z) „%s” glob kifejezéssel"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -431,31 +431,31 @@ msgstr "Ez a csomag nem található: %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr "„%s” csomagból nem választható verzió, mert teljesen virtuális"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 "„%s” csomag legújabb verziója nem választható ki, mert teljesen virtuális"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 "„%s” csomag kiadásra jelölt verziója nem választható ki, mert nincs jelöltje"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 "„%s” csomag telepített verziója nem választható ki, mert nincs telepítve"
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "„%s” csomagból nem választható sem telepített, sem kiadásra jelölt verzió, "
@@ -775,7 +775,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "A fájlok listáját nem lehetett létrehozni, mert „%s” nem könyvtár"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -802,7 +802,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Nem található a(z) %s, a várakozás után sem"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -868,7 +868,7 @@ msgstr "olvasás, még kellene %llu, de már az összes elfogyott"
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "írás, még kiírandó %llu, de ez nem lehetséges"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -897,17 +897,17 @@ msgstr "Nem lehet írni ebbe: %s"
 
 # FIXME
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Nem lehet mmap-olni egy üres fájlt"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Nem sikerült %llu bájtot mmap-olni"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Nem lehetett kettőzni a(z) %i fájlleírót"
 
 #: apt-pkg/contrib/mmap.cc
@@ -920,7 +920,7 @@ msgstr "Nem lehet szinkronizálni az mmapot"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Nem sikerült %lu bájtot mmap-olni"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1400,7 +1400,7 @@ msgstr "%i rekord kiírva %i hiányzó és %i eltérő fájllal\n"
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "%s hitelesítési rekordja nem található"
 
 #: apt-pkg/indexcopy.cc
@@ -1807,7 +1807,7 @@ msgstr "„%s” csomagnak nincs telepítésre jelölt verziója"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "A virtuális csomagokat, mint a(z) „%s” nem lehet eltávolítani\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1896,12 +1896,12 @@ msgstr ""
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Nem határozható meg a szabad hely mennyisége itt: %s"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Nincs elég szabad hely itt: %s."
 
 #: apt-private/private-download.cc
@@ -1990,11 +1990,11 @@ msgstr ""
 "a --allow-change-held-packages nélkül."
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Belső hiba, a rendezés nem fejeződött be"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr "A méretek nem egyeznek, írjon az apt@packages.debian.org címre"
 
 #: apt-private/private-install.cc
@@ -2144,13 +2144,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "Megjegyzés: ezt a dpkg automatikusan és szándékosan hajtja végre."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "Nem kellene semmit törölni, az AutoRemover nem indítható"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Úgy tűnik, az AutoRemover hibát okozott, ez nem történhetne meg.\n"
 "Küldjön hibajelentést az apt csomaghoz."
@@ -2256,7 +2256,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "NE FELEDJE: Ez csak szimuláció!\n"
 "      Az %s rendszergazdai jogokat igényel a tényleges végrehajtáshoz.\n"
@@ -2525,7 +2525,7 @@ msgid "Package files:"
 msgstr "Csomagfájlok:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 "A gyorsítótár nincs szinkronban, nem lehet kereszthivatkozni a csomagfájlra"
 
@@ -2980,7 +2980,7 @@ msgstr "Nem lehet megállapítani a debconf verziót. A debconf telepítve van?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Az alábbi csomag nem található: %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -4050,7 +4050,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, fuzzy, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 "A digitálisan aláírt fájl nem érvényes, érkezett: „%s” (igényel a hálózat "
 "hitelesítést?)"
@@ -4094,7 +4094,7 @@ msgstr "Az alábbi aláírások érvénytelenek voltak:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "Az alábbi aláírások nem ellenőrizhetők, mert a nyilvános kulcs nem érhető "
@@ -4129,7 +4129,7 @@ msgid "Connection closed prematurely"
 msgstr "A kapcsolat idő előtt lezárult"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Az üres fájlok biztosan nem érvényes csomagok"
 
 #, fuzzy, c-format
@@ -4283,7 +4283,7 @@ msgstr "Az üres fájlok biztosan nem érvényes csomagok"
 #~ msgstr "A(z) %s könyvtár eltérítve"
 
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "%2$s csomag %1$s függősége nem elégíthető ki, mert a(z) %3$s nem "
@@ -4304,7 +4304,7 @@ msgstr "Az üres fájlok biztosan nem érvényes csomagok"
 
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "%2$s csomag %1$s függősége nem elégíthető ki, mert a(z) %3$s csomag "
 #~ "elérhető verziója nem elégíti ki a verziókövetelményeket"
@@ -4371,7 +4371,7 @@ msgstr "Az üres fájlok biztosan nem érvényes csomagok"
 #~ "  -d   CD-ROM mount point\n"
 #~ "  -r   Rename a recognized CD-ROM\n"
 #~ "  -m   No mounting\n"
-#~ "  -f   Fast mode, don't check package files\n"
+#~ "  -f   Fast mode, do not check package files\n"
 #~ "  -a   Thorough scan mode\n"
 #~ "  --no-auto-detect Do not try to auto detect drive and mount point\n"
 #~ "  -c=? Read this configuration file\n"
@@ -4520,7 +4520,7 @@ msgstr "Az üres fájlok biztosan nem érvényes csomagok"
 #~ "A(z) %s %s csomag nem volt megtalálható a fájl függőségeinek feldolgozása "
 #~ "közben"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Nem lehet a(z) %s forrás csomaglistáját elérni"
 
 # FIXME
@@ -4540,7 +4540,7 @@ msgstr "Az üres fájlok biztosan nem érvényes csomagok"
 #~ msgid "Total dependency version space: "
 #~ msgstr "Függőségiverzió-terület összesen: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Nincs elég szabad hely itt: %s"
 
 #~ msgid "Done"
@@ -4589,7 +4589,7 @@ msgstr "Az üres fájlok biztosan nem érvényes csomagok"
 #~ msgstr "Az MD5Sum nem megfelelő"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Egy fájl nem található a(z) %s csomaghoz. Ez azt jelentheti, hogy kézzel "
@@ -4662,13 +4662,13 @@ msgstr "Az üres fájlok biztosan nem érvényes csomagok"
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "MD5 értelmezési hiba. Eltolás: %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Nem lehet váltani ebbe: %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Nem található érvényes control fájl"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Nem lehet adatcsatornát nyitni ehhez: %s"
 
 #~ msgid "Read error from %s process"
@@ -4695,7 +4695,7 @@ msgstr "Az üres fájlok biztosan nem érvényes csomagok"
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "olvasás, még kellene %lu, de már az összes elfogyott"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "írás, még kiírandó %lu, de ez nem lehetséges"
 
 #~ msgid ""

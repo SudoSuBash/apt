@@ -27,7 +27,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 "Eine Aktualisierung von solch einem Depot kann nicht auf eine sichere Art "
@@ -35,7 +35,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 "Daten von solch einem Depot können nicht authentifiziert werden und deren "
@@ -124,7 +124,7 @@ msgstr "Signaturfehler"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 "Durch Clearsign signierte Datei ist nicht gültig, »%s« erhalten (erfordert "
@@ -149,7 +149,7 @@ msgstr "GPG-Fehler: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 "Das Laden der konfigurierten Datei »%s« wird übersprungen, da das Depot »%s« "
@@ -159,7 +159,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 "Das Laden der konfigurierten Datei »%s« wird übersprungen, da das Depot »%s« "
@@ -261,7 +261,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Es konnte keine Datei für Paket %s gefunden werden. Das könnte heißen, dass "
@@ -270,7 +270,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr ""
 "Es konnte keine Quelle gefunden werden, um Version »%s« von »%s« "
 "herunterzuladen."
@@ -351,7 +351,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 "Der Download wird als root und nicht Sandbox-geschützt durchgeführt, da auf "
@@ -384,7 +384,7 @@ msgstr "Holen der Datei %li von %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "Das Paket %s muss neu installiert werden, es kann jedoch kein Archiv dafür "
 "gefunden werden."
@@ -425,17 +425,17 @@ msgstr "Fehler beim Kompilieren eines regulären Ausdrucks - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Task »%s« konnte nicht gefunden werden."
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Mittels regulärem Ausdruck »%s« konnte kein Paket gefunden werden."
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Mittels des Musters »%s« konnte kein Paket gefunden werden."
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -445,28 +445,28 @@ msgstr "Paket %s kann nicht gefunden werden."
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 "Es können keine Versionen von Paket »%s« ausgewählt werden, da es rein "
 "virtuell ist."
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 "Die neueste Version von Paket »%s« kann nicht ausgewählt werden, da es rein "
 "virtuell ist."
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 "Es kann kein Installationskandidat von Paket »%s« ausgewählt werden, da kein "
 "solcher existiert."
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 "Die installierte Version von Paket »%s« kann nicht ausgewählt werden, da es "
 "nicht installiert ist."
@@ -474,7 +474,7 @@ msgstr ""
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "Es kann weder eine installierte Version noch ein Installationskandidat von "
@@ -796,7 +796,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "Dateiliste kann nicht erstellt werden, da »%s« kein Verzeichnis ist."
 
 #: apt-pkg/contrib/fileutl.cc
@@ -823,7 +823,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Es wurde auf %s gewartet, war jedoch nicht vorhanden"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -891,7 +891,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr ""
 "Schreibvorgang: es verbleiben noch %llu zu schreiben, Schreiben ist jedoch "
 "nicht möglich."
@@ -921,17 +921,17 @@ msgid "Unable to write to %s"
 msgstr "Schreiben nach %s nicht möglich"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Eine leere Datei kann nicht mit mmap abgebildet werden."
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "mmap mit %llu Byte Größe konnte nicht erzeugt werden."
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Datei-Deskriptor %i konnte nicht dupliziert werden."
 
 #: apt-pkg/contrib/mmap.cc
@@ -944,7 +944,7 @@ msgstr "mmap konnte nicht synchronisiert werden."
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "mmap mit %lu Byte Größe konnte nicht erzeugt werden."
 
 #: apt-pkg/contrib/mmap.cc
@@ -1418,7 +1418,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "Authentifizierungs-Datensatz konnte nicht gefunden werden für: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1842,7 +1842,7 @@ msgstr "Für Paket »%s« existiert kein Installationskandidat."
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "Virtuelle Pakete wie »%s« können nicht entfernt werden.\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1935,12 +1935,12 @@ msgstr ""
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Freier Platz in %s konnte nicht bestimmt werden."
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Sie haben nicht genug Platz in %s."
 
 #: apt-private/private-download.cc
@@ -2030,11 +2030,11 @@ msgstr ""
 "held-packages verwendet."
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Interner Fehler, Anordnung beendete nicht"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Wie merkwürdig … die Größen haben nicht übereingestimmt; schreiben Sie eine "
 "E-Mail an apt@packages.debian.org (auf Englisch bitte)."
@@ -2189,14 +2189,14 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "Hinweis: Dies wird automatisch und absichtlich von dpkg durchgeführt."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr ""
 "Es soll nichts gelöscht werden, AutoRemover kann nicht gestartet werden."
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Hmm, es sieht so aus, als ob der AutoRemover etwas beschädigt hat, was\n"
 "wirklich nicht geschehen sollte. Bitte erstellen Sie einen Fehlerbericht\n"
@@ -2313,7 +2313,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "HINWEIS: Dies ist nur eine Simulation!\n"
 "         %s benötigt root-Privilegien für die reale Ausführung.\n"
@@ -2586,7 +2586,7 @@ msgid "Package files:"
 msgstr "Paketdateien:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 "Zwischenspeicher ist nicht synchron, Querverweisen einer Paketdatei nicht "
 "möglich"
@@ -3071,7 +3071,7 @@ msgstr ""
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Paket %s konnte nicht gefunden werden"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -4158,7 +4158,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 "Signierte Datei ist nicht gültig, »%s« erhalten. (Erfordert das Netzwerk "
 "eine Authentifizierung?)"
@@ -4207,7 +4207,7 @@ msgstr "Die folgenden Signaturen waren ungültig:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "Die folgenden Signaturen konnten nicht überprüft werden, weil ihr "
@@ -4245,7 +4245,7 @@ msgid "Connection closed prematurely"
 msgstr "Verbindung vorzeitig beendet"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Leere Dateien können kein gültiges Archiv sein."
 
 #, fuzzy, c-format
@@ -4395,7 +4395,7 @@ msgstr "Leere Dateien können kein gültiges Archiv sein."
 #~ "Es gibt keine öffentlichen Schlüssel für die folgenden Schlüssel-IDs:\n"
 
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "»%s«-Abhängigkeit für %s kann nicht erfüllt werden, da %s bei »%s«-"
@@ -4416,7 +4416,7 @@ msgstr "Leere Dateien können kein gültiges Archiv sein."
 
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "»%s«-Abhängigkeit für %s kann nicht erfüllt werden, da die Version des "
 #~ "Installationskandidaten für das Paket %s die Versionsanforderungen nicht "
@@ -4605,7 +4605,7 @@ msgstr "Leere Dateien können kein gültiges Archiv sein."
 #~ msgstr ""
 #~ "Paket %s %s wurde beim Verarbeiten der Dateiabhängigkeiten nicht gefunden."
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Die Quellpaket-Liste %s konnte nicht mit »stat« abgefragt werden"
 
 #~ msgid "Collecting File Provides"
@@ -4620,7 +4620,7 @@ msgstr "Leere Dateien können kein gültiges Archiv sein."
 #~ msgid "Total dependency version space: "
 #~ msgstr "Gesamtmenge des Abhängigkeits-/Versionsspeichers: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Sie haben nicht genügend freien Speicherplatz in %s."
 
 #~ msgid "Done"
@@ -4676,7 +4676,7 @@ msgstr "Leere Dateien können kein gültiges Archiv sein."
 #~ msgstr "MD5-Summe stimmt nicht überein"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Es konnte keine Datei für Paket %s gefunden werden. Das könnte heißen, "
@@ -4752,13 +4752,13 @@ msgstr "Leere Dateien können kein gültiges Archiv sein."
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Fehler beim Verarbeiten der MD5-Summe. Offset %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Wechsel nach %s nicht möglich"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Es konnte keine gültige »control«-Datei gefunden werden."
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Pipe (Weiterleitung) für %s konnte nicht geöffnet werden."
 
 #~ msgid "Read error from %s process"
@@ -4787,7 +4787,7 @@ msgstr "Leere Dateien können kein gültiges Archiv sein."
 #~ msgstr ""
 #~ "Lesevorgang: es verbleiben noch %lu zu lesen, jedoch nichts mehr übrig"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr ""
 #~ "Schreibvorgang: es verbleiben noch %lu zu schreiben, jedoch Schreiben "
 #~ "nicht möglich"

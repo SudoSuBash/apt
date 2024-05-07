@@ -77,7 +77,7 @@ The following packages will be upgraded:
 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 Inst libc6 [1.0] (2.0 testing [all])
 Conf libc6 (2.0 testing [all])' aptget upgrade -t testing -s
-# FIXME: on amd64 systems this test wouldn't run with a real upgrade
+# FIXME: on amd64 systems this test would not run with a real upgrade
 # as APT (here i386) disagree about the native architecture, so
 # we fake it here:
 #aptget upgrade -y -qq >/dev/null 2>&1
@@ -167,7 +167,7 @@ The following NEW packages will be installed:
 Inst libc6-same:amd64 (1.0 stable [amd64])
 Conf libc6-same:amd64 (1.0 stable [amd64])' aptget install libc6-same:amd64 -s -t stable
 
-# FIXME: We should test installing libc6-same:amd64 here, but dpkg doesn't allow it currently
+# FIXME: We should test installing libc6-same:amd64 here, but dpkg does not allow it currently
 
 testsuccessequal 'Reading package lists...
 Building dependency tree...
@@ -178,7 +178,7 @@ The following packages will be upgraded:
 1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 Inst libc6-same [1.0] (2.0 testing [all])
 Conf libc6-same (2.0 testing [all])' aptget upgrade -t testing -s
-# FIXME: on amd64 systems this test wouldn't run with a real upgrade
+# FIXME: on amd64 systems this test would not run with a real upgrade
 # as APT (here i386) disagree about the native architecture, so
 # we fake it here:
 #aptget upgrade -y -qq >/dev/null 2>&1

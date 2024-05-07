@@ -161,8 +161,8 @@ Inst upgrade-over-new [1] (2 unstable [all])
 Conf cool (2 unstable [all])
 Conf upgrade-over-new (2 unstable [all])' aptget install upgrade-over-new -s
 
-# the recommends wasn't used before so while we could do it now,
-# the user doesn't seem to need it so avoid upgrading it
+# the recommends was not used before so while we could do it now,
+# the user does not seem to need it so avoid upgrading it
 testsuccessequal 'Reading package lists...
 Building dependency tree...
 The following packages will be upgraded:

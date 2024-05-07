@@ -18,7 +18,7 @@ setupaptarchive --no-update
 changetowebserver
 
 # the framework modifies some configs to ensure testability,
-# at the expense of creating an environment which doesn't always
+# at the expense of creating an environment which does not always
 # reflect apts "normal" behavior on a "normal" system
 echo 'Acquire::IndexTargets::Randomized "true";
 Acquire::Languages { "environment"; "en"; "de"; };

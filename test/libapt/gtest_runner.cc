@@ -16,7 +16,7 @@ int main(int argc, char **argv) {
    {
       std::cerr << "The test generated the following global messages:" << std::endl;
       _error->DumpErrors(std::cerr);
-      // messages on the stack can't be right, error out
+      // messages on the stack ca not be right, error out
       // even if we have no idea where this message came from
       if (result == 0)
       {

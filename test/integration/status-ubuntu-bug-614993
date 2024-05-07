@@ -42,7 +42,7 @@ Description: internationalized substitute of Text::Wrap
  This module is a substitution for Text::Wrap, supporting
  multibyte characters such as UTF-8, EUC-JP, and GB2312, fullwidth
  characters such as east Asian characters, combining characters
- such as diacritical marks and Thai, and languages which don't
+ such as diacritical marks and Thai, and languages which do not
  use whitespaces between words such as Chinese and Japanese.
  .
  It provides wrap().
@@ -674,7 +674,7 @@ Conflicts: libtasn1-2 (= 0.3.1-1)
 Description: Manage ASN.1 structures (runtime)
  Manage ASN1 (Abstract Syntax Notation One) structures.
  The main features of this library are:
-   * on-line ASN1 structure management that doesn't require any C code
+   * on-line ASN1 structure management that does not require any C code
      file generation.
    * off-line ASN1 structure management with C code file generation
      containing an array.
@@ -3495,7 +3495,7 @@ Suggests: libpcre3 (>= 7.7)
 Conflicts: rgrep
 Description: GNU grep, egrep and fgrep
  'grep' is a utility to search for text in files; it can be used from the
- command line or in scripts.  Even if you don't want to use it, other packages
+ command line or in scripts.  Even if you do not want to use it, other packages
  on your system probably will.
  .
  The GNU family of grep utilities may be the "fastest grep in the west".

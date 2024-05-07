@@ -46,14 +46,14 @@ testrun() {
 		listcurrentlistsdirectory > lists.before
 		testfailuremsg "W: No Hash entry in Release file ${MANGLED} which is considered strong enough for security purposes
 E: The repository 'file:${APTARCHIVE} unstable $(basename "$FILENAME")' provides only weak security information.
-N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: Updating from such a repository cannot be done securely, and is therefore disabled by default.
 N: See apt-secure(8) manpage for repository creation and user configuration details." apt update
 		testfileequal lists.before "$(listcurrentlistsdirectory)"
 		testnopkg 'foo'
 	else
 		testwarningmsg "W: No Hash entry in Release file ${MANGLED} which is considered strong enough for security purposes
 W: The repository 'file:${APTARCHIVE} unstable $(basename "$FILENAME")' provides only weak security information.
-N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: Data from such a repository cannot be authenticated and is therefore potentially dangerous to use.
 N: See apt-secure(8) manpage for repository creation and user configuration details." apt update "$@"
 		testbadpkg 'foo'
 	fi
@@ -63,7 +63,7 @@ N: See apt-secure(8) manpage for repository creation and user configuration deta
 	genericprepare
 	testwarningmsg "W: No Hash entry in Release file ${MANGLED} which is considered strong enough for security purposes
 W: The repository 'file:${APTARCHIVE} unstable $(basename "$FILENAME")' provides only weak security information.
-N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: Data from such a repository cannot be authenticated and is therefore potentially dangerous to use.
 N: See apt-secure(8) manpage for repository creation and user configuration details." apt update "$@"
 	testbadpkg 'foo'
 	sed -i 's#^deb\(-src\)\? \[allow-weak=yes\] #deb\1 #' rootdir/etc/apt/sources.list.d/*
@@ -77,14 +77,14 @@ N: See apt-secure(8) manpage for repository creation and user configuration deta
 		listcurrentlistsdirectory > lists.before
 		testfailuremsg "W: No Hash entry in Release file ${MANGLED}
 E: The repository 'file:${APTARCHIVE} unstable $(basename "$FILENAME")' provides only weak security information.
-N: Updating from such a repository can't be done securely, and is therefore disabled by default.
+N: Updating from such a repository cannot be done securely, and is therefore disabled by default.
 N: See apt-secure(8) manpage for repository creation and user configuration details." apt update
 		testfileequal lists.before "$(listcurrentlistsdirectory)"
 		testnopkg 'foo'
 	else
 		testwarningmsg "W: No Hash entry in Release file ${MANGLED}
 W: The repository 'file:${APTARCHIVE} unstable $(basename "$FILENAME")' provides only weak security information.
-N: Data from such a repository can't be authenticated and is therefore potentially dangerous to use.
+N: Data from such a repository cannot be authenticated and is therefore potentially dangerous to use.
 N: See apt-secure(8) manpage for repository creation and user configuration details." apt update "$@"
 		testbadpkg 'foo'
 	fi

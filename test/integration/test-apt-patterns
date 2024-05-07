@@ -238,10 +238,10 @@ testsuccessequal "Package: does-not-exist
 State: not a real package (virtual)
 Package: notinstalled:amd64
 State: not a real package (virtual)
-N: Can't select candidate version from package does-not-exist as it has no candidate
-N: Can't select candidate version from package notinstalled:amd64 as it has no candidate
-N: Can't select versions from package 'does-not-exist' as it is purely virtual
-N: Can't select versions from package 'notinstalled:amd64' as it is purely virtual
+N: cannot select candidate version from package does-not-exist as it has no candidate
+N: cannot select candidate version from package notinstalled:amd64 as it has no candidate
+N: cannot select versions from package 'does-not-exist' as it is purely virtual
+N: cannot select versions from package 'notinstalled:amd64' as it is purely virtual
 N: No packages found" apt show '?virtual'
 
 testsuccessequal "Listing..." apt list '?x-name-fnmatch(1)'

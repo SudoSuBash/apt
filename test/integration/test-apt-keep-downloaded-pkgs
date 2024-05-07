@@ -29,7 +29,7 @@ testfailure test -f rootdir/var/cache/apt/archives/pkg1_1.0_all.deb
 changetowebserver
 testsuccess aptget update
 
-# see if no-download really doesn't download the package
+# see if no-download really does not download the package
 testfailuremsg 'E: Unable to fetch some archives, maybe run apt-get update or try with --fix-missing?' aptget install pkg2 --no-download -y
 testsuccess test -f aptarchive/pool/pkg2_1.0_all.deb
 testfailure test -f rootdir/var/cache/apt/archives/pkg2_1.0_all.deb

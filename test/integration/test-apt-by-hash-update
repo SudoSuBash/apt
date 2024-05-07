@@ -28,7 +28,7 @@ makebyhashonly 'source' 'Sources'
 
 ensureitsbroken() {
 	rm -rf rootdir/var/lib/apt/lists
-	# we moved the Packages file away, normal update won't work
+	# we moved the Packages file away, normal update wo not work
 	testfailure aptget update "$@"
 	# ensure we do not know about "foo"
 	testfailureequal "Reading package lists...

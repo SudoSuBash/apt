@@ -136,10 +136,10 @@ bool CheckFreeSpaceBeforeDownload(std::string const &Dir, unsigned long long Fet
    struct statvfs Buf;
    if (statvfs(Dir.c_str(),&Buf) != 0) {
       if (errno == EOVERFLOW)
-	 return _error->WarningE("statvfs",_("Couldn't determine free space in %s"),
+	 return _error->WarningE("statvfs",_("Could not determine free space in %s"),
 	       Dir.c_str());
       else
-	 return _error->Errno("statvfs",_("Couldn't determine free space in %s"),
+	 return _error->Errno("statvfs",_("Could not determine free space in %s"),
 	       Dir.c_str());
    }
    else
@@ -153,7 +153,7 @@ bool CheckFreeSpaceBeforeDownload(std::string const &Dir, unsigned long long Fet
 	       || Stat.f_type != RAMFS_MAGIC
 #endif
 	    )
-	    return _error->Error(_("You don't have enough free space in %s."),
+	    return _error->Error(_("You do not have enough free space in %s."),
 		  Dir.c_str());
       }
    }

@@ -40,8 +40,8 @@ like this (see also `apt.conf(5)` manpage for configuration file syntax):
 All files which should be downloaded (nicknamed *Targets*) are mentioned
 below the `Acquire::IndexTargets` scope. `deb` is here the type of the
 `sources.list` entry the file should be acquired for. The only other
-supported value is hence `deb-src`. Beware: You can't specify multiple
-types here and you can't download the same (evaluated) `MetaKey` from
+supported value is hence `deb-src`. Beware: You cannot specify multiple
+types here and you cannot download the same (evaluated) `MetaKey` from
 multiple types!
 
 After the type you can pick any valid and unique string which preferable
@@ -79,23 +79,23 @@ Additional optional properties:
   `Created-By`. The difference is that using this property multiple files
   can be subsumed under one identifier e.g. if you configure multiple
   possible locations for the files (with `Fallback-Of`), but the front-end
-  doesn't need to handle files from the different locations differently.
+  does not need to handle files from the different locations differently.
 * `DefaultEnabled`: The default value is `yes` which means that apt will
   try to acquire this target from all sources. If set to `no` the user
   has to explicitly enable this target in the sources.list file with the
   `Targets` option(s) – or override this value in a config file.
 * `Optional`: The default value is `yes` and should be kept at this value.
-  If enabled the acquire system will skip the download if the file isn't
+  If enabled the acquire system will skip the download if the file is not
   mentioned in the `Release` file. Otherwise this is treated as a hard
   error and the update process fails. Note that failures while
   downloading (e.g. 404 or hash verification errors) are failures,
   regardless of this setting.
 * `KeepCompressed`: The default is the value of `Acquire::GzipIndexes`,
   which defaults to `false`. If `true`, the acquire system will keep the
-  file compressed on disk rather than extract it. If your front-end can't
+  file compressed on disk rather than extract it. If your front-end cannot
   deal with compressed files transparently you have to explicitly set
   this option to `false` to avoid problems with users setting the option
-  globally. On the other hand, if you set it to `true` or don't set it you
+  globally. On the other hand, if you set it to `true` or do not set it you
   have to ensure your front-end can deal with all compressed file formats
   supported by apt (libapt users can e.g. use `FileFd`, others can use
   the `cat-file` command of `/usr/lib/apt/apt-helper`).
@@ -124,7 +124,7 @@ information about the compressed files/PDiffs to make this happen.
 More properties exist, but these should **NOT** be set by front-ends
 requesting files. They exist for internal and end-user usage only.
 Some of these are – which are documented here only to ensure that they
-aren't accidentally used by front-ends:
+are not accidentally used by front-ends:
 
 * `PDiffs`: controls if apt will try to use PDiffs for this target.
   Defaults to the value of `Acquire::PDiffs` which is *true* by default.
@@ -136,7 +136,7 @@ aren't accidentally used by front-ends:
 * `CompressionTypes`: The default value is a space separated list of
   compression types supported by apt (see `Acquire::CompressionTypes`).
   You can set this option to prevent apt from downloading a compression
-  type a front-end can't open transparently. This should always be
+  type a front-end cannot open transparently. This should always be
   a temporary workaround through and a bug should be reported against
   the front-end in question.
 * `KeepCompressedAs`: The default value is a space separated list of
@@ -233,16 +233,16 @@ sources.lists (`pkgSourceList`), iterating over the metaIndex objects this
 creates and calling `GetIndexTargets()` on them. See the source code of
 `apt-get indextargets` for a complete example.
 
-Note that by default targets are not listed if they weren't downloaded.
+Note that by default targets are not listed if they were not downloaded.
 If you want to see all targets, you can use the `--no-release-info`, which
 also removes the *Codename*, *Suite*, *Version*, *Origin*, *Label* and *Trusted*
 fields from the output as these also display data which needs to be
 downloaded first and could hence be inaccurate [on the pro-side: This
-mode is faster as it doesn't require a valid binary cache to operate].
+mode is faster as it does not require a valid binary cache to operate].
 The most notable difference perhaps is in the *Filename* field through: By
 default it indicates an existing file, potentially compressed (Hint:
 libapt users can use `FileFd` to open compressed files transparently). In
-the `--no-release-info` mode the indicated file doesn't need to exist and
+the `--no-release-info` mode the indicated file does not need to exist and
 it will always refer to an uncompressed file, even if the index would be
 (or is) stored compressed.
 
@@ -269,8 +269,8 @@ Remarks on other available fields:
 * `Optional`, `DefaultEnabled`, `KeepCompressed`: Decode the options of the
   same name from the configuration.
 * `Language`, `Architecture`, `Component`: as defined further above, but with
-  the catch that they might be missing if they don't effect the target
-  (aka: They weren't used while evaluating the `MetaKey` template).
+  the catch that they might be missing if they do not effect the target
+  (aka: They were not used while evaluating the `MetaKey` template).
 
 Again, additional fields might be visible in certain implementations,
 but you should avoid using them and instead talk to us about a portable
@@ -289,13 +289,13 @@ important!
 
 # Acquiring files not mentioned in the Release file
 
-You can't. This is by design as these files couldn't be verified to not
+You cannot. This is by design as these files could not be verified to not
 be modified in transit, corrupted by the download process or simple if
 they are present at all on the server, which would require apt to probe
 for them. APT did this in the past for legacy reasons, we do not intend
 to go back to these dark times.
 
-This is also why you can't request files from a different server. It
+This is also why you cannot request files from a different server. It
 would have the additional problem that this server might not even be
 accessible (e.g. proxy settings) or that local sources (file:/, cdrom:/)
 start requesting online files…
@@ -304,14 +304,14 @@ In other words: We would be opening Pandora's box.
 
 # Acquiring files to a specific location on disk
 
-You can't by design to avoid multiple front-ends requesting the same file
+You cannot by design to avoid multiple front-ends requesting the same file
 to be downloaded to multiple different places on (different) disks
 (among other reasons).  See the next point for a solution if you really
 have to force a specific location by creating symlinks.
 
 # Post processing the acquired files
 
-You can't modify the files apt has downloaded as apt keeps state with
+You cannot modify the files apt has downloaded as apt keeps state with
 e.g. the modification times of the files and advanced features like
 PDiffs break.
 

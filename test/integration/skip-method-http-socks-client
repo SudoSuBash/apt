@@ -6,7 +6,7 @@ TESTDIR="$(readlink -f "$(dirname "$0")")"
 
 setupenvironment
 
-# We don't do a real proxy here, we just look how the implementation
+# We do not do a real proxy here, we just look how the implementation
 # reacts to certain responses from a "proxy" provided by socat
 # Checks HTTP, but requesting https instead will check HTTPS (curl) which
 # uses different error messages through – also: https://github.com/curl/curl/issues/944
@@ -22,8 +22,8 @@ else
 fi
 
 runclient() {
-	# this doesn't need to be an actually reachable webserver for this test
-	# in fact, its better if it isn't.
+	# this does not need to be an actually reachable webserver for this test
+	# in fact, its better if it is not.
 	rm -f index.html
 	apthelper download-file "http://${2:-localhost:2903}/" index.html \
 		-o Acquire::http::Proxy="socks5h://${1}localhost:5555" \

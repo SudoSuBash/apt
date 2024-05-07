@@ -5,7 +5,7 @@ TESTDIR="$(readlink -f "$(dirname "$0")")"
 . "$TESTDIR/framework"
 setupenvironment
 
-# we need this construct here as it isn't really possible to fake native arch for dpkg-* tools
+# we need this construct here as it is not really possible to fake native arch for dpkg-* tools
 NATIVE="$(command dpkg --print-architecture)"
 configarchitecture "${NATIVE}" 'armel'
 

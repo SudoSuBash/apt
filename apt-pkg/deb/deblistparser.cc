@@ -125,7 +125,7 @@ unsigned char debListParser::ParseMultiArch(bool const showErrors)	/*{{{*/
       if (ArchitectureAll() == true)
       {
 	 if (showErrors == true)
-	    _error->Warning("Architecture: all package '%s' can't be Multi-Arch: same",
+	    _error->Warning("Architecture: all package '%s' cannot be Multi-Arch: same",
 		  Package().c_str());
 	 MA = pkgCache::Version::No;
       }

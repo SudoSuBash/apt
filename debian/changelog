@@ -2612,7 +2612,7 @@ apt (1.4~beta3) unstable; urgency=medium
   * Honour Acquire::ForceIPv4/6 in the https transport
 
   [ David Kalnischkies ]
-  * reword "Can't drop priv" warning message (Closes: #813786) (LP: #1522675)
+  * reword "cannot drop priv" warning message (Closes: #813786) (LP: #1522675)
   * let {dsc,tar,diff}-only implicitly enable download-only
   * remove needless fork() in apt-get source
   * default to --no-check for dpkg-source call (Closes: 724744)

@@ -115,7 +115,7 @@ Remv ${CURRENTKERNEL}-dbg [5-1]" aptget autoremove -s
 unset COLUMNS
 
 msgmsg "install unknown kernel"
-# even if installed/uname reports a kernel which we can't find via dpkg,
+# even if installed/uname reports a kernel which we cannot find via dpkg,
 # ensure that we still protect it just in case as these are kernels we
 # know for sure without complicated detection mechanisms
 testprotected 1.0.0-2-ungeneric

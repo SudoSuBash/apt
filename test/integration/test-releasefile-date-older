@@ -10,7 +10,7 @@ insertpackage 'wheezy' 'apt' 'all' '0.8.15'
 
 setupaptarchive --no-update
 
-# we don't complain as the server could have just sent a 'Hit' here and this
+# we do not complain as the server could have just sent a 'Hit' here and this
 # 'downgrade attack' is usually performed by out-of-sync mirrors. Valid-Until
 # catches the 'real' downgrade attacks (expect that it finds stale mirrors).
 # Scaring users with an error here serves hence no point.

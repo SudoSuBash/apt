@@ -25,13 +25,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -113,7 +113,7 @@ msgstr "Chyba pri zápise"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -135,14 +135,14 @@ msgstr "Chyba GPG: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -233,7 +233,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Nedá sa nájsť súbor s balíkom %s. To by mohlo znamenať, že tento balík je "
@@ -241,7 +241,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "Nie je možné nájsť zdroj na stiahnutie verzie „%s“ balíka „%s“"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -311,7 +311,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -342,7 +342,7 @@ msgstr "Sťahuje sa %li. súbor z %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr "Je nutné preinštalovať balík %s, ale nedá sa nájsť jeho archív."
 
 #: apt-pkg/algorithms.cc
@@ -377,17 +377,17 @@ msgstr "Chyba pri preklade regulárneho výrazu - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Nebolo možné nájsť úlohu „%s“"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Nebol nájdený žiaden balík zodpovedajúci regulárnemu výrazu „%s“"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Nebol nájdený žiaden balík zodpovedajúci regulárnemu výrazu „%s“"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -397,25 +397,25 @@ msgstr "Nedá sa nájsť balík %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr "Nie je možné vybrať verzie z balíka „%s“, pretože je čisto virtuálny"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 "Nie je možné vybrať najnovšiu verziu z balíka „%s“, pretože je čisto "
 "virtuálny"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 "Nie je možné vybrať kandidátsku verziu z balíka „%s“, pretože nemá kandidáta"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 "Nie je možné vybrať nainštalovanú verziu z balíka „%s“, pretože nie je "
 "nainštalovaný"
@@ -423,7 +423,7 @@ msgstr ""
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "Nie je možné vybrať nainštalované ani kandidátske verzie z balíka „%s“, "
@@ -738,7 +738,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr "Zoznam súborov nemožno vytvoriť, pretože „%s“ nie je adresár"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -761,7 +761,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Čakalo sa na %s, ale nebolo to tam"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -827,7 +827,7 @@ msgstr "čítanie, treba prečítať ešte %llu, ale už nič neostáva"
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "zápis, treba zapísať ešte %llu, no nedá sa to"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -855,17 +855,17 @@ msgid "Unable to write to %s"
 msgstr "Do %s sa nedá zapisovať"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Nedá sa vykonať mmap prázdneho súboru"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Nedá sa urobiť mmap %llu bajtov"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Nedá sa duplikovať popisovač súboru %i"
 
 #: apt-pkg/contrib/mmap.cc
@@ -878,7 +878,7 @@ msgstr "Nedá sa synchronizovať mmap"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Nedá sa urobiť mmap %lu bajtov"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1339,7 +1339,7 @@ msgstr "Zapísaných %i záznamov s %i chýbajúcimi a %i chybnými súbormi\n"
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "Nebolo možné nájsť autentifikačný záznam pre: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1747,7 +1747,7 @@ msgstr "Balík „%s“ nemá kandidáta na inštaláciu"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "Virtuálne balíky ako „%s“ nemožno odstrániť\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1829,12 +1829,12 @@ msgstr "Nastali problémy a -y bolo použité bez --force-yes"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Na %s sa nedá zistiť veľkosť voľného miesta"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Na %s nemáte dostatok voľného miesta."
 
 #: apt-private/private-download.cc
@@ -1918,11 +1918,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Vnútorná chyba, Triedenie sa neukončilo"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Nezvyčajná udalosť... Veľkosti nesúhlasia, pošlite e-mail na apt@packages."
 "debian.org"
@@ -2077,13 +2077,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "Pozn.: Toto robí dpkg automaticky a zámerne."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "Nemajú sa odstraňovať veci, nespustí sa AutoRemover"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Hmm, zdá sa, že AutoRemover niečo zničil, čo sa naozaj nemalo stať.\n"
 "Prosím, pošlite hlásenie o chybe balíka apt."
@@ -2195,7 +2195,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "POZN.: Toto je iba simulácia!\n"
 "      %s potrebuje na skutočné spustenie práva používateľa root.\n"
@@ -2466,7 +2466,7 @@ msgid "Package files:"
 msgstr "Súbory balíka:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr "Vyrovnávacia pamäť je neaktuálna, nedá sa odvolať na súbor balíka"
 
 #. Show any packages have explicit pins
@@ -2904,7 +2904,7 @@ msgstr "Nedá sa určiť verzia programu debconf. Je debconf nainštalovaný?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Balík %s sa nedá nájsť"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3965,7 +3965,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -4005,7 +4005,7 @@ msgstr "Nasledovné signatúry sú neplatné:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "Nasledovné signatúry sa nedajú overiť, pretože nie je dostupný verejný "
@@ -4040,7 +4040,7 @@ msgid "Connection closed prematurely"
 msgstr "Spojenie bolo predčasne ukončené"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Prázdne súbory nemôžu byť platné archívy"
 
 #, fuzzy, c-format
@@ -4194,7 +4194,7 @@ msgstr "Prázdne súbory nemôžu byť platné archívy"
 #~ msgstr "Adresár %s je divertovaný"
 
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "%s závislosť pre %s nemožno splniť, pretože %s nie je povolené na "
@@ -4212,7 +4212,7 @@ msgstr "Prázdne súbory nemôžu byť platné archívy"
 
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "%s závislosť pre %s nemožno splniť, pretože kandidátska verzia balíka %s, "
 #~ "nedokáže splniť požiadavky na verziu"
@@ -4275,7 +4275,7 @@ msgstr "Prázdne súbory nemôžu byť platné archívy"
 #~ "  -d   CD-ROM mount point\n"
 #~ "  -r   Rename a recognized CD-ROM\n"
 #~ "  -m   No mounting\n"
-#~ "  -f   Fast mode, don't check package files\n"
+#~ "  -f   Fast mode, do not check package files\n"
 #~ "  -a   Thorough scan mode\n"
 #~ "  --no-auto-detect Do not try to auto detect drive and mount point\n"
 #~ "  -c=? Read this configuration file\n"
@@ -4410,7 +4410,7 @@ msgstr "Prázdne súbory nemôžu byť platné archívy"
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "Pri spracovaní závislostí nebol nájdený balík %s %s"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Nedá sa vyhodnotiť zoznam zdrojových balíkov %s"
 
 #~ msgid "Collecting File Provides"
@@ -4429,7 +4429,7 @@ msgstr "Prázdne súbory nemôžu byť platné archívy"
 #~ msgid "Total dependency version space: "
 #~ msgstr "Celkom miesta závislých verzií: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Na %s nemáte dostatok voľného miesta"
 
 #~ msgid "Done"
@@ -4476,7 +4476,7 @@ msgstr "Prázdne súbory nemôžu byť platné archívy"
 #~ msgstr "Nezhoda kontrolných MD5 súčtov"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Nedá sa nájsť súbor s balíkom %s. Asi budete musieť opraviť tento balík "
@@ -4550,13 +4550,13 @@ msgstr "Prázdne súbory nemôžu byť platné archívy"
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Chyba pri spracovaní MD5. Pozícia %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Nedá sa prejsť do %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Nedá sa nájsť platný riadiaci súbor"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Nedá sa otvoriť rúra pre %s"
 
 #~ msgid "Read error from %s process"
@@ -4583,7 +4583,7 @@ msgstr "Prázdne súbory nemôžu byť platné archívy"
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "čítanie, stále treba prečítať %lu, ale už nič neostáva"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "zápis, stále treba zapísať %lu, no nedá sa to"
 
 #~ msgid ""

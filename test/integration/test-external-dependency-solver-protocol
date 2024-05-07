@@ -250,7 +250,7 @@ done
 EOF
 chmod +x rootdir/usr/lib/apt/solvers/removeall
 testwarning apt full-upgrade -s --solver removeall
-testsuccess grep "which isn't installed!" rootdir/tmp/testwarning.output
+testsuccess grep "which is not installed!" rootdir/tmp/testwarning.output
 
 cat > rootdir/usr/lib/apt/solvers/installall << EOF
 #!/bin/sh

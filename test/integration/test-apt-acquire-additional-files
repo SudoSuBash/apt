@@ -10,7 +10,7 @@ setupenvironment
 configarchitecture 'amd64'
 
 # note that in --print-uri we talk about .xz because that is the default.
-# This doesn't mean it is actually attempt to download it.
+# This does not mean it is actually attempt to download it.
 configcompression '.' 'gz'
 LOWCOSTEXT='lz4'
 

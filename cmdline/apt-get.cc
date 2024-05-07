@@ -113,7 +113,7 @@ static bool DoMarkAuto(CommandLine &CmdL)
       // Locate the package
       pkgCache::PkgIterator Pkg = Cache->FindPkg(S);
       if (Pkg.end() == true) {
-         return _error->Error(_("Couldn't find package %s"),S);
+         return _error->Error(_("Could not find package %s"),S);
       }
       else
       {

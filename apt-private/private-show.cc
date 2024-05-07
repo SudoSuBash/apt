@@ -508,7 +508,7 @@ bool Policy(CommandLine &CmdL)
 	 pkgIndexFile *Indx;
 	 if (SrcList->FindIndex(F,Indx) == false &&
 	       _system->FindIndex(F,Indx) == false)
-	    return _error->Error(_("Cache is out of sync, can't x-ref a package file"));
+	    return _error->Error(_("Cache is out of sync, cannot x-ref a package file"));
 
 	 printf("%4i %s\n",
 	       Plcy->GetPriority(F),Indx->Describe(true).c_str());
@@ -592,7 +592,7 @@ bool Policy(CommandLine &CmdL)
 	    pkgIndexFile *Indx;
 	    if (SrcList->FindIndex(VF.File(),Indx) == false &&
 		  _system->FindIndex(VF.File(),Indx) == false)
-	       return _error->Error(_("Cache is out of sync, can't x-ref a package file"));
+	       return _error->Error(_("Cache is out of sync, cannot x-ref a package file"));
 	    printf("       %4i %s\n",Plcy->GetPriority(VF.File()),
 		  Indx->Describe(true).c_str());
 	 }

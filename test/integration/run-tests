@@ -162,5 +162,5 @@ if [ -n "$FAILED_TESTS" ]; then
 else
 	echo >&2 'All tests seem to have been run successfully. What could possibly go wrong?'
 fi
-# ensure we don't overflow
+# ensure we do not overflow
 exit $((FAIL <= 255 ? FAIL : 255))

@@ -100,7 +100,7 @@ bool RequestState::HeaderLine(string const &Line)			/*{{{*/
 	 {
 	    Code[0] = '\0';
 	    if (Owner != NULL && Owner->Debug == true)
-	       clog << "HTTP server doesn't give Reason-Phrase for " << std::to_string(Result) << std::endl;
+	       clog << "HTTP server does not give Reason-Phrase for " << std::to_string(Result) << std::endl;
 	 }
 	 else if (elements != 4)
 	    return _error->Error(_("The HTTP server sent an invalid reply header"));

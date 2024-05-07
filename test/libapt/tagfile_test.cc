@@ -243,7 +243,7 @@ TEST(TagFileTest, Comments)
 "# apt-utils, (temporarily disabled)\n"
 " apt\n"
 "\n"
-"# Comments in the middle shouldn't result in extra blank paragraphs either.\n"
+"# Comments in the middle should not result in extra blank paragraphs either.\n"
 "\n"
 "# Ditto.\n"
 "\n"
@@ -252,11 +252,11 @@ TEST(TagFileTest, Comments)
 "Architecture: any\n"
 "Description: An awesome package\n"
 "  # This should still appear in the result.\n"
-"# this one shouldn't\n"
+"# this one should not\n"
 "  Blah, blah, blah. # but this again.\n"
 "# A comment at the end of a paragraph should be ignored.\n"
 "\n"
-"# Trailing comments shouldn't cause extra blank paragraphs."
+"# Trailing comments should not cause extra blank paragraphs."
 	 );
 
    pkgTagFile tfile(&fd, pkgTagFile::SUPPORT_COMMENTS, 1);

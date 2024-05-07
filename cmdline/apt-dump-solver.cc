@@ -49,7 +49,7 @@ static std::vector<aptDispatchWithHelp> GetCommands()			/*{{{*/
 static int WriteError(char const * const uid, std::ostringstream &out, FileFd &stdoutfd, pid_t const &Solver)/*{{{*/
 {
    _error->DumpErrors(out);
-   // ensure the solver isn't printing into "our" error message, too
+   // ensure the solver is not printing into "our" error message, too
    if (Solver != 0)
       ExecWait(Solver, "dump", true);
    EDSP::WriteError(uid, out.str(), stdoutfd);
@@ -89,7 +89,7 @@ int main(int argc,const char *argv[])					/*{{{*/
       {
 	 _error->MergeWithStack();
 	 std::ostringstream out;
-	 out << "Writing EDSP solver input to file '" << filename << "' failed as it couldn't be created!\n";
+	 out << "Writing EDSP solver input to file '" << filename << "' failed as it could not be created!\n";
 	 return WriteError("ERR_CREATE_FILE", out, stdoutfd, 0);
       }
       _error->RevertToStack();
@@ -130,7 +130,7 @@ int main(int argc,const char *argv[])					/*{{{*/
    if (input.OpenDescriptor(STDIN_FILENO, FileFd::ReadOnly) == false)
    {
       std::ostringstream out;
-      out << "Writing EDSP solver input to file '" << filename << "' failed as stdin couldn't be opened!\n";
+      out << "Writing EDSP solver input to file '" << filename << "' failed as stdin could not be opened!\n";
       return WriteError("ERR_READ_ERROR", out, stdoutfd, Solver);
    }
 
@@ -164,7 +164,7 @@ int main(int argc,const char *argv[])					/*{{{*/
 	    continue;
 
 	 std::ostringstream out;
-	 ioprintf(out, _("Waited for %s but it wasn't there"), CmdL.FileList[1]);
+	 ioprintf(out, _("Waited for %s but it was not there"), CmdL.FileList[1]);
 	 return WriteError("ERR_FORWARD", out, stdoutfd, 0);
       }
       if (WIFEXITED(Status))

@@ -29,13 +29,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -116,7 +116,7 @@ msgstr "Lỗi ghi"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 "Tập tin Clearsigned không hợp lệ, nhận được “%s” (mạng yêu cầu xác nhận phải "
@@ -141,14 +141,14 @@ msgstr "Lỗi GPG: %s: %s"
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -239,7 +239,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Không tìm thấy tập tin liên quan đến gói %s. Có lẽ bạn cần phải tự sửa gói "
@@ -247,7 +247,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr "Không tìm thấy nguồn cho việc tải về phiên bản “%s” of “%s”"
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -317,7 +317,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -348,7 +348,7 @@ msgstr "Đang tải tập tin %li trong tổng số %li"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr "Cần phải cài đặt lại gói %s, nhưng mà không thể tìm kho cho nó."
 
 #: apt-pkg/algorithms.cc
@@ -385,17 +385,17 @@ msgstr "Lỗi biên dịch biểu thức chính quy - %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Không tìm thấy tác vụ “%s”"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Không tìm thấy gói nào theo biểu thức chính quy “%s”"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Không tìm thấy gói nào theo đường dẫn “%s”"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -405,22 +405,22 @@ msgstr "Không thể định vị gói %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr "Không thể chọn phiên bản trong gói “%s” vì nó chỉ là ảo"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr "Không thể chọn phiên bản mới nhất trong gói “%s” vì nó chỉ là ảo"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr "Không thể chọn phiên bản ứng cử trong gói %s vì nó không có ứng cử"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 "Không thể chọn phiên bản được cài đặt trong gói %s vì nó không phải được cài "
 "đặt"
@@ -428,7 +428,7 @@ msgstr ""
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 "Không thể chọn phiên bản được cài đặt hoặc phiên bản ứng cử trong gói “%s” "
@@ -742,7 +742,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr ""
 "Liệt kê các tập tin không thể được tạo ra vì “%s” không phải là một thư mục"
 
@@ -768,7 +768,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Cần %s nhưng mà không thấy nó ở đây"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -834,7 +834,7 @@ msgstr "đọc, còn cần đọc %llu nhưng mà không có gì còn lại cả
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "ghi, còn cần ghi %llu nhưng mà không thể"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -862,17 +862,17 @@ msgid "Unable to write to %s"
 msgstr "Không thể ghi vào %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Không thể mmap (ánh xạ bộ nhớ) tập tin rỗng"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Không thể tạo mmap (ánh xạ bộ nhớ) kích cỡ %llu byte"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Không thể nhân đôi bộ mô tả tập tin %i"
 
 #: apt-pkg/contrib/mmap.cc
@@ -885,7 +885,7 @@ msgstr "Không thể động bộ hoá mmap (ánh xạ bộ nhớ)"
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Không thể tạo mmap (ánh xạ bộ nhớ) kích cỡ %lu byte"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1356,7 +1356,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr "Không tìm thấy bản ghi xác thực cho: %s"
 
 #: apt-pkg/indexcopy.cc
@@ -1766,7 +1766,7 @@ msgstr "Gói “%s” không có ứng cử cài đặt"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr "Không thể gỡ bỏ được gói ảo như “%s”\n"
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1846,12 +1846,12 @@ msgstr "Có lỗi và đã dùng tùy chọn “-y” mà không có  “--force
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Không thể tìm được chỗ trống trong %s"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Bạn không có đủ dung lượng đĩa còn trống trong %s."
 
 #: apt-private/private-download.cc
@@ -1937,11 +1937,11 @@ msgid ""
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Gặp lỗi nội bộ: Tiến trình Sắp xếp chưa xong"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 "Lạ nhỉ... Kích cỡ không khớp nhau. Hãy gửi thư cho <apt@packages.debian.org>"
 
@@ -2092,13 +2092,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr "Ghi chú: Thay đổi này được tự động thực hiện bởi dpkg."
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr "Không nên xoá gì thì không thể khởi chạy Bộ Gỡ bỏ Tự động"
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 "Ừm, có vẻ là Bộ Gỡ bỏ Tự động đã hủy cái gì, một trường hợp thực sự không "
 "nên xảy ra. Hãy thông báo lỗi về apt."
@@ -2197,7 +2197,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 "CHÚ Ý: đây chỉ là mô phỏng!\n"
 "       %s yêu cầu quyền root để thực hiện thật.\n"
@@ -2463,7 +2463,7 @@ msgid "Package files:"
 msgstr "Tập tin gói:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr ""
 "Bộ nhớ tạm không đồng bộ được nên không thể tham chiếu chéo tập tin gói"
 
@@ -2909,7 +2909,7 @@ msgstr "Không thể lấy phiên bản debconf. Debconf có được cài đặ
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Không tìm thấy gói %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3999,7 +3999,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, fuzzy, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 "Tập tin Clearsigned không hợp lệ, nhận được “%s” (mạng yêu cầu xác nhận phải "
 "không?)"
@@ -4042,7 +4042,7 @@ msgstr "Những chữ ký theo đây không hợp lệ:\n"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 "Không thể kiểm chứng những chữ ký theo đây, vì khóa công không sẵn có:\n"
@@ -4076,7 +4076,7 @@ msgid "Connection closed prematurely"
 msgstr "Kết nối bị đóng bất ngờ"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr "Các tập tin trống rỗng không phải là kho lưu hợp lệ"
 
 #, fuzzy, c-format
@@ -4231,7 +4231,7 @@ msgstr "Các tập tin trống rỗng không phải là kho lưu hợp lệ"
 #~ msgstr "Thư mục %s bị trệch hướng"
 
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "Phần phụ thuộc %s cho %s không ổn thỏa bởi vì %s không được cho phép trên "
@@ -4251,7 +4251,7 @@ msgstr "Các tập tin trống rỗng không phải là kho lưu hợp lệ"
 
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "phần phụ thuộc %s cho %s không thể được thỏa mãn phiên bản ứng cử của gói "
 #~ "%s có thể thỏa mãn điều kiện phiên bản"
@@ -4326,7 +4326,7 @@ msgstr "Các tập tin trống rỗng không phải là kho lưu hợp lệ"
 #~ "  -d   CD-ROM mount point\n"
 #~ "  -r   Rename a recognized CD-ROM\n"
 #~ "  -m   No mounting\n"
-#~ "  -f   Fast mode, don't check package files\n"
+#~ "  -f   Fast mode, do not check package files\n"
 #~ "  -a   Thorough scan mode\n"
 #~ "  --no-auto-detect Do not try to auto detect drive and mount point\n"
 #~ "  -c=? Read this configuration file\n"
@@ -4470,7 +4470,7 @@ msgstr "Các tập tin trống rỗng không phải là kho lưu hợp lệ"
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "Không tìm thấy gói %s %s khi xử lý quan hệ phụ thuộc của tập tin"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Không thể lấy các thông tin về danh sách gói nguồn %s"
 
 #~ msgid "Collecting File Provides"
@@ -4489,7 +4489,7 @@ msgstr "Các tập tin trống rỗng không phải là kho lưu hợp lệ"
 #~ msgid "Total dependency version space: "
 #~ msgstr "Tổng chỗ phiên bản phụ thuộc: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Không đủ chỗ trống trên %s"
 
 #~ msgid "Done"
@@ -4543,7 +4543,7 @@ msgstr "Các tập tin trống rỗng không phải là kho lưu hợp lệ"
 #~ msgstr "Mã băm tổng kiểm MD5Sum không khớp"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Không tìm thấy tập tin liên quan đến gói %s. Có lẽ bạn cần phải tự sửa "
@@ -4627,13 +4627,13 @@ msgstr "Các tập tin trống rỗng không phải là kho lưu hợp lệ"
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Gặp lỗi khi phân tách MD5. Hiệu số %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Không thể chuyển đổi sang %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Việc định vị tập tin điều khiển hợp lệ bị lỗi"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Không thể mở ống dẫn cho %s"
 
 #~ msgid "Read error from %s process"
@@ -4660,7 +4660,7 @@ msgstr "Các tập tin trống rỗng không phải là kho lưu hợp lệ"
 #~ msgid "read, still have %lu to read but none left"
 #~ msgstr "đọc, còn cần đọc %lu nhưng mà không có gì còn lại"
 
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "ghi, còn cần ghi %lu nhưng mà không thể"
 
 #~ msgid ""

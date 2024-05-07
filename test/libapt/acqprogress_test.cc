@@ -149,7 +149,7 @@ TEST(AcqProgress, Pulse)
    std::ostringstream out;
    unsigned int width = 80;
    AcqTextStatus Stat(out, width, 0);
-   _config->Set("APT::Sandbox::User", ""); // ensure we aren't sandboxing
+   _config->Set("APT::Sandbox::User", ""); // ensure we are not sandboxing
 
    pkgAcquire Acq(&Stat);
    pkgAcquire::ItemDesc fetch;

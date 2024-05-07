@@ -75,7 +75,7 @@ bool MMap::Map(FileFd &Fd)
       Map = MAP_PRIVATE;
    
    if (iSize == 0)
-      return _error->Error(_("Can't mmap an empty file"));
+      return _error->Error(_("cannot mmap an empty file"));
 
    // We can't mmap compressed fd's directly, so we need to read it completely
    if (Fd.IsCompressed() == true)
@@ -84,10 +84,10 @@ bool MMap::Map(FileFd &Fd)
 	 return _error->Error("Compressed file %s can only be mapped readonly", Fd.Name().c_str());
       Base = malloc(iSize);
       if (unlikely(Base == nullptr))
-	 return _error->Errno("MMap-compressed-malloc", _("Couldn't make mmap of %llu bytes"), iSize);
+	 return _error->Errno("MMap-compressed-malloc", _("Could not make mmap of %llu bytes"), iSize);
       SyncToFd = new FileFd();
       if (Fd.Seek(0L) == false || Fd.Read(Base, iSize) == false)
-	 return _error->Error("Compressed file %s can't be read into mmap", Fd.Name().c_str());
+	 return _error->Error("Compressed file %s cannot be read into mmap", Fd.Name().c_str());
       return true;
    }
 
@@ -104,24 +104,24 @@ bool MMap::Map(FileFd &Fd)
 	    // for readonly, we don't need sync, so make it simple
 	    Base = malloc(iSize);
 	    if (unlikely(Base == nullptr))
-	       return _error->Errno("MMap-malloc", _("Couldn't make mmap of %llu bytes"), iSize);
+	       return _error->Errno("MMap-malloc", _("Could not make mmap of %llu bytes"), iSize);
 	    SyncToFd = new FileFd();
 	    return Fd.Read(Base, iSize);
 	 }
 	 // FIXME: Writing to compressed fd's ?
 	 int const dupped_fd = dup(Fd.Fd());
 	 if (dupped_fd == -1)
-	    return _error->Errno("mmap", _("Couldn't duplicate file descriptor %i"), Fd.Fd());
+	    return _error->Errno("mmap", _("Could not duplicate file descriptor %i"), Fd.Fd());
 
 	 Base = calloc(iSize, 1);
 	 if (unlikely(Base == nullptr))
-	    return _error->Errno("MMap-calloc", _("Couldn't make mmap of %llu bytes"), iSize);
+	    return _error->Errno("MMap-calloc", _("Could not make mmap of %llu bytes"), iSize);
 	 SyncToFd = new FileFd (dupped_fd);
 	 if (!SyncToFd->Seek(0L) || !SyncToFd->Read(Base, iSize))
 	    return false;
       }
       else
-	 return _error->Errno("MMap-mmap", _("Couldn't make mmap of %llu bytes"), iSize);
+	 return _error->Errno("MMap-mmap", _("Could not make mmap of %llu bytes"), iSize);
      }
 
    return true;
@@ -285,7 +285,7 @@ DynamicMMap::DynamicMMap(unsigned long Flags,unsigned long const &WorkSpace,
 		Base = (unsigned char*) mmap(0, WorkSpace, Prot, Map, -1, 0);
 
 		if(Base == MAP_FAILED)
-			_error->Errno("DynamicMMap",_("Couldn't make mmap of %lu bytes"),WorkSpace);
+			_error->Errno("DynamicMMap",_("Could not make mmap of %lu bytes"),WorkSpace);
 
 		iSize = 0;
 		return;
@@ -352,7 +352,7 @@ unsigned long DynamicMMap::Allocate(unsigned long ItemSize)
 {
    if (unlikely(ItemSize == 0))
    {
-      _error->Fatal("Can't allocate an item of size zero");
+      _error->Fatal("cannot allocate an item of size zero");
       return 0;
    }
 

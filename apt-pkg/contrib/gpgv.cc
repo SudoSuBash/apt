@@ -89,7 +89,7 @@ class LineBuffer							/*{{{*/
       {
 	 if (acceptEoF)
 	    return false;
-	 return _error->Error("Splitting of clearsigned file %s failed as it doesn't contain all expected parts", InFile.c_str());
+	 return _error->Error("Splitting of clearsigned file %s failed as it does not contain all expected parts", InFile.c_str());
       }
       // a) remove newline characters, so we can work consistently with lines
       line_length = find_last_not_of_length("\n\r");
@@ -219,12 +219,12 @@ void ExecGPGV(std::string const &File, std::string const &FileGPG,
 	 conf.reset(strdup(tmpfile.c_str()));
       }
       if (conf == nullptr) {
-	 apt_error(std::cerr, statusfd, fd, "Couldn't create tempfile names for passing config to apt-key");
+	 apt_error(std::cerr, statusfd, fd, "Could not create tempfile names for passing config to apt-key");
 	 local_exit(EINTERNAL);
       }
       int confFd = mkstemp(conf.get());
       if (confFd == -1) {
-	 apt_error(std::cerr, statusfd, fd, "Couldn't create temporary file %s for passing config to apt-key", conf.get());
+	 apt_error(std::cerr, statusfd, fd, "Could not create temporary file %s for passing config to apt-key", conf.get());
 	 local_exit(EINTERNAL);
       }
       local_exit.files.push_back(conf.get());
@@ -382,7 +382,7 @@ void ExecGPGV(std::string const &File, std::string const &FileGPG,
       if (statusfd != -1)
 	 dup2(fd[1], statusfd);
       execvp(Args[0], (char **) &Args[0]);
-      apt_error(std::cerr, statusfd, fd, "Couldn't execute %s to check %s", Args[0], File.c_str());
+      apt_error(std::cerr, statusfd, fd, "Could not execute %s to check %s", Args[0], File.c_str());
       local_exit(EINTERNAL);
    }
 
@@ -392,7 +392,7 @@ void ExecGPGV(std::string const &File, std::string const &FileGPG,
    {
       if (errno == EINTR)
 	 continue;
-      apt_error(std::cerr, statusfd, fd, _("Waited for %s but it wasn't there"), "apt-key");
+      apt_error(std::cerr, statusfd, fd, _("Waited for %s but it was not there"), "apt-key");
       local_exit(EINTERNAL);
    }
 
@@ -521,7 +521,7 @@ bool SplitClearSignedFile(std::string const &InFile, FileFd * const ContentFile,
 	 return false;
    }
    if (open_signature)
-      return _error->Error("Signature in file %s wasn't closed", InFile.c_str());
+      return _error->Error("Signature in file %s was not closed", InFile.c_str());
 
    // Flush the files
    if (SignatureFile != nullptr)
@@ -541,7 +541,7 @@ bool OpenMaybeClearSignedFile(std::string const &ClearSignedFileName, FileFd &Me
    if (GetTempFile("clearsigned.message", true, &MessageFile, true) == nullptr)
       return false;
    if (MessageFile.Failed())
-      return _error->Error("Couldn't open temporary file to work with %s", ClearSignedFileName.c_str());
+      return _error->Error("Could not open temporary file to work with %s", ClearSignedFileName.c_str());
 
    _error->PushToStack();
    bool const splitDone = SplitClearSignedFile(ClearSignedFileName, &MessageFile, NULL, NULL);

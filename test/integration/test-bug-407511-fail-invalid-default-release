@@ -58,7 +58,7 @@ passdist 42*
 passdist 4*.0
 faildist 21.0
 faildist 21*
-# we accept, but don't validate the following
+# we accept, but do not validate the following
 passdist a=unstable
 passdist n=sid
 passdist v=42.0

@@ -373,7 +373,7 @@ pkgCache::PkgFileIterator pkgDebianIndexFile::FindInCache(pkgCache &Cache) const
          if (_config->FindB("Debug::pkgCacheGen", false))
 	    std::clog << "DebianIndexFile::FindInCache - size (" << St.st_size << " <> " << File->Size
 			<< ") or mtime (" << St.st_mtime << " <> " << File->mtime
-			<< ") doesn't match for " << File.FileName() << std::endl;
+			<< ") does not match for " << File.FileName() << std::endl;
 	 return pkgCache::PkgFileIterator(Cache);
       }
       return File;

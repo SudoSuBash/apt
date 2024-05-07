@@ -161,7 +161,7 @@ testsuccessequal "'http://localhost:${APTHTTPPORT}/dists/stable/InRelease' local
 
 msgmsg "Origin: Unknown"
 releasechanger 'Origin' 'Unknown'
-# XXX: @PATH@ is empty here so we have //, there isn't much we can do here, people don't have to use @PATH@ of course.
+# XXX: @PATH@ is empty here so we have //, there is not much we can do here, people do not have to use @PATH@ of course.
 testsuccessequal "'https://example.org/snapshots//BANANA/dists/stable/InRelease' example.org_snapshots__BANANA_dists_stable_InRelease 0 
 'https://example.org/snapshots//BANANA/dists/stable/main/source/Sources.xz' example.org_snapshots__BANANA_dists_stable_main_source_Sources 0 
 'https://example.org/snapshots//BANANA/dists/stable/main/binary-amd64/Packages.xz' example.org_snapshots__BANANA_dists_stable_main_binary-amd64_Packages 0 

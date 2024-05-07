@@ -22,13 +22,13 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Updating from such a repository can't be done securely, and is therefore "
+"Updating from such a repository cannot be done securely, and is therefore "
 "disabled by default."
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 msgid ""
-"Data from such a repository can't be authenticated and is therefore "
+"Data from such a repository cannot be authenticated and is therefore "
 "potentially dangerous to use."
 msgstr ""
 
@@ -111,7 +111,7 @@ msgstr "Gwall ysgrifennu"
 #: apt-pkg/acquire-item.cc methods/gpgv.cc
 #, c-format
 msgid ""
-"Clearsigned file isn't valid, got '%s' (does the network require "
+"Clearsigned file is not valid, got '%s' (does the network require "
 "authentication?)"
 msgstr ""
 
@@ -131,14 +131,14 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't have the "
+"Skipping acquire of configured file '%s' as repository '%s' does not have the "
 "component '%s' (component misspelt in sources.list?)"
 msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"Skipping acquire of configured file '%s' as repository '%s' doesn't support "
+"Skipping acquire of configured file '%s' as repository '%s' does not support "
 "architecture '%s'"
 msgstr ""
 
@@ -223,7 +223,7 @@ msgstr ""
 #: apt-pkg/acquire-item.cc
 #, c-format
 msgid ""
-"I wasn't able to locate a file for the %s package. This might mean you need "
+"I was not able to locate a file for the %s package. This might mean you need "
 "to manually fix this package. (due to missing arch)"
 msgstr ""
 "Methais i leoli ffeila r gyfer y pecyn %s. Fa all hyn olygu bod rhaid i chi "
@@ -231,7 +231,7 @@ msgstr ""
 
 #: apt-pkg/acquire-item.cc
 #, c-format
-msgid "Can't find a source to download version '%s' of '%s'"
+msgid "cannot find a source to download version '%s' of '%s'"
 msgstr ""
 
 #. TRANSLATOR: %s=%s is sourcename=sourceversion, e.g. apt=1.1
@@ -304,7 +304,7 @@ msgstr ""
 #: apt-pkg/acquire.cc
 #, c-format
 msgid ""
-"Download is performed unsandboxed as root as file '%s' couldn't be accessed "
+"Download is performed unsandboxed as root as file '%s' could not be accessed "
 "by user '%s'."
 msgstr ""
 
@@ -335,7 +335,7 @@ msgstr "Yn Darllen Rhestr Ffeiliau"
 #: apt-pkg/algorithms.cc
 #, c-format
 msgid ""
-"The package %s needs to be reinstalled, but I can't find an archive for it."
+"The package %s needs to be reinstalled, but I cannot find an archive for it."
 msgstr ""
 "Mae angen ailsefydlu'r pecyn %s, ond dydw i ddim yn gallu canfod archif ar "
 "ei gyfer."
@@ -373,17 +373,17 @@ msgstr "Gwall crynhoi patrwm - %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find task '%s'"
+msgid "Could not find task '%s'"
 msgstr "Methwyd canfod pecyn %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by regex '%s'"
+msgid "Could not find any package by regex '%s'"
 msgstr "Methwyd canfod pecyn %s"
 
 #: apt-pkg/cacheset.cc
 #, fuzzy, c-format
-msgid "Couldn't find any package by glob '%s'"
+msgid "Could not find any package by glob '%s'"
 msgstr "Methwyd canfod pecyn %s"
 
 #: apt-pkg/cacheset.cc apt-private/private-show.cc
@@ -393,28 +393,28 @@ msgstr "Ni ellir lleoli'r pecyn %s"
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select versions from package '%s' as it is purely virtual"
+msgid "cannot select versions from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select newest version from package '%s' as it is purely virtual"
+msgid "cannot select newest version from package '%s' as it is purely virtual"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select candidate version from package %s as it has no candidate"
+msgid "cannot select candidate version from package %s as it has no candidate"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
-msgid "Can't select installed version from package %s as it is not installed"
+msgid "cannot select installed version from package %s as it is not installed"
 msgstr ""
 
 #: apt-pkg/cacheset.cc
 #, c-format
 msgid ""
-"Can't select installed nor candidate version from package '%s' as it has "
+"cannot select installed nor candidate version from package '%s' as it has "
 "neither of them"
 msgstr ""
 
@@ -729,7 +729,7 @@ msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
 #, c-format
-msgid "List of files can't be created as '%s' is not a directory"
+msgid "List of files cannot be created as '%s' is not a directory"
 msgstr ""
 
 #: apt-pkg/contrib/fileutl.cc
@@ -751,7 +751,7 @@ msgstr ""
 #: apt-pkg/contrib/fileutl.cc apt-pkg/contrib/gpgv.cc apt-pkg/deb/debsystem.cc
 #: cmdline/apt-dump-solver.cc
 #, fuzzy, c-format
-msgid "Waited for %s but it wasn't there"
+msgid "Waited for %s but it was not there"
 msgstr "Arhoswyd am %s ond nid oedd e yna"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -819,7 +819,7 @@ msgstr "o hyd %lu i ddarllen ond dim ar ôl"
 # FIXME
 #: apt-pkg/contrib/fileutl.cc
 #, fuzzy, c-format
-msgid "write, still have %llu to write but couldn't"
+msgid "write, still have %llu to write but could not"
 msgstr "o hyd %lu i ysgrifennu ond methwyd"
 
 #: apt-pkg/contrib/fileutl.cc
@@ -847,17 +847,17 @@ msgid "Unable to write to %s"
 msgstr "Ni ellir ysgrifennu i %s"
 
 #: apt-pkg/contrib/mmap.cc
-msgid "Can't mmap an empty file"
+msgid "cannot mmap an empty file"
 msgstr "Ni ellir defnyddio mmap() ar ffeil gwag"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't make mmap of %llu bytes"
+msgid "Could not make mmap of %llu bytes"
 msgstr "Methwyd gwneud mmap() efo %lu beit"
 
 #: apt-pkg/contrib/mmap.cc
 #, fuzzy, c-format
-msgid "Couldn't duplicate file descriptor %i"
+msgid "Could not duplicate file descriptor %i"
 msgstr "Methwyd agor pibell ar gyfer %s"
 
 #: apt-pkg/contrib/mmap.cc
@@ -873,7 +873,7 @@ msgstr "Methwyd gweithredu "
 
 #: apt-pkg/contrib/mmap.cc
 #, c-format
-msgid "Couldn't make mmap of %lu bytes"
+msgid "Could not make mmap of %lu bytes"
 msgstr "Methwyd gwneud mmap() efo %lu beit"
 
 #: apt-pkg/contrib/mmap.cc
@@ -1318,7 +1318,7 @@ msgstr ""
 
 #: apt-pkg/indexcopy.cc
 #, c-format
-msgid "Can't find authentication record for: %s"
+msgid "cannot find authentication record for: %s"
 msgstr ""
 
 #: apt-pkg/indexcopy.cc
@@ -1738,7 +1738,7 @@ msgstr "Does dim ymgeisydd sefydlu gan y pecyn %s"
 
 #: apt-private/private-cacheset.cc
 #, c-format
-msgid "Virtual packages like '%s' can't be removed\n"
+msgid "Virtual packages like '%s' cannot be removed\n"
 msgstr ""
 
 #. TRANSLATORS: Note, this is not an interactive question
@@ -1820,12 +1820,12 @@ msgstr "Mae problemau a defnyddwyd -y heb --force-yes"
 
 #: apt-private/private-download.cc
 #, fuzzy, c-format
-msgid "Couldn't determine free space in %s"
+msgid "Could not determine free space in %s"
 msgstr "Does dim digon o le rhydd yn %s gennych"
 
 #: apt-private/private-download.cc
 #, c-format
-msgid "You don't have enough free space in %s."
+msgid "You do not have enough free space in %s."
 msgstr "Does dim digon o le rhydd gennych yn %s."
 
 #: apt-private/private-download.cc
@@ -1912,11 +1912,11 @@ msgstr ""
 
 #: apt-private/private-install.cc
 #, fuzzy
-msgid "Internal error, Ordering didn't finish"
+msgid "Internal error, Ordering did not finish"
 msgstr "Gwall Mewnol wrth ychwanegu dargyfeiriad"
 
 #: apt-private/private-install.cc
-msgid "How odd... The sizes didn't match, email apt@packages.debian.org"
+msgid "How odd... The sizes did not match, email apt@packages.debian.org"
 msgstr ""
 
 #: apt-private/private-install.cc
@@ -2061,13 +2061,13 @@ msgid "Note: This is done automatically and on purpose by dpkg."
 msgstr ""
 
 #: apt-private/private-install.cc
-msgid "We are not supposed to delete stuff, can't start AutoRemover"
+msgid "We are not supposed to delete stuff, cannot start AutoRemover"
 msgstr ""
 
 #: apt-private/private-install.cc
 msgid ""
 "Hmm, seems like the AutoRemover destroyed something which really\n"
-"shouldn't happen. Please file a bug report against apt."
+"should not happen. Please file a bug report against apt."
 msgstr ""
 
 #: apt-private/private-install.cc
@@ -2168,7 +2168,7 @@ msgid ""
 "NOTE: This is only a simulation!\n"
 "      %s needs root privileges for real execution.\n"
 "      Keep also in mind that locking is deactivated,\n"
-"      so don't depend on the relevance to the real current situation!\n"
+"      so do not depend on the relevance to the real current situation!\n"
 msgstr ""
 
 #: apt-private/private-output.cc apt-private/private-show.cc
@@ -2433,7 +2433,7 @@ msgid "Package files:"
 msgstr "Ffeiliau Pecynnau:"
 
 #: apt-private/private-show.cc
-msgid "Cache is out of sync, can't x-ref a package file"
+msgid "Cache is out of sync, cannot x-ref a package file"
 msgstr "Nid yw'r storfa yn gydamserol, ni ellir croesgyfeirio ffeil pecym"
 
 #. Show any packages have explicit pins
@@ -2879,7 +2879,7 @@ msgstr "Ni ellir cael fersiwn debconf. Ydi debconf wedi ei sefydlu?"
 
 #: cmdline/apt-get.cc
 #, c-format
-msgid "Couldn't find package %s"
+msgid "Could not find package %s"
 msgstr "Methwyd canfod pecyn %s"
 
 #: cmdline/apt-get.cc cmdline/apt-mark.cc
@@ -3959,7 +3959,7 @@ msgstr ""
 #: methods/gpgv.cc
 #, c-format
 msgid ""
-"Signed file isn't valid, got '%s' (does the network require authentication?)"
+"Signed file is not valid, got '%s' (does the network require authentication?)"
 msgstr ""
 
 #: methods/gpgv.cc
@@ -3999,7 +3999,7 @@ msgstr "Caiff y pecynnau canlynol ychwanegol eu sefydlu:"
 
 #: methods/gpgv.cc
 msgid ""
-"The following signatures couldn't be verified because the public key is not "
+"The following signatures could not be verified because the public key is not "
 "available:\n"
 msgstr ""
 
@@ -4033,7 +4033,7 @@ msgid "Connection closed prematurely"
 msgstr "Caewyd y cysylltiad yn gynnar"
 
 #: methods/store.cc
-msgid "Empty files can't be valid archives"
+msgid "Empty files cannot be valid archives"
 msgstr ""
 
 #, fuzzy
@@ -4175,7 +4175,7 @@ msgstr ""
 
 #, fuzzy
 #~ msgid ""
-#~ "%s dependency for %s can't be satisfied because %s is not allowed on '%s' "
+#~ "%s dependency for %s cannot be satisfied because %s is not allowed on '%s' "
 #~ "packages"
 #~ msgstr ""
 #~ "Ni ellir bodloni dibyniaeth %s ar gyfer %s oherwydd ni ellir canfod y "
@@ -4197,7 +4197,7 @@ msgstr ""
 #, fuzzy
 #~ msgid ""
 #~ "%s dependency for %s cannot be satisfied because candidate version of "
-#~ "package %s can't satisfy version requirements"
+#~ "package %s cannot satisfy version requirements"
 #~ msgstr ""
 #~ "Ni ellir bodloni'r dibyniaeth %s ar gyfer %s oherwydd does dim fersiwn "
 #~ "sydd ar gael o'r pecyn %s yn gallu bodloni'r gofynion ferswin"
@@ -4338,7 +4338,7 @@ msgstr ""
 #~ msgid "Package %s %s was not found while processing file dependencies"
 #~ msgstr "Ni chanfuwyd pecyn %s %s wrth brosesu dibyniaethau ffeil"
 
-#~ msgid "Couldn't stat source package list %s"
+#~ msgid "Could not stat source package list %s"
 #~ msgstr "Methwyd stat() o'r rhestr pecyn ffynhonell %s"
 
 #~ msgid "Collecting File Provides"
@@ -4356,7 +4356,7 @@ msgstr ""
 #~ msgid "Total dependency version space: "
 #~ msgstr "Cyfanswm gofod Fersiwn Dibyniaeth: "
 
-#~ msgid "You don't have enough free space in %s"
+#~ msgid "You do not have enough free space in %s"
 #~ msgstr "Does dim digon o le rhydd yn %s gennych"
 
 #~ msgid "Done"
@@ -4381,7 +4381,7 @@ msgstr ""
 #~ msgstr "Camgyfatebiaeth swm MD5"
 
 #~ msgid ""
-#~ "I wasn't able to locate a file for the %s package. This might mean you "
+#~ "I was not able to locate a file for the %s package. This might mean you "
 #~ "need to manually fix this package."
 #~ msgstr ""
 #~ "Methais i leoli ffeila r gyfer y pecyn %s. Fa all hyn olygu bod rhaid i "
@@ -4460,13 +4460,13 @@ msgstr ""
 #~ msgid "Error parsing MD5. Offset %lu"
 #~ msgstr "Gwall wrth ramadegu MD5. Atred: %lu"
 
-#~ msgid "Couldn't change to %s"
+#~ msgid "Could not change to %s"
 #~ msgstr "Methwyd newid i %s"
 
 #~ msgid "Failed to locate a valid control file"
 #~ msgstr "Methwyd lleoli ffeil rheoli dilys"
 
-#~ msgid "Couldn't open pipe for %s"
+#~ msgid "Could not open pipe for %s"
 #~ msgstr "Methwyd agor pibell ar gyfer %s"
 
 #~ msgid "Read error from %s process"
@@ -4492,7 +4492,7 @@ msgstr ""
 #~ msgstr "o hyd %lu i ddarllen ond dim ar ôl"
 
 # FIXME
-#~ msgid "write, still have %lu to write but couldn't"
+#~ msgid "write, still have %lu to write but could not"
 #~ msgstr "o hyd %lu i ysgrifennu ond methwyd"
 
 #, fuzzy
@@ -4548,7 +4548,7 @@ msgstr ""
 #~ msgstr "Llinell camffurfiol %lu yn y rhestr ffynhonell %s (dosranniad)"
 
 #, fuzzy
-#~ msgid "Couldn't access keyring: '%s'"
+#~ msgid "Could not access keyring: '%s'"
 #~ msgstr "Methwyd datrys '%s'"
 
 #, fuzzy

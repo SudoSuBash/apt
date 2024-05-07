@@ -305,7 +305,7 @@ bool InstallPackages(CacheFile &Cache, APT::PackageVector &HeldBackPackages, boo
       if (Res == pkgPackageManager::Failed)
 	 return false;
       if (Res != pkgPackageManager::Completed)
-	 return _error->Error(_("Internal error, Ordering didn't finish"));
+	 return _error->Error(_("Internal error, Ordering did not finish"));
       return true;
    }
 
@@ -318,7 +318,7 @@ bool InstallPackages(CacheFile &Cache, APT::PackageVector &HeldBackPackages, boo
       if (DebBytes != Cache->DebSize())
       {
 	 c0out << "E: " << DebBytes << ',' << Cache->DebSize() << std::endl;
-	 c0out << "E: " << _("How odd... The sizes didn't match, email apt@packages.debian.org") << std::endl;
+	 c0out << "E: " << _("How odd... The sizes did not match, email apt@packages.debian.org") << std::endl;
       }
 
       // Number of bytes
@@ -565,7 +565,7 @@ bool DoAutomaticRemove(CacheFile &Cache)
    if (doAutoRemove == true &&
 	_config->FindB("APT::Get::Remove",true) == false)
    {
-      c1out << _("We are not supposed to delete stuff, can't start "
+      c1out << _("We are not supposed to delete stuff, cannot start "
 		 "AutoRemover") << std::endl;
       return false;
    }
@@ -680,7 +680,7 @@ bool DoAutomaticRemove(CacheFile &Cache)
    if (Cache->BrokenCount() != 0)
    {
       c1out << _("Hmm, seems like the AutoRemover destroyed something which really\n"
-	         "shouldn't happen. Please file a bug report against apt.") << std::endl;
+	         "should not happen. Please file a bug report against apt.") << std::endl;
       c1out << std::endl;
       c1out << _("The following information may help to resolve the situation:") << std::endl;
       c1out << std::endl;

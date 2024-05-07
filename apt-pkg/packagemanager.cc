@@ -444,7 +444,7 @@ bool pkgPackageManager::SmartConfigure(PkgIterator Pkg, int const Depth)
 		  if (List->IsFlag(DepPkg,pkgOrderList::UnPacked))
 		     Bad = false;
 		  else if (Debug)
-		     std::clog << ", but it isn't unpacked yet";
+		     std::clog << ", but it is not unpacked yet";
 		  if (Debug)
 		     std::clog << std::endl;
 	       }
@@ -491,7 +491,7 @@ bool pkgPackageManager::SmartConfigure(PkgIterator Pkg, int const Depth)
 		  if (List->IsFlag(DepPkg,pkgOrderList::UnPacked))
 		     Bad = false;
 		  else if (Debug)
-		     std::clog << ", but it isn't unpacked yet";
+		     std::clog << ", but it is not unpacked yet";
 		  if (Debug)
 		     std::clog << std::endl;
 	       }
@@ -954,7 +954,7 @@ bool pkgPackageManager::SmartUnPack(PkgIterator Pkg, bool const Immediate, int c
    } while (Changed == true);
 
    if (SomethingBad == true)
-      return _error->Error("Couldn't configure %s, probably a dependency cycle.", Pkg.FullName().c_str());
+      return _error->Error("Could not configure %s, probably a dependency cycle.", Pkg.FullName().c_str());
 
    if (couldBeTemporaryRemoved == true && List->IsFlag(Pkg,pkgOrderList::Removed) == true)
    {

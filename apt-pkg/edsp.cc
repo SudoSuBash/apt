@@ -484,10 +484,10 @@ bool EDSP::ReadResponse(int const input, pkgDepCache &Cache, OpProgress *Progres
 			}
 		} else if (type == "Remove") {
 			if (Pkg->CurrentVer == 0)
-				_error->Warning("Ignoring Remove stanza received for version %s of package %s which isn't installed!",
+				_error->Warning("Ignoring Remove stanza received for version %s of package %s which is not installed!",
 				      Ver.VerStr(), Pkg.FullName(false).c_str());
 			else if (Pkg.CurrentVer() != Ver)
-				_error->Warning("Ignoring Remove stanza received for version %s of package %s which isn't the installed version %s!",
+				_error->Warning("Ignoring Remove stanza received for version %s of package %s which is not the installed version %s!",
 				      Ver.VerStr(), Pkg.FullName(false).c_str(), Pkg.CurrentVer().VerStr());
 			else
 				Cache.MarkDelete(Ver.ParentPkg(), false);
@@ -618,7 +618,7 @@ bool EDSP::ApplyRequest(std::list<std::string> const &install,
 	     i != install.end(); ++i) {
 		pkgCache::PkgIterator P = Cache.FindPkg(*i);
 		if (P.end() == true)
-			_error->Warning("Package %s is not known, so can't be installed", i->c_str());
+			_error->Warning("Package %s is not known, so cannot be installed", i->c_str());
 		else
 			Cache.MarkInstall(P, false);
 	}
@@ -627,7 +627,7 @@ bool EDSP::ApplyRequest(std::list<std::string> const &install,
 	     i != remove.end(); ++i) {
 		pkgCache::PkgIterator P = Cache.FindPkg(*i);
 		if (P.end() == true)
-			_error->Warning("Package %s is not known, so can't be installed", i->c_str());
+			_error->Warning("Package %s is not known, so cannot be installed", i->c_str());
 		else
 			Cache.MarkDelete(P);
 	}
@@ -683,13 +683,13 @@ static pid_t ExecuteExternal(char const* const type, char const * const binary, 
 
 	if (file.empty() == true)
 	{
-		_error->Error("Can't call external %s '%s' as it is not in a configured directory!", type, binary);
+		_error->Error("cannot call external %s '%s' as it is not in a configured directory!", type, binary);
 		return 0;
 	}
 	int external[4] = {-1, -1, -1, -1};
 	if (pipe(external) != 0 || pipe(external + 2) != 0)
 	{
-		_error->Errno("Resolve", "Can't create needed IPC pipes for EDSP");
+		_error->Errno("Resolve", "cannot create needed IPC pipes for EDSP");
 		return 0;
 	}
 	for (int i = 0; i < 4; ++i)
@@ -1170,7 +1170,7 @@ bool EIPP::ApplyRequest(std::list<std::pair<std::string,PKG_ACTION>> &actions,/*
       pkgCache::PkgIterator P = Cache.FindPkg(a.first);
       if (P.end() == true)
       {
-	 _error->Warning("Package %s is not known, so can't be acted on", a.first.c_str());
+	 _error->Warning("Package %s is not known, so cannot be acted on", a.first.c_str());
 	 continue;
       }
       switch (a.second)

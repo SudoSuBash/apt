@@ -162,7 +162,7 @@ static void ReportMirrorFailureToCentral(pkgAcquire::Item const &I, std::string 
       _exit(100);
    }
    if(!ExecWait(pid, "report-mirror-failure"))
-      _error->Warning("Couldn't report problem to '%s'", report.c_str());
+      _error->Warning("Could not report problem to '%s'", report.c_str());
 }
 									/*}}}*/
 
@@ -173,12 +173,12 @@ static APT_NONNULL(2) bool MessageInsecureRepository(bool const isError, char co
    if (isError)
    {
       _error->Error("%s", m.c_str());
-      _error->Notice("%s", _("Updating from such a repository can't be done securely, and is therefore disabled by default."));
+      _error->Notice("%s", _("Updating from such a repository cannot be done securely, and is therefore disabled by default."));
    }
    else
    {
       _error->Warning("%s", m.c_str());
-      _error->Notice("%s", _("Data from such a repository can't be authenticated and is therefore potentially dangerous to use."));
+      _error->Notice("%s", _("Data from such a repository cannot be authenticated and is therefore potentially dangerous to use."));
    }
    _error->Notice("%s", _("See apt-secure(8) manpage for repository creation and user configuration details."));
    return false;
@@ -1103,7 +1103,7 @@ bool pkgAcquire::Item::RenameOnError(pkgAcquire::Item::RenameOnErrorState const 
 	 Status = StatError;
 	 break;
       case NotClearsigned:
-	 strprintf(errtext, _("Clearsigned file isn't valid, got '%s' (does the network require authentication?)"), "NOSPLIT");
+	 strprintf(errtext, _("Clearsigned file is not valid, got '%s' (does the network require authentication?)"), "NOSPLIT");
 	 Status = StatAuthError;
 	 break;
       case MaximumSizeExceeded:
@@ -1602,7 +1602,7 @@ void pkgAcqMetaClearSig::QueueIndexes(bool const verify)			/*{{{*/
 		TransactionManager->MetaIndexParser->HasSupportForComponent(component) == false)
 	    {
 	       new CleanupItem(Owner, TransactionManager, Target);
-	       _error->Warning(_("Skipping acquire of configured file '%s' as repository '%s' doesn't have the component '%s' (component misspelt in sources.list?)"),
+	       _error->Warning(_("Skipping acquire of configured file '%s' as repository '%s' does not have the component '%s' (component misspelt in sources.list?)"),
 		     Target.MetaKey.c_str(), TransactionManager->Target.Description.c_str(), component.c_str());
 	       continue;
 
@@ -1621,7 +1621,7 @@ void pkgAcqMetaClearSig::QueueIndexes(bool const verify)			/*{{{*/
 	       if (TransactionManager->MetaIndexParser->IsArchitectureSupported(arch) == false)
 	       {
 		  new CleanupItem(Owner, TransactionManager, Target);
-		  _error->Notice(_("Skipping acquire of configured file '%s' as repository '%s' doesn't support architecture '%s'"),
+		  _error->Notice(_("Skipping acquire of configured file '%s' as repository '%s' does not support architecture '%s'"),
 			Target.MetaKey.c_str(), TransactionManager->Target.Description.c_str(), arch.c_str());
 		  continue;
 	       }
@@ -2489,7 +2489,7 @@ bool pkgAcqDiffIndex::ParseDiffIndex(string const &IndexDiffFile)	/*{{{*/
 	 {
 	    if (Debug == true)
 	       std::clog << "pkgAcqDiffIndex: " << IndexDiffFile << ": File " << filename
-		  << " wasn't in the list for the first parsed hash! (history)" << std::endl;
+		  << " was not in the list for the first parsed hash! (history)" << std::endl;
 	    break;
 	 }
       }
@@ -2498,7 +2498,7 @@ bool pkgAcqDiffIndex::ParseDiffIndex(string const &IndexDiffFile)	/*{{{*/
 
    if (unlikely(available_patches.empty() == true))
    {
-      ErrorText = "Couldn't find any patches for the patch series";
+      ErrorText = "Could not find any patches for the patch series";
       return false;
    }
 
@@ -2538,7 +2538,7 @@ bool pkgAcqDiffIndex::ParseDiffIndex(string const &IndexDiffFile)	/*{{{*/
 	       continue;
 	 if (Debug == true)
 	    std::clog << "pkgAcqDiffIndex: " << IndexDiffFile << ": File " << filename
-	       << " wasn't in the list for the first parsed hash! (patches)" << std::endl;
+	       << " was not in the list for the first parsed hash! (patches)" << std::endl;
 	 break;
       }
    }
@@ -2580,7 +2580,7 @@ bool pkgAcqDiffIndex::ParseDiffIndex(string const &IndexDiffFile)	/*{{{*/
 	       continue;
 	 if (Debug == true)
 	    std::clog << "pkgAcqDiffIndex: " << IndexDiffFile << ": File " << filename
-	       << " wasn't in the list for the first parsed hash! (download)" << std::endl;
+	       << " was not in the list for the first parsed hash! (download)" << std::endl;
 	 break;
       }
    }
@@ -2590,7 +2590,7 @@ bool pkgAcqDiffIndex::ParseDiffIndex(string const &IndexDiffFile)	/*{{{*/
 	    [&](auto const &cur) { return LocalHashes == cur.result_hashes; });
       if (foundStart == available_patches.rend() || unlikely(available_patches.empty()))
       {
-	 ErrorText = "Couldn't find the start of the patch series";
+	 ErrorText = "Could not find the start of the patch series";
 	 return false;
       }
       available_patches.erase(available_patches.begin(), std::prev(foundStart.base()));
@@ -2718,7 +2718,7 @@ bool pkgAcqDiffIndex::VerifyDone(std::string const &/*Message*/, pkgAcquire::Met
 
    Status = StatError;
    if (ErrorText.empty())
-      ErrorText = "Couldn't parse pdiff index";
+      ErrorText = "Could not parse pdiff index";
    return false;
 }
 									/*}}}*/
@@ -2859,7 +2859,7 @@ bool pkgAcqIndexDiffs::QueueNextDiff()					/*{{{*/
    std::string const PartialFile = GetExistingFilename(GetPartialFileNameFromURI(Target.URI));
    if(unlikely(PartialFile.empty()))
    {
-      Failed("Message: The file " + GetPartialFileNameFromURI(Target.URI) + " isn't available", NULL);
+      Failed("Message: The file " + GetPartialFileNameFromURI(Target.URI) + " is not available", NULL);
       return false;
    }
 
@@ -3053,7 +3053,7 @@ void pkgAcqIndexMergeDiffs::Done(string const &Message, HashStringList const &Ha
    std::string const UnpatchedFile = GetExistingFilename(UncompressedUnpatchedFile);
    if (UnpatchedFile.empty())
    {
-      _error->Fatal("Unpatched file %s doesn't exist (anymore)!", UncompressedUnpatchedFile.c_str());
+      _error->Fatal("Unpatched file %s does not exist (anymore)!", UncompressedUnpatchedFile.c_str());
       State = StateErrorDiff;
       return;
    }
@@ -3353,7 +3353,7 @@ pkgAcqArchive::pkgAcqArchive(pkgAcquire *const Owner, pkgSourceList *const Sourc
 {
    if (Version.Arch() == 0)
    {
-      _error->Error(_("I wasn't able to locate a file for the %s package. "
+      _error->Error(_("I was not able to locate a file for the %s package. "
 		      "This might mean you need to manually fix this package. "
 		      "(due to missing arch)"),
 		    Version.ParentPkg().FullName().c_str());
@@ -3482,7 +3482,7 @@ pkgAcqArchive::pkgAcqArchive(pkgAcquire *const Owner, pkgSourceList *const Sourc
    }
    if (StoreFilename.empty())
    {
-      _error->Error(_("Can't find a source to download version '%s' of '%s'"),
+      _error->Error(_("cannot find a source to download version '%s' of '%s'"),
 		    Version.VerStr(), Version.ParentPkg().FullName(false).c_str());
       return;
    }
