@@ -329,7 +329,7 @@ static bool DoListKeys(CommandLine &CmdL) /*{{{*/
       for (auto &key : keyring)
       {
 	 std::cout << "Keyring: " << name << "\n";
-	 std::cout << "Public-Key-Algorithm: " << key.algorithm << "\n";
+	 std::cout << "Public-Key-Algorithm: " << key.algorithm << (key.safe ? "" : "!") << "\n";
 	 if (not key.uids.empty())
 	 {
 	    std::cout << "UIDs:\n";
@@ -340,7 +340,7 @@ static bool DoListKeys(CommandLine &CmdL) /*{{{*/
 	 {
 	    std::cout << "Subkeys:\n";
 	    for (auto &subkey : key.subkeys)
-	       std::cout << " " << subkey.algorithm << "\n";
+	       std::cout << " " << subkey.algorithm << (subkey.safe ? "" : "!") << "\n";
 	 }
 	 std::cout << "\n";
       }

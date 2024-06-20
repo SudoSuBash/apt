@@ -36,6 +36,7 @@
 
 #include "config.h"
 
+#include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/openpgp.h>
@@ -43,6 +44,7 @@
 
 #include <cassert>
 #include <cstdio>
+#include <climits>
 
 static int popc(APT::StringView &buffer)
 {
@@ -126,6 +128,10 @@ static bool VerifyPublicKeyPacket(const char *path, APT::StringView key, APT::Op
       case 17:
       {
 	 int bits = key[6] * 256 + key[7];
+	    std::string safeOption;
+	    strprintf(safeOption, "APT::Key::%s::Safe-Size", algorithms[algo]);
+	 if (_config->FindI(safeOption.c_str(), INT_MAX) <= bits)
+	    out.safe = true;
 	 strprintf(out.algorithm, "%s%d", algorithms[algo], bits);
 	 break;
       }
@@ -139,6 +145,15 @@ static bool VerifyPublicKeyPacket(const char *path, APT::StringView key, APT::Op
 	 {
 	    if (memcmp(ellipticCurves[i].oidhex, oid.data(), oid.size()) != 0)
 	       continue;
+	    std::string safeOption;
+	    strprintf(safeOption, "APT::Key::%s::Safe-Curves", algorithms[algo]);
+	    auto rootItem = _config->Tree(safeOption.c_str());
+	    if (rootItem)
+	    {
+	       for (auto item = rootItem->Child; item != nullptr; item = item->Next)
+		   if (item->Value ==  ellipticCurves[i].name)
+		      out.safe = true;
+	    }
 	    strprintf(out.algorithm, "%s-%s", algorithms[algo], ellipticCurves[i].name);
 	    return true;
 	 }

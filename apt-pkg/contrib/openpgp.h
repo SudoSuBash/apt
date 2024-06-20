@@ -15,8 +15,16 @@ namespace OpenPGP
 
 struct PublicKey
 {
+   // \brief Human readable algorithm name
    std::string algorithm;
+   /// \brief Flag whether the algorithm listed above is safe.
+   ///
+   /// Note that the algorithm for this primary key may be safe, but it may have
+   /// unsafe subkeys.
+   bool safe = false;
+   /// \brief User identities belonging to the key (not valid for subkeys)
    std::vector<std::string> uids;
+   /// \brief Subkeys.
    std::vector<PublicKey> subkeys;
 };
 
