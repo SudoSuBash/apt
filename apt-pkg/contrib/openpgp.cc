@@ -96,27 +96,45 @@ static bool VerifyPublicKeyPacket(const char *path, APT::StringView key, APT::Op
       case 3:
       {
 	 int bits = key[6] * 256 + key[7];
-	 strprintf(out.algorithm, "rsa%d", bits);
+	 strprintf(out.algorithm, "RSA%d", bits);
 	 break;
       }
       case 16:
-	 return _error->Warning("Unsupported ElGamal key in %s", path);
+      {
+	 int bits = key[6] * 256 + key[7];
+	 strprintf(out.algorithm, "ElGamal%d", bits);
 	 break;
+      }
       case 17:
-	 return _error->Warning("Unsupported DSA key in %s", path);
+      {
+	 int bits = key[6] * 256 + key[7];
+	 strprintf(out.algorithm, "DSA%d", bits);
+	 break;
+      }
       case 18:
-	 return _error->Warning("Unsupported ECDH key in %s", path);
       case 19:
-	 return _error->Warning("Unsupported ECDSA key in %s", path);
       case 22:
       {
+	 std::string algoname;
+	 switch (algo)
+	 {
+	 case 18:
+	    algoname = "ECDH";
+	    break;
+	 case 19:
+	    algoname = "ECDSA";
+	    break;
+	 case 22:
+	    algoname = "EdDSA";
+	    break;
+	 }
 	 int oidlen = key[6] & 0xFF;
 	 auto oid = key.substr(7, oidlen);
 	 for (size_t i = 0; i < APT_ARRAY_SIZE(ELLIP_CURVES); i++)
 	 {
 	    if (memcmp(ELLIP_CURVES[i].oidhex, oid.data(), oid.size()) != 0)
 	       continue;
-	    strprintf(out.algorithm, "EdDSA-%s", ELLIP_CURVES[i].name);
+	    strprintf(out.algorithm, "%s-%s", algoname.c_str(), ELLIP_CURVES[i].name);
 	    return true;
 	 }
 	 std::string oidhex;
@@ -164,7 +182,7 @@ bool APT::OpenPGP::Keyring::AddKeyFile(const char *path, APT::StringView key)
       key = key.substr(1);
 
       if (c & NEW_TAG_FLAG)
-	 return _error->Warning("Unsupported new tag in %s", path);
+	 return _error->Warning("Unsupported new tag in %s", path), true;
 
       int tlen = c & OLD_LEN_MASK;
       tag >>= OLD_TAG_SHIFT;
