@@ -54,6 +54,33 @@ static int popc(APT::StringView &buffer)
    return c & 0xFF;
 }
 
+// All the known algorithms
+constexpr char algorithms[][8] = {
+   "",
+   "RSA",
+   "RSA",
+   "RSA",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "",
+   "ElGamal",
+   "DSA",
+   "ECDH",
+   "ECDSA",
+   "",
+   "",
+   "EdDSA",
+};
+
 constexpr struct
 {
    const char *name;
@@ -94,47 +121,24 @@ static bool VerifyPublicKeyPacket(const char *path, APT::StringView key, APT::Op
       case 1:
       case 2:
       case 3:
-      {
-	 int bits = key[6] * 256 + key[7];
-	 strprintf(out.algorithm, "RSA%d", bits);
-	 break;
-      }
       case 16:
-      {
-	 int bits = key[6] * 256 + key[7];
-	 strprintf(out.algorithm, "ElGamal%d", bits);
-	 break;
-      }
       case 17:
       {
 	 int bits = key[6] * 256 + key[7];
-	 strprintf(out.algorithm, "DSA%d", bits);
+	 strprintf(out.algorithm, "%s%d", algorithms[algo], bits);
 	 break;
       }
       case 18:
       case 19:
       case 22:
       {
-	 std::string algoname;
-	 switch (algo)
-	 {
-	 case 18:
-	    algoname = "ECDH";
-	    break;
-	 case 19:
-	    algoname = "ECDSA";
-	    break;
-	 case 22:
-	    algoname = "EdDSA";
-	    break;
-	 }
 	 int oidlen = key[6] & 0xFF;
 	 auto oid = key.substr(7, oidlen);
 	 for (size_t i = 0; i < APT_ARRAY_SIZE(ELLIP_CURVES); i++)
 	 {
 	    if (memcmp(ELLIP_CURVES[i].oidhex, oid.data(), oid.size()) != 0)
 	       continue;
-	    strprintf(out.algorithm, "%s-%s", algoname.c_str(), ELLIP_CURVES[i].name);
+	    strprintf(out.algorithm, "%s-%s", algorithms[algo], ELLIP_CURVES[i].name);
 	    return true;
 	 }
 	 std::string oidhex;
