@@ -15,6 +15,8 @@ namespace OpenPGP
 
 struct PublicKey
 {
+   // \brief Fingerprint of the key
+   std::string fingerprint;
    // \brief Human readable algorithm name
    std::string algorithm;
    /// \brief Flag whether the algorithm listed above is safe.

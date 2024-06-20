@@ -38,6 +38,7 @@
 
 #include <apt-pkg/configuration.h>
 #include <apt-pkg/error.h>
+#include <apt-pkg/hashes.h>
 #include <apt-pkg/macros.h>
 #include <apt-pkg/openpgp.h>
 #include <apt-pkg/strutl.h>
@@ -108,6 +109,10 @@ static bool VerifyPublicKeyPacket(const char *path, APT::StringView key, APT::Op
    case 2:
    case 3:
    {
+      Hashes md5(Hashes::MD5SUM);
+      md5.Add(key.data() + 4, key.size() - 4);
+      out.fingerprint = md5.GetHashString(Hashes::MD5SUM).HashValue();
+
       int algo = key[3];
       if (algo != 1)
 	 return _error->Warning("unknown public key algorithm %d in %s", algo, path);
@@ -117,6 +122,12 @@ static bool VerifyPublicKeyPacket(const char *path, APT::StringView key, APT::Op
    break;
    case 4:
    {
+      Hashes sha1(Hashes::SHA1SUM);
+      unsigned char prefix[] = {0x99, static_cast<unsigned char>((key.size() >> 8) & 0xFF), static_cast<unsigned char>(key.size() & 0xFF)};
+      sha1.Add(prefix, sizeof(prefix));
+      sha1.Add(key.data(), key.size());
+      out.fingerprint = sha1.GetHashString(Hashes::SHA1SUM).HashValue();
+
       // 1,2,3,4 are creation time.
       int algo = key[5];
       switch (algo)
