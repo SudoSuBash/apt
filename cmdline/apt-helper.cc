@@ -332,6 +332,7 @@ static bool DoListKeys(CommandLine &CmdL) /*{{{*/
 	 std::cout << "Public-Key-Fingerprint: " << key.fingerprint << "\n";
 	 std::cout << "Public-Key-Algorithm: " << key.algorithm << "\n";
 	 std::cout << "Public-Key-Safe: " << (key.safe ? "yes" : "no") << "\n";
+	 std::cout << "Public-Key-Revoked: " << (key.revoked ? "yes" : "no") << "\n";
 	 if (not key.uids.empty())
 	 {
 	    std::cout << "UIDs:\n";
@@ -342,7 +343,7 @@ static bool DoListKeys(CommandLine &CmdL) /*{{{*/
 	 {
 	    std::cout << "Subkeys:\n";
 	    for (auto &subkey : key.subkeys)
-	       std::cout << " " << subkey.fingerprint << " algorithm=" << subkey.algorithm << (subkey.safe ? " safe=yes" : " safe=no") << "\n";
+	       std::cout << " " << subkey.fingerprint << " algorithm=" << subkey.algorithm << (subkey.safe ? " safe=yes" : " safe=no") << (subkey.revoked ? " revoked=yes" : " revoked=no") << "\n";
 	 }
 	 std::cout << "\n";
       }

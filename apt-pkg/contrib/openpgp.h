@@ -24,6 +24,8 @@ struct PublicKey
    /// Note that the algorithm for this primary key may be safe, but it may have
    /// unsafe subkeys.
    bool safe = false;
+   /// \brief Whether the key is revoked (it may not be but all subkeys may be, better check!).
+   bool revoked = false;
    /// \brief User identities belonging to the key (not valid for subkeys)
    std::vector<std::string> uids;
    /// \brief Subkeys.

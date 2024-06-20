@@ -197,6 +197,7 @@ bool APT::OpenPGP::Keyring::AddKeyFile(const char *path, APT::StringView key)
 
    enum class Tag
    {
+      Signature = 2,
       PubKey = 6,
       Compressed = 8,
       UID = 13,
@@ -279,6 +280,37 @@ bool APT::OpenPGP::Keyring::AddKeyFile(const char *path, APT::StringView key)
 	    return _error->Error("UID without key in %s: %s", path, key.substr(0, len).to_string().c_str());
 	 publicKeys.back().uids.push_back(key.substr(0, len).to_string());
 	 break;
+      case int(Tag::Signature):
+      {
+	 if (SkippedOne)
+	    break;
+	 if (publicKeys.size() == 0)
+	    return _error->Error("Signature without key in %s", path);
+
+	 auto signature = key.substr(0, len);
+	 auto version = signature[0];
+	 switch (version)
+	 {
+	 case 3:
+	    return _error->Error("Version 3 signatures are not supported");
+	 case 4:
+	    auto sigType = signature[1];
+	    switch (sigType)
+	    {
+	    case 0x13: // Self certification
+	       break;
+	    case 0x18: // Subkey binding signature
+	       break;
+	    case 0x20: // Key revocation
+	       publicKeys.back().revoked = true;
+	       break;
+	    case 0x28: // Subkey revocation
+	       publicKeys.back().subkeys.back().revoked = true;
+	       break;
+	    }
+	    break;
+	 }
+      }
       default:
 	 break;
       }
