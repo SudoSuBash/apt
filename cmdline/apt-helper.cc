@@ -296,7 +296,12 @@ static bool DoQuoteString(CommandLine &CmdL)				/*{{{*/
    return true;
 }
 									/*}}}*/
-static bool DoListKeys(CommandLine &CmdL) /*{{{*/
+/*{{{*/
+static std::ostream &operator<<(std::ostream &out, APT::OpenPGP::PublicKey key)
+{
+   return out << key.fingerprint << " algorithm=" << key.algorithm << (key.safe ? " safe=yes" : " safe=no") << (key.revoked ? " revoked=yes" : " revoked=no");
+}
+static bool DoListKeys(CommandLine &CmdL)
 {
    FileFd fd;
 
@@ -326,13 +331,11 @@ static bool DoListKeys(CommandLine &CmdL) /*{{{*/
 
       if (!keyring.AddKeyFile(name.c_str(), APT::StringView(key.data(), key.size())))
 	 return false;
+
       for (auto &key : keyring)
       {
+	 std::cout << "Key:" << key << "\n";
 	 std::cout << "Keyring: " << name << "\n";
-	 std::cout << "Public-Key-Fingerprint: " << key.fingerprint << "\n";
-	 std::cout << "Public-Key-Algorithm: " << key.algorithm << "\n";
-	 std::cout << "Public-Key-Safe: " << (key.safe ? "yes" : "no") << "\n";
-	 std::cout << "Public-Key-Revoked: " << (key.revoked ? "yes" : "no") << "\n";
 	 if (not key.uids.empty())
 	 {
 	    std::cout << "UIDs:\n";
@@ -343,7 +346,7 @@ static bool DoListKeys(CommandLine &CmdL) /*{{{*/
 	 {
 	    std::cout << "Subkeys:\n";
 	    for (auto &subkey : key.subkeys)
-	       std::cout << " " << subkey.fingerprint << " algorithm=" << subkey.algorithm << (subkey.safe ? " safe=yes" : " safe=no") << (subkey.revoked ? " revoked=yes" : " revoked=no") << "\n";
+	       std::cout << " " << subkey << "\n";
 	 }
 	 std::cout << "\n";
       }
