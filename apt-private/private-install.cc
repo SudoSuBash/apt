@@ -1143,7 +1143,7 @@ bool DoInstall(CommandLine &CmdL)
 
    // See if we need to prompt
    // FIXME: check if really the packages in the set are going to be installed
-   bool ask = Cache->InstCount() == verset[MOD_INSTALL].size() && Cache->DelCount() == 0;
+   bool ask = Cache->InstCount() != verset[MOD_INSTALL].size() || Cache->DelCount() != 0;
    bool result = InstallPackages(Cache, HeldBackPackages, false, ask, true, "AptCli::Hooks::Install", CmdL);
 
    if (result)
