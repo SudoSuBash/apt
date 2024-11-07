@@ -132,7 +132,7 @@ bool ExtractTar::Go(pkgDirStream &Stream)
    // Loop over all blocks
    string LastLongLink, ItemLink;
    string LastLongName, ItemName;
-   auto Junk = std::make_unique<std::array<unsigned char, 32*1024>>();
+   auto Junk = std::make_unique_for_overwrite<std::array<unsigned char, APT_BUFFER_SIZE>>();
    while (1)
    {
       bool BadRecord = false;      
