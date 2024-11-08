@@ -605,8 +605,8 @@ bool pkgAcquire::Worker::RunMessages()
 	    {
 	       std::string const failReason = LookupTag(Message, "FailReason");
 	       {
-		  auto const reasons = { "Timeout", "ConnectionRefused",
-		     "ConnectionTimedOut", "ResolveFailure", "TmpResolveFailure" };
+		  auto const reasons = {"Timeout", "ConnectionRefused",
+					"ConnectionTimedOut", "ResolveFailure", "TmpResolveFailure", "TooManyRequests"};
 		  errTransient = std::find(std::begin(reasons), std::end(reasons), failReason) != std::end(reasons);
 	       }
 	       if (errTransient == false)
@@ -638,6 +638,7 @@ void pkgAcquire::Worker::HandleFailure(std::vector<pkgAcquire::Item *> const &It
 				       std::string const &Message, bool const errTransient, bool const errAuthErr)
 {
    auto currentTime = clock::now();
+   auto currentWall = std::chrono::system_clock::now();
    for (auto const Owner : ItmOwners)
    {
       std::string NewURI;
@@ -650,7 +651,24 @@ void pkgAcquire::Worker::HandleFailure(std::vector<pkgAcquire::Item *> const &It
 	 {
 	    auto Iter = _config->FindI("Acquire::Retries", 3) - Owner->Retries - 1;
 	    auto const MaxDur = _config->FindI("Acquire::Retries::Delay::Maximum", 30);
-	    auto Dur =  std::chrono::seconds(std::min(1 << Iter, MaxDur));
+	    auto const HandleRetryAfter = _config->FindB("Acquire::Retries::HandleRetryAfter", false);
+	    auto Dur = std::chrono::seconds(1 << Iter);
+	    auto const retry_after_str = LookupTag(Message, "Retry-After");
+	    auto const fail_reason = LookupTag(Message, "FailReason");
+	    if (fail_reason == "TooManyRequests" && !retry_after_str.empty() && HandleRetryAfter)
+	    {
+	       // The webserver gave a retry time. Use it, but also add exponential
+	       // backoff waiting as we might not be the only client.
+	       const auto retry_after = std::chrono::seconds(std::strtoul(retry_after_str.c_str(), nullptr, 10));
+	       const auto epoch_current = std::chrono::duration_cast<std::chrono::seconds>(currentWall.time_since_epoch());
+	       // If the retry_after is in the past, we can just continue.
+	       if (retry_after > epoch_current)
+		  Dur += retry_after - epoch_current;
+	       // Usually, all requests run into the rate limit at the same time.
+	       // Distribute the retries to avoid hitting the limit again.
+	       Dur += std::chrono::seconds(std::rand() % Dur.count());
+	    }
+	    Dur = std::min(Dur, std::chrono::seconds(MaxDur));
 	    if (_config->FindB("Debug::Acquire::Retries"))
 	       std::clog << "Delaying " << SavedDesc.Description << " by " << Dur.count() << " seconds" << std::endl;
 	    Owner->FetchAfter(currentTime + Dur);
